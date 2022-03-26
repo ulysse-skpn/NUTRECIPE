@@ -1,0 +1,1414 @@
+17/03/2022 09:41:59 [error] : 	test error
+17/03/2022 09:41:59 [warn] : 	test warning
+17/03/2022 09:41:59 [info] : 	test info
+17/03/2022 09:41:59 [http] : 	test http
+17/03/2022 09:41:59 [verbose] : 	test verbose
+17/03/2022 09:41:59 [debug] : 	test debug
+17/03/2022 09:41:59 [silly] : 	test silly
+17/03/2022 09:43:16 [error] : 	test error
+17/03/2022 09:43:16 [warn] : 	test warning
+17/03/2022 09:43:16 [info] : 	test info
+17/03/2022 09:43:16 [http] : 	test http
+17/03/2022 09:43:16 [verbose] : 	test verbose
+17/03/2022 09:43:16 [debug] : 	test debug
+17/03/2022 09:43:16 [silly] : 	test silly
+17/03/2022 09:45:16 [error] : 	test error
+17/03/2022 09:45:16 [warn] : 	test warning
+17/03/2022 09:45:16 [info] : 	test info
+17/03/2022 09:45:16 [http] : 	test http
+17/03/2022 09:45:16 [verbose] : 	test verbose
+17/03/2022 09:45:16 [debug] : 	test debug
+17/03/2022 09:45:16 [silly] : 	test silly
+17/03/2022 09:49:05 [info] : 	POST /ingredients 201 13968 - 42.264 ms
+
+17/03/2022 09:49:11 [http] : 	
+17/03/2022 09:49:11 [info] : 	GET /ingredients 200 13970 - 4.809 ms
+
+17/03/2022 09:49:39 [info] : 	POST /ingredients 201 13968 - 15.011 ms
+
+17/03/2022 09:53:11 [error] : 	test error
+17/03/2022 09:53:11 [warn] : 	test warning
+17/03/2022 09:53:11 [info] : 	test info
+17/03/2022 09:53:11 [http] : 	test http
+17/03/2022 09:53:11 [verbose] : 	test verbose
+17/03/2022 09:53:11 [debug] : 	test debug
+17/03/2022 09:53:11 [silly] : 	test silly
+17/03/2022 09:53:36 [info] : 	POST /ingredients 400 - - 4.984 ms
+
+17/03/2022 09:58:16 [error] : 	test error
+17/03/2022 09:58:16 [warn] : 	test warning
+17/03/2022 09:58:16 [info] : 	test info
+17/03/2022 09:58:16 [http] : 	test http
+17/03/2022 09:58:16 [verbose] : 	test verbose
+17/03/2022 09:58:16 [debug] : 	test debug
+17/03/2022 09:58:16 [silly] : 	test silly
+17/03/2022 10:00:06 [http] : 	
+17/03/2022 10:00:06 [info] : 	GET /ingredients 200 2 - 18.411 ms
+
+17/03/2022 10:00:13 [http] : 	
+17/03/2022 10:00:13 [info] : 	GET /ingredients 200 2 - 2.668 ms
+
+17/03/2022 10:00:16 [info] : 	GET /ingredients// 404 152 - 3.240 ms
+
+17/03/2022 10:00:40 [error] : 	test error
+17/03/2022 10:00:40 [warn] : 	test warning
+17/03/2022 10:00:40 [info] : 	test info
+17/03/2022 10:00:40 [http] : 	test http
+17/03/2022 10:00:40 [verbose] : 	test verbose
+17/03/2022 10:00:40 [debug] : 	test debug
+17/03/2022 10:00:40 [silly] : 	test silly
+17/03/2022 10:00:45 [info] : 	GET /ingredients// 404 152 - 2.391 ms
+
+17/03/2022 10:03:19 [error] : 	test error
+17/03/2022 10:03:19 [warn] : 	test warning
+17/03/2022 10:03:19 [info] : 	test info
+17/03/2022 10:03:19 [http] : 	test http
+17/03/2022 10:03:19 [verbose] : 	test verbose
+17/03/2022 10:03:19 [debug] : 	test debug
+17/03/2022 10:03:19 [silly] : 	test silly
+17/03/2022 10:03:30 [info] : 	GET /ingredients// 404 152 - 2.636 ms
+
+17/03/2022 10:03:50 [error] : 	test error
+17/03/2022 10:03:50 [warn] : 	test warning
+17/03/2022 10:03:50 [info] : 	test info
+17/03/2022 10:03:50 [http] : 	test http
+17/03/2022 10:03:50 [verbose] : 	test verbose
+17/03/2022 10:03:50 [debug] : 	test debug
+17/03/2022 10:03:50 [silly] : 	test silly
+17/03/2022 10:03:56 [info] : 	GET /ingredients// 404 152 - 2.279 ms
+
+17/03/2022 10:04:35 [error] : 	test error
+17/03/2022 10:04:35 [warn] : 	test warning
+17/03/2022 10:04:35 [info] : 	test info
+17/03/2022 10:04:35 [http] : 	test http
+17/03/2022 10:04:35 [verbose] : 	test verbose
+17/03/2022 10:04:35 [debug] : 	test debug
+17/03/2022 10:04:35 [silly] : 	test silly
+17/03/2022 10:04:57 [error] : 	test error
+17/03/2022 10:04:57 [warn] : 	test warning
+17/03/2022 10:04:57 [info] : 	test info
+17/03/2022 10:04:57 [http] : 	test http
+17/03/2022 10:04:57 [verbose] : 	test verbose
+17/03/2022 10:04:57 [debug] : 	test debug
+17/03/2022 10:04:57 [silly] : 	test silly
+17/03/2022 10:05:03 [error] : 	string violation: categories cannot be an array or an object
+17/03/2022 10:05:23 [error] : 	test error
+17/03/2022 10:05:23 [warn] : 	test warning
+17/03/2022 10:05:23 [info] : 	test info
+17/03/2022 10:05:23 [http] : 	test http
+17/03/2022 10:05:23 [verbose] : 	test verbose
+17/03/2022 10:05:23 [debug] : 	test debug
+17/03/2022 10:05:23 [silly] : 	test silly
+17/03/2022 10:06:33 [error] : 	test error
+17/03/2022 10:06:33 [warn] : 	test warning
+17/03/2022 10:06:33 [info] : 	test info
+17/03/2022 10:06:33 [http] : 	test http
+17/03/2022 10:06:33 [verbose] : 	test verbose
+17/03/2022 10:06:33 [debug] : 	test debug
+17/03/2022 10:06:33 [silly] : 	test silly
+17/03/2022 10:06:40 [info] : 	POST /ingredients 201 13988 - 16.499 ms
+
+17/03/2022 10:07:37 [error] : 	test error
+17/03/2022 10:07:37 [warn] : 	test warning
+17/03/2022 10:07:37 [info] : 	test info
+17/03/2022 10:07:37 [http] : 	test http
+17/03/2022 10:07:37 [verbose] : 	test verbose
+17/03/2022 10:07:37 [debug] : 	test debug
+17/03/2022 10:07:37 [silly] : 	test silly
+17/03/2022 10:07:43 [info] : 	POST /ingredients 400 14196 - 5.151 ms
+
+17/03/2022 10:25:02 [error] : 	test error
+17/03/2022 10:25:02 [warn] : 	test warning
+17/03/2022 10:25:02 [info] : 	test info
+17/03/2022 10:25:02 [http] : 	test http
+17/03/2022 10:25:02 [verbose] : 	test verbose
+17/03/2022 10:25:02 [debug] : 	test debug
+17/03/2022 10:25:02 [silly] : 	test silly
+17/03/2022 10:28:34 [error] : 	test error
+17/03/2022 10:28:34 [warn] : 	test warning
+17/03/2022 10:28:34 [info] : 	test info
+17/03/2022 10:28:34 [http] : 	test http
+17/03/2022 10:28:34 [verbose] : 	test verbose
+17/03/2022 10:28:34 [debug] : 	test debug
+17/03/2022 10:28:34 [silly] : 	test silly
+17/03/2022 10:42:18 [error] : 	test error
+17/03/2022 10:42:18 [warn] : 	test warning
+17/03/2022 10:42:18 [info] : 	test info
+17/03/2022 10:42:18 [http] : 	test http
+17/03/2022 10:42:18 [verbose] : 	test verbose
+17/03/2022 10:42:18 [debug] : 	test debug
+17/03/2022 10:42:18 [silly] : 	test silly
+17/03/2022 10:43:44 [error] : 	test error
+17/03/2022 10:43:44 [warn] : 	test warning
+17/03/2022 10:43:44 [info] : 	test info
+17/03/2022 10:43:44 [http] : 	test http
+17/03/2022 10:43:44 [verbose] : 	test verbose
+17/03/2022 10:43:44 [debug] : 	test debug
+17/03/2022 10:43:44 [silly] : 	test silly
+17/03/2022 10:43:50 [info] : 	GET /ingredients// 404 152 - 2.817 ms
+
+17/03/2022 11:09:18 [error] : 	test error
+17/03/2022 11:09:18 [warn] : 	test warning
+17/03/2022 11:09:18 [info] : 	test info
+17/03/2022 11:09:18 [http] : 	test http
+17/03/2022 11:09:18 [verbose] : 	test verbose
+17/03/2022 11:09:18 [debug] : 	test debug
+17/03/2022 11:09:18 [silly] : 	test silly
+17/03/2022 11:10:39 [error] : 	test error
+17/03/2022 11:10:39 [warn] : 	test warning
+17/03/2022 11:10:39 [info] : 	test info
+17/03/2022 11:10:39 [http] : 	test http
+17/03/2022 11:10:39 [verbose] : 	test verbose
+17/03/2022 11:10:39 [debug] : 	test debug
+17/03/2022 11:10:39 [silly] : 	test silly
+17/03/2022 11:11:38 [error] : 	test error
+17/03/2022 11:11:38 [warn] : 	test warning
+17/03/2022 11:11:38 [info] : 	test info
+17/03/2022 11:11:38 [http] : 	test http
+17/03/2022 11:11:38 [verbose] : 	test verbose
+17/03/2022 11:11:38 [debug] : 	test debug
+17/03/2022 11:11:38 [silly] : 	test silly
+17/03/2022 11:12:21 [error] : 	test error
+17/03/2022 11:12:21 [warn] : 	test warning
+17/03/2022 11:12:21 [info] : 	test info
+17/03/2022 11:12:21 [http] : 	test http
+17/03/2022 11:12:21 [verbose] : 	test verbose
+17/03/2022 11:12:21 [debug] : 	test debug
+17/03/2022 11:12:21 [silly] : 	test silly
+17/03/2022 11:12:55 [error] : 	test error
+17/03/2022 11:12:55 [warn] : 	test warning
+17/03/2022 11:12:55 [info] : 	test info
+17/03/2022 11:12:55 [http] : 	test http
+17/03/2022 11:12:55 [verbose] : 	test verbose
+17/03/2022 11:12:55 [debug] : 	test debug
+17/03/2022 11:12:55 [silly] : 	test silly
+17/03/2022 11:47:52 [error] : 	test error
+17/03/2022 11:47:52 [warn] : 	test warning
+17/03/2022 11:47:52 [info] : 	test info
+17/03/2022 11:47:52 [http] : 	test http
+17/03/2022 11:47:52 [verbose] : 	test verbose
+17/03/2022 11:47:52 [debug] : 	test debug
+17/03/2022 11:47:52 [silly] : 	test silly
+17/03/2022 11:48:04 [info] : 	GET /ingredients/22 200 0 - 14.908 ms
+
+17/03/2022 11:49:34 [error] : 	test error
+17/03/2022 11:49:34 [warn] : 	test warning
+17/03/2022 11:49:34 [info] : 	test info
+17/03/2022 11:49:34 [http] : 	test http
+17/03/2022 11:49:34 [verbose] : 	test verbose
+17/03/2022 11:49:34 [debug] : 	test debug
+17/03/2022 11:49:34 [silly] : 	test silly
+17/03/2022 11:49:38 [info] : 	GET /ingredients/22 200 0 - 14.517 ms
+
+17/03/2022 11:50:58 [error] : 	test error
+17/03/2022 11:50:58 [warn] : 	test warning
+17/03/2022 11:50:58 [info] : 	test info
+17/03/2022 11:50:58 [http] : 	test http
+17/03/2022 11:50:58 [verbose] : 	test verbose
+17/03/2022 11:50:58 [debug] : 	test debug
+17/03/2022 11:50:58 [silly] : 	test silly
+17/03/2022 11:51:06 [http] : 	
+17/03/2022 11:51:06 [info] : 	GET /ingredients 200 14006 - 21.165 ms
+
+17/03/2022 11:53:45 [error] : 	test error
+17/03/2022 11:53:45 [warn] : 	test warning
+17/03/2022 11:53:45 [info] : 	test info
+17/03/2022 11:53:45 [http] : 	test http
+17/03/2022 11:53:45 [verbose] : 	test verbose
+17/03/2022 11:53:45 [debug] : 	test debug
+17/03/2022 11:53:45 [silly] : 	test silly
+17/03/2022 11:54:47 [error] : 	test error
+17/03/2022 11:54:47 [warn] : 	test warning
+17/03/2022 11:54:47 [info] : 	test info
+17/03/2022 11:54:47 [http] : 	test http
+17/03/2022 11:54:47 [verbose] : 	test verbose
+17/03/2022 11:54:47 [debug] : 	test debug
+17/03/2022 11:54:47 [silly] : 	test silly
+17/03/2022 11:55:56 [error] : 	test error
+17/03/2022 11:55:56 [warn] : 	test warning
+17/03/2022 11:55:56 [info] : 	test info
+17/03/2022 11:55:56 [http] : 	test http
+17/03/2022 11:55:56 [verbose] : 	test verbose
+17/03/2022 11:55:56 [debug] : 	test debug
+17/03/2022 11:55:56 [silly] : 	test silly
+17/03/2022 11:56:24 [error] : 	test error
+17/03/2022 11:56:24 [warn] : 	test warning
+17/03/2022 11:56:24 [info] : 	test info
+17/03/2022 11:56:24 [http] : 	test http
+17/03/2022 11:56:24 [verbose] : 	test verbose
+17/03/2022 11:56:24 [debug] : 	test debug
+17/03/2022 11:56:24 [silly] : 	test silly
+17/03/2022 11:57:01 [error] : 	test error
+17/03/2022 11:57:01 [warn] : 	test warning
+17/03/2022 11:57:01 [info] : 	test info
+17/03/2022 11:57:01 [http] : 	test http
+17/03/2022 11:57:01 [verbose] : 	test verbose
+17/03/2022 11:57:01 [debug] : 	test debug
+17/03/2022 11:57:01 [silly] : 	test silly
+17/03/2022 11:57:42 [error] : 	test error
+17/03/2022 11:57:42 [warn] : 	test warning
+17/03/2022 11:57:42 [info] : 	test info
+17/03/2022 11:57:42 [http] : 	test http
+17/03/2022 11:57:42 [verbose] : 	test verbose
+17/03/2022 11:57:42 [debug] : 	test debug
+17/03/2022 11:57:42 [silly] : 	test silly
+17/03/2022 11:59:27 [error] : 	test error
+17/03/2022 11:59:27 [warn] : 	test warning
+17/03/2022 11:59:27 [info] : 	test info
+17/03/2022 11:59:27 [http] : 	test http
+17/03/2022 11:59:27 [verbose] : 	test verbose
+17/03/2022 11:59:27 [debug] : 	test debug
+17/03/2022 11:59:27 [silly] : 	test silly
+17/03/2022 12:00:10 [error] : 	test error
+17/03/2022 12:00:10 [warn] : 	test warning
+17/03/2022 12:00:10 [info] : 	test info
+17/03/2022 12:00:10 [http] : 	test http
+17/03/2022 12:00:10 [verbose] : 	test verbose
+17/03/2022 12:00:10 [debug] : 	test debug
+17/03/2022 12:00:10 [silly] : 	test silly
+17/03/2022 12:01:27 [error] : 	test error
+17/03/2022 12:01:27 [warn] : 	test warning
+17/03/2022 12:01:27 [info] : 	test info
+17/03/2022 12:01:27 [http] : 	test http
+17/03/2022 12:01:27 [verbose] : 	test verbose
+17/03/2022 12:01:27 [debug] : 	test debug
+17/03/2022 12:01:27 [silly] : 	test silly
+17/03/2022 12:03:46 [error] : 	test error
+17/03/2022 12:03:46 [warn] : 	test warning
+17/03/2022 12:03:46 [info] : 	test info
+17/03/2022 12:03:46 [http] : 	test http
+17/03/2022 12:03:46 [verbose] : 	test verbose
+17/03/2022 12:03:46 [debug] : 	test debug
+17/03/2022 12:03:46 [silly] : 	test silly
+17/03/2022 12:04:49 [error] : 	test error
+17/03/2022 12:04:49 [warn] : 	test warning
+17/03/2022 12:04:49 [info] : 	test info
+17/03/2022 12:04:49 [http] : 	test http
+17/03/2022 12:04:49 [verbose] : 	test verbose
+17/03/2022 12:04:49 [debug] : 	test debug
+17/03/2022 12:04:49 [silly] : 	test silly
+17/03/2022 12:05:58 [error] : 	test error
+17/03/2022 12:05:58 [warn] : 	test warning
+17/03/2022 12:05:58 [info] : 	test info
+17/03/2022 12:05:58 [http] : 	test http
+17/03/2022 12:05:58 [verbose] : 	test verbose
+17/03/2022 12:05:58 [debug] : 	test debug
+17/03/2022 12:05:58 [silly] : 	test silly
+17/03/2022 12:06:25 [error] : 	test error
+17/03/2022 12:06:25 [warn] : 	test warning
+17/03/2022 12:06:25 [info] : 	test info
+17/03/2022 12:06:25 [http] : 	test http
+17/03/2022 12:06:25 [verbose] : 	test verbose
+17/03/2022 12:06:25 [debug] : 	test debug
+17/03/2022 12:06:25 [silly] : 	test silly
+17/03/2022 12:07:16 [error] : 	test error
+17/03/2022 12:07:16 [warn] : 	test warning
+17/03/2022 12:07:16 [info] : 	test info
+17/03/2022 12:07:16 [http] : 	test http
+17/03/2022 12:07:16 [verbose] : 	test verbose
+17/03/2022 12:07:16 [debug] : 	test debug
+17/03/2022 12:07:16 [silly] : 	test silly
+17/03/2022 12:07:18 [info] : 	GET /ingredients/a 500 142 - 5.584 ms
+
+17/03/2022 12:07:36 [error] : 	test error
+17/03/2022 12:07:36 [warn] : 	test warning
+17/03/2022 12:07:36 [info] : 	test info
+17/03/2022 12:07:36 [http] : 	test http
+17/03/2022 12:07:36 [verbose] : 	test verbose
+17/03/2022 12:07:36 [debug] : 	test debug
+17/03/2022 12:07:36 [silly] : 	test silly
+17/03/2022 12:07:39 [info] : 	GET /ingredients/a 500 142 - 3.340 ms
+
+17/03/2022 12:08:06 [error] : 	test error
+17/03/2022 12:08:06 [warn] : 	test warning
+17/03/2022 12:08:06 [info] : 	test info
+17/03/2022 12:08:06 [http] : 	test http
+17/03/2022 12:08:06 [verbose] : 	test verbose
+17/03/2022 12:08:06 [debug] : 	test debug
+17/03/2022 12:08:06 [silly] : 	test silly
+17/03/2022 12:08:55 [error] : 	test error
+17/03/2022 12:08:55 [warn] : 	test warning
+17/03/2022 12:08:55 [info] : 	test info
+17/03/2022 12:08:55 [http] : 	test http
+17/03/2022 12:08:55 [verbose] : 	test verbose
+17/03/2022 12:08:55 [debug] : 	test debug
+17/03/2022 12:08:55 [silly] : 	test silly
+17/03/2022 12:09:12 [error] : 	test error
+17/03/2022 12:09:12 [warn] : 	test warning
+17/03/2022 12:09:12 [info] : 	test info
+17/03/2022 12:09:12 [http] : 	test http
+17/03/2022 12:09:12 [verbose] : 	test verbose
+17/03/2022 12:09:12 [debug] : 	test debug
+17/03/2022 12:09:12 [silly] : 	test silly
+17/03/2022 12:09:33 [info] : 	GET /ingredients/22 - - - - ms
+
+17/03/2022 12:12:04 [error] : 	test error
+17/03/2022 12:12:04 [warn] : 	test warning
+17/03/2022 12:12:04 [info] : 	test info
+17/03/2022 12:12:04 [http] : 	test http
+17/03/2022 12:12:04 [verbose] : 	test verbose
+17/03/2022 12:12:04 [debug] : 	test debug
+17/03/2022 12:12:04 [silly] : 	test silly
+17/03/2022 12:12:12 [info] : 	GET /ingredients/22 - - - - ms
+
+17/03/2022 12:13:07 [error] : 	test error
+17/03/2022 12:13:07 [warn] : 	test warning
+17/03/2022 12:13:07 [info] : 	test info
+17/03/2022 12:13:07 [http] : 	test http
+17/03/2022 12:13:07 [verbose] : 	test verbose
+17/03/2022 12:13:07 [debug] : 	test debug
+17/03/2022 12:13:07 [silly] : 	test silly
+17/03/2022 12:13:12 [info] : 	GET /ingredients/1 200 14004 - 12.559 ms
+
+17/03/2022 12:13:19 [info] : 	GET /ingredients/5 200 0 - 3.298 ms
+
+17/03/2022 12:13:56 [error] : 	test error
+17/03/2022 12:13:56 [warn] : 	test warning
+17/03/2022 12:13:56 [info] : 	test info
+17/03/2022 12:13:56 [http] : 	test http
+17/03/2022 12:13:56 [verbose] : 	test verbose
+17/03/2022 12:13:56 [debug] : 	test debug
+17/03/2022 12:13:56 [silly] : 	test silly
+17/03/2022 12:14:15 [error] : 	test error
+17/03/2022 12:14:15 [warn] : 	test warning
+17/03/2022 12:14:15 [info] : 	test info
+17/03/2022 12:14:15 [http] : 	test http
+17/03/2022 12:14:15 [verbose] : 	test verbose
+17/03/2022 12:14:15 [debug] : 	test debug
+17/03/2022 12:14:15 [silly] : 	test silly
+17/03/2022 12:14:47 [error] : 	test error
+17/03/2022 12:14:47 [warn] : 	test warning
+17/03/2022 12:14:47 [info] : 	test info
+17/03/2022 12:14:47 [http] : 	test http
+17/03/2022 12:14:47 [verbose] : 	test verbose
+17/03/2022 12:14:47 [debug] : 	test debug
+17/03/2022 12:14:47 [silly] : 	test silly
+17/03/2022 12:14:51 [info] : 	GET /ingredients/p 200 62 - 64.868 ms
+
+17/03/2022 12:15:48 [error] : 	test error
+17/03/2022 12:15:48 [warn] : 	test warning
+17/03/2022 12:15:48 [info] : 	test info
+17/03/2022 12:15:48 [http] : 	test http
+17/03/2022 12:15:48 [verbose] : 	test verbose
+17/03/2022 12:15:48 [debug] : 	test debug
+17/03/2022 12:15:48 [silly] : 	test silly
+17/03/2022 12:15:53 [error] : 	Champ 'NaN' inconnu dans where clause
+17/03/2022 12:15:53 [info] : 	GET /ingredients/p 400 62 - 60.539 ms
+
+17/03/2022 12:16:42 [error] : 	test error
+17/03/2022 12:16:42 [warn] : 	test warning
+17/03/2022 12:16:42 [info] : 	test info
+17/03/2022 12:16:42 [http] : 	test http
+17/03/2022 12:16:42 [verbose] : 	test verbose
+17/03/2022 12:16:42 [debug] : 	test debug
+17/03/2022 12:16:42 [silly] : 	test silly
+17/03/2022 12:16:46 [error] : 	GET BY ID : Champ 'NaN' inconnu dans where clause
+17/03/2022 12:16:46 [info] : 	GET /ingredients/p 400 62 - 54.912 ms
+
+17/03/2022 12:17:08 [error] : 	test error
+17/03/2022 12:17:08 [warn] : 	test warning
+17/03/2022 12:17:08 [info] : 	test info
+17/03/2022 12:17:08 [http] : 	test http
+17/03/2022 12:17:08 [verbose] : 	test verbose
+17/03/2022 12:17:08 [debug] : 	test debug
+17/03/2022 12:17:08 [silly] : 	test silly
+17/03/2022 12:17:11 [error] : 	Method => GET BY ID : Champ 'NaN' inconnu dans where clause
+17/03/2022 12:17:11 [info] : 	GET /ingredients/p 400 62 - 60.081 ms
+
+17/03/2022 12:18:17 [error] : 	test error
+17/03/2022 12:18:17 [warn] : 	test warning
+17/03/2022 12:18:17 [info] : 	test info
+17/03/2022 12:18:17 [http] : 	test http
+17/03/2022 12:18:17 [verbose] : 	test verbose
+17/03/2022 12:18:17 [debug] : 	test debug
+17/03/2022 12:18:17 [silly] : 	test silly
+17/03/2022 12:18:37 [error] : 	test error
+17/03/2022 12:18:37 [warn] : 	test warning
+17/03/2022 12:18:37 [info] : 	test info
+17/03/2022 12:18:37 [http] : 	test http
+17/03/2022 12:18:37 [verbose] : 	test verbose
+17/03/2022 12:18:37 [debug] : 	test debug
+17/03/2022 12:18:37 [silly] : 	test silly
+17/03/2022 12:18:41 [error] : 	Method => GET BY ID : Champ 'NaN' inconnu dans where clause
+17/03/2022 12:18:41 [info] : 	GET /ingredients/p 400 62 - 66.810 ms
+
+17/03/2022 12:20:30 [error] : 	test error
+17/03/2022 12:20:30 [warn] : 	test warning
+17/03/2022 12:20:30 [info] : 	test info
+17/03/2022 12:20:30 [http] : 	test http
+17/03/2022 12:20:30 [verbose] : 	test verbose
+17/03/2022 12:20:30 [debug] : 	test debug
+17/03/2022 12:20:30 [silly] : 	test silly
+17/03/2022 12:20:33 [error] : 	Method => GET Ingredient BY ID : Champ 'NaN' inconnu dans where clause
+17/03/2022 12:20:33 [info] : 	GET /ingredients/p 400 62 - 69.853 ms
+
+17/03/2022 12:20:41 [info] : 	Get Ingredient By id
+17/03/2022 12:20:41 [info] : 	GET /ingredients/1 200 14004 - 8.507 ms
+
+17/03/2022 12:22:25 [error] : 	test error
+17/03/2022 12:22:25 [warn] : 	test warning
+17/03/2022 12:22:25 [info] : 	test info
+17/03/2022 12:22:25 [http] : 	test http
+17/03/2022 12:22:25 [verbose] : 	test verbose
+17/03/2022 12:22:25 [debug] : 	test debug
+17/03/2022 12:22:25 [silly] : 	test silly
+17/03/2022 12:22:31 [info] : 	Get Ingredient By id
+17/03/2022 12:22:31 [info] : 	GET /ingredients/1 200 14004 - 14.916 ms
+
+17/03/2022 12:22:36 [error] : 	Method => GET Ingredient BY ID : Champ 'NaN' inconnu dans where clause
+17/03/2022 12:23:06 [error] : 	test error
+17/03/2022 12:23:06 [warn] : 	test warning
+17/03/2022 12:23:06 [info] : 	test info
+17/03/2022 12:23:06 [http] : 	test http
+17/03/2022 12:23:06 [verbose] : 	test verbose
+17/03/2022 12:23:06 [debug] : 	test debug
+17/03/2022 12:23:06 [silly] : 	test silly
+17/03/2022 12:23:10 [error] : 	Method => GET Ingredient BY ID : Champ 'NaN' inconnu dans where clause
+17/03/2022 12:23:31 [info] : 	GET /ingredients/o - - - - ms
+
+17/03/2022 12:23:34 [http] : 	
+17/03/2022 12:23:34 [info] : 	GET /ingredients/ 200 14006 - 15.398 ms
+
+17/03/2022 12:23:45 [error] : 	Method => GET Ingredient BY ID : Champ 'NaN' inconnu dans where clause
+17/03/2022 12:24:20 [error] : 	test error
+17/03/2022 12:24:20 [warn] : 	test warning
+17/03/2022 12:24:20 [info] : 	test info
+17/03/2022 12:24:20 [http] : 	test http
+17/03/2022 12:24:20 [verbose] : 	test verbose
+17/03/2022 12:24:20 [debug] : 	test debug
+17/03/2022 12:24:20 [silly] : 	test silly
+17/03/2022 12:25:39 [error] : 	test error
+17/03/2022 12:25:39 [warn] : 	test warning
+17/03/2022 12:25:39 [info] : 	test info
+17/03/2022 12:25:39 [http] : 	test http
+17/03/2022 12:25:39 [verbose] : 	test verbose
+17/03/2022 12:25:39 [debug] : 	test debug
+17/03/2022 12:25:39 [silly] : 	test silly
+17/03/2022 12:25:48 [error] : 	Method => GET Ingredient BY ID : Champ 'NaN' inconnu dans where clause
+17/03/2022 12:25:48 [info] : 	GET /ingredients/- 400 62 - 89.815 ms
+
+17/03/2022 12:27:22 [error] : 	test error
+17/03/2022 12:27:22 [warn] : 	test warning
+17/03/2022 12:27:22 [info] : 	test info
+17/03/2022 12:27:22 [http] : 	test http
+17/03/2022 12:27:22 [verbose] : 	test verbose
+17/03/2022 12:27:22 [debug] : 	test debug
+17/03/2022 12:27:22 [silly] : 	test silly
+17/03/2022 12:27:28 [info] : 	Get All Ingredients
+17/03/2022 12:27:28 [info] : 	GET /ingredients 200 14006 - 11.443 ms
+
+17/03/2022 12:27:34 [info] : 	GET /ingredient 404 149 - 2.447 ms
+
+17/03/2022 12:31:13 [error] : 	test error
+17/03/2022 12:31:13 [warn] : 	test warning
+17/03/2022 12:31:13 [info] : 	test info
+17/03/2022 12:31:13 [http] : 	test http
+17/03/2022 12:31:13 [verbose] : 	test verbose
+17/03/2022 12:31:13 [debug] : 	test debug
+17/03/2022 12:31:13 [silly] : 	test silly
+17/03/2022 12:32:37 [error] : 	test error
+17/03/2022 12:32:37 [warn] : 	test warning
+17/03/2022 12:32:37 [info] : 	test info
+17/03/2022 12:32:37 [http] : 	test http
+17/03/2022 12:32:37 [verbose] : 	test verbose
+17/03/2022 12:32:37 [debug] : 	test debug
+17/03/2022 12:32:37 [silly] : 	test silly
+17/03/2022 12:32:42 [error] : 	Method => POST Ingredient : notNull Violation: ingredients.ingredient_text cannot be null
+17/03/2022 12:32:42 [info] : 	POST /ingredients 400 86 - 6.578 ms
+
+17/03/2022 12:34:14 [error] : 	test error
+17/03/2022 12:34:14 [warn] : 	test warning
+17/03/2022 12:34:14 [info] : 	test info
+17/03/2022 12:34:14 [http] : 	test http
+17/03/2022 12:34:14 [verbose] : 	test verbose
+17/03/2022 12:34:14 [debug] : 	test debug
+17/03/2022 12:34:14 [silly] : 	test silly
+17/03/2022 12:34:18 [error] : 	Method => POST Ingredient : notNull Violation: ingredients.ingredient_text cannot be null
+17/03/2022 12:34:18 [info] : 	POST /ingredients 400 86 - 52.927 ms
+
+17/03/2022 12:34:42 [info] : 	POST /ingredients 201 13988 - 22.708 ms
+
+17/03/2022 12:34:45 [info] : 	POST /ingredients 201 13988 - 10.758 ms
+
+17/03/2022 12:35:31 [error] : 	test error
+17/03/2022 12:35:31 [warn] : 	test warning
+17/03/2022 12:35:31 [info] : 	test info
+17/03/2022 12:35:31 [http] : 	test http
+17/03/2022 12:35:31 [verbose] : 	test verbose
+17/03/2022 12:35:31 [debug] : 	test debug
+17/03/2022 12:35:31 [silly] : 	test silly
+17/03/2022 12:35:46 [info] : 	POST /ingredients 201 13988 - 22.300 ms
+
+17/03/2022 12:36:22 [error] : 	test error
+17/03/2022 12:36:22 [warn] : 	test warning
+17/03/2022 12:36:22 [info] : 	test info
+17/03/2022 12:36:22 [http] : 	test http
+17/03/2022 12:36:22 [verbose] : 	test verbose
+17/03/2022 12:36:22 [debug] : 	test debug
+17/03/2022 12:36:22 [silly] : 	test silly
+17/03/2022 12:36:31 [error] : 	test error
+17/03/2022 12:36:31 [warn] : 	test warning
+17/03/2022 12:36:31 [info] : 	test info
+17/03/2022 12:36:31 [http] : 	test http
+17/03/2022 12:36:31 [verbose] : 	test verbose
+17/03/2022 12:36:31 [debug] : 	test debug
+17/03/2022 12:36:31 [silly] : 	test silly
+17/03/2022 12:36:47 [error] : 	test error
+17/03/2022 12:36:47 [warn] : 	test warning
+17/03/2022 12:36:47 [info] : 	test info
+17/03/2022 12:36:47 [http] : 	test http
+17/03/2022 12:36:47 [verbose] : 	test verbose
+17/03/2022 12:36:47 [debug] : 	test debug
+17/03/2022 12:36:47 [silly] : 	test silly
+17/03/2022 12:36:52 [info] : 	POST /ingredients 201 13988 - 24.825 ms
+
+17/03/2022 12:36:56 [error] : 	Method => POST Ingredient : Validation error
+17/03/2022 12:36:56 [info] : 	POST /ingredients 400 41 - 113.750 ms
+
+17/03/2022 12:38:15 [error] : 	test error
+17/03/2022 12:38:15 [warn] : 	test warning
+17/03/2022 12:38:15 [info] : 	test info
+17/03/2022 12:38:15 [http] : 	test http
+17/03/2022 12:38:15 [verbose] : 	test verbose
+17/03/2022 12:38:15 [debug] : 	test debug
+17/03/2022 12:38:15 [silly] : 	test silly
+17/03/2022 12:38:20 [error] : 	Method => POST Ingredient : Validation error
+17/03/2022 12:38:20 [info] : 	POST /ingredients 400 41 - 140.852 ms
+
+17/03/2022 12:38:48 [error] : 	test error
+17/03/2022 12:38:48 [warn] : 	test warning
+17/03/2022 12:38:48 [info] : 	test info
+17/03/2022 12:38:48 [http] : 	test http
+17/03/2022 12:38:48 [verbose] : 	test verbose
+17/03/2022 12:38:48 [debug] : 	test debug
+17/03/2022 12:38:48 [silly] : 	test silly
+17/03/2022 12:38:53 [error] : 	Method => POST Ingredient : Validation error
+17/03/2022 12:38:53 [info] : 	POST /ingredients 400 41 - 119.539 ms
+
+17/03/2022 12:39:14 [error] : 	test error
+17/03/2022 12:39:14 [warn] : 	test warning
+17/03/2022 12:39:14 [info] : 	test info
+17/03/2022 12:39:14 [http] : 	test http
+17/03/2022 12:39:14 [verbose] : 	test verbose
+17/03/2022 12:39:14 [debug] : 	test debug
+17/03/2022 12:39:14 [silly] : 	test silly
+17/03/2022 12:39:18 [error] : 	Method => POST Ingredient : Validation error
+17/03/2022 12:39:18 [info] : 	POST /ingredients 400 41 - 67.031 ms
+
+17/03/2022 12:39:44 [error] : 	test error
+17/03/2022 12:39:44 [warn] : 	test warning
+17/03/2022 12:39:44 [info] : 	test info
+17/03/2022 12:39:44 [http] : 	test http
+17/03/2022 12:39:44 [verbose] : 	test verbose
+17/03/2022 12:39:44 [debug] : 	test debug
+17/03/2022 12:39:44 [silly] : 	test silly
+17/03/2022 12:39:49 [error] : 	Method => POST Ingredient : Validation error
+17/03/2022 12:39:49 [info] : 	POST /ingredients 400 41 - 124.515 ms
+
+17/03/2022 12:40:01 [error] : 	test error
+17/03/2022 12:40:01 [warn] : 	test warning
+17/03/2022 12:40:01 [info] : 	test info
+17/03/2022 12:40:01 [http] : 	test http
+17/03/2022 12:40:01 [verbose] : 	test verbose
+17/03/2022 12:40:01 [debug] : 	test debug
+17/03/2022 12:40:01 [silly] : 	test silly
+17/03/2022 12:40:05 [error] : 	Method => POST Ingredient : Validation error
+17/03/2022 12:40:05 [info] : 	POST /ingredients 400 41 - 84.030 ms
+
+17/03/2022 12:40:25 [error] : 	test error
+17/03/2022 12:40:25 [warn] : 	test warning
+17/03/2022 12:40:25 [info] : 	test info
+17/03/2022 12:40:25 [http] : 	test http
+17/03/2022 12:40:25 [verbose] : 	test verbose
+17/03/2022 12:40:25 [debug] : 	test debug
+17/03/2022 12:40:25 [silly] : 	test silly
+17/03/2022 12:41:30 [error] : 	test error
+17/03/2022 12:41:30 [warn] : 	test warning
+17/03/2022 12:41:30 [info] : 	test info
+17/03/2022 12:41:30 [http] : 	test http
+17/03/2022 12:41:30 [verbose] : 	test verbose
+17/03/2022 12:41:30 [debug] : 	test debug
+17/03/2022 12:41:30 [silly] : 	test silly
+17/03/2022 12:41:53 [info] : 	POST /ingredients - - - - ms
+
+17/03/2022 12:43:25 [error] : 	test error
+17/03/2022 12:43:25 [warn] : 	test warning
+17/03/2022 12:43:25 [info] : 	test info
+17/03/2022 12:43:25 [http] : 	test http
+17/03/2022 12:43:25 [verbose] : 	test verbose
+17/03/2022 12:43:25 [debug] : 	test debug
+17/03/2022 12:43:25 [silly] : 	test silly
+17/03/2022 12:43:48 [error] : 	test error
+17/03/2022 12:43:48 [warn] : 	test warning
+17/03/2022 12:43:48 [info] : 	test info
+17/03/2022 12:43:48 [http] : 	test http
+17/03/2022 12:43:48 [verbose] : 	test verbose
+17/03/2022 12:43:48 [debug] : 	test debug
+17/03/2022 12:43:48 [silly] : 	test silly
+17/03/2022 12:45:11 [error] : 	test error
+17/03/2022 12:45:11 [warn] : 	test warning
+17/03/2022 12:45:11 [info] : 	test info
+17/03/2022 12:45:11 [http] : 	test http
+17/03/2022 12:45:11 [verbose] : 	test verbose
+17/03/2022 12:45:11 [debug] : 	test debug
+17/03/2022 12:45:11 [silly] : 	test silly
+17/03/2022 12:45:21 [info] : 	POST /ingredients - - - - ms
+
+17/03/2022 12:46:00 [error] : 	test error
+17/03/2022 12:46:00 [warn] : 	test warning
+17/03/2022 12:46:00 [info] : 	test info
+17/03/2022 12:46:00 [http] : 	test http
+17/03/2022 12:46:00 [verbose] : 	test verbose
+17/03/2022 12:46:00 [debug] : 	test debug
+17/03/2022 12:46:00 [silly] : 	test silly
+17/03/2022 12:48:24 [error] : 	test error
+17/03/2022 12:48:24 [warn] : 	test warning
+17/03/2022 12:48:24 [info] : 	test info
+17/03/2022 12:48:24 [http] : 	test http
+17/03/2022 12:48:24 [verbose] : 	test verbose
+17/03/2022 12:48:24 [debug] : 	test debug
+17/03/2022 12:48:24 [silly] : 	test silly
+17/03/2022 12:50:11 [error] : 	test error
+17/03/2022 12:50:11 [warn] : 	test warning
+17/03/2022 12:50:11 [info] : 	test info
+17/03/2022 12:50:11 [http] : 	test http
+17/03/2022 12:50:11 [verbose] : 	test verbose
+17/03/2022 12:50:11 [debug] : 	test debug
+17/03/2022 12:50:11 [silly] : 	test silly
+17/03/2022 12:51:28 [error] : 	test error
+17/03/2022 12:51:28 [warn] : 	test warning
+17/03/2022 12:51:28 [info] : 	test info
+17/03/2022 12:51:28 [http] : 	test http
+17/03/2022 12:51:28 [verbose] : 	test verbose
+17/03/2022 12:51:28 [debug] : 	test debug
+17/03/2022 12:51:28 [silly] : 	test silly
+17/03/2022 12:51:33 [error] : 	Method => POST Ingredient : Validation error
+17/03/2022 12:51:33 [info] : 	POST /ingredients 400 41 - 61.777 ms
+
+17/03/2022 12:52:18 [error] : 	test error
+17/03/2022 12:52:18 [warn] : 	test warning
+17/03/2022 12:52:18 [info] : 	test info
+17/03/2022 12:52:18 [http] : 	test http
+17/03/2022 12:52:18 [verbose] : 	test verbose
+17/03/2022 12:52:18 [debug] : 	test debug
+17/03/2022 12:52:18 [silly] : 	test silly
+17/03/2022 12:52:21 [error] : 	Method => POST Ingredient : Validation error
+17/03/2022 12:52:40 [error] : 	test error
+17/03/2022 12:52:40 [warn] : 	test warning
+17/03/2022 12:52:40 [info] : 	test info
+17/03/2022 12:52:40 [http] : 	test http
+17/03/2022 12:52:40 [verbose] : 	test verbose
+17/03/2022 12:52:40 [debug] : 	test debug
+17/03/2022 12:52:40 [silly] : 	test silly
+17/03/2022 12:52:43 [error] : 	Method => POST Ingredient : Validation error
+17/03/2022 12:53:25 [error] : 	test error
+17/03/2022 12:53:25 [warn] : 	test warning
+17/03/2022 12:53:25 [info] : 	test info
+17/03/2022 12:53:25 [http] : 	test http
+17/03/2022 12:53:25 [verbose] : 	test verbose
+17/03/2022 12:53:25 [debug] : 	test debug
+17/03/2022 12:53:25 [silly] : 	test silly
+17/03/2022 12:53:29 [error] : 	Method => POST Ingredient : Validation error
+17/03/2022 12:53:50 [error] : 	test error
+17/03/2022 12:53:50 [warn] : 	test warning
+17/03/2022 12:53:50 [info] : 	test info
+17/03/2022 12:53:50 [http] : 	test http
+17/03/2022 12:53:50 [verbose] : 	test verbose
+17/03/2022 12:53:50 [debug] : 	test debug
+17/03/2022 12:53:50 [silly] : 	test silly
+17/03/2022 12:54:06 [error] : 	test error
+17/03/2022 12:54:06 [warn] : 	test warning
+17/03/2022 12:54:06 [info] : 	test info
+17/03/2022 12:54:06 [http] : 	test http
+17/03/2022 12:54:06 [verbose] : 	test verbose
+17/03/2022 12:54:06 [debug] : 	test debug
+17/03/2022 12:54:06 [silly] : 	test silly
+17/03/2022 12:54:21 [error] : 	Method => POST Ingredient : Validation error
+17/03/2022 12:55:13 [error] : 	test error
+17/03/2022 12:55:13 [warn] : 	test warning
+17/03/2022 12:55:13 [info] : 	test info
+17/03/2022 12:55:13 [http] : 	test http
+17/03/2022 12:55:13 [verbose] : 	test verbose
+17/03/2022 12:55:13 [debug] : 	test debug
+17/03/2022 12:55:13 [silly] : 	test silly
+17/03/2022 12:55:16 [error] : 	Method => POST Ingredient : Validation error
+17/03/2022 12:56:27 [error] : 	test error
+17/03/2022 12:56:27 [warn] : 	test warning
+17/03/2022 12:56:27 [info] : 	test info
+17/03/2022 12:56:27 [http] : 	test http
+17/03/2022 12:56:27 [verbose] : 	test verbose
+17/03/2022 12:56:27 [debug] : 	test debug
+17/03/2022 12:56:27 [silly] : 	test silly
+17/03/2022 12:59:12 [error] : 	test error
+17/03/2022 12:59:12 [warn] : 	test warning
+17/03/2022 12:59:12 [info] : 	test info
+17/03/2022 12:59:12 [http] : 	test http
+17/03/2022 12:59:12 [verbose] : 	test verbose
+17/03/2022 12:59:12 [debug] : 	test debug
+17/03/2022 12:59:12 [silly] : 	test silly
+17/03/2022 12:59:17 [info] : 	GET /ingredient 404 149 - 2.287 ms
+
+17/03/2022 12:59:22 [info] : 	GET /ingredient 404 149 - 1.963 ms
+
+17/03/2022 12:59:29 [info] : 	Get All Ingredients
+17/03/2022 12:59:29 [info] : 	GET /ingredients 200 14006 - 18.521 ms
+
+17/03/2022 12:59:54 [info] : 	PUT /ingredients/1 202 3 - 32.938 ms
+
+17/03/2022 01:00:13 [error] : 	Method => PUT Ingredient : Ingredient doesn't exists, id:1
+17/03/2022 01:00:13 [info] : 	PUT /ingredients/1 400 56 - 9.487 ms
+
+17/03/2022 01:00:58 [error] : 	test error
+17/03/2022 01:00:58 [warn] : 	test warning
+17/03/2022 01:00:58 [info] : 	test info
+17/03/2022 01:00:58 [http] : 	test http
+17/03/2022 01:00:58 [verbose] : 	test verbose
+17/03/2022 01:00:58 [debug] : 	test debug
+17/03/2022 01:00:58 [silly] : 	test silly
+17/03/2022 01:01:02 [error] : 	Method => PUT Ingredient : Ingredient doesn't exists, id:1
+17/03/2022 01:01:02 [info] : 	PUT /ingredients/1 404 56 - 11.399 ms
+
+17/03/2022 01:03:25 [error] : 	test error
+17/03/2022 01:03:25 [warn] : 	test warning
+17/03/2022 01:03:25 [info] : 	test info
+17/03/2022 01:03:25 [http] : 	test http
+17/03/2022 01:03:25 [verbose] : 	test verbose
+17/03/2022 01:03:25 [debug] : 	test debug
+17/03/2022 01:03:25 [silly] : 	test silly
+17/03/2022 01:57:50 [error] : 	test error
+17/03/2022 01:57:50 [warn] : 	test warning
+17/03/2022 01:57:50 [info] : 	test info
+17/03/2022 01:57:50 [http] : 	test http
+17/03/2022 01:57:50 [verbose] : 	test verbose
+17/03/2022 01:57:50 [debug] : 	test debug
+17/03/2022 01:57:50 [silly] : 	test silly
+17/03/2022 01:59:46 [error] : 	test error
+17/03/2022 01:59:46 [warn] : 	test warning
+17/03/2022 01:59:46 [info] : 	test info
+17/03/2022 01:59:46 [http] : 	test http
+17/03/2022 01:59:46 [verbose] : 	test verbose
+17/03/2022 01:59:46 [debug] : 	test debug
+17/03/2022 01:59:46 [silly] : 	test silly
+17/03/2022 01:59:53 [error] : 	Method => POST Ingredient : Validation error
+17/03/2022 01:59:53 [info] : 	POST /ingredients 400 41 - 89.748 ms
+
+17/03/2022 02:00:54 [error] : 	test error
+17/03/2022 02:00:54 [warn] : 	test warning
+17/03/2022 02:00:54 [info] : 	test info
+17/03/2022 02:00:54 [http] : 	test http
+17/03/2022 02:00:54 [verbose] : 	test verbose
+17/03/2022 02:00:54 [debug] : 	test debug
+17/03/2022 02:00:54 [silly] : 	test silly
+17/03/2022 02:01:02 [error] : 	Method => POST Ingredient : Validation error
+17/03/2022 02:01:02 [info] : 	POST /ingredients 400 41 - 76.555 ms
+
+17/03/2022 02:01:41 [error] : 	test error
+17/03/2022 02:01:41 [warn] : 	test warning
+17/03/2022 02:01:41 [info] : 	test info
+17/03/2022 02:01:41 [http] : 	test http
+17/03/2022 02:01:41 [verbose] : 	test verbose
+17/03/2022 02:01:41 [debug] : 	test debug
+17/03/2022 02:01:41 [silly] : 	test silly
+17/03/2022 02:03:02 [error] : 	test error
+17/03/2022 02:03:02 [warn] : 	test warning
+17/03/2022 02:03:02 [info] : 	test info
+17/03/2022 02:03:02 [http] : 	test http
+17/03/2022 02:03:02 [verbose] : 	test verbose
+17/03/2022 02:03:02 [debug] : 	test debug
+17/03/2022 02:03:02 [silly] : 	test silly
+17/03/2022 02:03:06 [error] : 	Method => POST Ingredient : Validation error
+17/03/2022 02:03:06 [info] : 	POST /ingredients 400 41 - 68.437 ms
+
+17/03/2022 02:03:57 [error] : 	test error
+17/03/2022 02:03:57 [warn] : 	test warning
+17/03/2022 02:03:57 [info] : 	test info
+17/03/2022 02:03:57 [http] : 	test http
+17/03/2022 02:03:57 [verbose] : 	test verbose
+17/03/2022 02:03:57 [debug] : 	test debug
+17/03/2022 02:03:57 [silly] : 	test silly
+17/03/2022 02:04:34 [error] : 	test error
+17/03/2022 02:04:34 [warn] : 	test warning
+17/03/2022 02:04:34 [info] : 	test info
+17/03/2022 02:04:34 [http] : 	test http
+17/03/2022 02:04:34 [verbose] : 	test verbose
+17/03/2022 02:04:34 [debug] : 	test debug
+17/03/2022 02:04:34 [silly] : 	test silly
+17/03/2022 02:04:44 [error] : 	Method => POST Ingredient : Validation error
+17/03/2022 02:04:44 [info] : 	POST /ingredients 400 41 - 64.840 ms
+
+17/03/2022 02:06:26 [error] : 	test error
+17/03/2022 02:06:26 [warn] : 	test warning
+17/03/2022 02:06:26 [info] : 	test info
+17/03/2022 02:06:26 [http] : 	test http
+17/03/2022 02:06:26 [verbose] : 	test verbose
+17/03/2022 02:06:26 [debug] : 	test debug
+17/03/2022 02:06:26 [silly] : 	test silly
+17/03/2022 02:06:40 [error] : 	Method => DELETE Ingredient : Ingredient doesn't exists, id:77
+17/03/2022 02:06:40 [info] : 	DELETE /ingredients/77 404 57 - 17.402 ms
+
+17/03/2022 02:07:32 [error] : 	Method => DELETE Ingredient : Ingredient doesn't exists, id:77
+17/03/2022 02:07:32 [info] : 	DELETE /ingredients/77 404 57 - 9.725 ms
+
+17/03/2022 02:07:43 [error] : 	Method => DELETE Ingredient : Invalid status code: 1
+17/03/2022 02:07:43 [info] : 	DELETE /ingredients/22 404 47 - 20.991 ms
+
+17/03/2022 02:08:00 [error] : 	Method => DELETE Ingredient : Ingredient doesn't exists, id:22
+17/03/2022 02:08:00 [info] : 	DELETE /ingredients/22 404 57 - 8.870 ms
+
+17/03/2022 02:08:53 [error] : 	test error
+17/03/2022 02:08:53 [warn] : 	test warning
+17/03/2022 02:08:53 [info] : 	test info
+17/03/2022 02:08:53 [http] : 	test http
+17/03/2022 02:08:53 [verbose] : 	test verbose
+17/03/2022 02:08:53 [debug] : 	test debug
+17/03/2022 02:08:53 [silly] : 	test silly
+17/03/2022 02:09:03 [error] : 	Method => DELETE Ingredient : Ingredient doesn't exists, id:22
+17/03/2022 02:09:17 [error] : 	test error
+17/03/2022 02:09:17 [warn] : 	test warning
+17/03/2022 02:09:17 [info] : 	test info
+17/03/2022 02:09:17 [http] : 	test http
+17/03/2022 02:09:17 [verbose] : 	test verbose
+17/03/2022 02:09:17 [debug] : 	test debug
+17/03/2022 02:09:17 [silly] : 	test silly
+17/03/2022 02:09:23 [error] : 	Method => DELETE Ingredient : Ingredient doesn't exists, id:22
+17/03/2022 02:09:23 [info] : 	DELETE /ingredients/22 404 57 - 10.687 ms
+
+17/03/2022 02:10:03 [error] : 	test error
+17/03/2022 02:10:03 [warn] : 	test warning
+17/03/2022 02:10:03 [info] : 	test info
+17/03/2022 02:10:03 [http] : 	test http
+17/03/2022 02:10:03 [verbose] : 	test verbose
+17/03/2022 02:10:03 [debug] : 	test debug
+17/03/2022 02:10:03 [silly] : 	test silly
+17/03/2022 02:10:22 [error] : 	Method => DELETE Ingredient : Invalid status code: 1
+17/03/2022 02:10:22 [info] : 	DELETE /ingredients/4 404 47 - 28.012 ms
+
+17/03/2022 02:10:58 [error] : 	test error
+17/03/2022 02:10:58 [warn] : 	test warning
+17/03/2022 02:10:58 [info] : 	test info
+17/03/2022 02:10:58 [http] : 	test http
+17/03/2022 02:10:58 [verbose] : 	test verbose
+17/03/2022 02:10:58 [debug] : 	test debug
+17/03/2022 02:10:58 [silly] : 	test silly
+17/03/2022 02:11:06 [info] : 	POST /ingredients 201 13989 - 19.895 ms
+
+17/03/2022 02:12:32 [error] : 	test error
+17/03/2022 02:12:32 [warn] : 	test warning
+17/03/2022 02:12:32 [info] : 	test info
+17/03/2022 02:12:32 [http] : 	test http
+17/03/2022 02:12:32 [verbose] : 	test verbose
+17/03/2022 02:12:32 [debug] : 	test debug
+17/03/2022 02:12:32 [silly] : 	test silly
+17/03/2022 02:12:39 [info] : 	POST /ingredients 201 13989 - 15.989 ms
+
+17/03/2022 02:12:48 [info] : 	DELETE /ingredients/28 204 - - 16.159 ms
+
+17/03/2022 02:13:06 [error] : 	test error
+17/03/2022 02:13:06 [warn] : 	test warning
+17/03/2022 02:13:06 [info] : 	test info
+17/03/2022 02:13:06 [http] : 	test http
+17/03/2022 02:13:06 [verbose] : 	test verbose
+17/03/2022 02:13:06 [debug] : 	test debug
+17/03/2022 02:13:06 [silly] : 	test silly
+17/03/2022 02:13:12 [error] : 	Method => DELETE Ingredient : Ingredient doesn't exists, id:28
+17/03/2022 02:13:12 [info] : 	DELETE /ingredients/28 404 57 - 10.997 ms
+
+17/03/2022 02:14:19 [error] : 	test error
+17/03/2022 02:14:19 [warn] : 	test warning
+17/03/2022 02:14:19 [info] : 	test info
+17/03/2022 02:14:19 [http] : 	test http
+17/03/2022 02:14:19 [verbose] : 	test verbose
+17/03/2022 02:14:19 [debug] : 	test debug
+17/03/2022 02:14:19 [silly] : 	test silly
+17/03/2022 02:14:26 [info] : 	DELETE /ingredients 404 153 - 2.865 ms
+
+17/03/2022 02:14:43 [error] : 	test error
+17/03/2022 02:14:43 [warn] : 	test warning
+17/03/2022 02:14:43 [info] : 	test info
+17/03/2022 02:14:43 [http] : 	test http
+17/03/2022 02:14:43 [verbose] : 	test verbose
+17/03/2022 02:14:43 [debug] : 	test debug
+17/03/2022 02:14:43 [silly] : 	test silly
+17/03/2022 02:14:47 [info] : 	DELETE /ingredients 404 153 - 2.538 ms
+
+17/03/2022 02:15:14 [error] : 	test error
+17/03/2022 02:15:14 [warn] : 	test warning
+17/03/2022 02:15:14 [info] : 	test info
+17/03/2022 02:15:14 [http] : 	test http
+17/03/2022 02:15:14 [verbose] : 	test verbose
+17/03/2022 02:15:14 [debug] : 	test debug
+17/03/2022 02:15:14 [silly] : 	test silly
+17/03/2022 02:15:17 [info] : 	DELETE /ingredients 404 153 - 2.998 ms
+
+17/03/2022 02:15:29 [error] : 	test error
+17/03/2022 02:15:29 [warn] : 	test warning
+17/03/2022 02:15:29 [info] : 	test info
+17/03/2022 02:15:29 [http] : 	test http
+17/03/2022 02:15:29 [verbose] : 	test verbose
+17/03/2022 02:15:29 [debug] : 	test debug
+17/03/2022 02:15:29 [silly] : 	test silly
+17/03/2022 02:15:32 [info] : 	DELETE /ingredients 404 153 - 4.221 ms
+
+17/03/2022 02:15:57 [error] : 	test error
+17/03/2022 02:15:57 [warn] : 	test warning
+17/03/2022 02:15:57 [info] : 	test info
+17/03/2022 02:15:57 [http] : 	test http
+17/03/2022 02:15:57 [verbose] : 	test verbose
+17/03/2022 02:15:57 [debug] : 	test debug
+17/03/2022 02:15:57 [silly] : 	test silly
+17/03/2022 02:16:01 [info] : 	DELETE /ingredients 404 153 - 3.616 ms
+
+17/03/2022 02:16:13 [error] : 	test error
+17/03/2022 02:16:13 [warn] : 	test warning
+17/03/2022 02:16:13 [info] : 	test info
+17/03/2022 02:16:13 [http] : 	test http
+17/03/2022 02:16:13 [verbose] : 	test verbose
+17/03/2022 02:16:13 [debug] : 	test debug
+17/03/2022 02:16:13 [silly] : 	test silly
+17/03/2022 02:16:18 [info] : 	DELETE /ingredients 404 153 - 2.850 ms
+
+17/03/2022 02:16:34 [error] : 	test error
+17/03/2022 02:16:34 [warn] : 	test warning
+17/03/2022 02:16:34 [info] : 	test info
+17/03/2022 02:16:34 [http] : 	test http
+17/03/2022 02:16:34 [verbose] : 	test verbose
+17/03/2022 02:16:34 [debug] : 	test debug
+17/03/2022 02:16:34 [silly] : 	test silly
+17/03/2022 02:16:37 [info] : 	DELETE /ingredients 404 153 - 3.282 ms
+
+17/03/2022 02:17:03 [error] : 	test error
+17/03/2022 02:17:03 [warn] : 	test warning
+17/03/2022 02:17:03 [info] : 	test info
+17/03/2022 02:17:03 [http] : 	test http
+17/03/2022 02:17:03 [verbose] : 	test verbose
+17/03/2022 02:17:03 [debug] : 	test debug
+17/03/2022 02:17:03 [silly] : 	test silly
+17/03/2022 02:17:08 [info] : 	DELETE /ingredients 404 153 - 2.744 ms
+
+17/03/2022 02:17:14 [error] : 	test error
+17/03/2022 02:17:14 [warn] : 	test warning
+17/03/2022 02:17:14 [info] : 	test info
+17/03/2022 02:17:14 [http] : 	test http
+17/03/2022 02:17:14 [verbose] : 	test verbose
+17/03/2022 02:17:14 [debug] : 	test debug
+17/03/2022 02:17:14 [silly] : 	test silly
+17/03/2022 02:17:18 [info] : 	DELETE /ingredients 404 153 - 2.409 ms
+
+17/03/2022 02:17:58 [error] : 	test error
+17/03/2022 02:17:58 [warn] : 	test warning
+17/03/2022 02:17:58 [info] : 	test info
+17/03/2022 02:17:58 [http] : 	test http
+17/03/2022 02:17:58 [verbose] : 	test verbose
+17/03/2022 02:17:58 [debug] : 	test debug
+17/03/2022 02:17:58 [silly] : 	test silly
+17/03/2022 02:18:48 [error] : 	test error
+17/03/2022 02:18:48 [warn] : 	test warning
+17/03/2022 02:18:48 [info] : 	test info
+17/03/2022 02:18:48 [http] : 	test http
+17/03/2022 02:18:48 [verbose] : 	test verbose
+17/03/2022 02:18:48 [debug] : 	test debug
+17/03/2022 02:18:48 [silly] : 	test silly
+17/03/2022 02:25:44 [error] : 	test error
+17/03/2022 02:25:44 [warn] : 	test warning
+17/03/2022 02:25:44 [info] : 	test info
+17/03/2022 02:25:44 [http] : 	test http
+17/03/2022 02:25:44 [verbose] : 	test verbose
+17/03/2022 02:25:44 [debug] : 	test debug
+17/03/2022 02:25:44 [silly] : 	test silly
+17/03/2022 02:25:50 [error] : 	Method => DELETE Ingredient : Champ 'NaN' inconnu dans where clause
+17/03/2022 02:25:50 [info] : 	DELETE /ingredients/a 404 62 - 74.113 ms
+
+17/03/2022 02:26:13 [error] : 	test error
+17/03/2022 02:26:13 [warn] : 	test warning
+17/03/2022 02:26:13 [info] : 	test info
+17/03/2022 02:26:13 [http] : 	test http
+17/03/2022 02:26:13 [verbose] : 	test verbose
+17/03/2022 02:26:13 [debug] : 	test debug
+17/03/2022 02:26:13 [silly] : 	test silly
+17/03/2022 02:26:16 [error] : 	Method => DELETE Ingredient : Champ 'NaN' inconnu dans where clause
+17/03/2022 02:26:16 [info] : 	DELETE /ingredients/a 404 62 - 61.035 ms
+
+17/03/2022 02:26:27 [error] : 	test error
+17/03/2022 02:26:27 [warn] : 	test warning
+17/03/2022 02:26:27 [info] : 	test info
+17/03/2022 02:26:27 [http] : 	test http
+17/03/2022 02:26:27 [verbose] : 	test verbose
+17/03/2022 02:26:27 [debug] : 	test debug
+17/03/2022 02:26:27 [silly] : 	test silly
+17/03/2022 02:26:31 [error] : 	Method => DELETE Ingredient : Champ 'NaN' inconnu dans where clause
+17/03/2022 02:26:31 [info] : 	DELETE /ingredients/a 404 62 - 59.925 ms
+
+17/03/2022 02:27:26 [error] : 	test error
+17/03/2022 02:27:26 [warn] : 	test warning
+17/03/2022 02:27:26 [info] : 	test info
+17/03/2022 02:27:26 [http] : 	test http
+17/03/2022 02:27:26 [verbose] : 	test verbose
+17/03/2022 02:27:26 [debug] : 	test debug
+17/03/2022 02:27:26 [silly] : 	test silly
+17/03/2022 02:27:30 [error] : 	Method => DELETE Ingredient : Champ 'NaN' inconnu dans where clause
+17/03/2022 02:27:30 [info] : 	DELETE /ingredients/a 404 62 - 68.310 ms
+
+17/03/2022 02:27:54 [error] : 	test error
+17/03/2022 02:27:54 [warn] : 	test warning
+17/03/2022 02:27:54 [info] : 	test info
+17/03/2022 02:27:54 [http] : 	test http
+17/03/2022 02:27:54 [verbose] : 	test verbose
+17/03/2022 02:27:54 [debug] : 	test debug
+17/03/2022 02:27:54 [silly] : 	test silly
+17/03/2022 02:28:09 [error] : 	test error
+17/03/2022 02:28:09 [warn] : 	test warning
+17/03/2022 02:28:09 [info] : 	test info
+17/03/2022 02:28:09 [http] : 	test http
+17/03/2022 02:28:09 [verbose] : 	test verbose
+17/03/2022 02:28:09 [debug] : 	test debug
+17/03/2022 02:28:09 [silly] : 	test silly
+17/03/2022 02:31:37 [error] : 	test error
+17/03/2022 02:31:37 [warn] : 	test warning
+17/03/2022 02:31:37 [info] : 	test info
+17/03/2022 02:31:37 [http] : 	test http
+17/03/2022 02:31:37 [verbose] : 	test verbose
+17/03/2022 02:31:37 [debug] : 	test debug
+17/03/2022 02:31:37 [silly] : 	test silly
+17/03/2022 02:34:24 [error] : 	test error
+17/03/2022 02:34:24 [warn] : 	test warning
+17/03/2022 02:34:24 [info] : 	test info
+17/03/2022 02:34:24 [http] : 	test http
+17/03/2022 02:34:24 [verbose] : 	test verbose
+17/03/2022 02:34:24 [debug] : 	test debug
+17/03/2022 02:34:24 [silly] : 	test silly
+17/03/2022 02:34:28 [error] : 	Method => DELETE Ingredient : Error: TEST
+17/03/2022 02:35:24 [error] : 	test error
+17/03/2022 02:35:24 [warn] : 	test warning
+17/03/2022 02:35:24 [info] : 	test info
+17/03/2022 02:35:24 [http] : 	test http
+17/03/2022 02:35:24 [verbose] : 	test verbose
+17/03/2022 02:35:24 [debug] : 	test debug
+17/03/2022 02:35:24 [silly] : 	test silly
+17/03/2022 02:35:27 [error] : 	Method => DELETE Ingredient : Error
+17/03/2022 02:35:27 [info] : 	DELETE /ingredients/a 400 43 - 3.895 ms
+
+17/03/2022 02:36:48 [error] : 	test error
+17/03/2022 02:36:48 [warn] : 	test warning
+17/03/2022 02:36:48 [info] : 	test info
+17/03/2022 02:36:48 [http] : 	test http
+17/03/2022 02:36:48 [verbose] : 	test verbose
+17/03/2022 02:36:48 [debug] : 	test debug
+17/03/2022 02:36:48 [silly] : 	test silly
+17/03/2022 02:37:15 [error] : 	Method => DELETE Ingredient : Error
+17/03/2022 02:37:15 [info] : 	DELETE /ingredients/a 400 43 - 4.496 ms
+
+17/03/2022 02:38:01 [error] : 	test error
+17/03/2022 02:38:01 [warn] : 	test warning
+17/03/2022 02:38:01 [info] : 	test info
+17/03/2022 02:38:01 [http] : 	test http
+17/03/2022 02:38:01 [verbose] : 	test verbose
+17/03/2022 02:38:01 [debug] : 	test debug
+17/03/2022 02:38:01 [silly] : 	test silly
+17/03/2022 02:38:15 [error] : 	Method => DELETE Ingredient : Error: Ingredient Id is not a number
+17/03/2022 02:38:15 [info] : 	DELETE /ingredients/a 400 72 - 6.209 ms
+
+17/03/2022 02:38:43 [error] : 	test error
+17/03/2022 02:38:43 [warn] : 	test warning
+17/03/2022 02:38:43 [info] : 	test info
+17/03/2022 02:38:43 [http] : 	test http
+17/03/2022 02:38:43 [verbose] : 	test verbose
+17/03/2022 02:38:43 [debug] : 	test debug
+17/03/2022 02:38:43 [silly] : 	test silly
+17/03/2022 02:39:34 [error] : 	Method => DELETE Ingredient : Error: Ingredient Id is not a number
+17/03/2022 02:39:34 [info] : 	DELETE /ingredients/a 400 54 - 5.229 ms
+
+17/03/2022 02:39:44 [error] : 	Method => DELETE Ingredient : Ingredient doesn't exists, id:78
+17/03/2022 02:39:44 [info] : 	DELETE /ingredients/78 404 57 - 13.238 ms
+
+17/03/2022 02:39:52 [info] : 	POST /ingredients 201 13989 - 16.671 ms
+
+17/03/2022 02:40:12 [info] : 	DELETE /ingredients/29 204 - - 14.150 ms
+
+17/03/2022 02:45:56 [error] : 	test error
+17/03/2022 02:45:56 [warn] : 	test warning
+17/03/2022 02:45:56 [info] : 	test info
+17/03/2022 02:45:56 [http] : 	test http
+17/03/2022 02:45:56 [verbose] : 	test verbose
+17/03/2022 02:45:56 [debug] : 	test debug
+17/03/2022 02:45:56 [silly] : 	test silly
+17/03/2022 02:46:05 [info] : 	GET /ingredients/- - - - - ms
+
+17/03/2022 02:46:44 [info] : 	GET /ingredients/a - - - - ms
+
+17/03/2022 02:47:07 [error] : 	test error
+17/03/2022 02:47:07 [warn] : 	test warning
+17/03/2022 02:47:07 [info] : 	test info
+17/03/2022 02:47:07 [http] : 	test http
+17/03/2022 02:47:07 [verbose] : 	test verbose
+17/03/2022 02:47:07 [debug] : 	test debug
+17/03/2022 02:47:07 [silly] : 	test silly
+17/03/2022 02:47:11 [error] : 	Method => GET Ingredient BY ID : Error: Ingredient Id is not a number
+17/03/2022 02:47:11 [info] : 	GET /ingredients/a 400 54 - 5.797 ms
+
+17/03/2022 02:47:21 [error] : 	Method => GET Ingredient BY ID : Error: Ingredient Id is not a number
+17/03/2022 02:47:21 [info] : 	GET /ingredients/- 400 54 - 2.360 ms
+
+17/03/2022 02:51:36 [error] : 	test error
+17/03/2022 02:51:36 [warn] : 	test warning
+17/03/2022 02:51:36 [info] : 	test info
+17/03/2022 02:51:36 [http] : 	test http
+17/03/2022 02:51:36 [verbose] : 	test verbose
+17/03/2022 02:51:36 [debug] : 	test debug
+17/03/2022 02:51:36 [silly] : 	test silly
+17/03/2022 02:51:46 [info] : 	POST /ingredients 201 13989 - 16.655 ms
+
+17/03/2022 02:52:06 [info] : 	PUT /ingredients/30 - - - - ms
+
+17/03/2022 02:53:34 [error] : 	test error
+17/03/2022 02:53:34 [warn] : 	test warning
+17/03/2022 02:53:34 [info] : 	test info
+17/03/2022 02:53:34 [http] : 	test http
+17/03/2022 02:53:34 [verbose] : 	test verbose
+17/03/2022 02:53:34 [debug] : 	test debug
+17/03/2022 02:53:34 [silly] : 	test silly
+17/03/2022 02:53:46 [info] : 	PUT /ingredients/30 - - - - ms
+
+17/03/2022 02:54:49 [info] : 	PUT /ingredients/30 - - - - ms
+
+17/03/2022 02:56:20 [info] : 	PUT /ingredients/30 - - - - ms
+
+17/03/2022 02:57:22 [error] : 	test error
+17/03/2022 02:57:22 [warn] : 	test warning
+17/03/2022 02:57:22 [info] : 	test info
+17/03/2022 02:57:22 [http] : 	test http
+17/03/2022 02:57:22 [verbose] : 	test verbose
+17/03/2022 02:57:22 [debug] : 	test debug
+17/03/2022 02:57:22 [silly] : 	test silly
+17/03/2022 02:57:27 [error] : 	Method => PUT Ingredient : TypeError: Cannot read properties of undefined (reading 'length')
+17/03/2022 02:58:06 [error] : 	test error
+17/03/2022 02:58:06 [warn] : 	test warning
+17/03/2022 02:58:06 [info] : 	test info
+17/03/2022 02:58:06 [http] : 	test http
+17/03/2022 02:58:06 [verbose] : 	test verbose
+17/03/2022 02:58:06 [debug] : 	test debug
+17/03/2022 02:58:06 [silly] : 	test silly
+17/03/2022 02:58:10 [error] : 	Method => PUT Ingredient : TypeError: Cannot read properties of undefined (reading 'length')
+17/03/2022 02:58:21 [error] : 	test error
+17/03/2022 02:58:21 [warn] : 	test warning
+17/03/2022 02:58:21 [info] : 	test info
+17/03/2022 02:58:21 [http] : 	test http
+17/03/2022 02:58:21 [verbose] : 	test verbose
+17/03/2022 02:58:21 [debug] : 	test debug
+17/03/2022 02:58:21 [silly] : 	test silly
+17/03/2022 02:59:15 [error] : 	test error
+17/03/2022 02:59:15 [warn] : 	test warning
+17/03/2022 02:59:15 [info] : 	test info
+17/03/2022 02:59:15 [http] : 	test http
+17/03/2022 02:59:15 [verbose] : 	test verbose
+17/03/2022 02:59:15 [debug] : 	test debug
+17/03/2022 02:59:15 [silly] : 	test silly
+17/03/2022 03:00:04 [info] : 	PUT /ingredients/30 - - - - ms
+
+17/03/2022 03:13:42 [error] : 	test error
+17/03/2022 03:13:42 [warn] : 	test warning
+17/03/2022 03:13:42 [info] : 	test info
+17/03/2022 03:13:42 [http] : 	test http
+17/03/2022 03:13:42 [verbose] : 	test verbose
+17/03/2022 03:13:42 [debug] : 	test debug
+17/03/2022 03:13:42 [silly] : 	test silly
+17/03/2022 03:14:11 [error] : 	test error
+17/03/2022 03:14:11 [warn] : 	test warning
+17/03/2022 03:14:11 [info] : 	test info
+17/03/2022 03:14:11 [http] : 	test http
+17/03/2022 03:14:11 [verbose] : 	test verbose
+17/03/2022 03:14:11 [debug] : 	test debug
+17/03/2022 03:14:11 [silly] : 	test silly
+17/03/2022 03:14:40 [error] : 	test error
+17/03/2022 03:14:40 [warn] : 	test warning
+17/03/2022 03:14:40 [info] : 	test info
+17/03/2022 03:14:40 [http] : 	test http
+17/03/2022 03:14:40 [verbose] : 	test verbose
+17/03/2022 03:14:40 [debug] : 	test debug
+17/03/2022 03:14:40 [silly] : 	test silly
+17/03/2022 03:15:14 [error] : 	test error
+17/03/2022 03:15:14 [warn] : 	test warning
+17/03/2022 03:15:14 [info] : 	test info
+17/03/2022 03:15:14 [http] : 	test http
+17/03/2022 03:15:14 [verbose] : 	test verbose
+17/03/2022 03:15:14 [debug] : 	test debug
+17/03/2022 03:15:14 [silly] : 	test silly
+17/03/2022 03:16:18 [error] : 	test error
+17/03/2022 03:16:18 [warn] : 	test warning
+17/03/2022 03:16:18 [info] : 	test info
+17/03/2022 03:16:18 [http] : 	test http
+17/03/2022 03:16:18 [verbose] : 	test verbose
+17/03/2022 03:16:18 [debug] : 	test debug
+17/03/2022 03:16:18 [silly] : 	test silly
+17/03/2022 03:18:41 [error] : 	test error
+17/03/2022 03:18:41 [warn] : 	test warning
+17/03/2022 03:18:41 [info] : 	test info
+17/03/2022 03:18:41 [http] : 	test http
+17/03/2022 03:18:41 [verbose] : 	test verbose
+17/03/2022 03:18:41 [debug] : 	test debug
+17/03/2022 03:18:41 [silly] : 	test silly
+17/03/2022 03:18:46 [info] : 	PUT /ingredients/30 - - - - ms
+
+17/03/2022 03:18:54 [info] : 	PUT /ingredients/30 - - - - ms
+
+17/03/2022 03:20:55 [error] : 	test error
+17/03/2022 03:20:55 [warn] : 	test warning
+17/03/2022 03:20:55 [info] : 	test info
+17/03/2022 03:20:55 [http] : 	test http
+17/03/2022 03:20:55 [verbose] : 	test verbose
+17/03/2022 03:20:55 [debug] : 	test debug
+17/03/2022 03:20:55 [silly] : 	test silly
+17/03/2022 03:21:07 [info] : 	PUT /ingredients/30 - - - - ms
+
+17/03/2022 03:21:33 [info] : 	PUT /ingredients/30 - - - - ms
+
+17/03/2022 03:21:36 [info] : 	PUT /ingredients/30 - - - - ms
+
+17/03/2022 03:23:52 [error] : 	test error
+17/03/2022 03:23:52 [warn] : 	test warning
+17/03/2022 03:23:52 [info] : 	test info
+17/03/2022 03:23:52 [http] : 	test http
+17/03/2022 03:23:52 [verbose] : 	test verbose
+17/03/2022 03:23:52 [debug] : 	test debug
+17/03/2022 03:23:52 [silly] : 	test silly
+17/03/2022 03:24:21 [info] : 	PUT /ingredients/30 202 3 - 32.951 ms
+
+17/03/2022 03:24:37 [error] : 	Method => PUT Ingredient : Error: Ingredient object is malformed
+17/03/2022 03:24:37 [info] : 	PUT /ingredients/30 400 25 - 1.844 ms
+
+17/03/2022 03:26:55 [error] : 	test error
+17/03/2022 03:26:55 [warn] : 	test warning
+17/03/2022 03:26:55 [info] : 	test info
+17/03/2022 03:26:55 [http] : 	test http
+17/03/2022 03:26:55 [verbose] : 	test verbose
+17/03/2022 03:26:55 [debug] : 	test debug
+17/03/2022 03:26:55 [silly] : 	test silly
+17/03/2022 03:26:59 [error] : 	Method => PUT Ingredient : Error: Ingredient object is malformed
+17/03/2022 03:26:59 [info] : 	PUT /ingredients/30 400 54 - 5.267 ms
+
+17/03/2022 03:30:37 [error] : 	test error
+17/03/2022 03:30:37 [warn] : 	test warning
+17/03/2022 03:30:37 [info] : 	test info
+17/03/2022 03:30:37 [http] : 	test http
+17/03/2022 03:30:37 [verbose] : 	test verbose
+17/03/2022 03:30:37 [debug] : 	test debug
+17/03/2022 03:30:37 [silly] : 	test silly
+17/03/2022 03:30:41 [error] : 	Method => PUT Ingredient : Error: Ingredient object is malformed
+17/03/2022 03:30:41 [info] : 	PUT /ingredients/30 400 62 - 4.736 ms
+
+17/03/2022 03:32:57 [error] : 	test error
+17/03/2022 03:32:57 [warn] : 	test warning
+17/03/2022 03:32:57 [info] : 	test info
+17/03/2022 03:32:57 [http] : 	test http
+17/03/2022 03:32:57 [verbose] : 	test verbose
+17/03/2022 03:32:57 [debug] : 	test debug
+17/03/2022 03:32:57 [silly] : 	test silly
+17/03/2022 03:33:16 [error] : 	Method => POST Ingredient : Error: Ingredient object is malformed
+17/03/2022 03:33:16 [info] : 	POST /ingredients 400 62 - 3.749 ms
+
+17/03/2022 03:33:41 [info] : 	POST /ingredients 201 14002 - 22.856 ms
+
+17/03/2022 03:34:29 [info] : 	Get All Ingredients
+17/03/2022 03:34:29 [info] : 	GET /ingredients 200 14315 - 13.657 ms
+
+17/03/2022 03:35:41 [info] : 	Get Ingredient By id
+17/03/2022 03:35:41 [info] : 	GET /ingredients/30 200 310 - 9.310 ms
+
+17/03/2022 03:35:51 [error] : 	Method => GET Ingredient BY ID : Error: Ingredient Id is not a number
+17/03/2022 03:35:51 [info] : 	GET /ingredients/- 400 54 - 1.373 ms
+
+17/03/2022 03:39:35 [error] : 	Method => POST Ingredient : Validation error
+17/03/2022 03:39:35 [info] : 	POST /ingredients 400 41 - 52.415 ms
+
+17/03/2022 03:39:43 [info] : 	POST /ingredients 201 14003 - 8.568 ms
+
+17/03/2022 04:02:25 [info] : 	Get All Ingredients
+17/03/2022 04:02:25 [info] : 	GET /ingredients 200 28319 - 11.975 ms
+
+17/03/2022 04:02:53 [error] : 	test error
+17/03/2022 04:02:53 [warn] : 	test warning
+17/03/2022 04:02:53 [info] : 	test info
+17/03/2022 04:02:53 [http] : 	test http
+17/03/2022 04:02:53 [verbose] : 	test verbose
+17/03/2022 04:02:53 [debug] : 	test debug
+17/03/2022 04:02:53 [silly] : 	test silly
+17/03/2022 04:03:03 [info] : 	Get Ingredient By id
+17/03/2022 04:03:03 [info] : 	GET /ingredients/30 200 310 - 18.122 ms
+
+17/03/2022 04:03:10 [info] : 	Get Ingredient By id
+17/03/2022 04:03:10 [info] : 	GET /ingredients/60 200 0 - 5.035 ms
+
+17/03/2022 04:03:21 [error] : 	Method => GET Ingredient BY ID : Error: Ingredient Id is not a number
+17/03/2022 04:03:21 [info] : 	GET /ingredients/k 400 61 - 2.354 ms
+
+17/03/2022 04:04:11 [error] : 	test error
+17/03/2022 04:04:11 [warn] : 	test warning
+17/03/2022 04:04:11 [info] : 	test info
+17/03/2022 04:04:11 [http] : 	test http
+17/03/2022 04:04:11 [verbose] : 	test verbose
+17/03/2022 04:04:11 [debug] : 	test debug
+17/03/2022 04:04:11 [silly] : 	test silly
+17/03/2022 04:06:14 [error] : 	test error
+17/03/2022 04:06:14 [warn] : 	test warning
+17/03/2022 04:06:14 [info] : 	test info
+17/03/2022 04:06:14 [http] : 	test http
+17/03/2022 04:06:14 [verbose] : 	test verbose
+17/03/2022 04:06:14 [debug] : 	test debug
+17/03/2022 04:06:14 [silly] : 	test silly
+17/03/2022 04:06:53 [info] : 	Get Ingredient By id
+17/03/2022 04:06:53 [info] : 	GET /ingredients/999 200 0 - 22.642 ms
+
+17/03/2022 04:08:03 [error] : 	test error
+17/03/2022 04:08:03 [warn] : 	test warning
+17/03/2022 04:08:03 [info] : 	test info
+17/03/2022 04:08:03 [http] : 	test http
+17/03/2022 04:08:03 [verbose] : 	test verbose
+17/03/2022 04:08:03 [debug] : 	test debug
+17/03/2022 04:08:03 [silly] : 	test silly
+17/03/2022 04:08:06 [info] : 	Get Ingredient By id
+17/03/2022 04:08:06 [info] : 	GET /ingredients/999 200 0 - 14.945 ms
+
+17/03/2022 04:09:18 [error] : 	test error
+17/03/2022 04:09:18 [warn] : 	test warning
+17/03/2022 04:09:18 [info] : 	test info
+17/03/2022 04:09:18 [http] : 	test http
+17/03/2022 04:09:18 [verbose] : 	test verbose
+17/03/2022 04:09:18 [debug] : 	test debug
+17/03/2022 04:09:18 [silly] : 	test silly
+17/03/2022 04:09:29 [error] : 	Method => GET Ingredient BY ID : Ingredient with id:'999' does not exist
+17/03/2022 04:09:29 [info] : 	GET /ingredients/999 400 64 - 16.369 ms
+
+17/03/2022 04:10:22 [error] : 	test error
+17/03/2022 04:10:22 [warn] : 	test warning
+17/03/2022 04:10:22 [info] : 	test info
+17/03/2022 04:10:22 [http] : 	test http
+17/03/2022 04:10:22 [verbose] : 	test verbose
+17/03/2022 04:10:22 [debug] : 	test debug
+17/03/2022 04:10:22 [silly] : 	test silly
+17/03/2022 04:13:08 [error] : 	test error
+17/03/2022 04:13:08 [warn] : 	test warning
+17/03/2022 04:13:08 [info] : 	test info
+17/03/2022 04:13:08 [http] : 	test http
+17/03/2022 04:13:08 [verbose] : 	test verbose
+17/03/2022 04:13:08 [debug] : 	test debug
+17/03/2022 04:13:08 [silly] : 	test silly
+17/03/2022 04:14:56 [error] : 	test error
+17/03/2022 04:14:56 [warn] : 	test warning
+17/03/2022 04:14:56 [info] : 	test info
+17/03/2022 04:14:56 [http] : 	test http
+17/03/2022 04:14:56 [verbose] : 	test verbose
+17/03/2022 04:14:56 [debug] : 	test debug
+17/03/2022 04:14:56 [silly] : 	test silly
+17/03/2022 04:18:53 [error] : 	test error
+17/03/2022 04:18:53 [warn] : 	test warning
+17/03/2022 04:18:53 [info] : 	test info
+17/03/2022 04:18:53 [http] : 	test http
+17/03/2022 04:18:53 [verbose] : 	test verbose
+17/03/2022 04:18:53 [debug] : 	test debug
+17/03/2022 04:18:53 [silly] : 	test silly
+17/03/2022 04:20:27 [error] : 	test error
+17/03/2022 04:20:27 [warn] : 	test warning
+17/03/2022 04:20:27 [info] : 	test info
+17/03/2022 04:20:27 [http] : 	test http
+17/03/2022 04:20:27 [verbose] : 	test verbose
+17/03/2022 04:20:27 [debug] : 	test debug
+17/03/2022 04:20:27 [silly] : 	test silly

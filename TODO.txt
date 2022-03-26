@@ -1,0 +1,10 @@
+TODO 
+table category 
+table role
+
+DTO
+DAO
+
+PASSER SUR POSTGRESQL
+
+DTO ou Entity
