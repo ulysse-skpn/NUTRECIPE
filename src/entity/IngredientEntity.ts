@@ -1,22 +1,14 @@
 
-import { AllowNull, Column, Table , IsFloat , IsDate , IsInt , PrimaryKey , DataType } from "sequelize-typescript";
-// import { DataTypes } from "sequelize/types";
+import { AllowNull, Column, Table , IsFloat , IsInt , DataType } from "sequelize-typescript";
 import { BaseModel } from "../model/baseModel";
 
 @Table
 export class Ingredient extends BaseModel<Ingredient>
 {
-    @PrimaryKey
     @AllowNull(false)
-    @Column(DataType.INTEGER)
-    id!: number;
-
-    @AllowNull(false)
-    // @Column(DataType.TEXT)
     @Column
     product_name!: string;
     
-    // @Column(DataType.TEXT)
     @Column
     ingredient_text!: string;
 
@@ -51,7 +43,7 @@ export class Ingredient extends BaseModel<Ingredient>
     serving_size!: string;
 
     @IsInt
-    @Column(DataType.SMALLINT)
+    @Column(DataType.TINYINT)
     quantity!: number;
 
     @Column
@@ -59,14 +51,6 @@ export class Ingredient extends BaseModel<Ingredient>
 
     @Column(DataType.TEXT)
     image!: string;
-
-    @IsDate
-    @Column
-    readonly created_at!: Date;
-
-    @IsDate
-    @Column
-    readonly updated_at!: Date;
 
 }
 

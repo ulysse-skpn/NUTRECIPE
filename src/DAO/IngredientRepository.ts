@@ -3,7 +3,7 @@ import { IBaseRepository } from "./IBaseRepository"
 import { database } from "../lib/config/database"
 import { UpdateOptions , DestroyOptions } from "sequelize"
 
-export class IIngredientRepository implements IBaseRepository<Ingredient>
+export class IngredientRepository implements IBaseRepository<Ingredient>
 {
     ingredientRepository = database.getRepository(Ingredient)
 
@@ -22,7 +22,7 @@ export class IIngredientRepository implements IBaseRepository<Ingredient>
         return this.ingredientRepository.create(item)
     }
 
-    async put(id: number, item: Ingredient): Promise<any> 
+    async put(id: number, item: Ingredient): Promise<[affectedCount:number]> 
     {
         const options:UpdateOptions = 
         {
@@ -32,7 +32,7 @@ export class IIngredientRepository implements IBaseRepository<Ingredient>
         return this.ingredientRepository.update(item,options)
     }
 
-    async delete(id: number): Promise<any> 
+    async delete(id: number): Promise<number> 
     {
         const options:DestroyOptions = 
         {

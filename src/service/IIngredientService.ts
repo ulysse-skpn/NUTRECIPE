@@ -6,6 +6,6 @@ export interface IIngredientService
     getAllIngredients(): Promise<Ingredient[]>
     getIngredientById(id:number): Promise<Ingredient>
     addIngredient(item:Ingredient): Promise<Ingredient>
-    updateIngredient(id:number,item:Ingredient): Promise<number> // number => Affected row
-    deleteIngredient(id:number): Promise<any>
+    updateIngredient(id:number,item:Ingredient): Promise<[affectedCount:number]> // number => Affected row
+    deleteIngredient(id:number): Promise<number>
 }

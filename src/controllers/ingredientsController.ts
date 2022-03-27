@@ -2,7 +2,6 @@ import { Request, Response} from "express";
 import { logger } from "../lib/config/winston";
 import { ApiError } from "../handlers/ApiError";
 import { IngredientServiceImpl } from "../service/Impl/IngredientServiceImpl";
-import { IIngredientRepository } from "../DAO/IIngredientRepository";
 import { Ingredient } from "../entity/IngredientEntity";
 
 export class IngredientsCtrl
@@ -12,11 +11,11 @@ export class IngredientsCtrl
 
     async getAll(req:Request , res:Response)
     {
-        const ingredientServiceImpl = new IngredientServiceImpl()
+        const ingredientServiceImpl:IngredientServiceImpl = new IngredientServiceImpl()
 
         try 
         {
-            const ingredientsList = await ingredientServiceImpl.getAllIngredients()
+            const ingredientsList:Ingredient[] = await ingredientServiceImpl.getAllIngredients()
             res.status(200).send(ingredientsList)
         } 
         catch (err:any) 
@@ -30,14 +29,14 @@ export class IngredientsCtrl
     async getById(req:Request , res:Response)
     {
         let id:number
-        const ingredientServiceImpl = new IngredientServiceImpl()
+        const ingredientServiceImpl:IngredientServiceImpl = new IngredientServiceImpl()
 
         try 
         {
             id = parseInt(req.params.id)
             if( isNaN(id) ) throw Error("Ingredient Id is not a number")
 
-            const ingredient = await ingredientServiceImpl.getIngredientById(id)
+            const ingredient:Ingredient = await ingredientServiceImpl.getIngredientById(id)
 
             if( ingredient ) res.status(200).send(ingredient)
             else res.status(404).send( ApiError.not_found("There is no ingredient with this id") )
@@ -52,14 +51,14 @@ export class IngredientsCtrl
 
     async create(req:Request , res:Response)
     {
-        const ingredientServiceImpl = new IngredientServiceImpl()
+        const ingredientServiceImpl:IngredientServiceImpl = new IngredientServiceImpl()
 
         try 
         {
             if( !isIngredient(req.body) ) throw Error("Ingredient object is malformed")
             const ingredient: Ingredient = req.body
 
-            const result = await ingredientServiceImpl.addIngredient(ingredient)
+            const result:Ingredient = await ingredientServiceImpl.addIngredient(ingredient)
             res.status(201).send(result)
         } 
         catch (err:any) 
@@ -73,13 +72,14 @@ export class IngredientsCtrl
     async update(req:Request , res:Response)
     {
         let id:number
-        const ingredientServiceImpl = new IngredientServiceImpl()
+        const ingredientServiceImpl:IngredientServiceImpl = new IngredientServiceImpl()
 
         try 
         {
             id = parseInt(req.params.id)
             if( isNaN(id) ) throw Error("Ingredient Id is not a number")
             if( !isIngredient(req.body) ) throw Error("Ingredient object is malformed")
+            
             const ingredient: Ingredient = req.body
 
             const result = await ingredientServiceImpl.updateIngredient(id,ingredient)
@@ -98,7 +98,7 @@ export class IngredientsCtrl
     async delete(req:Request , res:Response)
     {
         let id:number
-        const ingredientServiceImpl = new IngredientServiceImpl()
+        const ingredientServiceImpl:IngredientServiceImpl = new IngredientServiceImpl()
 
         try 
         {

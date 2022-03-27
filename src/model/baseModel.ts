@@ -1,20 +1,20 @@
-import { Table , Model, PrimaryKey, Default, DataType, Column, IsUUID } from "sequelize-typescript"
+// import { Table , Model, PrimaryKey, Default, DataType, Column, IsUUID } from "sequelize-typescript"
+import { Table , Model, PrimaryKey, DataType, Column, AutoIncrement, AllowNull, IsDate } from "sequelize-typescript"
 
 @Table
 export class BaseModel<T> extends Model<T>
 {
-    @IsUUID(4)
     @PrimaryKey
-    @Default(DataType.UUIDV4)
-    @Column(DataType.UUID)
-    id!:number;
+    @AllowNull(false)
+    @AutoIncrement
+    @Column(DataType.INTEGER)
+    id!: number;
 
-    // @CreatedAt
-    // creationDate!: Date;
+    @IsDate
+    @Column
+    readonly created_at!: Date;
 
-    // @UpdatedAt
-    // updatedOn!: Date;
-
-    // @DeletedAt
-    // deletionDate!: Date;
+    @IsDate
+    @Column
+    readonly updated_at!: Date;
 }

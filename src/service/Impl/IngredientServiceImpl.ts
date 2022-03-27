@@ -1,10 +1,10 @@
 import { Ingredient } from "../../entity/IngredientEntity";
 import { IIngredientService } from "../IIngredientService";
-import { IIngredientRepository } from "../../DAO/IIngredientRepository";
+import { IngredientRepository } from "../../DAO/IngredientRepository";
 
 export class IngredientServiceImpl implements IIngredientService
 {
-    ingredientRepository : IIngredientRepository = new IIngredientRepository()
+    ingredientRepository : IngredientRepository = new IngredientRepository()
 
     constructor(){}
 
@@ -28,12 +28,12 @@ export class IngredientServiceImpl implements IIngredientService
         return this.ingredientRepository.create(item)
     }
 
-    async updateIngredient(id: number, item: Ingredient): Promise<number>
+    async updateIngredient(id: number, item: Ingredient): Promise<[affectedcount:number]>
     {
         return this.ingredientRepository.put(id,item)
     }
 
-    async deleteIngredient(id: number): Promise<any>
+    async deleteIngredient(id: number): Promise<number>
     {
         return this.ingredientRepository.delete(id)
     }

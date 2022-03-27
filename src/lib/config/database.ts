@@ -1,7 +1,10 @@
 import { Sequelize } from "sequelize-typescript"
 import dotenv from "dotenv"
-import { Ingredient, NOVA_GROUP } from "../../entity/IngredientEntity"
 import { init_entities } from "./initEntities"
+import { Ingredient } from "../../entity/IngredientEntity"
+import { Recipe } from "../../entity/RecipeEntity"
+import { User } from "../../entity/UserEntity"
+import { Bookmark } from "../../entity/BookmarkEntity"
 
 dotenv.config()
 
@@ -20,17 +23,13 @@ export const database = new Sequelize({
 })
 
 database.addModels([Ingredient])
-
-// export const database = new Sequelize( 'test' , 'root' , 'azerty' , {
-//     port:5432,
-//     host:process.env.DB_HOST,
-//     dialect: 'postgres',
-//     logging: true
-// });
+database.addModels([Recipe])
+database.addModels([User])
+database.addModels([Bookmark])
 
 database.authenticate()
     .then( async () => {
         console.log("Database connected...")
-        // init_entities()
+        init_entities()
     } )
     .catch( err => console.log(`Error : ${err}`) )
