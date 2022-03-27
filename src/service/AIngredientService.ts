@@ -1,6 +1,6 @@
 import { DestroyOptions, UpdateOptions } from "sequelize";
 import { Ingredient } from "../entity/IngredientEntity";
-import { IAbstractService } from "./IAbstractService";
+import { IAbstractService } from "./AIAbstractService";
 
 export class IngredientService implements IAbstractService<Ingredient>
 {

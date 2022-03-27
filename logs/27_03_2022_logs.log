@@ -1,0 +1,352 @@
+27/03/2022 12:02:31 [error] : 	test error
+27/03/2022 12:02:31 [warn] : 	test warning
+27/03/2022 12:02:31 [info] : 	test info
+27/03/2022 12:02:31 [http] : 	test http
+27/03/2022 12:02:31 [verbose] : 	test verbose
+27/03/2022 12:02:31 [debug] : 	test debug
+27/03/2022 12:02:31 [silly] : 	test silly
+27/03/2022 12:02:32 [info] : 	App listening on port 3000 , host 127.0.0.1
+27/03/2022 12:02:35 [info] : 	GET /ingredients 200 2 - 14.313 ms
+
+27/03/2022 12:11:26 [error] : 	test error
+27/03/2022 12:11:26 [warn] : 	test warning
+27/03/2022 12:11:26 [info] : 	test info
+27/03/2022 12:11:26 [http] : 	test http
+27/03/2022 12:11:26 [verbose] : 	test verbose
+27/03/2022 12:11:26 [debug] : 	test debug
+27/03/2022 12:11:26 [silly] : 	test silly
+27/03/2022 12:11:27 [info] : 	App listening on port 3000 , host 127.0.0.1
+27/03/2022 12:23:22 [error] : 	test error
+27/03/2022 12:23:22 [warn] : 	test warning
+27/03/2022 12:23:22 [info] : 	test info
+27/03/2022 12:23:22 [http] : 	test http
+27/03/2022 12:23:22 [verbose] : 	test verbose
+27/03/2022 12:23:22 [debug] : 	test debug
+27/03/2022 12:23:22 [silly] : 	test silly
+27/03/2022 12:23:23 [info] : 	App listening on port 3000 , host 127.0.0.1
+27/03/2022 12:23:26 [info] : 	POST /ingredients 404 151 - 1.139 ms
+
+27/03/2022 12:23:31 [info] : 	GET /ingredients 200 300 - 13.408 ms
+
+27/03/2022 12:41:18 [error] : 	test error
+27/03/2022 12:41:18 [warn] : 	test warning
+27/03/2022 12:41:18 [info] : 	test info
+27/03/2022 12:41:18 [http] : 	test http
+27/03/2022 12:41:18 [verbose] : 	test verbose
+27/03/2022 12:41:18 [debug] : 	test debug
+27/03/2022 12:41:18 [silly] : 	test silly
+27/03/2022 12:41:19 [info] : 	App listening on port 3000 , host 127.0.0.1
+27/03/2022 12:41:22 [info] : 	GET /ingredients 200 300 - 8.576 ms
+
+27/03/2022 12:41:33 [info] : 	PUT /ingredients/1 404 152 - 1.202 ms
+
+27/03/2022 12:42:43 [error] : 	test error
+27/03/2022 12:42:43 [warn] : 	test warning
+27/03/2022 12:42:43 [info] : 	test info
+27/03/2022 12:42:43 [http] : 	test http
+27/03/2022 12:42:43 [verbose] : 	test verbose
+27/03/2022 12:42:43 [debug] : 	test debug
+27/03/2022 12:42:43 [silly] : 	test silly
+27/03/2022 12:42:43 [info] : 	App listening on port 3000 , host 127.0.0.1
+27/03/2022 12:42:48 [info] : 	PUT /ingredients/1 202 3 - 27.713 ms
+
+27/03/2022 12:42:52 [info] : 	GET /ingredients 200 494 - 5.074 ms
+
+27/03/2022 12:31:47 [error] : 	test error
+27/03/2022 12:31:47 [warn] : 	test warning
+27/03/2022 12:31:47 [info] : 	test info
+27/03/2022 12:31:47 [http] : 	test http
+27/03/2022 12:31:47 [verbose] : 	test verbose
+27/03/2022 12:31:47 [debug] : 	test debug
+27/03/2022 12:31:47 [silly] : 	test silly
+27/03/2022 12:31:48 [info] : 	App listening on port 3000 , host 127.0.0.1
+27/03/2022 12:31:52 [info] : 	GET /ingredients 200 494 - 10.810 ms
+
+27/03/2022 12:31:55 [info] : 	GET /ingredients/1 404 152 - 1.653 ms
+
+27/03/2022 12:32:35 [error] : 	test error
+27/03/2022 12:32:35 [warn] : 	test warning
+27/03/2022 12:32:35 [info] : 	test info
+27/03/2022 12:32:35 [http] : 	test http
+27/03/2022 12:32:35 [verbose] : 	test verbose
+27/03/2022 12:32:35 [debug] : 	test debug
+27/03/2022 12:32:35 [silly] : 	test silly
+27/03/2022 12:32:36 [info] : 	App listening on port 3000 , host 127.0.0.1
+27/03/2022 12:32:40 [info] : 	GET /ingredients 200 494 - 8.490 ms
+
+27/03/2022 12:32:43 [info] : 	GET /ingredients/1 404 152 - 1.235 ms
+
+[error] : 27/03/2022 12:33:35 || 	test error
+[warn] : 27/03/2022 12:33:35 || 	test warning
+[info] : 27/03/2022 12:33:35 || 	test info
+[http] : 27/03/2022 12:33:35 || 	test http
+[verbose] : 27/03/2022 12:33:35 || 	test verbose
+[debug] : 27/03/2022 12:33:35 || 	test debug
+[silly] : 27/03/2022 12:33:35 || 	test silly
+[info] : 27/03/2022 12:33:36 || 	App listening on port 3000 , host 127.0.0.1
+[error] : 27/03/2022 12:33:44 	test error
+[warn] : 27/03/2022 12:33:44 	test warning
+[info] : 27/03/2022 12:33:44 	test info
+[http] : 27/03/2022 12:33:44 	test http
+[verbose] : 27/03/2022 12:33:44 	test verbose
+[debug] : 27/03/2022 12:33:44 	test debug
+[silly] : 27/03/2022 12:33:44 	test silly
+[info] : 27/03/2022 12:33:45 	App listening on port 3000 , host 127.0.0.1
+[info] : 27/03/2022 12:33:55 	GET /ingredients/1 404 152 - 2.203 ms
+
+[error] : 27/03/2022 12:34:21 	test error
+[warn] : 27/03/2022 12:34:21 	test warning
+[info] : 27/03/2022 12:34:21 	test info
+[http] : 27/03/2022 12:34:21 	test http
+[verbose] : 27/03/2022 12:34:21 	test verbose
+[debug] : 27/03/2022 12:34:21 	test debug
+[silly] : 27/03/2022 12:34:21 	test silly
+[info] : 27/03/2022 12:34:22 	App listening on port 3000 , host 127.0.0.1
+[info] : 27/03/2022 12:34:24 	GET /ingredients/1 200 492 - 16.706 ms
+
+[info] : 27/03/2022 12:34:32 	GET /ingredients 200 494 - 2.708 ms
+
+[error] : 27/03/2022 12:45:13 	test error
+[warn] : 27/03/2022 12:45:13 	test warning
+[info] : 27/03/2022 12:45:13 	test info
+[http] : 27/03/2022 12:45:13 	test http
+[verbose] : 27/03/2022 12:45:13 	test verbose
+[debug] : 27/03/2022 12:45:13 	test debug
+[silly] : 27/03/2022 12:45:13 	test silly
+[info] : 27/03/2022 12:45:14 	App listening on port 3000 , host 127.0.0.1
+[info] : 27/03/2022 12:45:18 	GET /ingredients/1 200 492 - 10.069 ms
+
+[info] : 27/03/2022 12:45:31 	PUT /ingredients/1 202 3 - 17.248 ms
+
+[info] : 27/03/2022 12:45:33 	GET /ingredients/1 200 491 - 3.454 ms
+
+[error] : 27/03/2022 12:48:04 	test error
+[warn] : 27/03/2022 12:48:04 	test warning
+[info] : 27/03/2022 12:48:04 	test info
+[http] : 27/03/2022 12:48:04 	test http
+[verbose] : 27/03/2022 12:48:04 	test verbose
+[debug] : 27/03/2022 12:48:04 	test debug
+[silly] : 27/03/2022 12:48:04 	test silly
+[info] : 27/03/2022 12:48:05 	App listening on port 3000 , host 127.0.0.1
+[info] : 27/03/2022 12:49:05 	POST /ingredients 404 151 - 1.169 ms
+
+[error] : 27/03/2022 12:51:49 	test error
+[warn] : 27/03/2022 12:51:49 	test warning
+[info] : 27/03/2022 12:51:49 	test info
+[http] : 27/03/2022 12:51:49 	test http
+[verbose] : 27/03/2022 12:51:49 	test verbose
+[debug] : 27/03/2022 12:51:49 	test debug
+[silly] : 27/03/2022 12:51:49 	test silly
+[info] : 27/03/2022 12:51:50 	App listening on port 3000 , host 127.0.0.1
+[info] : 27/03/2022 12:51:55 	GET /ingredients 200 493 - 8.615 ms
+
+[info] : 27/03/2022 12:51:58 	GET /ingredients/1 200 491 - 5.115 ms
+
+[info] : 27/03/2022 12:52:03 	GET /ingredients/2 200 0 - 2.403 ms
+
+[error] : 27/03/2022 12:52:22 	Method => GET Ingredient BY ID : Ingredient Id is not a number
+[info] : 27/03/2022 12:52:22 	GET /ingredients/- 400 54 - 1.937 ms
+
+[info] : 27/03/2022 12:52:27 	GET /ingredients/2 200 0 - 4.428 ms
+
+[error] : 27/03/2022 12:53:58 	test error
+[warn] : 27/03/2022 12:53:58 	test warning
+[info] : 27/03/2022 12:53:58 	test info
+[http] : 27/03/2022 12:53:58 	test http
+[verbose] : 27/03/2022 12:53:58 	test verbose
+[debug] : 27/03/2022 12:53:58 	test debug
+[silly] : 27/03/2022 12:53:58 	test silly
+[info] : 27/03/2022 12:53:58 	App listening on port 3000 , host 127.0.0.1
+[info] : 27/03/2022 12:54:22 	GET /ingredients 200 493 - 11.781 ms
+
+[info] : 27/03/2022 12:54:27 	GET /ingredients/1 200 491 - 5.366 ms
+
+[error] : 27/03/2022 12:54:31 	Method => GET Ingredient BY ID : Ingredient Id is not a number
+[info] : 27/03/2022 12:54:31 	GET /ingredients/- 400 54 - 1.130 ms
+
+[error] : 27/03/2022 12:54:35 	Method => GET Ingredient BY ID : There is no Ingredient with this Id
+[info] : 27/03/2022 12:54:35 	GET /ingredients/2 400 60 - 2.745 ms
+
+[error] : 27/03/2022 12:55:20 	test error
+[warn] : 27/03/2022 12:55:20 	test warning
+[info] : 27/03/2022 12:55:20 	test info
+[http] : 27/03/2022 12:55:20 	test http
+[verbose] : 27/03/2022 12:55:20 	test verbose
+[debug] : 27/03/2022 12:55:20 	test debug
+[silly] : 27/03/2022 12:55:20 	test silly
+[info] : 27/03/2022 12:55:21 	App listening on port 3000 , host 127.0.0.1
+[error] : 27/03/2022 12:59:51 	test error
+[warn] : 27/03/2022 12:59:51 	test warning
+[info] : 27/03/2022 12:59:51 	test info
+[http] : 27/03/2022 12:59:51 	test http
+[verbose] : 27/03/2022 12:59:51 	test verbose
+[debug] : 27/03/2022 12:59:51 	test debug
+[silly] : 27/03/2022 12:59:51 	test silly
+[info] : 27/03/2022 12:59:52 	App listening on port 3000 , host 127.0.0.1
+[error] : 27/03/2022 01:01:23 	test error
+[warn] : 27/03/2022 01:01:23 	test warning
+[info] : 27/03/2022 01:01:23 	test info
+[http] : 27/03/2022 01:01:23 	test http
+[verbose] : 27/03/2022 01:01:23 	test verbose
+[debug] : 27/03/2022 01:01:23 	test debug
+[silly] : 27/03/2022 01:01:23 	test silly
+[info] : 27/03/2022 01:01:24 	App listening on port 3000 , host 127.0.0.1
+[info] : 27/03/2022 01:01:33 	GET /ingredients/3 404 60 - 8.865 ms
+
+[error] : 27/03/2022 01:06:57 	test error
+[warn] : 27/03/2022 01:06:57 	test warning
+[info] : 27/03/2022 01:06:57 	test info
+[http] : 27/03/2022 01:06:57 	test http
+[verbose] : 27/03/2022 01:06:57 	test verbose
+[debug] : 27/03/2022 01:06:57 	test debug
+[silly] : 27/03/2022 01:06:57 	test silly
+[info] : 27/03/2022 01:06:58 	App listening on port 3000 , host 127.0.0.1
+[info] : 27/03/2022 01:07:04 	GET /ingredients 200 493 - 8.320 ms
+
+[info] : 27/03/2022 01:07:08 	GET /ingredients/3 404 60 - 5.719 ms
+
+[info] : 27/03/2022 01:07:12 	GET /ingredients/1 200 491 - 2.804 ms
+
+[error] : 27/03/2022 01:14:27 	test error
+[warn] : 27/03/2022 01:14:27 	test warning
+[info] : 27/03/2022 01:14:27 	test info
+[http] : 27/03/2022 01:14:27 	test http
+[verbose] : 27/03/2022 01:14:27 	test verbose
+[debug] : 27/03/2022 01:14:27 	test debug
+[silly] : 27/03/2022 01:14:27 	test silly
+[info] : 27/03/2022 01:14:28 	App listening on port 3000 , host 127.0.0.1
+[error] : 27/03/2022 02:16:44 	test error
+[warn] : 27/03/2022 02:16:44 	test warning
+[info] : 27/03/2022 02:16:44 	test info
+[http] : 27/03/2022 02:16:44 	test http
+[verbose] : 27/03/2022 02:16:44 	test verbose
+[debug] : 27/03/2022 02:16:44 	test debug
+[silly] : 27/03/2022 02:16:44 	test silly
+[info] : 27/03/2022 02:16:45 	App listening on port 3000 , host 127.0.0.1
+[error] : 27/03/2022 02:29:41 	test error
+[warn] : 27/03/2022 02:29:41 	test warning
+[info] : 27/03/2022 02:29:41 	test info
+[http] : 27/03/2022 02:29:41 	test http
+[verbose] : 27/03/2022 02:29:41 	test verbose
+[debug] : 27/03/2022 02:29:41 	test debug
+[silly] : 27/03/2022 02:29:41 	test silly
+[info] : 27/03/2022 02:29:42 	App listening on port 3000 , host 127.0.0.1
+[error] : 27/03/2022 02:30:06 	test error
+[warn] : 27/03/2022 02:30:06 	test warning
+[info] : 27/03/2022 02:30:06 	test info
+[http] : 27/03/2022 02:30:06 	test http
+[verbose] : 27/03/2022 02:30:06 	test verbose
+[debug] : 27/03/2022 02:30:06 	test debug
+[silly] : 27/03/2022 02:30:06 	test silly
+[info] : 27/03/2022 02:30:07 	App listening on port 3000 , host 127.0.0.1
+[error] : 27/03/2022 02:31:53 	test error
+[warn] : 27/03/2022 02:31:53 	test warning
+[info] : 27/03/2022 02:31:53 	test info
+[http] : 27/03/2022 02:31:53 	test http
+[verbose] : 27/03/2022 02:31:53 	test verbose
+[debug] : 27/03/2022 02:31:53 	test debug
+[silly] : 27/03/2022 02:31:53 	test silly
+[error] : 27/03/2022 02:32:17 	test error
+[warn] : 27/03/2022 02:32:17 	test warning
+[info] : 27/03/2022 02:32:17 	test info
+[http] : 27/03/2022 02:32:17 	test http
+[verbose] : 27/03/2022 02:32:17 	test verbose
+[debug] : 27/03/2022 02:32:17 	test debug
+[silly] : 27/03/2022 02:32:17 	test silly
+[info] : 27/03/2022 02:32:18 	App listening on port 3000 , host 127.0.0.1
+[error] : 27/03/2022 02:32:47 	test error
+[warn] : 27/03/2022 02:32:47 	test warning
+[info] : 27/03/2022 02:32:47 	test info
+[http] : 27/03/2022 02:32:47 	test http
+[verbose] : 27/03/2022 02:32:47 	test verbose
+[debug] : 27/03/2022 02:32:47 	test debug
+[silly] : 27/03/2022 02:32:47 	test silly
+[info] : 27/03/2022 02:32:48 	App listening on port 3000 , host 127.0.0.1
+[error] : 27/03/2022 02:33:29 	test error
+[warn] : 27/03/2022 02:33:29 	test warning
+[info] : 27/03/2022 02:33:29 	test info
+[http] : 27/03/2022 02:33:29 	test http
+[verbose] : 27/03/2022 02:33:29 	test verbose
+[debug] : 27/03/2022 02:33:29 	test debug
+[silly] : 27/03/2022 02:33:29 	test silly
+[info] : 27/03/2022 02:33:30 	App listening on port 3000 , host 127.0.0.1
+[error] : 27/03/2022 02:39:25 	test error
+[warn] : 27/03/2022 02:39:25 	test warning
+[info] : 27/03/2022 02:39:25 	test info
+[http] : 27/03/2022 02:39:25 	test http
+[verbose] : 27/03/2022 02:39:25 	test verbose
+[debug] : 27/03/2022 02:39:25 	test debug
+[silly] : 27/03/2022 02:39:25 	test silly
+[info] : 27/03/2022 02:39:26 	App listening on port 3000 , host 127.0.0.1
+[info] : 27/03/2022 02:39:36 	GET /ingredients 200 845 - 8.346 ms
+
+[error] : 27/03/2022 02:40:45 	test error
+[warn] : 27/03/2022 02:40:45 	test warning
+[info] : 27/03/2022 02:40:45 	test info
+[http] : 27/03/2022 02:40:45 	test http
+[verbose] : 27/03/2022 02:40:45 	test verbose
+[debug] : 27/03/2022 02:40:45 	test debug
+[silly] : 27/03/2022 02:40:45 	test silly
+[info] : 27/03/2022 02:40:46 	App listening on port 3000 , host 127.0.0.1
+[error] : 27/03/2022 02:43:35 	test error
+[warn] : 27/03/2022 02:43:35 	test warning
+[info] : 27/03/2022 02:43:35 	test info
+[http] : 27/03/2022 02:43:35 	test http
+[verbose] : 27/03/2022 02:43:35 	test verbose
+[debug] : 27/03/2022 02:43:35 	test debug
+[silly] : 27/03/2022 02:43:35 	test silly
+[error] : 27/03/2022 02:44:05 	test error
+[warn] : 27/03/2022 02:44:05 	test warning
+[info] : 27/03/2022 02:44:05 	test info
+[http] : 27/03/2022 02:44:05 	test http
+[verbose] : 27/03/2022 02:44:05 	test verbose
+[debug] : 27/03/2022 02:44:05 	test debug
+[silly] : 27/03/2022 02:44:05 	test silly
+[error] : 27/03/2022 02:50:42 	test error
+[warn] : 27/03/2022 02:50:42 	test warning
+[info] : 27/03/2022 02:50:42 	test info
+[http] : 27/03/2022 02:50:42 	test http
+[verbose] : 27/03/2022 02:50:42 	test verbose
+[debug] : 27/03/2022 02:50:42 	test debug
+[silly] : 27/03/2022 02:50:42 	test silly
+[info] : 27/03/2022 02:50:42 	App listening on port 3000 , host 127.0.0.1
+[error] : 27/03/2022 02:51:25 	test error
+[warn] : 27/03/2022 02:51:25 	test warning
+[info] : 27/03/2022 02:51:25 	test info
+[http] : 27/03/2022 02:51:25 	test http
+[verbose] : 27/03/2022 02:51:25 	test verbose
+[debug] : 27/03/2022 02:51:25 	test debug
+[silly] : 27/03/2022 02:51:25 	test silly
+[info] : 27/03/2022 02:51:26 	App listening on port 3000 , host 127.0.0.1
+[error] : 27/03/2022 02:52:56 	test error
+[warn] : 27/03/2022 02:52:56 	test warning
+[info] : 27/03/2022 02:52:56 	test info
+[http] : 27/03/2022 02:52:56 	test http
+[verbose] : 27/03/2022 02:52:56 	test verbose
+[debug] : 27/03/2022 02:52:56 	test debug
+[silly] : 27/03/2022 02:52:56 	test silly
+[info] : 27/03/2022 02:52:57 	App listening on port 3000 , host 127.0.0.1
+[error] : 27/03/2022 02:59:48 	test error
+[warn] : 27/03/2022 02:59:48 	test warning
+[info] : 27/03/2022 02:59:48 	test info
+[http] : 27/03/2022 02:59:48 	test http
+[verbose] : 27/03/2022 02:59:48 	test verbose
+[debug] : 27/03/2022 02:59:48 	test debug
+[silly] : 27/03/2022 02:59:48 	test silly
+[info] : 27/03/2022 02:59:49 	App listening on port 3000 , host 127.0.0.1
+[error] : 27/03/2022 03:00:01 	test error
+[warn] : 27/03/2022 03:00:01 	test warning
+[info] : 27/03/2022 03:00:01 	test info
+[http] : 27/03/2022 03:00:01 	test http
+[verbose] : 27/03/2022 03:00:01 	test verbose
+[debug] : 27/03/2022 03:00:01 	test debug
+[silly] : 27/03/2022 03:00:01 	test silly
+[info] : 27/03/2022 03:00:02 	App listening on port 3000 , host 127.0.0.1
+[error] : 27/03/2022 03:01:53 	test error
+[warn] : 27/03/2022 03:01:53 	test warning
+[info] : 27/03/2022 03:01:53 	test info
+[http] : 27/03/2022 03:01:53 	test http
+[verbose] : 27/03/2022 03:01:53 	test verbose
+[debug] : 27/03/2022 03:01:53 	test debug
+[silly] : 27/03/2022 03:01:53 	test silly
+[info] : 27/03/2022 03:01:54 	App listening on port 3000 , host 127.0.0.1

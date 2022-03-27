@@ -27,7 +27,7 @@ const options =
 }
 
 const myFormat = printf( ({ level , message , timestamp }) => {
-    return `${timestamp} [${level}] : ${message}`
+    return `[${level}] : ${timestamp} ${message}`
 })
 
 export const logger = winston.createLogger({

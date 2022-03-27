@@ -1,7 +1,6 @@
 import { Model } from "sequelize/types";
 import { Ingredient , NOVA_GROUP } from "../entity/IngredientEntity";
 
-// Par convention, les variables commençant par _xxx sont de type public
 export class IngredientDTO extends Model
 {
     public id!:number

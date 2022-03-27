@@ -1,7 +1,7 @@
 import { Application } from "express";
 import { IngredientsCtrl } from "../controllers/ingredientsController";
 import { Ingredient } from "../entity/IngredientEntity";
-import { IngredientService } from "../service/IngredientService";
+import { IngredientService } from "../service/AIngredientService";
 
 
 export class Routes 
