@@ -1,12 +1,12 @@
 # dependencies
-node_modules/*
-
-# exception to the rule
-!node_modules/README.txt
+node_modules/
 
 # System Files
 .DS_Store
 Thumbs.db
 
 # Logs
-logs/
+logs/*
+
+# exception to the rule
+!logs/README.txt
