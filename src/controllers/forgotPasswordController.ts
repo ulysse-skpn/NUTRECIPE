@@ -4,6 +4,7 @@ import { ApiError } from "../handlers/ApiError";
 import { ForgotPasswordServiceImpl } from "../service/Impl/ForgotPasswordServiceImpl"
 import nodemailer from "nodemailer"
 import dotenv from "dotenv"
+import crypto from 'crypto';
 
 export class ForgotPasswordCtrl
 {
@@ -56,7 +57,7 @@ const generateNewPassword = async () =>
 
     for ( let i = 0 ; i <= passwordLength; i++ ) 
     {
-        const randomNumber = Math.floor(Math.random() * chars.length)
+        const randomNumber:number = Math.floor( crypto.randomInt(1) * chars.length)
         password += chars.substring(randomNumber, randomNumber +1)
     }
 
@@ -71,7 +72,8 @@ async function mailer(login:string,newPassword:string)
     const transporter = nodemailer.createTransport({
         host: "smtp.ethereal.email",
         port: 587,
-        secure: false, // true for 465, false for other ports
+        requireTLS: true,
+        secure: true, // true for 465, false for other ports
         // auth: {
         // user: testAccount.user, // generated ethereal user
         // pass: testAccount.pass, // generated ethereal password
