@@ -1,10 +1,10 @@
 export interface ILoginService
 {
     userExist(login:string,password:string): Promise<boolean>
-    getUserRole(login:string,password:string): Promise<userRole>
+    getUserRole(login:string,password:string): Promise<IUserRole>
 }
 
-export interface userRole
+export interface IUserRole
 {
     email:string
     role:string

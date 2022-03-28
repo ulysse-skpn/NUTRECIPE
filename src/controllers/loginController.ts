@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { ApiError } from "../handlers/ApiError";
 import { logger } from "../lib/config/winston";
-import { userRole } from "../service/ILoginService";
+import { IUserRole } from "../service/ILoginService";
 import { LoginServiceImpl } from "../service/Impl/LoginServiceImpl";
 
 export class LoginCtrl
@@ -19,7 +19,7 @@ export class LoginCtrl
 
             if( exists )
             {
-                const role:userRole = await loginServiceImpl.getUserRole(login,password)
+                const role:IUserRole = await loginServiceImpl.getUserRole(login,password)
                 res.status(200).send(role)
             }
             else res.status(404).send( ApiError.not_found("User with this login and password not found") )

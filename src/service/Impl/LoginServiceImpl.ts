@@ -1,4 +1,4 @@
-import { ILoginService, userRole } from "../ILoginService";
+import { ILoginService, IUserRole } from "../ILoginService";
 
 export class LoginServiceImpl implements ILoginService
 {
@@ -7,7 +7,7 @@ export class LoginServiceImpl implements ILoginService
         throw new Error("Method not implemented.");
     }
 
-    getUserRole(login: string, password: string): Promise<userRole> 
+    getUserRole(login: string, password: string): Promise<IUserRole> 
     {
         throw new Error("Method not implemented.");
     }
