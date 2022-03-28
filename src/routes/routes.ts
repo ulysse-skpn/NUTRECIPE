@@ -3,6 +3,9 @@ import { BookmarksCtrl } from "../controllers/bookmarksController";
 import { IngredientsCtrl } from "../controllers/ingredientsController";
 import { RecipesCtrl } from "../controllers/recipesController";
 import { UsersCtrl } from "../controllers/usersController";
+import * as swagger from "swagger-ui-express"
+import swaggerDocument from "../lib/config/swagger.json"
+
 
 
 export class Routes 
@@ -16,7 +19,13 @@ export class Routes
 
     public routes(app: Application): void 
     {
-
+        // SWAGGER UI
+        // router.use('/api-docs', swaggerUi.serve);
+        // router.get('/api-docs', swaggerUi.setup(swaggerDocument));
+        app
+            .use("/api-docs" , swagger.serve)
+            .route("/api-docs")
+            .get(swagger.setup(swaggerDocument))
         //  INGREDIENTS
         app
             .route("/ingredients")

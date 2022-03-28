@@ -414,3 +414,19 @@
 [debug] : 27/03/2022 04:38:30 	test debug
 [silly] : 27/03/2022 04:38:30 	test silly
 [info] : 27/03/2022 04:38:31 	App listening on port 3000 , host 127.0.0.1
+[error] : 27/03/2022 10:47:15 	test error
+[warn] : 27/03/2022 10:47:15 	test warning
+[info] : 27/03/2022 10:47:15 	test info
+[http] : 27/03/2022 10:47:15 	test http
+[verbose] : 27/03/2022 10:47:15 	test verbose
+[debug] : 27/03/2022 10:47:15 	test debug
+[silly] : 27/03/2022 10:47:15 	test silly
+[info] : 27/03/2022 10:47:17 	App listening on port 3000 , host 127.0.0.1
+[error] : 27/03/2022 10:48:50 	test error
+[warn] : 27/03/2022 10:48:50 	test warning
+[info] : 27/03/2022 10:48:50 	test info
+[http] : 27/03/2022 10:48:50 	test http
+[verbose] : 27/03/2022 10:48:50 	test verbose
+[debug] : 27/03/2022 10:48:50 	test debug
+[silly] : 27/03/2022 10:48:50 	test silly
+[info] : 27/03/2022 10:48:51 	App listening on port 3000 , host 127.0.0.1
