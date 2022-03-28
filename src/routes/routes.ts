@@ -3,6 +3,9 @@ import { BookmarksCtrl } from "../controllers/bookmarksController";
 import { IngredientsCtrl } from "../controllers/ingredientsController";
 import { RecipesCtrl } from "../controllers/recipesController";
 import { UsersCtrl } from "../controllers/usersController";
+import { LoginCtrl } from "../controllers/loginController"
+import { RegisterCtrl } from "../controllers/registerController";
+import { ForgotPasswordCtrl } from "../controllers/forgotPasswordController";
 import * as swagger from "swagger-ui-express"
 import swaggerDocument from "../lib/config/swagger.json"
 
@@ -10,6 +13,9 @@ import swaggerDocument from "../lib/config/swagger.json"
 
 export class Routes 
 {
+    public loginController: LoginCtrl = new LoginCtrl()
+    public registerController: RegisterCtrl = new RegisterCtrl()
+    public forgotPasswordController: ForgotPasswordCtrl = new ForgotPasswordCtrl()
     public ingredientsController: IngredientsCtrl = new IngredientsCtrl()
     public recipesController: RecipesCtrl = new RecipesCtrl()
     public usersController: UsersCtrl = new UsersCtrl()
@@ -19,12 +25,27 @@ export class Routes
     public routes(app: Application): void 
     {
         // SWAGGER UI
-        // router.use('/api-docs', swaggerUi.serve);
-        // router.get('/api-docs', swaggerUi.setup(swaggerDocument));
         app
             .use("/api-docs" , swagger.serve)
             .route("/api-docs")
             .get(swagger.setup(swaggerDocument))
+
+
+        //  APP ROOT
+        app
+            .route("/")
+            .post(this.loginController.login)
+
+        //  REGISTER
+        app
+            .route("/register")
+            .post(this.registerController.register)
+
+        //  FORGOT PASSWORD
+        app
+            .route("/forgotPaswword")
+            .post(this.forgotPasswordController.forgotPassword)
+
         //  INGREDIENTS
         app
             .route("/ingredients")
