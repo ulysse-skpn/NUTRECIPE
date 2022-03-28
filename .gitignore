@@ -1,5 +1,8 @@
 # dependencies
-node_modules/
+node_modules/*
+
+# exception to the rule
+!node_modules/README.txt
 
 # System Files
 .DS_Store
