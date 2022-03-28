@@ -24,7 +24,10 @@ class App
       this.app.use(express.json())
       this.app.use(express.urlencoded({extended:false}))
       this.app.use(helmet())
-      this.app.use(cors())
+      this.app.use(cors({
+        origin: 'https://127.0.0.1:3000',
+        methods: ['GET','POST','DELETE','UPDATE','PUT']
+      }))
       this.app.use(morganMiddleware)
       this.app.use(apiErrorHandler)
     }

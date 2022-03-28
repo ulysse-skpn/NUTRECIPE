@@ -7,8 +7,6 @@ export class UserServiceImpl implements IUserService
 {
     userRepository : UserRepository = new UserRepository()
 
-    constructor(){}
-
     async userExist(id: number): Promise<boolean>
     {
         return this.userRepository.exists(id)

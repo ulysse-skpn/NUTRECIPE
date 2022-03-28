@@ -6,9 +6,6 @@ import { Ingredient } from "../entity/IngredientEntity";
 
 export class IngredientsCtrl
 {   
-
-    constructor(){}
-
     async getAll(req:Request , res:Response)
     {
         const ingredientServiceImpl:IngredientServiceImpl = new IngredientServiceImpl()

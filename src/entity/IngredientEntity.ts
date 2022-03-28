@@ -61,32 +61,3 @@ export enum NOVA_GROUP
     THREE = 3,
     FOUR = 4
 }
-
-export const isIngredient = (obj:any) => {
-    if( obj.hasOwnProperty("product_name")
-    &&
-    obj.hasOwnProperty("ingredient_text")
-    &&
-    obj.hasOwnProperty("carbohydrates")
-    &&
-    obj.hasOwnProperty("proteins") 
-    &&
-    obj.hasOwnProperty("fats")
-    &&
-    obj.hasOwnProperty("salt") 
-    &&
-    obj.hasOwnProperty("calories")
-    &&
-    obj.hasOwnProperty("nova_group") 
-    &&
-    obj.hasOwnProperty("categories")
-    &&
-    obj.hasOwnProperty("serving_size")
-    && 
-    obj.hasOwnProperty("quantity") 
-    &&
-    obj.hasOwnProperty("status") 
-    &&
-    obj.hasOwnProperty("image") )    return true
-    else return false
-}

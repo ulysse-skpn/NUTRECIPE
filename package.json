@@ -1,11 +1,24 @@
 {
-  "name": "ionic_app_recette_v2",
+  "name": "nutrecipe",
   "version": "1.0.0",
   "description": "Application de gestion de recettes et d'ingrédients",
   "main": "app.js",
   "scripts": {
     "test": "test",
-    "start:dev": "nodemon"
+    "start:dev": "nodemon",
+    "sonar":"node sonar-project.js"
+  },
+  "jest": {
+      "testEnvironment":  "node",
+      "coveragePathIgnorePatterns": [
+          "/node_modules/"
+      ],
+      "testResultsProcessor":  "jest-sonar-reporter"
+  },
+  "jestSonar": {
+      "reportPath":  "coverage",
+      "reportFile":  "test-reporter.xml",
+      "indent":  4
   },
   "author": "Ulysse Sekpon",
   "license": "ISC",
@@ -22,12 +35,15 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "helmet": "^5.0.2",
+    "jest": "^27.5.1",
+    "jest-sonar-reporter": "^2.0.0",
     "morgan": "^1.10.0",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.15",
     "sequelize": "^6.17.0",
     "sequelize-typescript": "^2.1.3",
     "sonarqube-scanner": "^2.8.1",
+    "supertest": "^6.2.2",
     "swagger-ui-express": "^4.3.0",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.2",

@@ -7,7 +7,6 @@ const ingredientList:Array<object> = []
 export const fetchIngredients = () => 
 {
     products.forEach( (element: any) => {
-        // console.log(element);
         
         const product_name = element.fields.product_name !== null ? element.fields.product_name : element.fields.generic_name
         const ingredient_text = element.fields.ingredients_text

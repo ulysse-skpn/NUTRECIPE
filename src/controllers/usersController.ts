@@ -6,9 +6,6 @@ import { User } from "../entity/UserEntity";
 
 export class UsersCtrl
 {   
-
-    constructor(){}
-
     async getAll(req:Request , res:Response)
     {
         const userServiceImpl:UserServiceImpl = new UserServiceImpl()

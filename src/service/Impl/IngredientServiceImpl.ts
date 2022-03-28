@@ -6,8 +6,6 @@ export class IngredientServiceImpl implements IIngredientService
 {
     ingredientRepository : IngredientRepository = new IngredientRepository()
 
-    constructor(){}
-
     async ingredientExist(id: number): Promise<boolean>
     {
         return this.ingredientRepository.exists(id)

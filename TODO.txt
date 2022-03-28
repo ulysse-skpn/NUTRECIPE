@@ -8,3 +8,5 @@ DAO
 PASSER SUR POSTGRESQL
 
 DTO ou Entity
+
+https://medium.com/swlh/nodejs-code-evaluation-using-jest-sonarqube-and-docker-f6b41b2c319d

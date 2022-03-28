@@ -6,8 +6,6 @@ export class RecipeServiceImpl implements IRecipeService
 {
     recipeRepository : RecipeRepository = new RecipeRepository()
 
-    constructor(){}
-
     async recipeExist(id: number): Promise<boolean>
     {
         return this.recipeRepository.exists(id)

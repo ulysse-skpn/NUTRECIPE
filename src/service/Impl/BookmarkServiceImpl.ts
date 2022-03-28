@@ -7,8 +7,6 @@ export class BookmarkServiceImpl implements IBookmarkService
 {
     bookmarkRepository : BookmarkRepository = new BookmarkRepository()
 
-    constructor(){}
-
     async bookmarkExist(id: number): Promise<boolean>
     {
         return this.bookmarkRepository.exists(id)

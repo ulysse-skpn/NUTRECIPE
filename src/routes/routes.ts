@@ -10,7 +10,6 @@ import swaggerDocument from "../lib/config/swagger.json"
 
 export class Routes 
 {
-    constructor(){}
     public ingredientsController: IngredientsCtrl = new IngredientsCtrl()
     public recipesController: RecipesCtrl = new RecipesCtrl()
     public usersController: UsersCtrl = new UsersCtrl()

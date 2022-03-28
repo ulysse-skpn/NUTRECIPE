@@ -1,4 +1,3 @@
-// import { Table , Model, PrimaryKey, Default, DataType, Column, IsUUID } from "sequelize-typescript"
 import { Table , Model, PrimaryKey, DataType, Column, AutoIncrement, AllowNull, IsDate } from "sequelize-typescript"
 
 @Table

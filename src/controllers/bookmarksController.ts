@@ -7,9 +7,6 @@ import { Bookmark } from "../entity/BookmarkEntity";
 
 export class BookmarksCtrl
 {   
-
-    constructor(){}
-
     async getAll(req:Request , res:Response)
     {
         const bookmarkServiceImpl:BookmarkServiceImpl = new BookmarkServiceImpl()

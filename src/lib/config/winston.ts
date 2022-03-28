@@ -26,7 +26,7 @@ const options =
     }
 }
 
-const myFormat = printf( ({ level , message , timestamp }) => {
+const myFormat = printf( ({ level , message }) => {
     return `[${level}] : ${timestamp} ${message}`
 })
 
@@ -41,13 +41,6 @@ export const logger = winston.createLogger({
         new winston.transports.File(options.error),
     ]
 })
-
-// if( process.env.NODE_ENV !== "production" )
-// {
-//     logger.add(new winston.transports.Console({
-//         format: winston.format.simple(),
-//     }));
-// }
 
 
 logger.error('test error')
