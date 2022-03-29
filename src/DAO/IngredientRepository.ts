@@ -14,12 +14,12 @@ export class IngredientRepository implements IBaseRepository<Ingredient>
 
     async findById(id: number): Promise<Ingredient | any> 
     {
-        return this.ingredientRepository.findByPk(id)
+        return await this.ingredientRepository.findByPk(id)
     }
 
     async create(item: Ingredient): Promise<Ingredient> 
     {
-        return this.ingredientRepository.create(item)
+        return await this.ingredientRepository.create(item)
     }
 
     async put(id: number, item: Ingredient): Promise<[affectedCount:number]> 
@@ -29,7 +29,7 @@ export class IngredientRepository implements IBaseRepository<Ingredient>
             where:{id:id},
             limit:1
         }
-        return this.ingredientRepository.update(item,options)
+        return await this.ingredientRepository.update(item,options)
     }
 
     async delete(id: number): Promise<number> 
@@ -39,12 +39,12 @@ export class IngredientRepository implements IBaseRepository<Ingredient>
             where:{id:id},
             limit:1
         }
-        return this.ingredientRepository.destroy(options)
+        return await this.ingredientRepository.destroy(options)
     }
 
     async findAll(): Promise<Ingredient[]> 
     {
-        return this.ingredientRepository.findAll()
+        return await this.ingredientRepository.findAll()
     }
 
 }

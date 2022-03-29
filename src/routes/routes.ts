@@ -33,7 +33,7 @@ export class Routes
 
         //  APP ROOT
         app
-            .route("/")
+            .route("/login")
             .post(this.loginController.login)
 
         //  REGISTER
@@ -43,7 +43,7 @@ export class Routes
 
         //  FORGOT PASSWORD
         app
-            .route("/forgotPaswword")
+            .route("/forgotPassword")
             .post(this.forgotPasswordController.forgotPassword)
 
         //  INGREDIENTS

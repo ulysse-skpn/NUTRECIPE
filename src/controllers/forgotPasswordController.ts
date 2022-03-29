@@ -5,6 +5,7 @@ import { ForgotPasswordServiceImpl } from "../service/Impl/ForgotPasswordService
 import nodemailer from "nodemailer"
 import dotenv from "dotenv"
 import crypto from 'crypto';
+import { User } from "../entity/UserEntity";
 
 export class ForgotPasswordCtrl
 {
@@ -14,27 +15,28 @@ export class ForgotPasswordCtrl
 
         try 
         {
-            const login:string = req.body.login
+            const login:string = req.body.email
 
-            const exists:boolean = await forgotPasswordServiceImpl.userExists(login)
-
-            if( exists )
+            const user:User|null = await forgotPasswordServiceImpl.findUserByLogin(login)
+            if( user )
             {
                 const newPassword:string = await generateNewPassword()
     
                 if( newPassword )
                 {
-                    mailer(login,newPassword)
-                        .then( async () => {
-                            await forgotPasswordServiceImpl.saveNewPassword(newPassword)
-                        })
-                        .catch( (err:any) => {
-                            logger.error( `Method => FORGOTPASSWORD : ${err.message}` )
-                            res.status(520).send( ApiError.unknown_error(err.message) )
-                        })
-                        .finally( () => {
-                            res.status(200).send( "An email with your new password has be sent to you" )
-                        })
+                    //TODO Implements nodemailer
+                    // mailer(login,newPassword)
+                    //     .then( async () => {
+                    //         await forgotPasswordServiceImpl.saveNewPassword(login,newPassword)
+                    //     })
+                    //     .catch( (err:any) => {
+                    //         logger.error( `Method => FORGOTPASSWORD : ${err.message}` )
+                    //         res.status(520).send( ApiError.unknown_error(err.message) )
+                    //     })
+                        // .finally( () => {
+                        //     res.status(200).send( "An email with your new password has be sent to you" )
+                        // })
+                    res.status(200).send( `An email with your new password has be sent to you ${newPassword}` ) //TODO A retirer
                 }
                 else res.status(520).send( ApiError.unknown_error("An unknown error occured") )
             }
@@ -42,7 +44,7 @@ export class ForgotPasswordCtrl
         } 
         catch (err:any) 
         {
-            logger.error( `Method => FORGOTPASSWORD : ${err.message}` )
+            logger.error( `Method => FORGOT_PASSWORD : ${err.message}` )
             res.status(520).send( ApiError.unknown_error(err.message) )
         }
     }
@@ -52,12 +54,12 @@ export class ForgotPasswordCtrl
 const generateNewPassword = async () =>
 {
     const chars: string = "0123456789abcdefghijklmnopqrstuvwxyz!@#$*ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const passwordLength: number = 8;
+    const passwordLength: number = 10;
     let password: string = ""
 
     for ( let i = 0 ; i <= passwordLength; i++ ) 
     {
-        const randomNumber:number = Math.floor( crypto.randomInt(1) * chars.length)
+        const randomNumber:number = crypto.randomInt(0, (chars.length - 1) )
         password += chars.substring(randomNumber, randomNumber +1)
     }
 
@@ -71,7 +73,7 @@ async function mailer(login:string,newPassword:string)
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
         host: "smtp.ethereal.email",
-        port: 587,
+        port: 465,
         requireTLS: true,
         secure: true, // true for 465, false for other ports
         // auth: {

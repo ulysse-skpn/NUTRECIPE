@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { User } from "../entity/UserEntity";
 import { ApiError } from "../handlers/ApiError";
 import { logger } from "../lib/config/winston";
 import { IUserRole } from "../service/ILoginService";
@@ -12,17 +13,17 @@ export class LoginCtrl
 
         try 
         {
-            const login:string = req.body.login
+            const login:string = req.body.email
             const password:string = req.body.password
 
-            const exists:boolean = await loginServiceImpl.userExist(login,password)
+            const user:User|null = await loginServiceImpl.userExist(login,password)
 
-            if( exists )
+            if( user )
             {
-                const role:IUserRole = await loginServiceImpl.getUserRole(login,password)
+                const role:IUserRole|null = await loginServiceImpl.getUserRole(login,password)
                 res.status(200).send(role)
             }
-            else res.status(404).send( ApiError.not_found("User with this login and password not found") )
+            else res.status(404).send( ApiError.not_found("User with this login and/or password not found") )
         } 
         catch (err:any) 
         {

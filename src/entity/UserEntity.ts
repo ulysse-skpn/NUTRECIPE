@@ -16,8 +16,8 @@ export class User extends BaseModel<User>
     @Column(DataType.STRING(20))
     phone_number!: string;
 
-    @AllowNull(false)
     @Unique
+    @AllowNull(false)
     @Column
     email!: string;
 

@@ -14,12 +14,12 @@ export class RecipeRepository implements IBaseRepository<Recipe>
 
     async findById(id: number): Promise<Recipe | any> 
     {
-        return this.recipeRepository.findByPk(id)
+        return await this.recipeRepository.findByPk(id)
     }
 
     async create(item: Recipe): Promise<Recipe> 
     {
-        return this.recipeRepository.create(item)
+        return await this.recipeRepository.create(item)
     }
 
     async put(id: number, item: Recipe): Promise<[affectedCount:number]> 
@@ -29,7 +29,7 @@ export class RecipeRepository implements IBaseRepository<Recipe>
             where:{id:id},
             limit:1
         }
-        return this.recipeRepository.update(item,options)
+        return await this.recipeRepository.update(item,options)
     }
 
     async delete(id: number): Promise<number> 
@@ -39,12 +39,12 @@ export class RecipeRepository implements IBaseRepository<Recipe>
             where:{id:id},
             limit:1
         }
-        return this.recipeRepository.destroy(options)
+        return await this.recipeRepository.destroy(options)
     }
 
     async findAll(): Promise<Recipe[]> 
     {
-        return this.recipeRepository.findAll()
+        return await this.recipeRepository.findAll()
     }
 
 }

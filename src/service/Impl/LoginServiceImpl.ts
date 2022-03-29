@@ -1,14 +1,18 @@
+import { UserRepository } from "../../DAO/UserRepository";
+import { User } from "../../entity/UserEntity";
 import { ILoginService, IUserRole } from "../ILoginService";
 
 export class LoginServiceImpl implements ILoginService
 {
-    userExist(login: string, password: string): Promise<boolean> 
+    userRepository:UserRepository = new UserRepository()
+
+    async userExist(login: string, password: string): Promise<User|null> 
     {
-        throw new Error("Method not implemented.");
+        return this.userRepository.findByLoginPassword(login, password)
     }
 
-    getUserRole(login: string, password: string): Promise<IUserRole> 
+    async getUserRole(login: string, password: string): Promise<IUserRole|null> 
     {
-        throw new Error("Method not implemented.");
+        return this.userRepository.findByLoginPassword(login,password)
     }
 }

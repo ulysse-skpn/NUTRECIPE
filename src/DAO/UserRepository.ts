@@ -14,12 +14,12 @@ export class UserRepository implements IBaseRepository<User>
 
     async findById(id: number): Promise<User | any> 
     {
-        return this.userRepository.findByPk(id)
+        return await this.userRepository.findByPk(id)
     }
 
     async create(item: User): Promise<User> 
     {
-        return this.userRepository.create(item)
+        return await this.userRepository.create(item)
     }
 
     async put(id: number, item: User): Promise<[affectedCount:number]> 
@@ -29,7 +29,7 @@ export class UserRepository implements IBaseRepository<User>
             where:{id:id},
             limit:1
         }
-        return this.userRepository.update(item,options)
+        return await this.userRepository.update(item,options)
     }
 
     async delete(id: number): Promise<number> 
@@ -39,12 +39,22 @@ export class UserRepository implements IBaseRepository<User>
             where:{id:id},
             limit:1
         }
-        return this.userRepository.destroy(options)
+        return await this.userRepository.destroy(options)
     }
 
     async findAll(): Promise<User[]> 
     {
-        return this.userRepository.findAll()
+        return await this.userRepository.findAll()
+    }
+
+    async findByText(login:string): Promise<User|null>
+    {
+        return await this.userRepository.findOne({ where:{email:login} })
+    }
+
+    async findByLoginPassword(login:string,password:string): Promise<User|null>
+    {
+        return await this.userRepository.findOne({ where:{ email:login , password:password } })
     }
 
 }

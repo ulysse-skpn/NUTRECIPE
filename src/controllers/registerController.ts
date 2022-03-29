@@ -5,38 +5,30 @@ import { RegisterServiceImpl } from "../service/Impl/RegisterServiceImpl";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { User } from "../entity/UserEntity";
+import { isUser } from "./usersController";
 
 export class RegisterCtrl
 {
-    SECRET_KEY:string = "secretkey23456";
 
     async register(req:Request , res:Response)
     {
+        const SECRET_KEY:string = "secretkey23456";
         const registerServiceImpl: RegisterServiceImpl = new RegisterServiceImpl()
 
         try 
         {
+            if( !isUser(req.body) ) throw Error("User object is malformed")
+            
             bcrypt.hash( req.body.password , 10 , async (err:any, hash:string) =>
             {
-                //TODO user DTO ?
-                const user:any = 
-                {
-                    last_name: req.body.last_name,
-                    first_name: req.body.first_name,
-                    phone_number: req.body.phone_number,
-                    email: req.body.login,
-                    password: hash,
-                    role: "user",
-                    created_at: new Date(),
-                    updated_at: new Date()
-                }
-
+                const user:User = req.body
                 const createdUser:User = await registerServiceImpl.createUser(user)
 
                 if( createdUser )
                 {
+                    createdUser.password = hash
                     const expiresIn = 24 * 60 * 60
-                    const accessToken = jwt.sign( {id:createdUser.id} , this.SECRET_KEY , {
+                    const accessToken = jwt.sign( {id:createdUser.id} , SECRET_KEY , {
                         expiresIn: expiresIn
                     })
                     res.status(201).send({ "user": createdUser , "access_token": accessToken, "expires_in": expiresIn})

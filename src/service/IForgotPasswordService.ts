@@ -1,5 +1,7 @@
+import { User } from "../entity/UserEntity"
+
 export interface IForgotPasswordService
 {
-    userExists(login:string): Promise<boolean>
-    saveNewPassword(password:string): Promise<any>
+    findUserByLogin(login:string): Promise<User|null>
+    saveNewPassword(login:string,newPassword:string): Promise<[affectedCount:number]>
 }
