@@ -1,14 +1,16 @@
 
-import { AllowNull, Column, Table , IsFloat , IsInt , DataType } from "sequelize-typescript";
+import { AllowNull, Column, Table , IsFloat , IsInt , DataType, Unique } from "sequelize-typescript";
 import { BaseModel } from "../model/baseModel";
 
 @Table
 export class Ingredient extends BaseModel<Ingredient>
 {
+    @Unique
     @AllowNull(false)
     @Column
     product_name!: string;
     
+    @Unique
     @Column
     ingredient_text!: string;
 

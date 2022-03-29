@@ -1,4 +1,4 @@
-import { AllowNull, Column, Table , DataType, Unique } from "sequelize-typescript";
+import { AllowNull, Column, Table , DataType, Unique, IsEmail } from "sequelize-typescript";
 import { BaseModel } from "../model/baseModel";
 
 @Table
@@ -17,6 +17,7 @@ export class User extends BaseModel<User>
     phone_number!: string;
 
     @Unique
+    @IsEmail
     @AllowNull(false)
     @Column
     email!: string;

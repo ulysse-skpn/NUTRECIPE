@@ -1,9 +1,10 @@
-import { AllowNull, Column, Table , DataType } from "sequelize-typescript";
+import { AllowNull, Column, Table , DataType, Unique } from "sequelize-typescript";
 import { BaseModel } from "../model/baseModel";
 
 @Table
 export class Recipe extends BaseModel<Recipe>
 {
+    @Unique
     @AllowNull(false)
     @Column
     title!: string;
@@ -27,7 +28,6 @@ export class Recipe extends BaseModel<Recipe>
     @Column
     serving_size!: string;
 
-    @AllowNull(false)
     @Column(DataType.TEXT)
     instructions!: string;
 

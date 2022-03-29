@@ -15,11 +15,7 @@ export const database = new Sequelize({
     username:process.env.DB_USER,
     password:process.env.DB_PASSWORD,
     logging:true,
-    models: [__dirname + "/entity"],
-    define:
-    {
-        timestamps:false
-    }
+    models: [__dirname + "/entity"]
 })
 
 database.addModels([Ingredient])

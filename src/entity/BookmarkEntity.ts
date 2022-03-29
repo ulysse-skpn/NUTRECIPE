@@ -1,9 +1,10 @@
-import { Column, Table , DataType, AllowNull } from "sequelize-typescript";
+import { Column, Table , DataType, AllowNull, Unique } from "sequelize-typescript";
 import { BaseModel } from "../model/baseModel";
 
 @Table
 export class Bookmark extends BaseModel<Bookmark>
 {
+    @Unique
     @AllowNull(false)
     @Column
     label!: string;
