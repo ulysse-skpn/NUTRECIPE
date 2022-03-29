@@ -6,6 +6,7 @@ import { UsersCtrl } from "../controllers/usersController";
 import { LoginCtrl } from "../controllers/loginController"
 import { RegisterCtrl } from "../controllers/registerController";
 import { ForgotPasswordCtrl } from "../controllers/forgotPasswordController";
+import { RootCtrl } from "../controllers/rootController";
 import * as swagger from "swagger-ui-express"
 import swaggerDocument from "../lib/config/swagger.json"
 
@@ -13,6 +14,7 @@ import swaggerDocument from "../lib/config/swagger.json"
 
 export class Routes 
 {
+    public rootController: RootCtrl = new RootCtrl()
     public loginController: LoginCtrl = new LoginCtrl()
     public registerController: RegisterCtrl = new RegisterCtrl()
     public forgotPasswordController: ForgotPasswordCtrl = new ForgotPasswordCtrl()
@@ -32,6 +34,11 @@ export class Routes
 
 
         //  APP ROOT
+        app
+            .route("/")
+            .get(this.rootController.root)
+
+        //  LOGIN
         app
             .route("/login")
             .post(this.loginController.login)
