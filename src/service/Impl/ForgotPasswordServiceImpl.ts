@@ -10,13 +10,8 @@ export class ForgotPasswordServiceImpl implements IForgotPasswordService
     {
         const user:User|null = await this.userRepository.findByText(login)
 
-        if( user )
-        {
-            user.password = newPassword
-            const idUser:number = user !== null ? user.id : 0 
-            return this.userRepository.put(idUser,user)
-        }
-        else return [0]
+        if( user ) return this.userRepository.patchPassword(login,newPassword)
+        else        return [0]
     }
 
     async findUserByLogin(login: string): Promise<User|null>

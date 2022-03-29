@@ -8,6 +8,6 @@ export class RegisterServiceImpl implements IRegisterService
 
     async createUser(user:User): Promise<User> 
     {
-        return await this.userRepository.create(user)
+        return this.userRepository.create(user)
     }
 }

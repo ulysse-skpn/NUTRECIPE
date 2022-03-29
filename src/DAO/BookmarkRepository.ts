@@ -14,12 +14,12 @@ export class BookmarkRepository implements IBaseRepository<Bookmark>
 
     async findById(id: number): Promise<Bookmark | any> 
     {
-        return await this.bookmarkRepository.findByPk(id)
+        return this.bookmarkRepository.findByPk(id)
     }
 
     async create(item: Bookmark): Promise<Bookmark> 
     {
-        return await this.bookmarkRepository.create(item)
+        return this.bookmarkRepository.create(item)
     }
 
     async put(id: number, item: Bookmark): Promise<[affectedCount:number]> 
@@ -29,7 +29,7 @@ export class BookmarkRepository implements IBaseRepository<Bookmark>
             where:{id:id},
             limit:1
         }
-        return await this.bookmarkRepository.update(item,options)
+        return this.bookmarkRepository.update(item,options)
     }
 
     async delete(id: number): Promise<number> 
@@ -39,12 +39,12 @@ export class BookmarkRepository implements IBaseRepository<Bookmark>
             where:{id:id},
             limit:1
         }
-        return await this.bookmarkRepository.destroy(options)
+        return this.bookmarkRepository.destroy(options)
     }
 
     async findAll(): Promise<Bookmark[]> 
     {
-        return await this.bookmarkRepository.findAll()
+        return this.bookmarkRepository.findAll()
     }
 
 }

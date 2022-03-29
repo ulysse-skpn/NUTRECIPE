@@ -16,8 +16,8 @@ export class ForgotPasswordCtrl
         try 
         {
             const login:string = req.body.email
-
             const user:User|null = await forgotPasswordServiceImpl.findUserByLogin(login)
+
             if( user )
             {
                 const newPassword:string = await generateNewPassword()
@@ -33,10 +33,17 @@ export class ForgotPasswordCtrl
                     //         logger.error( `Method => FORGOTPASSWORD : ${err.message}` )
                     //         res.status(520).send( ApiError.unknown_error(err.message) )
                     //     })
-                        // .finally( () => {
-                        //     res.status(200).send( "An email with your new password has be sent to you" )
-                        // })
-                    res.status(200).send( `An email with your new password has be sent to you ${newPassword}` ) //TODO A retirer
+                    //     .finally( () => {
+                    //         res.status(200).send( "An email with your new password has be sent to you" )
+                    //     })
+
+                    await forgotPasswordServiceImpl.saveNewPassword(login,newPassword)
+                            .then( () => {
+                                res.status(200).send( `An email with your new password has be sent to you ${newPassword}` )
+                            })
+                            .catch( (err:any) => {
+                                res.status(500).send( ApiError.internal_server_error(err.message) )
+                            })
                 }
                 else res.status(520).send( ApiError.unknown_error("An unknown error occured") )
             }
@@ -73,13 +80,8 @@ async function mailer(login:string,newPassword:string)
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
         host: "smtp.ethereal.email",
-        port: 465,
-        requireTLS: true,
-        secure: true, // true for 465, false for other ports
-        // auth: {
-        // user: testAccount.user, // generated ethereal user
-        // pass: testAccount.pass, // generated ethereal password
-        // },
+        port: 587,
+        secure: false, // true for 465, false for other ports
     });
 
     // send mail with defined transport object
