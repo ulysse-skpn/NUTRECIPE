@@ -1,6 +1,6 @@
 import { database } from "./database";
 
-export class init_entities 
+export class InitEntities 
 {
     // ================ INIT One Ingredient ================
     public static init_ingredient()

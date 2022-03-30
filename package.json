@@ -6,7 +6,8 @@
   "scripts": {
     "test": "test",
     "start:dev": "nodemon",
-    "sonar": "node sonar-project.js"
+    "sonar": "node sonar-project.js",
+    "cypress:open":"cypress open"
   },
   "jest": {
     "testEnvironment": "node",
@@ -36,6 +37,8 @@
     "@types/validator": "^13.7.1",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
+    "cypress": "^9.5.3",
+    "cypress-sonarqube-reporter": "^1.10.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "helmet": "^5.0.2",

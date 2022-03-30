@@ -1,4 +1,4 @@
-import { Table , Model, PrimaryKey, DataType, Column, AutoIncrement, AllowNull, IsDate } from "sequelize-typescript"
+import { Table , Model, PrimaryKey, DataType, Column, AutoIncrement, AllowNull } from "sequelize-typescript"
 
 @Table
 export class BaseModel<T> extends Model<T>

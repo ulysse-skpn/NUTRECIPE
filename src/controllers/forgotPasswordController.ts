@@ -24,7 +24,7 @@ export class ForgotPasswordCtrl
     
                 if( newPassword )
                 {
-                    //TODO Implements nodemailer
+                    //?
                     // mailer(login,newPassword)
                     //     .then( async () => {
                     //         await forgotPasswordServiceImpl.saveNewPassword(login,newPassword)

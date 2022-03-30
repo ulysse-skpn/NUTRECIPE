@@ -8,7 +8,7 @@ import { logger } from "./winston"
 import { RecipeIngredients } from "../../entity/RecipeIngredientsEntity"
 import { UserBookmarks } from "../../entity/UserBookmarksEntity"
 import { RecipeBookmarks } from "../../entity/RecipeBookmarksEntity"
-import { init_entities } from "./initEntities"
+import { InitEntities } from "./initEntities"
 import sequelize from "sequelize"
 
 dotenv.config()
@@ -38,42 +38,42 @@ database.authenticate()
         database.sync()
             .then( async (res) => {
                 await database.query("show tables" , {type: sequelize.QueryTypes.SHOWTABLES})
-                    .then( (res) => {
+                    .then( () => {
                         console.log(res);
                 })
 
                 await database.query("SELECT COUNT(id) as elem FROM ingredients" , { plain:true , raw:true} )
-                    .then( async (res) => {
+                    .then( async () => {
                         if( res ) 
                         {
-                            init_entities.init_ingredient()
+                            InitEntities.init_ingredient()
                             logger.info( 'ingredients table initialized' )
                         }      
                     })   
 
                 await database.query("SELECT COUNT(id) as elem FROM recipes" , { plain:true , raw:true} )
-                    .then( async (res) => {
+                    .then( async () => {
                         if( res ) 
                         {
-                            init_entities.init_recipe()
+                            InitEntities.init_recipe()
                             logger.info( 'recipes table initialized' )
                         }    
                     })      
 
                 await database.query("SELECT COUNT(id) as elem FROM users" , { plain:true , raw:true} )
-                    .then( async (res) => {
+                    .then( async () => {
                         if( res ) 
                         {
-                            init_entities.init_user()
+                            InitEntities.init_user()
                             logger.info( 'users table initialized' )
                         }
                     })       
 
                 await database.query("SELECT COUNT(id) as elem FROM bookmarks" , { plain:true , raw:true} )
-                    .then( async (res) => {
+                    .then( async () => {
                         if( res ) 
                         {
-                            init_entities.init_bookmark()
+                            InitEntities.init_bookmark()
                             logger.info( 'boomarks table initialized' )
                         }
                     })    
