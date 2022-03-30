@@ -5,6 +5,7 @@ import { Ingredient } from "../../entity/IngredientEntity"
 import { Recipe } from "../../entity/RecipeEntity"
 import { User } from "../../entity/UserEntity"
 import { Bookmark } from "../../entity/BookmarkEntity"
+import { logger } from "./winston"
 
 dotenv.config()
 
@@ -29,7 +30,22 @@ database.addModels([Bookmark])
 
 database.authenticate()
     .then( async () => {
-        console.log("Database connected...")
-        init_entities()
+        logger.info("Database connected...")
+        database.query("SELECT * FROM ingredients")
+                .then( (res) => {
+                    if(res[0].length === 0) init_entities.init_ingredient()
+                })
+        database.query("SELECT * FROM recipes")
+                .then( (res) => {
+                    if(res[0].length === 0) init_entities.init_recipe()
+                })
+        database.query("SELECT * FROM users")
+                .then( (res) => {
+                    if(res[0].length === 0) init_entities.init_user()
+                })
+        database.query("SELECT * FROM bookmarks")
+                .then( (res) => {
+                    if(res[0].length === 0) init_entities.init_bookmark()
+                })
     } )
-    .catch( err => console.log(`Error : ${err}`) )
+    .catch( err => logger.info(`Error : ${err}`) )
