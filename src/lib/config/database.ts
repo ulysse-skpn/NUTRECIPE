@@ -9,18 +9,23 @@ import { RecipeIngredients } from "../../entity/RecipeIngredientsEntity"
 import { UserBookmarks } from "../../entity/UserBookmarksEntity"
 import { RecipeBookmarks } from "../../entity/RecipeBookmarksEntity"
 import { init_entities } from "./initEntities"
+import sequelize from "sequelize"
 
 dotenv.config()
+
+const timezone = () => {
+    return `+${String(Math.abs(new Date().getTimezoneOffset() / 60)).padStart(2,"0")}:00`
+}
 
 export const database = new Sequelize({
     repositoryMode: true,
     database:process.env.DATABASE_NAME,
     dialect:"mysql",
+    logging: msg => logger.debug(msg),
     username:process.env.DB_USER,
     password:process.env.DB_PASSWORD,
-    logging:true,
     models: [__dirname + "/entity"],
-    timezone:"Europe/France"
+    timezone:timezone()
 })
 
 // Entities & Intermediate Table
@@ -29,22 +34,51 @@ database.addModels([Ingredient , Recipe , User , Bookmark, RecipeIngredients , U
 database.authenticate()
     .then( async () => {
         logger.info("Database connected...")
-        // database.query("SELECT * FROM ingredients")
-        //         .then( (res) => {
-        //             if(res[0].length === 0) init_entities.init_ingredient()
-        //         })
-        // database.query("SELECT * FROM recipes")
-        //         .then( (res) => {
-        //             if(res[0].length === 0) init_entities.init_recipe()
-        //         })
-        // database.query("SELECT * FROM users")
-        //         .then( (res) => {
-        //             if(res[0].length === 0) init_entities.init_user()
-        //         })
-        // database.query("SELECT * FROM bookmarks")
-        //         .then( (res) => {
-        //             if(res[0].length === 0) init_entities.init_bookmark()
-        //         })
+
+        database.sync()
+            .then( async (res) => {
+                await database.query("show tables" , {type: sequelize.QueryTypes.SHOWTABLES})
+                    .then( (res) => {
+                        console.log(res);
+                })
+
+                await database.query("SELECT COUNT(id) as elem FROM ingredients" , { plain:true , raw:true} )
+                    .then( async (res) => {
+                        if( res ) 
+                        {
+                            init_entities.init_ingredient()
+                            logger.info( 'ingredients table initialized' )
+                        }      
+                    })   
+
+                await database.query("SELECT COUNT(id) as elem FROM recipes" , { plain:true , raw:true} )
+                    .then( async (res) => {
+                        if( res ) 
+                        {
+                            init_entities.init_recipe()
+                            logger.info( 'recipes table initialized' )
+                        }    
+                    })      
+
+                await database.query("SELECT COUNT(id) as elem FROM users" , { plain:true , raw:true} )
+                    .then( async (res) => {
+                        if( res ) 
+                        {
+                            init_entities.init_user()
+                            logger.info( 'users table initialized' )
+                        }
+                    })       
+
+                await database.query("SELECT COUNT(id) as elem FROM bookmarks" , { plain:true , raw:true} )
+                    .then( async (res) => {
+                        if( res ) 
+                        {
+                            init_entities.init_bookmark()
+                            logger.info( 'boomarks table initialized' )
+                        }
+                    })    
+            })          
+
     } )
     .catch( err => logger.info(`Error : ${err}`) )
 

@@ -1,4 +1,4 @@
-import { AllowNull, Column, Table , DataType, Unique, IsEmail, BelongsToMany } from "sequelize-typescript";
+import { AllowNull, Column, Table , DataType, Unique, IsEmail, BelongsToMany, Length } from "sequelize-typescript";
 import { BaseModel } from "../model/baseModel";
 import { Bookmark } from "./BookmarkEntity";
 import { UserBookmarks } from "./UserBookmarksEntity";
@@ -24,6 +24,7 @@ export class User extends BaseModel<User>
     @Column
     email!: string;
 
+    @Length({min:6})
     @AllowNull(false)
     @Column
     password!: string;
