@@ -7,13 +7,5 @@ export class BaseModel<T> extends Model<T>
     @AllowNull(false)
     @AutoIncrement
     @Column(DataType.INTEGER)
-    id!: number;
-
-    @IsDate
-    @Column
-    readonly created_at!: Date;
-
-    @IsDate
-    @Column
-    readonly updated_at!: Date;
+    id!: number
 }

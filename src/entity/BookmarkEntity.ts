@@ -1,5 +1,9 @@
-import { Column, Table , DataType, AllowNull, Unique } from "sequelize-typescript";
+import { Column, Table , DataType, AllowNull, Unique, BelongsToMany } from "sequelize-typescript";
 import { BaseModel } from "../model/baseModel";
+import { RecipeBookmarks } from "./RecipeBookmarksEntity";
+import { Recipe } from "./RecipeEntity";
+import { UserBookmarks } from "./UserBookmarksEntity";
+import { User } from "./UserEntity";
 
 @Table
 export class Bookmark extends BaseModel<Bookmark>
@@ -20,4 +24,10 @@ export class Bookmark extends BaseModel<Bookmark>
     @AllowNull(false)
     @Column
     saved!: boolean;
+
+    @BelongsToMany( () => User , { as: 'bookmark_has_users' , through: () => UserBookmarks}  )
+    bookmark_has_users!: Bookmark
+
+    @BelongsToMany( () => Recipe , { as: 'bookmark_has_recipes' , through: () => RecipeBookmarks}  )
+    bookmark_has_recipes!: Bookmark
 }

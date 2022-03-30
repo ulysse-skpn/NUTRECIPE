@@ -2,10 +2,12 @@ import { Ingredient } from "../entity/IngredientEntity"
 import { IBaseRepository } from "./IBaseRepository"
 import { database } from "../lib/config/database"
 import { UpdateOptions , DestroyOptions } from "sequelize"
+import { Recipe } from "../entity/RecipeEntity"
 
 export class IngredientRepository implements IBaseRepository<Ingredient>
 {
     ingredientRepository = database.getRepository(Ingredient)
+    recipeRepository = database.getRepository(Recipe)
 
     async exists(id: number): Promise<boolean> 
     {
@@ -14,12 +16,12 @@ export class IngredientRepository implements IBaseRepository<Ingredient>
 
     async findById(id: number): Promise<Ingredient | any> 
     {
-        return this.ingredientRepository.findByPk(id)
+        return this.ingredientRepository.findByPk(id , {include:[this.recipeRepository]})
     }
 
     async create(item: Ingredient): Promise<Ingredient> 
     {
-        return this.ingredientRepository.create(item)
+        return this.ingredientRepository.create(item , {include:[this.recipeRepository]})
     }
 
     async put(id: number, item: Ingredient): Promise<[affectedCount:number]> 
@@ -44,7 +46,7 @@ export class IngredientRepository implements IBaseRepository<Ingredient>
 
     async findAll(): Promise<Ingredient[]> 
     {
-        return this.ingredientRepository.findAll()
+        return this.ingredientRepository.findAll({include:[this.recipeRepository]})
     }
 
 }

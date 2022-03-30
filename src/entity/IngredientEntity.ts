@@ -1,6 +1,8 @@
 
-import { AllowNull, Column, Table , IsFloat , IsInt , DataType, Unique } from "sequelize-typescript";
+import { AllowNull, Column, Table , IsFloat , IsInt , DataType, Unique, BelongsToMany } from "sequelize-typescript";
 import { BaseModel } from "../model/baseModel";
+import { Recipe } from "./RecipeEntity";
+import { RecipeIngredients } from "./RecipeIngredientsEntity";
 
 @Table
 export class Ingredient extends BaseModel<Ingredient>
@@ -54,6 +56,8 @@ export class Ingredient extends BaseModel<Ingredient>
     @Column(DataType.TEXT)
     image!: string;
 
+    @BelongsToMany( () => Recipe , { as: 'ingredients_in_recipe' , through: () => RecipeIngredients } )
+    ingredients_in_recipe!: Ingredient[]
 }
 
 export enum NOVA_GROUP

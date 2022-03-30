@@ -1,5 +1,7 @@
-import { AllowNull, Column, Table , DataType, Unique, IsEmail } from "sequelize-typescript";
+import { AllowNull, Column, Table , DataType, Unique, IsEmail, BelongsToMany } from "sequelize-typescript";
 import { BaseModel } from "../model/baseModel";
+import { Bookmark } from "./BookmarkEntity";
+import { UserBookmarks } from "./UserBookmarksEntity";
 
 @Table
 export class User extends BaseModel<User>
@@ -29,4 +31,7 @@ export class User extends BaseModel<User>
     @AllowNull(false)
     @Column
     role!: string;
+
+    @BelongsToMany( () => Bookmark , { as: 'user_has_bookmarks' , through: () => UserBookmarks}  )
+    user_has_bookmarks!: User[]
 }
