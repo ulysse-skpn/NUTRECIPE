@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <div class='header'>
+      <ion-title>Inscription</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="ionicFormSignUp" (ngSubmit)="signUp()">
+
+    <div class="ion-label">
+      <ion-label position="floating">Prenom</ion-label>
+      <ion-input placeholder="Prénom" type="text" inputmode="text" formControlName="firstName" name="firstName" required></ion-input>
+    </div>
+
+    <div class="ion-label">
+      <ion-label position="floating">Nom</ion-label>
+      <ion-input placeholder="Nom" type="text" inputmode="text" formControlName="lastName" name="lastName" required></ion-input>
+    </div>
+
+    <div class="ion-label">
+      <ion-label position="floating">N° de téléphone</ion-label>
+      <ion-input placeholder="0102030405" type="tel" inputmode="tel" formControlName="phoneNumber" name="phoneNumber" required></ion-input>
+      <!-- <div><small>10 caractères</small></div> -->
+    </div>
+
+    <div class="ion-label">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input placeholder="email@mail.com" type="email" inputmode="email" formControlName="email" name="email" required></ion-input>
+    </div>
+
+    <div class="ion-label">
+      <ion-label position="floating">Mot de Passe</ion-label>
+      <ion-input placeholder="6 caratères minimum" type="password" inputmode="password" formControlName="password" name="password" minlength="6" required></ion-input>
+      <!-- <div><small>minimum 6 caractères</small></div> -->
+    </div>
+
+    <div class="alignButtons">
+      <button type="button" (click)="signUp()">Inscription</button>
+    </div>
+
+    <div class="alignButtons">
+      <button type="button" (click)="backToLogin()">Retour</button>
+    </div>
+  </form>
+</ion-content>
+

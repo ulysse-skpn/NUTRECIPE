@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-title>Connection</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form class="form-container" [formGroup]="ionicForm" (ngSubmit)="submitForm()">
+    <h1>J'ai déjà un compte</h1>
+    <h4>Email</h4>
+    <ion-input placeholder="Email" type="email" inputmode="email" formControlName="email" name="email" required></ion-input>
+  
+    <h4>Mot de passe</h4>
+    <ion-input placeholder="Mot de passe" type="password" formControlName="password" name="password" required></ion-input>
+
+    <div class="alignButtons">
+      <h4 (click)="recoverLogin()">Mot de passe oublié ?</h4>
+      <button type="button" (click)="submitForm()" id='submit'>Valider</button>
+    </div>
+  </form>
+
+  <div class="register-container">
+    <h1>Nouvel arrivant</h1>
+    <h4 (click)="signUp()">S'inscrire</h4>
+  </div>
+</ion-content>
+
+

@@ -1,0 +1,92 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <div class='header'>
+        <span>Accueil</span>
+        <ion-button slot="icon-only" fill="clear" (click)="openDrawer()">
+            <ion-icon name="grid"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-searchbar inputmode="text" placeholder="Recherche" (ionInput)="search($event)" (ionClear)="clearSearch()" [value]="searchQuery"></ion-searchbar>
+
+  <div class="control_display">
+    <ion-label>icone</ion-label>
+    <ion-toggle name="icone" (ionChange)="changeDisplay()"></ion-toggle>
+    <ion-select [(ngModel)]="select" name="select" multiple="true" selectedText="Filtre" okText="Choisir" cancelText="Annuler" (ionChange)="addFilter()">
+      <ion-select-option *ngFor="let item of selectOptions">{{item}}</ion-select-option>
+    </ion-select>
+  </div>
+
+    <div class="filterChips">
+      <span *ngFor="let chip of filterChips">
+        <ion-button (click)="removeFilter(chip)" fill="clear">
+          <ion-chip>
+            <ion-label>{{chip}}</ion-label>
+            <ion-icon name="close-circle" color="warning"></ion-icon>
+          </ion-chip>
+        </ion-button>
+      </span>
+    </div>
+
+
+    <!-- <ion-virtual-scroll [items]="list" approx-item-height="400px">
+      <ion-item *virtualItem="let item">
+        <ion-card>
+          <ion-img class="list-image" [src]="item.image_path"></ion-img>
+          <div class="overlay">
+            <ion-text class="overlayText" (click)="openModal()" >{{item.title}}</ion-text>
+            <ion-button class="overlayIcon" (click)="bookmark(item)" fill="clear" [ngClass]="{
+              buttonBGColorTrue: item.bookmark == true,
+              buttonBGColorFalse: item.bookmark == false
+            }">
+              <ion-icon name="heart" [ngClass]="{
+                btnColorTrue: item.bookmark == true,
+                btnColorFalse: item.bookmark == false
+              }"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-card>
+      </ion-item>
+    </ion-virtual-scroll> -->
+
+    <ion-virtual-scroll [items]="list">
+
+      <ion-item *virtualItem="let item" (click)="openModal(item.idrecipes)">
+        <ion-avatar slot="start">
+          <img src="{{item.image_path}}">
+        </ion-avatar>
+        <ion-label>
+          <h2>{{item.title}}</h2>
+        </ion-label>
+      </ion-item>
+
+    </ion-virtual-scroll>
+
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+    <!-- <div class="list" *ngIf="!display">      
+      <div class="list-item" *ngFor="let item of list" (click)="openModal()">
+        <div>Nom: {{ item.title }}</div>
+        <div>Temps de cuisson: {{ item.cookingTime }}</div>
+        <div *ngIf=" item.bookmark == false">
+          <ion-icon name="heart-outline"></ion-icon>
+        </div>
+        <div *ngIf=" item.bookmark == true">
+          <ion-icon name="heart"></ion-icon>
+        </div>
+      </div>
+    </div> -->
+
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+</ion-content>

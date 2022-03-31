@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <div class='header'>
+        <span>Favoris</span>
+        <ion-button slot="icon-only" fill="clear" (click)="openDrawer()">
+            <ion-icon name="grid"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-searchbar inputmode="text" placeholder="Recherche"></ion-searchbar>
+
+  <div class="control_display">
+    <ion-label>icone</ion-label>
+    <ion-toggle name="icone" (ionChange)="changeDisplay()"></ion-toggle>
+    <ion-select [(ngModel)]="select" name="select" multiple="true" selectedText="Filtre" okText="Choisir" cancelText="Annuler" (ionChange)="addFilter()">
+      <ion-select-option *ngFor="let item of selectOptions">{{item}}</ion-select-option>
+    </ion-select>
+  </div>
+
+    <div class="filterChips">
+      <span *ngFor="let chip of filterChips">
+        <ion-button (click)="removeFilter(chip)" fill="clear">
+          <ion-chip>
+            <ion-label>{{chip}}</ion-label>
+            <ion-icon name="close-circle" color="warning"></ion-icon>
+          </ion-chip>
+        </ion-button>
+      </span>
+    </div>
+
+    <div class="imageScroll" *ngIf="display">      
+      <div class="squareImg" *ngFor="let item of list">
+          <div>
+            <p>{{item.name}}</p>
+            <div class="squareImg-item">
+              <img class="list-image" src="https://sf2.bibamagazine.fr/wp-content/uploads/biba/2016/11/Comment-reussir-ses-photos-de-nourriture-sur-Instagram-1024x768.jpg">
+              <ion-button class="overlayIcon" (click)="bookmark(item)" fill="clear" [ngClass]="{
+                buttonBGColorTrue: item.bookmark == true,
+                buttonBGColorFalse: item.bookmark == false
+              }">
+                <ion-icon name="heart" [ngClass]="{
+                  btnColorTrue: item.bookmark == true,
+                  btnColorFalse: item.bookmark == false
+                }"></ion-icon>
+              </ion-button>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="list" *ngIf="!display">      
+      <div class="list-item" *ngFor="let item of list" (click)="openModal()">
+        <div>Nom: {{ item.name }}</div>
+        <div>Temps de cuisson: {{ item.cookingTime }}</div>
+        <div *ngIf=" item.bookmark == false">
+          <ion-icon name="heart-outline"></ion-icon>
+        </div>
+        <div *ngIf=" item.bookmark == true">
+          <ion-icon name="heart"></ion-icon>
+        </div>
+      </div>
+    </div>
+
+  <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
+</ion-content>
