@@ -1,0 +1,3 @@
+-TODO Créer fichier .env
+-TODO Voir comment mettre en cache la liste des ingrédients , recettes , users
+-TODO Créer un spinner pour patienter lors de la mise en cache
