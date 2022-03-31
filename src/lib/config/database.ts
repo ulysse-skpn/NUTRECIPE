@@ -10,8 +10,9 @@ import { UserBookmarks } from "../../entity/UserBookmarksEntity"
 import { RecipeBookmarks } from "../../entity/RecipeBookmarksEntity"
 import { InitEntities } from "./initEntities"
 import sequelize from "sequelize"
-import { fetchIngredients } from "../../fetchData"
+import { fetchIngredients, fetchRecipes } from "../../fetchData"
 import { IngredientRepository } from "../../DAO/IngredientRepository"
+import { RecipeRepository } from "../../DAO/RecipeRepository"
 
 dotenv.config()
 
@@ -50,6 +51,7 @@ database.authenticate()
                             if( e.elem === 0 || e.elem === 1 ) 
                             {
                                 InitEntities.init_ingredient()
+
                                 const ingredientRepository:any = new IngredientRepository()
                                 const ingredientsList = fetchIngredients()
 
@@ -67,6 +69,13 @@ database.authenticate()
                         if( e ) 
                         {
                             InitEntities.init_recipe()
+                            
+                            const recipeRepository:any = new RecipeRepository()
+                            const recipesList = fetchRecipes()
+
+                            const half = Math.ceil( recipesList.length / 2 )
+                            await recipeRepository.bulkCreate( recipesList.slice(0,half) )
+                            await recipeRepository.bulkCreate( recipesList.slice(-half) )
                             logger.info( 'recipes table initialized' )
                         }    
                     })      

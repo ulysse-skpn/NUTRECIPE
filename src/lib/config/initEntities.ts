@@ -25,7 +25,7 @@ export class InitEntities
     {
         database.query(`
             INSERT IGNORE INTO users ( last_name , first_name , phone_number , email , password , role ) 
-            VALUES ( "ex_last_name" , "ex_first_name" , "ex_phone_number" , "u.sekpon@gmail.com" , "passwordY" , "admin" )`
+            VALUES ( "SEKPON" , "ulysse" , "0627410018" , "u.sekpon@gmail.com" , "azerty" , "admin" )`
         )
     }
 

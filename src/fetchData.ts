@@ -1,12 +1,15 @@
 import fs from "fs"
 
-const rawData = fs.readFileSync('data/open-food-facts-products.json')
-const products = JSON.parse(rawData.toString())
+const rawDataIngredients = fs.readFileSync('data/open-food-facts-products.json')
+const rawDataRecipes = fs.readFileSync('data/recipes.json')
+const ingredients = JSON.parse(rawDataIngredients.toString())
+const recipes = JSON.parse(rawDataRecipes.toString())
 const ingredientList:Array<object> = []
+const recipeList:Array<object> = []
 
 export const fetchIngredients = () => 
 {
-    products.forEach( (element: any) => {
+    ingredients.forEach( (element: any) => {
         
         let product_name , ingredient_text , carbohydrates , proteins , fats , salt , calories , nova_group , categories ,serving_size , image;
         
@@ -54,3 +57,42 @@ export const fetchIngredients = () =>
     return ingredientList
 }
 
+
+export const fetchRecipes = () => 
+{
+    recipes.forEach( (element:any) => {
+        let title , prep_time , cooking_time , rest_time , categories , ingredients_list , serving_size , instructions , image;
+
+        if( element.title ) title = element.title
+        else title = null
+        
+        if( element.prep_time ) title = element.prep_time
+        else prep_time = null
+
+        if( element.cooking_time ) title = element.cooking_time
+        else cooking_time = null
+
+        if( element.rest_time ) title = element.rest_time
+        else rest_time = null
+
+        if( element.categories ) title = element.categories
+        else categories = null
+
+        if( element.ingredients_list ) title = element.ingredients_list
+        else ingredients_list = null
+
+        if( element.serving_size ) title = element.serving_size
+        else serving_size = null
+
+        if( element.instructions ) title = element.instructions
+        else instructions = null
+
+        if( element.image ) title = element.image
+        else image = null
+
+        const recipe = { title , prep_time , cooking_time , rest_time , categories , ingredients_list , serving_size , instructions ,image }
+        recipeList.push(recipe)
+    })
+
+    return recipeList
+}
