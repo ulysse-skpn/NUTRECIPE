@@ -1,5 +1,5 @@
 
-import { AllowNull, Column, Table , IsFloat , IsInt , DataType, Unique, BelongsToMany } from "sequelize-typescript";
+import { AllowNull, Column, Table , IsFloat , IsInt , DataType, BelongsToMany } from "sequelize-typescript";
 import { BaseModel } from "../model/baseModel";
 import { Recipe } from "./RecipeEntity";
 import { RecipeIngredients } from "./RecipeIngredientsEntity";

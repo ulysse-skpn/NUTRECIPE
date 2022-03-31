@@ -13,7 +13,6 @@ import sequelize from "sequelize"
 import { fetchIngredients, fetchRecipes } from "../../fetchData"
 import { IngredientRepository } from "../../DAO/IngredientRepository"
 import { RecipeRepository } from "../../DAO/RecipeRepository"
-import { UserRepository } from "../../DAO/UserRepository"
 
 dotenv.config()
 
@@ -46,58 +45,56 @@ database.authenticate()
 
                 await database.query("SELECT COUNT(id) as elem FROM ingredients" , { plain:true , raw:true} )
                     .then( async (e:any) => {
-                        if( e ) 
-                        {   
+ 
                             
-                            if( e.elem === 0 || e.elem === 1 ) 
-                            {
-                                InitEntities.init_ingredient()
+                        if( e.elem === 0 || e.elem === 1 ) 
+                        {
+                            InitEntities.init_ingredient()
 
-                                const ingredientRepository:any = new IngredientRepository()
-                                const ingredientsList = fetchIngredients()
+                            const ingredientRepository:any = new IngredientRepository()
+                            const ingredientsList = fetchIngredients()
 
-                                const half = Math.ceil( ingredientsList.length / 2 )
-                                await ingredientRepository.bulkCreate( ingredientsList.slice(0,half) )
-                                await ingredientRepository.bulkCreate( ingredientsList.slice(-half) )
-                            }
+                            const half = Math.ceil( ingredientsList.length / 2 )
+                            await ingredientRepository.bulkCreate( ingredientsList.slice(0,half) )
+                            await ingredientRepository.bulkCreate( ingredientsList.slice(-half) )
+                        }
 
-                            logger.info( 'ingredients table initialized' )
-                        }      
+                        logger.info( 'ingredients table initialized' )
+                              
                     })   
 
                 await database.query("SELECT COUNT(id) as elem FROM recipes" , { plain:true , raw:true} )
                     .then( async (e:any) => {
-                        if( e ) 
+
+
+                        if( e.elem === 0 || e.elem === 1 )
                         {
-                            if( e.elem === 0 || e.elem === 1 )
-                            {
-                                InitEntities.init_recipe()
-                                
-                                const recipeRepository:any = new RecipeRepository()
-                                const recipesList = fetchRecipes()
-    
-                                await recipeRepository.bulkCreate( recipesList )
-                            }
-                            logger.info( 'recipes table initialized' )
-                        }    
+                            InitEntities.init_recipe()
+                            
+                            const recipeRepository:any = new RecipeRepository()
+                            const recipesList = fetchRecipes()
+
+                            await recipeRepository.bulkCreate( recipesList )
+                        }
+                        logger.info( 'recipes table initialized' )
+                        
+                            
                     })      
 
                 await database.query("SELECT COUNT(id) as elem FROM users" , { plain:true , raw:true} )
                     .then( async (e:any) => {
-                        if( e ) 
-                        {
-                            InitEntities.init_user()
-                            logger.info( 'users table initialized' )
-                        }
+
+                        InitEntities.init_user()
+                        logger.info( 'users table initialized' )
+                        
                     })       
 
                 await database.query("SELECT COUNT(id) as elem FROM bookmarks" , { plain:true , raw:true} )
                     .then( async (e:any) => {
-                        if( e ) 
-                        {
-                            InitEntities.init_bookmark()
-                            logger.info( 'boomarks table initialized' )
-                        }
+
+                        InitEntities.init_bookmark()
+                        logger.info( 'boomarks table initialized' )
+                        
                     })    
             })          
 

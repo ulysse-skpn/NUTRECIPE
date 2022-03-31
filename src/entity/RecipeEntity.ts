@@ -1,4 +1,4 @@
-import { AllowNull, Column, Table , DataType, Unique, BelongsToMany } from "sequelize-typescript";
+import { AllowNull, Column, Table , DataType, BelongsToMany } from "sequelize-typescript";
 import { BaseModel } from "../model/baseModel";
 import { Bookmark } from "./BookmarkEntity";
 import { Ingredient } from "./IngredientEntity";
