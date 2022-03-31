@@ -16,7 +16,7 @@ export const fetchIngredients = () =>
         if( element.fields.product_name !== undefined ) product_name = element.fields.product_name !== null ? element.fields.product_name : element.fields.generic_name
         else product_name = "/"
 
-        if( element.fields.ingredients_text !== undefined ) ingredient_text = element.fields.ingredients_text
+        if( element.fields.ingredients_text !== undefined ) ingredient_text = JSON.stringify(element.fields.ingredients_text.split(","))
         else ingredient_text = null
 
         if( element.fields.carbohydrates_100g !== undefined ) carbohydrates = parseFloat(element.fields.carbohydrates_100g).toFixed(2)
@@ -37,7 +37,7 @@ export const fetchIngredients = () =>
         if( element.fields.nova_group !== undefined ) nova_group = element.fields.nova_group
         else nova_group = 0
 
-        if( element.fields.categories_fr !== undefined ) categories = element.fields.categories_fr || element.fields.categories
+        if( element.fields.categories_fr !== undefined ) categories = JSON.stringify(element.fields.categories_fr.split(",")) || JSON.stringify(element.fields.categories.split(","))
         else categories = null
 
         if( element.fields.serving_size !== undefined ) serving_size = element.fields.serving_size
