@@ -14,7 +14,7 @@ export const fetchIngredients = () =>
         let product_name , ingredient_text , carbohydrates , proteins , fats , salt , calories , nova_group , categories ,serving_size , image;
         
         if( element.fields.product_name !== undefined ) product_name = element.fields.product_name !== null ? element.fields.product_name : element.fields.generic_name
-        else product_name = "non renseigné"
+        else product_name = "/"
 
         if( element.fields.ingredients_text !== undefined ) ingredient_text = element.fields.ingredients_text
         else ingredient_text = null
@@ -64,33 +64,33 @@ export const fetchRecipes = () =>
         let title , prep_time , cooking_time , rest_time , categories , ingredients_list , serving_size , instructions , image;
 
         if( element.title ) title = element.title
-        else title = null
+        else title = "/"
         
-        if( element.prep_time ) title = element.prep_time
+        if( element.prep ) prep_time = element.prep
         else prep_time = null
 
-        if( element.cooking_time ) title = element.cooking_time
+        if( element.cookingTime ) cooking_time = element.cookingTime
         else cooking_time = null
 
-        if( element.rest_time ) title = element.rest_time
+        if( element.rest ) rest_time = element.rest
         else rest_time = null
 
-        if( element.categories ) title = element.categories
+        if( element.categories ) categories = JSON.stringify(element.categories)
         else categories = null
 
-        if( element.ingredients_list ) title = element.ingredients_list
+        if( element.ingredients ) ingredients_list = JSON.stringify(element.ingredients)
         else ingredients_list = null
 
-        if( element.serving_size ) title = element.serving_size
+        if( element.serving_size ) serving_size = element.serving_size
         else serving_size = null
 
-        if( element.instructions ) title = element.instructions
+        if( element.instructions ) instructions = JSON.stringify(element.instructions)
         else instructions = null
 
-        if( element.image ) title = element.image
+        if( element.image ) image = element.image
         else image = null
 
-        const recipe = { title , prep_time , cooking_time , rest_time , categories , ingredients_list , serving_size , instructions ,image }
+        const recipe = { title , prep_time , cooking_time , rest_time , categories , ingredients_list , serving_size , instructions , image }
         recipeList.push(recipe)
     })
 

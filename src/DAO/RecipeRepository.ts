@@ -18,12 +18,44 @@ export class RecipeRepository implements IBaseRepository<Recipe>
 
     async findById(id: number): Promise<Recipe | any> 
     {
-        return this.recipeRepository.findByPk(id , {include:[this.ingredientRepository,this.bookmarkRepository]})
+        return this.recipeRepository.findByPk(id , 
+            {
+                include:
+                [
+                    {
+                        model:this.ingredientRepository, as:"recipe_has_ingredients"
+                    }
+                ]
+            }
+        )
     }
 
     async create(item: Recipe): Promise<Recipe> 
     {
-        return this.recipeRepository.create(item , {include:[this.ingredientRepository,this.bookmarkRepository]})
+        return this.recipeRepository.create(item ,
+            {
+                include:
+                [
+                    {
+                        model:this.ingredientRepository, as:"recipe_has_ingredients"
+                    }
+                ]
+            }
+        )
+    }
+
+    async bulkCreate(item: Recipe[]): Promise<Recipe[]> 
+    {
+        return this.recipeRepository.bulkCreate(item,
+            {
+                include:
+                [
+                    {
+                        model:this.ingredientRepository, as:"recipe_has_ingredients"
+                    }
+                ]
+            }    
+        )
     }
 
     async put(id: number, item: Recipe): Promise<[affectedCount:number]> 
@@ -48,7 +80,16 @@ export class RecipeRepository implements IBaseRepository<Recipe>
 
     async findAll(): Promise<Recipe[]> 
     {
-        return this.recipeRepository.findAll({include:[this.ingredientRepository,this.bookmarkRepository]})
+        return this.recipeRepository.findAll(
+            {
+                include:
+                [
+                    {
+                        model:this.ingredientRepository, as:"recipe_has_ingredients"
+                    }
+                ]
+            }
+        )
     }
 
 }

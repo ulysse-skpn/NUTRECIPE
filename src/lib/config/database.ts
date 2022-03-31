@@ -13,6 +13,7 @@ import sequelize from "sequelize"
 import { fetchIngredients, fetchRecipes } from "../../fetchData"
 import { IngredientRepository } from "../../DAO/IngredientRepository"
 import { RecipeRepository } from "../../DAO/RecipeRepository"
+import { UserRepository } from "../../DAO/UserRepository"
 
 dotenv.config()
 
@@ -68,14 +69,15 @@ database.authenticate()
                     .then( async (e:any) => {
                         if( e ) 
                         {
-                            InitEntities.init_recipe()
-                            
-                            const recipeRepository:any = new RecipeRepository()
-                            const recipesList = fetchRecipes()
-
-                            const half = Math.ceil( recipesList.length / 2 )
-                            await recipeRepository.bulkCreate( recipesList.slice(0,half) )
-                            await recipeRepository.bulkCreate( recipesList.slice(-half) )
+                            if( e.elem === 0 || e.elem === 1 )
+                            {
+                                InitEntities.init_recipe()
+                                
+                                const recipeRepository:any = new RecipeRepository()
+                                const recipesList = fetchRecipes()
+    
+                                await recipeRepository.bulkCreate( recipesList )
+                            }
                             logger.info( 'recipes table initialized' )
                         }    
                     })      

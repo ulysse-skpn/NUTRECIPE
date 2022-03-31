@@ -6,5 +6,10 @@ DAO
 
 https://medium.com/swlh/nodejs-code-evaluation-using-jest-sonarqube-and-docker-f6b41b2c319d
 
+
+TODO Generate Swaager
+TODO Revoir Relations Entities
+
+//INFORMATIONS IMPORTANTES
 Check //? For todo
 database utf8mb4_bin

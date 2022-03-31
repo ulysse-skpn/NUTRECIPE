@@ -8,7 +8,6 @@ import { RecipeIngredients } from "./RecipeIngredientsEntity";
 @Table
 export class Recipe extends BaseModel<Recipe>
 {
-    @Unique
     @AllowNull(false)
     @Column
     title!: string;
@@ -25,7 +24,6 @@ export class Recipe extends BaseModel<Recipe>
     @Column(DataType.TEXT)
     categories!: string;
 
-    @AllowNull(false)
     @Column(DataType.TEXT)
     ingredients_list!: string;
 
