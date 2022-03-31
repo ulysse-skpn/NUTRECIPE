@@ -21,7 +21,7 @@ export const database = new Sequelize({
     repositoryMode: true,
     database:process.env.DATABASE_NAME,
     dialect:"mysql",
-    logging: msg => logger.debug(msg),
+    logging: msg => console.log(msg),
     username:process.env.DB_USER,
     password:process.env.DB_PASSWORD,
     models: [__dirname + "/entity"],
@@ -37,10 +37,8 @@ database.authenticate()
 
         database.sync()
             .then( async (res) => {
+
                 await database.query("show tables" , {type: sequelize.QueryTypes.SHOWTABLES})
-                    .then( () => {
-                        console.log(res);
-                })
 
                 await database.query("SELECT COUNT(id) as elem FROM ingredients" , { plain:true , raw:true} )
                     .then( async () => {

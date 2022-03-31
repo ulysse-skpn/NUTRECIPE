@@ -1,6 +1,6 @@
 import winston  from "winston"
 
-const { combine , timestamp , align , colorize , printf , splat } = winston.format
+const { combine , timestamp , align , colorize , printf , splat , prettyPrint } = winston.format
 const now = new Date()
 
 const options = 
@@ -20,21 +20,15 @@ const options =
     console:
     {
         format: colorize({all:true}),
-        level:'info',
-        json: false,
-        colorize:({all:true})
+        level:'silly'
     }
 }
-
-const myFormat = printf( ({ level , message }) => {
-    return `[${level}] : ${timestamp} ${message}`
-})
 
 export const logger = winston.createLogger({
     level: "silly",
     exitOnError:false,
     handleExceptions:true,
-    format: combine( splat() , align() , timestamp({ format: "DD/MM/YYYY hh:mm:ss"}) , myFormat ),
+    format: combine( splat() , prettyPrint() , align() , timestamp({ format: "DD/MM/YYYY hh:mm:ss"}) , printf(info => `[${info.level}] : ${info.timestamp}: ${info.message}`) ),
     transports: [
         new winston.transports.Console(options.console),
         new winston.transports.File(options.file),
