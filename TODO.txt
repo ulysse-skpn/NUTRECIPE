@@ -6,7 +6,8 @@ DAO
 
 https://medium.com/swlh/nodejs-code-evaluation-using-jest-sonarqube-and-docker-f6b41b2c319d
 
-
+TODO init angular APP
+TODO init ionic APP
 TODO Generate Swaager
 TODO Revoir Relations Entities
 
