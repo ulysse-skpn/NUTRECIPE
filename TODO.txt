@@ -4,7 +4,7 @@ DAO
 
 https://medium.com/swlh/nodejs-code-evaluation-using-jest-sonarqube-and-docker-f6b41b2c319d
 
-TODO Login , Register , Forgot Password
+TODO Login , Register , Forgot Password , Remove code smells with angular & ionic
 TODO Generate Swagger
 TODO Revoir Relations Entities
 
