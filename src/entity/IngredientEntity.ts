@@ -7,13 +7,11 @@ import { RecipeIngredients } from "./RecipeIngredientsEntity";
 @Table
 export class Ingredient extends BaseModel<Ingredient>
 {
-    @Unique
     @AllowNull(false)
     @Column
     product_name!: string;
     
-    @Unique
-    @Column
+    @Column(DataType.TEXT)
     ingredient_text!: string;
 
     @IsFloat

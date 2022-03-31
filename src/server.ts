@@ -2,7 +2,6 @@ import app from "./app";
 import dotenv from "dotenv"
 import { database } from "./lib/config/database";
 import { logger } from "./lib/config/winston";
-import { fetchIngredients } from "./fetchData";
 
 dotenv.config()
 const PORT = process.env.APP_PORT || 3000;
@@ -13,6 +12,5 @@ database.sync()
             app.listen( PORT , () => 
             {
                 logger.info(`App listening on port ${PORT} , host ${HOST}`)
-                // console.log( fetchIngredients() )
             });
         })

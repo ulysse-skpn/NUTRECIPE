@@ -1,5 +1,4 @@
 TODO 
-table category
 
 DTO
 DAO
@@ -7,6 +6,5 @@ DAO
 
 https://medium.com/swlh/nodejs-code-evaluation-using-jest-sonarqube-and-docker-f6b41b2c319d
 
-Fetch ingredients
-
 Check //? For todo
+database utf8mb4_bin

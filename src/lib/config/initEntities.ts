@@ -7,7 +7,7 @@ export class InitEntities
     {
         database.query(`
             INSERT IGNORE INTO ingredients (product_name, ingredient_text, carbohydrates, proteins, fats, salt, calories, nova_group, categories, serving_size, quantity, status, image) 
-            VALUES ( "ex_product_name" , "ex_ingredient_text" , 0 , 0 , 0 , 0 , 0 , "2" , "ex_categories" , "ex_serving_size" , 1 , false , "https://static.openfoodfacts.org/images/products/843/604/504/0053/front_fr.6.400.jpg")`
+            VALUES ( "ex_product_name" , "ex_ingredient_text" , 1.1 , 2.2 , 3.3 , 4.4 , 5.5 , "2" , "ex_categories" , "ex_serving_size" , 1 , false , "https://static.openfoodfacts.org/images/products/843/604/504/0053/front_fr.6.400.jpg")`
         )
     }
 

@@ -16,12 +16,17 @@ export class IngredientRepository implements IBaseRepository<Ingredient>
 
     async findById(id: number): Promise<Ingredient | any> 
     {
-        return this.ingredientRepository.findByPk(id , {include:[this.recipeRepository]})
+        return this.ingredientRepository.findByPk(id , {include:[{model:this.recipeRepository,as:"ingredients_in_recipe"}]})
     }
 
     async create(item: Ingredient): Promise<Ingredient> 
     {
-        return this.ingredientRepository.create(item , {include:[this.recipeRepository]})
+        return this.ingredientRepository.create(item , {include:[{model:this.recipeRepository,as:"ingredients_in_recipe"}]})
+    }
+
+    async bulkCreate(item: Ingredient[]): Promise<Ingredient[]> 
+    {
+        return this.ingredientRepository.bulkCreate(item, {include:[{model:this.recipeRepository,as:"ingredients_in_recipe"}]})
     }
 
     async put(id: number, item: Ingredient): Promise<[affectedCount:number]> 
@@ -46,7 +51,7 @@ export class IngredientRepository implements IBaseRepository<Ingredient>
 
     async findAll(): Promise<Ingredient[]> 
     {
-        return this.ingredientRepository.findAll({include:[this.recipeRepository]})
+        return this.ingredientRepository.findAll({include:[{model:this.recipeRepository,as:"ingredients_in_recipe"}]})
     }
 
 }
