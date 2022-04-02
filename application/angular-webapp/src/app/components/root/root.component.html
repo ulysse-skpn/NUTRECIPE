@@ -1,0 +1,46 @@
+<section class="content">
+
+    <mat-card>
+        <mat-card-title>NUTRECIPE</mat-card-title>
+
+        <mat-card-subtitle>Connexion</mat-card-subtitle>
+
+        <mat-card-content>
+            <form>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder='email' type="email" id="email" name="email" [formControl]="emailControl" required>
+                        <mat-error *ngIf="emailControl.invalid">{{ getErrorMessage('email') }}</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <br/>
+
+                <div>
+                    <mat-form-field hintLabel="Min 8 caractères">
+                        <mat-label>Mot de passe</mat-label>
+                        <input matInput #input placeholder='mot de passe' min="6" [type]="hide ? 'password' : 'text'" id="password" name="password" [formControl]="passwordControl" required>
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{ hide ? 'visibility_off' : 'visiblity' }}</mat-icon>
+                        </button>
+                        <mat-hint align="end">{{ input.value?.length || 0}}/6</mat-hint>
+                        <mat-error *ngIf="passwordControl.invalid">{{ getErrorMessage('password') }}</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <br/>
+
+                <div class="buttons">
+                    <div><button mat-raised-button color="primary" type="button" (click)="login()">Se connecter</button></div>
+                </div>
+                
+                <div><a mat-button [routerLink]="['/register']">Pas encore inscrit ?</a></div>
+                
+                <div><a mat-button [routerLink]="['/forgotPassword']">Mot de passe oublié ?</a></div>
+            </form>
+        </mat-card-content>
+
+    </mat-card>
+    
+</section>

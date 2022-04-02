@@ -14,23 +14,22 @@ export class ForgotPasswordCtrl
         try 
         {
             const login:string = req.body.email
-            const user:User|null = await forgotPasswordServiceImpl.findUserByLogin(login)
 
+            const user:User|null = await forgotPasswordServiceImpl.findUserByLogin(login)
             if( user )
             {
-                const newPassword:string = await generateNewPassword()
+                const password = await generateNewPassword()
     
-                if( newPassword )
+                if( password )
                 {
-
-                    await forgotPasswordServiceImpl.saveNewPassword(login,newPassword)
-                            .then( () => {
-                                res.status(200).send( `An email with your new password has be sent to you ${newPassword}` )
-                            })
-                            .catch( (err:any) => {
-                                res.status(500).send( ApiError.internal_server_error(err.message) )
-                            })
-
+                    const result = await forgotPasswordServiceImpl.saveNewPassword(login,password)
+                    const newPassword = 
+                    {
+                        newPassword : password
+                    }
+                    
+                    if( result ) res.status(200).send(newPassword)
+                    else res.status(500).send( ApiError.internal_server_error("Internal server error") )
                 }
                 else res.status(520).send( ApiError.unknown_error("An unknown error occured") )
             }

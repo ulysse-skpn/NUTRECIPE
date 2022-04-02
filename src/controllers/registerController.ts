@@ -21,6 +21,8 @@ export class RegisterCtrl
             
             bcrypt.hash( req.body.password , 10 , async (err:any, hash:string) =>
             {
+                req.body.last_name = req.body.last_name.toUpperCase()
+                req.body.password = hash
                 const user:User = req.body
                 const createdUser:User = await registerServiceImpl.createUser(user)
 

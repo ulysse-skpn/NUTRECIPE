@@ -55,6 +55,11 @@ export class UserRepository implements IBaseRepository<User>
         return this.userRepository.findOne({ where:{email:login} })
     }
 
+    async findByLogin(login:string): Promise<User|null>
+    {
+        return this.userRepository.findOne({ where:{ email:login } })
+    }
+
     async findByLoginPassword(login:string,password:string): Promise<User|null>
     {
         return this.userRepository.findOne({ where:{ email:login , password:password } })
