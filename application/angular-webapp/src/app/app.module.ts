@@ -15,14 +15,24 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password/forgot-password.component';
-import { RegisterComponent } from './components/register/register/register.component'
+import { RegisterComponent } from './components/register/register/register.component';
+import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
+import { IngredientsPageComponent } from './components/ingredientsPage/ingredients-page/ingredients-page.component';
+import { RecipesPageComponent } from './components/recipesPage/recipes-page/recipes-page.component';
+import { UsersPageComponent } from './components/usersPage/users-page/users-page.component';
+import { SettingsPageComponent } from './components/settings/settings-page/settings-page.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     RootComponent,
     ForgotPasswordComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardComponent,
+    IngredientsPageComponent,
+    RecipesPageComponent,
+    UsersPageComponent,
+    SettingsPageComponent
   ],
   imports: [
     BrowserModule,

@@ -49,7 +49,7 @@ export class RegisterComponent {
     this.rootService.register(userIn).subscribe( async(res) => {
       await this.storageService.set( "access_token" , res.access_token )
       await this.storageService.set( "expiresIn" , res.expires_in.toString() )
-      return location.href = "/recipes"
+      return location.href = "/dashboard"
     })
   }
 
