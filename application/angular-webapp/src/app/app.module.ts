@@ -13,6 +13,9 @@ import { MatInputModule } from '@angular/material/input'
 import { MatButtonModule } from '@angular/material/button'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator'
+
 import { AppRoutingModule } from './app-routing.module';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password/forgot-password.component';
 import { RegisterComponent } from './components/register/register/register.component';
@@ -44,6 +47,8 @@ import { SettingsPageComponent } from './components/settings/settings-page/setti
     MatButtonModule,
     MatFormFieldModule,
     MatIconModule,
+    MatTableModule,
+    MatPaginatorModule,
     BrowserAnimationsModule,
     AppRoutingModule
   ],
