@@ -17,6 +17,19 @@ export class IngredientsService {
   private host = environment.host
   private port = environment.port
 
+  getSizeArrayIngredients():Observable<any>
+  {
+    const url = `http://${this.host}:${this.port}/ingredients/size`
+    return this.http.get(url)
+    .pipe(
+      tap( (data:any) => {
+        console.log(data)
+      }),
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
+
   getAllIngredients(pageIndex:number,pageSize:number):Observable<IIngredient[]>
   {
     const url = `http://${this.host}:${this.port}/ingredients/pagination`

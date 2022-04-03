@@ -15,9 +15,20 @@
     text-align:end;
 }
 
-.tdAction > img{
+.tdAction > img , .addButton{
     cursor: pointer;
     height:2rem;
+}
+
+.addButton
+{
+  float: right;
+}
+
+.alignSpinner
+{
+  display: flex;
+  justify-content: center;
 }
 
 .redFilter{

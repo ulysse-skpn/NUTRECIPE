@@ -28,6 +28,22 @@ export class IngredientsCtrl
         }
     }
 
+    async getAllSize(req:Request , res:Response)
+    {
+        const ingredientServiceImpl:IngredientServiceImpl = new IngredientServiceImpl()
+
+        try 
+        {
+            const size = await ingredientServiceImpl.getNumberElements()
+            res.status(200).send(size[0][0])
+        } 
+        catch (err:any) 
+        {
+            logger.error( `Method => GET ALL Ingredients size : ${err.message}` )
+            res.status(400).send( ApiError.badRequest(err.message) )
+        }
+    }   
+
 
     async getById(req:Request , res:Response)
     {

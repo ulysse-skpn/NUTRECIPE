@@ -63,6 +63,10 @@ export class Routes
             .post(this.ingredientsController.getAll)
 
         app
+            .route("/ingredients/size")
+            .get(this.ingredientsController.getAllSize)
+
+        app
             .route("/ingredients/:id")
             .get(this.ingredientsController.getById)
             .put(this.ingredientsController.update)

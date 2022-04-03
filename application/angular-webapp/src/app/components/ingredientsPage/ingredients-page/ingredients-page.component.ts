@@ -26,12 +26,13 @@ export class IngredientsPageComponent implements OnInit {
   @ViewChild(MatSort) sort!: MatSort
   
   columnsToDisplay = ['id', 'product_name' , 'action']
-  dataSource = new MatTableDataSource<IIngredient>() 
+  ELEMENT_DATA:IIngredient[] = []
+  dataSource:MatTableDataSource<IIngredient> = new MatTableDataSource() 
   expandedElement!: ITableIngredient | null
-  length = 100;
-  pageSize = 10;
-  pageSizeOptions: number[] = [5, 10, 25, 100];
+  pageSize!:number
   pageIndex:number = 0
+  pageSizeOptions: number[] = [10, 30, 50 , 100];
+  isLoading:boolean = false
 
   constructor(
     private ingredientService:IngredientsService
@@ -39,7 +40,7 @@ export class IngredientsPageComponent implements OnInit {
 
   ngOnInit(): void 
   {
-    this.onChangePage()
+    this.sizeIngredientsArray()
   }
 
   add(event: Event)
@@ -66,18 +67,24 @@ export class IngredientsPageComponent implements OnInit {
     // this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  onChangePage(event?:PageEvent , pageIndex = 0 , pageSize = 25)
+  sizeIngredientsArray()
   {
-    if( event )
-    {
-      pageIndex = event.pageIndex
-      pageSize = event.pageSize
-    }
+    this.ingredientService.getSizeArrayIngredients().subscribe( async(res) => {
+      this.pageSize = res.nbElem
 
-    this.ingredientService.getAllIngredients(pageIndex,pageSize).subscribe( (res) => {
-      this.dataSource.data = res
+      this.loadIngredients()
+    })
+  }
+
+  loadIngredients( pageIndex = this.pageIndex , pageSize = this.pageSize )
+  {
+    this.isLoading = true
+
+    this.ingredientService.getAllIngredients(pageIndex,pageSize).subscribe( async(res:IIngredient[]) => {
+      this.isLoading = false
+      this.ELEMENT_DATA = res
+      this.dataSource = new MatTableDataSource(this.ELEMENT_DATA)
       this.dataSource.paginator = this.paginator
-      this.dataSource.sort = this.sort
     })
   }
 
