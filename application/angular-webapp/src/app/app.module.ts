@@ -17,6 +17,8 @@ import { MatTableModule } from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator'
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
 import {MatTooltipModule} from '@angular/material/tooltip'
+import {MatSortModule} from '@angular/material/sort'
+import {MatSnackBarModule} from '@angular/material/snack-bar'
 
 import { AppRoutingModule } from './app-routing.module';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password/forgot-password.component';
@@ -53,6 +55,8 @@ import { SettingsPageComponent } from './components/settings/settings-page/setti
     MatPaginatorModule,
     MatProgressSpinnerModule,
     MatTooltipModule,
+    MatSortModule,
+    MatSnackBarModule,
     BrowserAnimationsModule,
     AppRoutingModule
   ],

@@ -43,6 +43,17 @@ export class IngredientsService {
     )
   }
 
+  deleteIngredient(id:number):Observable<any>
+  {
+    const url = `http://${this.host}:${this.port}/ingredients/${id}`
+    return this.http.delete(url)
+    .pipe(
+      tap( (data:any) => console.log(data) ),
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
+
   private handleError(error:any)
   {
     let errorMessage = ""

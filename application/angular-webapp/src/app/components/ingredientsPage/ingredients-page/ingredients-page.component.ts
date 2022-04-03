@@ -1,11 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ITableIngredient } from 'src/app/interfaces/ingredients/ITableIngredients';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { MatPaginator, PageEvent } from '@angular/material/paginator';
+import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { IngredientsService } from 'src/app/services/ingredients/ingredients.service';
 import { IIngredient } from 'src/app/interfaces/ingredients/IIngredients';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-ingredients-page',
@@ -25,7 +26,7 @@ export class IngredientsPageComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator
   @ViewChild(MatSort) sort!: MatSort
   
-  columnsToDisplay = ['id', 'product_name' , 'action']
+  columnsToDisplay = ['id', 'product_name' , 'modif' , 'suppr' ]
   ELEMENT_DATA:IIngredient[] = []
   dataSource:MatTableDataSource<IIngredient> = new MatTableDataSource() 
   expandedElement!: ITableIngredient | null
@@ -33,10 +34,12 @@ export class IngredientsPageComponent implements OnInit {
   pageIndex:number = 0
   pageSizeOptions: number[] = [10, 30, 50 , 100];
   isLoading:boolean = false
+  durationInSeconds = 5
 
   constructor(
-    private ingredientService:IngredientsService
-  ) { }
+    private ingredientService:IngredientsService,
+    private snackBar: MatSnackBar
+  ) {}
 
   ngOnInit(): void 
   {
@@ -55,21 +58,31 @@ export class IngredientsPageComponent implements OnInit {
     alert('edit');
   }
 
-  delete(event: Event)
+  delete(id:number)
   {
-    event.stopPropagation();
-    alert('delete');
+    const snackBarRef = this.snackBar.open( "Annuler action : 'Supprimer'" , "Undo" , { duration: 3000 } )
+    snackBarRef.afterDismissed().subscribe( (e) => {
+      if( e.dismissedByAction === true )
+      {
+        this.snackBar.open( "Annulation" , "" , { duration: 2000 } )
+        return
+      }
+
+      this.ingredientService.deleteIngredient(id).subscribe( () => {
+        this.snackBar.open( "Elément supprimé" , "" , { duration: 2000 } )
+      })
+    })
   }
 
-  applyFilter(event: Event) 
+  applyFilter(event:Event) 
   {
     const filterValue = (event.target as HTMLInputElement).value;
-    // this.dataSource.filter = filterValue.trim().toLowerCase();
+    this.dataSource.filter = filterValue.trim().toLocaleLowerCase();
   }
 
   sizeIngredientsArray()
   {
-    this.ingredientService.getSizeArrayIngredients().subscribe( async(res) => {
+    this.ingredientService.getSizeArrayIngredients().subscribe( (res) => {
       this.pageSize = res.nbElem
 
       this.loadIngredients()

@@ -4,18 +4,8 @@
     text-align: justify;
 }
 
-.tdAction{
-    display: flex;
-    padding: 0.5rem;
-    justify-content: flex-end;
-}
 
-.action-header
-{
-    text-align:end;
-}
-
-.tdAction > img , .addButton{
+.btnAction , .addButton{
     cursor: pointer;
     height:2rem;
 }
