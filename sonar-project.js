@@ -5,7 +5,7 @@ sonarqubeScanner(
         options : {
             'sonar.login':'admin',
             'sonar.password':'azerty',
-            'sonar.sources':  'src,application/angular/src,application/ionic/src',
+            'sonar.sources':  'src,application/angular-webapp/src',
             // 'sonar.tests':  'tests',
             'sonar.inclusions'  :  '**', // Entry point of your code
             // 'sonar.test.inclusions':  'src/**/*.spec.js,src/**/*.spec.jsx,src/**/*.test.js,src/**/*.test.jsx',

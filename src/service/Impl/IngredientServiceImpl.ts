@@ -11,9 +11,9 @@ export class IngredientServiceImpl implements IIngredientService
         return this.ingredientRepository.exists(id)
     }
 
-    async getAllIngredients(): Promise<Ingredient[]>
+    async getAllIngredients(limit:number,offset:number): Promise<Ingredient[]>
     {
-        return this.ingredientRepository.findAll()
+        return this.ingredientRepository.findAll(limit,offset)
     }
 
     async getIngredientById(id: number): Promise<Ingredient>

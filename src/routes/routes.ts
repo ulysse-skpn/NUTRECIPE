@@ -56,8 +56,11 @@ export class Routes
         //  INGREDIENTS
         app
             .route("/ingredients")
-            .get(this.ingredientsController.getAll)
             .post(this.ingredientsController.create)
+
+        app
+            .route("/ingredients/pagination")
+            .post(this.ingredientsController.getAll)
 
         app
             .route("/ingredients/:id")

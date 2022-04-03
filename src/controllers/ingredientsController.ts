@@ -8,11 +8,17 @@ export class IngredientsCtrl
 {   
     async getAll(req:Request , res:Response)
     {
+        let pageSize:number , offset:number
         const ingredientServiceImpl:IngredientServiceImpl = new IngredientServiceImpl()
 
         try 
         {
-            const ingredientsList:Ingredient[] = await ingredientServiceImpl.getAllIngredients()
+            pageSize = parseInt(req.body.pageSize)
+            offset = parseInt(req.body.pageIndex) * parseInt(req.body.pageSize)
+            if( isNaN(pageSize) ) throw Error("Limit is not a number")
+            if( isNaN(offset) ) throw Error("Offset is not a number")
+
+            const ingredientsList:Ingredient[] = await ingredientServiceImpl.getAllIngredients(pageSize,offset)
             res.status(200).send(ingredientsList)
         } 
         catch (err:any) 

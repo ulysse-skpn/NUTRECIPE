@@ -49,9 +49,13 @@ export class IngredientRepository implements IBaseRepository<Ingredient>
         return this.ingredientRepository.destroy(options)
     }
 
-    async findAll(): Promise<Ingredient[]> 
+    async findAll(limit:number,offset:number): Promise<Ingredient[]> 
     {
-        return this.ingredientRepository.findAll({include:[{model:this.recipeRepository,as:"ingredients_in_recipe"}]})
+        return this.ingredientRepository.findAll({
+            offset:offset,
+            limit:limit,
+            include:[{model:this.recipeRepository,as:"ingredients_in_recipe"}]
+        })
     }
 
 }

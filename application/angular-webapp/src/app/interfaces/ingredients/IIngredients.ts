@@ -14,6 +14,8 @@ export interface IIngredient
     quantity:number
     status:boolean
     image:string
+    createdAt?:Date
+    updatedAt?:Date
 }
 
 enum NOVA_GROUP
