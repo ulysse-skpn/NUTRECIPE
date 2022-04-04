@@ -32,6 +32,10 @@ import { UsersPageComponent } from './components/usersPage/users-page/users-page
 import { SettingsPageComponent } from './components/settings/settings-page/settings-page.component';
 import { DialogAddIngredientComponent } from './components/dialog/add-ingredient-form/dialog-add-ingredient/dialog-add-ingredient.component';
 import { DialogModifIngredientComponent } from './components/dialog/modif-ingredient-form/dialog-modif-ingredient/dialog-modif-ingredient.component';
+import { DialogAddRecipeComponent } from './components/dialog/add-recipe-form/dialog-add-recipe/dialog-add-recipe.component';
+import { DialogModifRecipeComponent } from './components/dialog/modif-recipe-form/dialog-modif-recipe/dialog-modif-recipe.component';
+import { DialogAddUserComponent } from './components/dialog/add-user-form/dialog-add-user/dialog-add-user.component';
+import { DialogModifUserComponent } from './components/dialog/modif-user-form/dialog-modif-user/dialog-modif-user.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +49,11 @@ import { DialogModifIngredientComponent } from './components/dialog/modif-ingred
     UsersPageComponent,
     SettingsPageComponent,
     DialogAddIngredientComponent,
-    DialogModifIngredientComponent
+    DialogModifIngredientComponent,
+    DialogAddRecipeComponent,
+    DialogModifRecipeComponent,
+    DialogAddUserComponent,
+    DialogModifUserComponent
   ],
   imports: [
     BrowserModule,
