@@ -7,6 +7,9 @@ import { MatTableDataSource } from '@angular/material/table';
 import { IngredientsService } from 'src/app/services/ingredients/ingredients.service';
 import { IIngredient } from 'src/app/interfaces/ingredients/IIngredients';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogAddIngredientComponent } from '../../dialog/add-ingredient-form/dialog-add-ingredient/dialog-add-ingredient.component';
+import { DialogModifIngredientComponent } from '../../dialog/modif-ingredient-form/dialog-modif-ingredient/dialog-modif-ingredient.component';
 
 @Component({
   selector: 'app-ingredients-page',
@@ -38,7 +41,8 @@ export class IngredientsPageComponent implements OnInit {
 
   constructor(
     private ingredientService:IngredientsService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    public dialog: MatDialog
   ) {}
 
   ngOnInit(): void 
@@ -46,20 +50,21 @@ export class IngredientsPageComponent implements OnInit {
     this.sizeIngredientsArray()
   }
 
-  add(event: Event)
+  add()
   {
-    event.stopPropagation();
-    alert('add');
+    this.openAddDialog()
   }
 
-  edit(event: Event)
+  edit(event: Event , id:number)
   {
     event.stopPropagation();
-    alert('edit');
+    this.openModifDialog(id)
   }
 
-  delete(id:number)
+  delete(event:Event , id:number)
   {
+    event.stopPropagation();
+
     const snackBarRef = this.snackBar.open( "Annuler action : 'Supprimer'" , "Undo" , { duration: 3000 } )
     snackBarRef.afterDismissed().subscribe( (e) => {
       if( e.dismissedByAction === true )
@@ -72,6 +77,20 @@ export class IngredientsPageComponent implements OnInit {
         this.snackBar.open( "Elément supprimé" , "" , { duration: 2000 } )
       })
     })
+  }
+
+  openAddDialog()
+  {
+    this.dialog.open(DialogAddIngredientComponent , {
+      minWidth:'300px'
+    });
+  }
+
+  openModifDialog(id:number)
+  {
+    this.dialog.open(DialogModifIngredientComponent , {
+      data: { id: id }
+    });
   }
 
   applyFilter(event:Event) 

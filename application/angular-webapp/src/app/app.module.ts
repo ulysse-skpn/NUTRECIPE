@@ -19,6 +19,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
 import {MatTooltipModule} from '@angular/material/tooltip'
 import {MatSortModule} from '@angular/material/sort'
 import {MatSnackBarModule} from '@angular/material/snack-bar'
+import {MatDialogModule} from '@angular/material/dialog'
+import {MatSelectModule} from '@angular/material/select'
 
 import { AppRoutingModule } from './app-routing.module';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password/forgot-password.component';
@@ -27,7 +29,9 @@ import { DashboardComponent } from './components/dashboard/dashboard/dashboard.c
 import { IngredientsPageComponent } from './components/ingredientsPage/ingredients-page/ingredients-page.component';
 import { RecipesPageComponent } from './components/recipesPage/recipes-page/recipes-page.component';
 import { UsersPageComponent } from './components/usersPage/users-page/users-page.component';
-import { SettingsPageComponent } from './components/settings/settings-page/settings-page.component'
+import { SettingsPageComponent } from './components/settings/settings-page/settings-page.component';
+import { DialogAddIngredientComponent } from './components/dialog/add-ingredient-form/dialog-add-ingredient/dialog-add-ingredient.component';
+import { DialogModifIngredientComponent } from './components/dialog/modif-ingredient-form/dialog-modif-ingredient/dialog-modif-ingredient.component';
 
 @NgModule({
   declarations: [
@@ -39,13 +43,17 @@ import { SettingsPageComponent } from './components/settings/settings-page/setti
     IngredientsPageComponent,
     RecipesPageComponent,
     UsersPageComponent,
-    SettingsPageComponent
+    SettingsPageComponent,
+    DialogAddIngredientComponent,
+    DialogModifIngredientComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
     MatCardModule,
     MatInputModule,
     MatButtonModule,
@@ -57,8 +65,8 @@ import { SettingsPageComponent } from './components/settings/settings-page/setti
     MatTooltipModule,
     MatSortModule,
     MatSnackBarModule,
-    BrowserAnimationsModule,
-    AppRoutingModule
+    MatDialogModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

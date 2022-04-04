@@ -4,6 +4,8 @@ import { Observable, pipe, throwError } from 'rxjs';
 import { tap , catchError, retry } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { IIngredient } from 'src/app/interfaces/ingredients/IIngredients';
+import { IIngredientIn } from 'src/app/interfaces/ingredients/IIngredientIn';
+import { IIngredientOut } from 'src/app/interfaces/ingredients/ingredientOut';
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +40,41 @@ export class IngredientsService {
       tap( (data:IIngredient[]) => {
         console.log(data)
       }),
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
+
+  getIngredientById(id:number):Observable<IIngredient>
+  {
+    const url = `http://${this.host}:${this.port}/ingredients/${id}`
+    return this.http.get<IIngredient>(url)
+    .pipe(
+      tap( (data:IIngredient) => {
+        console.log(data)
+      }),
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
+
+  addIngredient(ingredient:IIngredientIn):Observable<IIngredient>
+  {
+    const url = `http://${this.host}:${this.port}/ingredients`
+    return this.http.post<IIngredient>(url,ingredient)
+    .pipe(
+      tap( (data:any) => console.log(data) ),
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
+
+  updateIngredient(ingredient:IIngredientIn,id:number):Observable<any>
+  {
+    const url = `http://${this.host}:${this.port}/ingredients/${id}`
+    return this.http.put<IIngredientOut>(url,ingredient)
+    .pipe(
+      tap( (data:any) => console.log(data) ),
       retry(1),
       catchError(this.handleError)
     )

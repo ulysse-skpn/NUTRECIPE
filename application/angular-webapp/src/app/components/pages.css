@@ -74,7 +74,15 @@ table {
     line-height: normal;
   }
   
-  .element-description {
+  .element-description img
+  {
+    margin-right: 1.5rem;
+  }
+
+  .element-description 
+  {
+    display: flex;
+    justify-content: space-around;
     padding: 16px;
   }
   
@@ -85,5 +93,5 @@ table {
   /* .second-footer-row{
 background-color: red;
   } */
-.mat-footer-cell{ flex-direction: row;justify-content: end;align-items: flex-end };
+.mat-footer-cell{ flex-direction: row;justify-content: end;align-items: flex-end }
   
