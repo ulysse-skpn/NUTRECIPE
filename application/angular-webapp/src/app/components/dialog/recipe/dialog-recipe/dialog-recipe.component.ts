@@ -33,7 +33,7 @@ export class DialogRecipeComponent implements OnInit {
   {
     if( type === "add" )
     {
-      return this.recipeFormGroup = new FormGroup({
+      this.recipeFormGroup = new FormGroup({
         titleControl : new FormControl("",[Validators.required]),
         prepTimeControl : new FormControl(""),
         cookingTimeControl : new FormControl(""),
@@ -48,7 +48,7 @@ export class DialogRecipeComponent implements OnInit {
     }
     else
     {
-      return this.recipeFormGroup = new FormGroup({
+      this.recipeFormGroup = new FormGroup({
         titleControl : new FormControl(),
         prepTimeControl : new FormControl(),
         cookingTimeControl : new FormControl(),

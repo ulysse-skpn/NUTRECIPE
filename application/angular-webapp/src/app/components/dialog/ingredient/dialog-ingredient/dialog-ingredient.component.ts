@@ -40,7 +40,7 @@ export class DialogIngredientComponent implements OnInit {
   {
     if( type === "add" )
     {
-      return this.ingredientFormGroup = new FormGroup({
+      this.ingredientFormGroup = new FormGroup({
         productNameControl : new FormControl("",[Validators.required , Validators.minLength(2)]),
         ingredientTextControl : new FormControl("",[Validators.required , Validators.minLength(2)]),
         carbohydratesControl : new FormControl( null , [Validators.required]),
@@ -59,7 +59,7 @@ export class DialogIngredientComponent implements OnInit {
     }
     else
     {
-      return this.ingredientFormGroup = new FormGroup({
+      this.ingredientFormGroup = new FormGroup({
         productNameControl : new FormControl(),
         ingredientTextControl : new FormControl(),
         carbohydratesControl : new FormControl(),

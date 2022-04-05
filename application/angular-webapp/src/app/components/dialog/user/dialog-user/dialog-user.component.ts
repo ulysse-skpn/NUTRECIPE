@@ -36,9 +36,10 @@ export class DialogUserComponent implements OnInit {
 
   initFormGroup( type:string )
   {
+
     if( type === "add" )
     {
-      return this.userFormGroup = new FormGroup({
+      this.userFormGroup = new FormGroup({
         lastNameControl : new FormControl( "" , [Validators.required , Validators.minLength(2)]),
         firstNameControl : new FormControl( "" , [Validators.required , Validators.minLength(2)]),
         phoneNumberControl : new FormControl( "" , [Validators.minLength(10) , Validators.maxLength(20) , Validators.pattern('[- +()0-9]+')]),
@@ -49,7 +50,7 @@ export class DialogUserComponent implements OnInit {
     }
     else
     {
-      return this.userFormGroup = new FormGroup({
+      this.userFormGroup = new FormGroup({
         lastNameControl : new FormControl(),
         firstNameControl : new FormControl(),
         phoneNumberControl : new FormControl(),
