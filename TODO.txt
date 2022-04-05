@@ -4,7 +4,9 @@ DAO
 
 https://medium.com/swlh/nodejs-code-evaluation-using-jest-sonarqube-and-docker-f6b41b2c319d
 
-TODO Login , Register , Forgot Password , Remove code smells with angular & ionic
+TODO mat error recipes & users
+TODO Remove code smells Angular
+TODO Remove code smells Ionic
 TODO Enlever quantity et status d'ingrédients car il faut créer une table avec les ingrédients et les recettes par utilisateurs
 TODO Generate Swagger
 TODO Revoir Relations Entities

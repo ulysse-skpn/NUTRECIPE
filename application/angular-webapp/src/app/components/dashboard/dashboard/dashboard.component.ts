@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RootService } from 'src/app/services/root-service/root.service';
 
 @Component({
@@ -6,14 +6,11 @@ import { RootService } from 'src/app/services/root-service/root.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent {
 
   constructor(
     private rootService:RootService
   ) { }
-
-  ngOnInit(): void {
-  }
 
   async logout()
   {

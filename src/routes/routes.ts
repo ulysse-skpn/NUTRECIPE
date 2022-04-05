@@ -80,6 +80,14 @@ export class Routes
             .post(this.recipesController.create)
 
         app
+            .route("/recipes/pagination")
+            .post(this.recipesController.getAll)
+
+        app
+            .route("/recipes/size")
+            .get(this.recipesController.getAllSize)
+
+        app
             .route("/recipes/:id")
             .get(this.recipesController.getById)
             .put(this.recipesController.update)
@@ -91,6 +99,14 @@ export class Routes
             .route("/users")
             .get(this.usersController.getAll)
             .post(this.usersController.create)
+
+        app
+            .route("/users/pagination")
+            .post(this.usersController.getAll)
+
+        app
+            .route("/users/size")
+            .get(this.usersController.getAllSize)
 
         app
             .route("/users/:id")

@@ -1,15 +1,14 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ITableIngredient } from 'src/app/interfaces/ingredients/ITableIngredients';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { IngredientsService } from 'src/app/services/ingredients/ingredients.service';
-import { IIngredient } from 'src/app/interfaces/ingredients/IIngredients';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogAddIngredientComponent } from '../../dialog/add-ingredient-form/dialog-add-ingredient/dialog-add-ingredient.component';
 import { DialogModifIngredientComponent } from '../../dialog/modif-ingredient-form/dialog-modif-ingredient/dialog-modif-ingredient.component';
+import { IIngredientOut, ITableIngredient } from 'src/app/interfaces/IIngredient';
 
 @Component({
   selector: 'app-ingredients-page',
@@ -30,12 +29,12 @@ export class IngredientsPageComponent implements OnInit {
   @ViewChild(MatSort) sort!: MatSort
   
   columnsToDisplay = ['id', 'product_name' , 'modif' , 'suppr' ]
-  ELEMENT_DATA:IIngredient[] = []
-  dataSource:MatTableDataSource<IIngredient> = new MatTableDataSource() 
+  ELEMENT_DATA:IIngredientOut[] = []
+  dataSource:MatTableDataSource<IIngredientOut> = new MatTableDataSource() 
   expandedElement!: ITableIngredient | null
   pageSize!:number
   pageIndex:number = 0
-  pageSizeOptions: number[] = [10, 30, 50 , 100];
+  pageSizeOptions: number[] = [10, 30, 50 , 100 , 200 , 500 , 1000];
   isLoading:boolean = false
   durationInSeconds = 5
 
@@ -89,7 +88,8 @@ export class IngredientsPageComponent implements OnInit {
   openModifDialog(id:number)
   {
     this.dialog.open(DialogModifIngredientComponent , {
-      data: { id: id }
+      data: { id: id },
+      minWidth:'300px'
     });
   }
 
@@ -112,7 +112,7 @@ export class IngredientsPageComponent implements OnInit {
   {
     this.isLoading = true
 
-    this.ingredientService.getAllIngredients(pageIndex,pageSize).subscribe( async(res:IIngredient[]) => {
+    this.ingredientService.getAllIngredients(pageIndex,pageSize).subscribe( async(res:IIngredientOut[]) => {
       this.isLoading = false
       this.ELEMENT_DATA = res
       this.dataSource = new MatTableDataSource(this.ELEMENT_DATA)

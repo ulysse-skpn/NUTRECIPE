@@ -4,10 +4,8 @@ import { Router } from '@angular/router';
 import { MatDialogRef , MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { IngredientsPageComponent } from 'src/app/components/ingredientsPage/ingredients-page/ingredients-page.component';
-import { IIngredientIn } from 'src/app/interfaces/ingredients/IIngredientIn';
 import { IngredientsService } from 'src/app/services/ingredients/ingredients.service';
-import { IIngredient } from 'src/app/interfaces/ingredients/IIngredients';
-import { IIngredientOut } from 'src/app/interfaces/ingredients/ingredientOut';
+import { IIngredientOut } from 'src/app/interfaces/IIngredient';
 
 @Component({
   selector: 'app-dialog-modif-ingredient',
@@ -33,7 +31,7 @@ export class DialogModifIngredientComponent implements OnInit {
   ]
 
   id!:number
-  selectedIngredient!: IIngredientIn
+  selectedIngredient!: IIngredientOut
 
   ingredientFormGroup = new FormGroup({
     productNameControl : new FormControl(),
@@ -54,7 +52,7 @@ export class DialogModifIngredientComponent implements OnInit {
 
   ngOnInit(): void 
   {
-    this.ingredientService.getIngredientById(this.data.id).subscribe( (res:IIngredient) => {
+    this.ingredientService.getIngredientById(this.data.id).subscribe( (res:IIngredientOut) => {
       this.selectedIngredient = res
       this.id = res.id
 
@@ -112,6 +110,7 @@ export class DialogModifIngredientComponent implements OnInit {
 
     const ingredient:IIngredientOut =
     {
+      id: this.id,
       product_name: form.productNameControl,
       ingredient_text: ingredient_text,
       carbohydrates: carbohydrates,
@@ -142,7 +141,12 @@ export class DialogModifIngredientComponent implements OnInit {
       this.ingredientService.updateIngredient(ingredient,this.id).subscribe( () => {
         const snackBarRef_ = this.snackBar.open( "Elément modifié" , "" , { duration: 3000 } )
         snackBarRef_.afterDismissed().subscribe(() => {
-          this.route.navigate(["/","ingredients"])
+          this.dialogRef.close()
+
+          let currentUrl = this.route.url;
+          this.route.routeReuseStrategy.shouldReuseRoute = () => false;
+          this.route.onSameUrlNavigation = 'reload';
+          this.route.navigate([currentUrl]);
         })
       })
     })

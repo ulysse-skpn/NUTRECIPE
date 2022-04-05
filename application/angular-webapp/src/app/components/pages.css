@@ -90,8 +90,15 @@ table {
     opacity: 0.5;
   }
   
-  /* .second-footer-row{
-background-color: red;
-  } */
-.mat-footer-cell{ flex-direction: row;justify-content: end;align-items: flex-end }
+.mat-footer-cell
+{ 
+  flex-direction: row;
+  justify-content: end;
+  align-items: flex-end 
+}
+
+.mat-cell 
+{
+  padding: 0.2rem 0.7rem;
+}
   

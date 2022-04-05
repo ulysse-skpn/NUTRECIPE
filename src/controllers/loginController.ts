@@ -4,7 +4,6 @@ import { ApiError } from "../handlers/ApiError";
 import { logger } from "../lib/config/winston";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import { IUserRole } from "../service/ILoginService";
 import { LoginServiceImpl } from "../service/Impl/LoginServiceImpl";
 
 export class LoginCtrl

@@ -1,18 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { IngredientsPageComponent } from 'src/app/components/ingredientsPage/ingredients-page/ingredients-page.component';
-import { IIngredientIn } from 'src/app/interfaces/ingredients/IIngredientIn';
 import { IngredientsService } from 'src/app/services/ingredients/ingredients.service';
+import { IIngredientIn } from 'src/app/interfaces/IIngredient';
 
 @Component({
   selector: 'app-dialog-add-ingredient',
   templateUrl: './dialog-add-ingredient.component.html',
   styleUrls: ['./dialog-add-ingredient.component.css']
 })
-export class DialogAddIngredientComponent implements OnInit {
+export class DialogAddIngredientComponent {
 
   constructor(
     public dialogRef:MatDialogRef<IngredientsPageComponent>,
@@ -46,9 +46,6 @@ export class DialogAddIngredientComponent implements OnInit {
     imageControlFile : new FormControl( null )
   })
 
-  ngOnInit(): void {
-  }
-
   onNoClick()
   {
     this.dialogRef.close()
@@ -56,6 +53,8 @@ export class DialogAddIngredientComponent implements OnInit {
 
   save()
   {
+    if( !this.ingredientFormGroup.valid ) return
+    
     let form = this.ingredientFormGroup.value
     
     const image = form.imageControlUrl ? form.imageControlUrl : form.imageControlFile
@@ -105,8 +104,6 @@ export class DialogAddIngredientComponent implements OnInit {
       status: false,
       image: image,
     }
-
-    if( !this.ingredientFormGroup.valid ) return
     
     const snackBarRef = this.snackBar.open( "Annuler action : 'Ajouter ingrédient'" , "Undo" , { duration: 3000 } )
     snackBarRef.afterDismissed().subscribe( (e) => {
@@ -120,7 +117,12 @@ export class DialogAddIngredientComponent implements OnInit {
       this.ingredientService.addIngredient(ingredient).subscribe( () => {
         const snackBarRef_ = this.snackBar.open( "Elément ajouté" , "" , { duration: 3000 } )
         snackBarRef_.afterDismissed().subscribe(() => {
-          this.route.navigate(["/","ingredients"])
+          this.dialogRef.close()
+
+          let currentUrl = this.route.url;
+          this.route.routeReuseStrategy.shouldReuseRoute = () => false;
+          this.route.onSameUrlNavigation = 'reload';
+          this.route.navigate([currentUrl]);
         })
       })
     })

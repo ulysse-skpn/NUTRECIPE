@@ -1,5 +1,6 @@
 import { UserRepository } from "../../DAO/UserRepository"
 import { User } from "../../entity/UserEntity"
+import { database } from "../../lib/config/database"
 import { IUserService } from "../IUserService"
 
 
@@ -37,4 +38,8 @@ export class UserServiceImpl implements IUserService
         return this.userRepository.delete(id)
     }
     
+    async getNumberElements()
+    {
+        return database.query("SELECT COUNT(id) as nbElem FROM `users`");
+    }
 }

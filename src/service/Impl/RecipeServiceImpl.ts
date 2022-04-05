@@ -1,5 +1,6 @@
 import { RecipeRepository } from "../../DAO/RecipeRepository";
 import { Recipe } from "../../entity/RecipeEntity";
+import { database } from "../../lib/config/database";
 import { IRecipeService } from "../IRecipeService";
 
 export class RecipeServiceImpl implements IRecipeService
@@ -36,4 +37,8 @@ export class RecipeServiceImpl implements IRecipeService
         return this.recipeRepository.delete(id)
     }
     
+    async getNumberElements()
+    {
+        return database.query("SELECT COUNT(id) as nbElem FROM `recipes`");
+    }
 }

@@ -2,7 +2,6 @@ import { Ingredient } from "../../entity/IngredientEntity";
 import { IIngredientService } from "../IIngredientService";
 import { IngredientRepository } from "../../DAO/IngredientRepository";
 import { database } from "../../lib/config/database";
-import { QueryTypes } from "sequelize/types";
 
 export class IngredientServiceImpl implements IIngredientService
 {
@@ -40,7 +39,6 @@ export class IngredientServiceImpl implements IIngredientService
     
     async getNumberElements()
     {
-        const nb= await database.query("SELECT COUNT(id) as nbElem FROM `ingredients`");
-        return nb
+        return database.query("SELECT COUNT(id) as nbElem FROM `ingredients`");
     }
 }

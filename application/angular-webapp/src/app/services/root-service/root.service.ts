@@ -3,10 +3,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { tap , catchError, retry } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { CredentialsIn } from 'src/app/interfaces/credentials/credentials-in';
-import { UserIn } from 'src/app/interfaces/user/user-in';
-import { UserOut } from 'src/app/interfaces/user/user-out';
 import { StorageService } from '../storage/storage.service';
+import { ICredentialsIn } from 'src/app/interfaces/ICredentials';
+import { IUserIn, IUserOut } from 'src/app/interfaces/IUser';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -15,19 +15,20 @@ export class RootService {
 
   constructor(
     private http:HttpClient,
+    private route:Router,
     private storageService:StorageService
   ) { }
 
   private host = environment.host
   private port = environment.port
 
-  login(credentials:CredentialsIn): Observable<UserOut>
+  login(credentials:ICredentialsIn): Observable<IUserOut>
   {
     const reqHeader = new HttpHeaders({ 'Content-Type': 'application/json', 'No-Auth': 'True' });
     const url = `http://${this.host}:${this.port}/login`
-    return this.http.post<UserOut>(url,credentials,{headers:reqHeader})
+    return this.http.post<IUserOut>(url,credentials,{headers:reqHeader})
                     .pipe(
-                      tap( (data:UserOut) => {
+                      tap( (data:IUserOut) => {
                         console.log(data)
                       }),
                       retry(1),
@@ -36,13 +37,13 @@ export class RootService {
   }
 
 
-  register(user:UserIn): Observable<UserOut>
+  register(user:IUserIn): Observable<IUserOut>
   {
     const reqHeader = new HttpHeaders({ 'Content-Type': 'application/json', 'No-Auth': 'True' });
     const url = `http://${this.host}:${this.port}/register`
-    return this.http.post<UserOut>(url,user,{ headers: reqHeader })
+    return this.http.post<IUserOut>(url,user,{ headers: reqHeader })
                     .pipe(
-                      tap( (data:UserOut) => {
+                      tap( (data:IUserOut) => {
                         console.log(data)
                       }),
                       retry(1),
@@ -68,7 +69,10 @@ export class RootService {
   {
     await this.storageService.remove("access_token")
     await this.storageService.remove("expiresIn")
-    return location.href = "/"
+    
+    this.route.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.route.onSameUrlNavigation = 'reload';
+    this.route.navigate(["/"]);
   }
 
 

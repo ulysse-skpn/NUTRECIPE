@@ -3,12 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { tap , catchError, retry } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { IIngredientIn, IIngredientOut } from 'src/app/interfaces/IIngredient';
 
 @Injectable({
   providedIn: 'root'
 })
-export class IngredientsService {
+export class UsersService {
 
   constructor(
     private http:HttpClient
@@ -17,9 +16,9 @@ export class IngredientsService {
   private host = environment.host
   private port = environment.port
 
-  getSizeArrayIngredients():Observable<any>
+  getSizeArrayUsers():Observable<any>
   {
-    const url = `http://${this.host}:${this.port}/ingredients/size`
+    const url = `http://${this.host}:${this.port}/users/size`
     return this.http.get(url)
     .pipe(
       tap( (data:any) => {
@@ -30,12 +29,12 @@ export class IngredientsService {
     )
   }
 
-  getAllIngredients(pageIndex:number,pageSize:number):Observable<IIngredientOut[]>
+  getAllUsers(pageIndex:number,pageSize:number):Observable<any[]>
   {
-    const url = `http://${this.host}:${this.port}/ingredients/pagination`
-    return this.http.post<IIngredientOut[]>(url,{pageIndex,pageSize})
+    const url = `http://${this.host}:${this.port}/users/pagination`
+    return this.http.post<any[]>(url,{pageIndex,pageSize})
     .pipe(
-      tap( (data:IIngredientOut[]) => {
+      tap( (data:any[]) => {
         console.log(data)
       }),
       retry(1),
@@ -43,12 +42,12 @@ export class IngredientsService {
     )
   }
 
-  getIngredientById(id:number):Observable<IIngredientOut>
+  getUserById(id:number):Observable<any>
   {
-    const url = `http://${this.host}:${this.port}/ingredients/${id}`
-    return this.http.get<IIngredientOut>(url)
+    const url = `http://${this.host}:${this.port}/users/${id}`
+    return this.http.get<any>(url)
     .pipe(
-      tap( (data:IIngredientOut) => {
+      tap( (data:any) => {
         console.log(data)
       }),
       retry(1),
@@ -56,10 +55,10 @@ export class IngredientsService {
     )
   }
 
-  addIngredient(ingredient:IIngredientIn):Observable<IIngredientOut>
+  addUser(user:any):Observable<any>
   {
-    const url = `http://${this.host}:${this.port}/ingredients`
-    return this.http.post<IIngredientOut>(url,ingredient)
+    const url = `http://${this.host}:${this.port}/users`
+    return this.http.post<any>(url,user)
     .pipe(
       tap( (data:any) => console.log(data) ),
       retry(1),
@@ -67,10 +66,10 @@ export class IngredientsService {
     )
   }
 
-  updateIngredient(ingredient:IIngredientIn,id:number):Observable<any>
+  updateUser(user:any,id:number):Observable<any>
   {
-    const url = `http://${this.host}:${this.port}/ingredients/${id}`
-    return this.http.put<any>(url,ingredient)
+    const url = `http://${this.host}:${this.port}/users/${id}`
+    return this.http.put<any>(url,user)
     .pipe(
       tap( (data:any) => console.log(data) ),
       retry(1),
@@ -78,9 +77,9 @@ export class IngredientsService {
     )
   }
 
-  deleteIngredient(id:number):Observable<any>
+  deleteUser(id:number):Observable<any>
   {
-    const url = `http://${this.host}:${this.port}/ingredients/${id}`
+    const url = `http://${this.host}:${this.port}/users/${id}`
     return this.http.delete(url)
     .pipe(
       tap( (data:any) => console.log(data) ),

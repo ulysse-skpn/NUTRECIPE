@@ -1,5 +1,23 @@
+export interface IIngredientIn
+{
+    product_name:string
+    ingredient_text:string
+    carbohydrates:number
+    proteins:number
+    fats:number
+    salt:number
+    calories:number
+    nova_group:NOVA_GROUP
+    categories:string
+    serving_size:string
+    quantity:number
+    status:boolean
+    image:string
+}
+
 export interface IIngredientOut
 {
+    id:number
     product_name:string
     ingredient_text:string
     carbohydrates:number
@@ -15,6 +33,12 @@ export interface IIngredientOut
     image:string
     createdAt:Date
     updatedAt:Date
+}
+
+export interface ITableIngredient
+{
+    id:number
+    product_name:string
 }
 
 enum NOVA_GROUP

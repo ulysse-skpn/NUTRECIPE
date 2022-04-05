@@ -19,13 +19,20 @@ class App
       this.routes.routes(this.app)
     }
 
+    private readonly _allowOrigin  =
+    [
+      'https://127.0.0.1:3000',
+      'https://localhost:4000',
+      'https://fonts.gstatic.com/s/materialicons/v126/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2'
+    ]
+
     private config(): void
     {
       this.app.use(express.json())
       this.app.use(express.urlencoded({extended:false}))
       this.app.use(helmet())
       this.app.use(cors({
-        origin: ['https://127.0.0.1:3000','https://localhost:4000'],
+        origin: this._allowOrigin,
         methods: ['GET','POST','DELETE','UPDATE','PUT']
       }))
       this.app.use(morganMiddleware)

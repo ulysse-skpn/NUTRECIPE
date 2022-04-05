@@ -8,10 +8,16 @@ export class RecipesCtrl
 {   
     async getAll(req:Request , res:Response)
     {
+        let pageSize:number , offset:number
         const recipeServiceImpl:RecipeServiceImpl = new RecipeServiceImpl()
 
         try 
         {
+            pageSize = parseInt(req.body.pageSize)
+            offset = parseInt(req.body.pageIndex) * parseInt(req.body.pageSize)
+            if( isNaN(pageSize) ) throw Error("Limit is not a number")
+            if( isNaN(offset) ) throw Error("Offset is not a number")
+            
             const recipesList:Recipe[] = await recipeServiceImpl.getAllRecipes()
             res.status(200).send(recipesList)
         } 
@@ -21,6 +27,23 @@ export class RecipesCtrl
             res.status(400).send( ApiError.badRequest(err.message) )
         }
     }
+
+
+    async getAllSize(req:Request , res:Response)
+    {
+        const recipeServiceImpl:RecipeServiceImpl = new RecipeServiceImpl()
+
+        try 
+        {
+            const size = await recipeServiceImpl.getNumberElements()
+            res.status(200).send(size[0][0])
+        } 
+        catch (err:any) 
+        {
+            logger.error( `Method => GET ALL Recipes size : ${err.message}` )
+            res.status(400).send( ApiError.badRequest(err.message) )
+        }
+    } 
 
 
     async getById(req:Request , res:Response)

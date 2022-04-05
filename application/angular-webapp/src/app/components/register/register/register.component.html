@@ -12,40 +12,46 @@
                 <div>
                     <mat-form-field>
                         <mat-label>Nom</mat-label>
-                        <input matInput placeholder='Nom' type="text" id="last_name" name="last_name" [formControl]="lastNameControl" min="1">
-                        <mat-error *ngIf="lastNameControl.invalid">{{ getErrorMessage('last_name') }}</mat-error>
+                        <input matInput placeholder='Nom' type="text" id="last_name" name="last_name" formControlName="lastNameControl" min="1">
+                        <mat-error *ngIf="getErrorMessage('lastNameControl','required')">Ce champ est obligatoire</mat-error>
+                        <mat-error *ngIf="getErrorMessage('lastNameControl','minlength')">2 caractères minimum</mat-error>
                     </mat-form-field>
                 </div>
 
                 <div>
                     <mat-form-field>
                         <mat-label>Prenom</mat-label>
-                        <input matInput placeholder='Prenom' type="text" id="first_name" name="first_name" [formControl]="firstNameControl" min="1">
-                        <mat-error *ngIf="firstNameControl.invalid">{{ getErrorMessage('first_name') }}</mat-error>
+                        <input matInput placeholder='Prenom' type="text" id="first_name" name="first_name" formControlName="firstNameControl" min="1">
+                        <mat-error *ngIf="getErrorMessage('firstNameControl','required')">Ce champ est obligatoire</mat-error>
+                        <mat-error *ngIf="getErrorMessage('firstNameControl','minlength')">2 caractères minimum</mat-error>
                     </mat-form-field>
                 </div>
 
                 <div>
                     <mat-form-field>
                         <mat-label>Numéro de téléphone</mat-label>
-                        <input matInput placeholder='N° téléphone' type="tel" id="phone_number" name="phone_number" [formControl]="phoneNumberControl" min="10" max="20">
-                        <mat-error *ngIf="phoneNumberControl.invalid">{{ getErrorMessage('phone_number') }}</mat-error>
+                        <input matInput placeholder='N° téléphone' type="tel" id="phone_number" name="phone_number" formControlName="phoneNumberControl" min="10" max="20">
+                        <mat-error *ngIf="getErrorMessage('phoneNumberControl','minlength')">10 caractères minimum</mat-error>
+                        <mat-error *ngIf="getErrorMessage('phoneNumberControl','maxlength')">20 caractères maximum</mat-error>
                     </mat-form-field>
                 </div>
 
                 <div>
                     <mat-form-field>
                         <mat-label>Email</mat-label>
-                        <input matInput placeholder='email' type="email" id="email" name="email" [formControl]="emailControl" required>
-                        <mat-error *ngIf="emailControl.invalid">{{ getErrorMessage('email') }}</mat-error>
+                        <input matInput placeholder='email' type="email" id="email" name="email" formControlName="emailControl" required>
+                        <mat-error *ngIf="getErrorMessage('emailControl','required')">Ce champ est obligatoire</mat-error>
+                        <mat-error *ngIf="getErrorMessage('emailControl','email')">L'email n'est pas valide</mat-error>
+                        <mat-error *ngIf="getErrorMessage('emailControl','pattern')">L'email n'est pas bien formaté</mat-error>
                     </mat-form-field>
                 </div>
 
                 <div>
                     <mat-form-field hintLabel="Min 6 caractères">
                         <mat-label>Mot de passe</mat-label>
-                        <input matInput #input placeholder='mot de passe' min="6" [type]="hide ? 'password' : 'text'" id="password" name="password" [formControl]="passwordControl" required>
-                        <mat-error *ngIf="passwordControl.invalid">{{ getErrorMessage('password') }}</mat-error>
+                        <input matInput #input placeholder='mot de passe' min="6" [type]="hide ? 'password' : 'text'" id="password" name="password" formControlName="passwordControl" required>
+                        <mat-error *ngIf="getErrorMessage('passwordControl','required')">Ce champ est obligatoire</mat-error>
+                        <mat-error *ngIf="getErrorMessage('passwordControl','minlength')">6 caractères minimum</mat-error>
                         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                             <mat-icon>{{ hide ? 'visibility_off' : 'visiblity' }}</mat-icon>
                         </button>

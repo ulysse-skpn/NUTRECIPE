@@ -29,7 +29,6 @@ import { DashboardComponent } from './components/dashboard/dashboard/dashboard.c
 import { IngredientsPageComponent } from './components/ingredientsPage/ingredients-page/ingredients-page.component';
 import { RecipesPageComponent } from './components/recipesPage/recipes-page/recipes-page.component';
 import { UsersPageComponent } from './components/usersPage/users-page/users-page.component';
-import { SettingsPageComponent } from './components/settings/settings-page/settings-page.component';
 import { DialogAddIngredientComponent } from './components/dialog/add-ingredient-form/dialog-add-ingredient/dialog-add-ingredient.component';
 import { DialogModifIngredientComponent } from './components/dialog/modif-ingredient-form/dialog-modif-ingredient/dialog-modif-ingredient.component';
 import { DialogAddRecipeComponent } from './components/dialog/add-recipe-form/dialog-add-recipe/dialog-add-recipe.component';
@@ -47,7 +46,6 @@ import { DialogModifUserComponent } from './components/dialog/modif-user-form/di
     IngredientsPageComponent,
     RecipesPageComponent,
     UsersPageComponent,
-    SettingsPageComponent,
     DialogAddIngredientComponent,
     DialogModifIngredientComponent,
     DialogAddRecipeComponent,
