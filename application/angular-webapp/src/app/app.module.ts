@@ -29,12 +29,9 @@ import { DashboardComponent } from './components/dashboard/dashboard/dashboard.c
 import { IngredientsPageComponent } from './components/ingredientsPage/ingredients-page/ingredients-page.component';
 import { RecipesPageComponent } from './components/recipesPage/recipes-page/recipes-page.component';
 import { UsersPageComponent } from './components/usersPage/users-page/users-page.component';
-import { DialogAddIngredientComponent } from './components/dialog/add-ingredient-form/dialog-add-ingredient/dialog-add-ingredient.component';
-import { DialogModifIngredientComponent } from './components/dialog/modif-ingredient-form/dialog-modif-ingredient/dialog-modif-ingredient.component';
-import { DialogAddRecipeComponent } from './components/dialog/add-recipe-form/dialog-add-recipe/dialog-add-recipe.component';
-import { DialogModifRecipeComponent } from './components/dialog/modif-recipe-form/dialog-modif-recipe/dialog-modif-recipe.component';
-import { DialogAddUserComponent } from './components/dialog/add-user-form/dialog-add-user/dialog-add-user.component';
-import { DialogModifUserComponent } from './components/dialog/modif-user-form/dialog-modif-user/dialog-modif-user.component';
+import { DialogIngredientComponent } from './components/dialog/ingredient/dialog-ingredient/dialog-ingredient.component';
+import { DialogUserComponent } from './components/dialog/user/dialog-user/dialog-user.component';
+import { DialogRecipeComponent } from './components/dialog/recipe/dialog-recipe/dialog-recipe.component';
 
 @NgModule({
   declarations: [
@@ -46,12 +43,9 @@ import { DialogModifUserComponent } from './components/dialog/modif-user-form/di
     IngredientsPageComponent,
     RecipesPageComponent,
     UsersPageComponent,
-    DialogAddIngredientComponent,
-    DialogModifIngredientComponent,
-    DialogAddRecipeComponent,
-    DialogModifRecipeComponent,
-    DialogAddUserComponent,
-    DialogModifUserComponent
+    DialogIngredientComponent,
+    DialogUserComponent,
+    DialogRecipeComponent
   ],
   imports: [
     BrowserModule,

@@ -7,9 +7,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { RecipesService } from 'src/app/services/recipes/recipes.service';
-import { DialogAddRecipeComponent } from '../../dialog/add-recipe-form/dialog-add-recipe/dialog-add-recipe.component';
-import { DialogModifRecipeComponent } from '../../dialog/modif-recipe-form/dialog-modif-recipe/dialog-modif-recipe.component';
 import { IRecipeOut } from 'src/app/interfaces/IRecipe';
+import { DialogRecipeComponent } from '../../dialog/recipe/dialog-recipe/dialog-recipe.component';
 
 @Component({
   selector: 'app-recipes-page',
@@ -81,15 +80,16 @@ export class RecipesPageComponent implements OnInit {
 
   openAddDialog()
   {
-    this.dialog.open(DialogAddRecipeComponent , {
+    this.dialog.open(DialogRecipeComponent , {
+      data: { type:'add' },
       minWidth:'300px'
     });
   }
 
   openModifDialog(id:number)
   {
-    this.dialog.open(DialogModifRecipeComponent , {
-      data: { id: id },
+    this.dialog.open(DialogRecipeComponent , {
+      data: { id: id , type:'modif' },
       minWidth:'300px'
     });
   }

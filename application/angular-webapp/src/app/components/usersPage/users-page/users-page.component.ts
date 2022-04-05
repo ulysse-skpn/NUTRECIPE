@@ -6,9 +6,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { UsersService } from 'src/app/services/users/users.service';
-import { DialogAddUserComponent } from '../../dialog/add-user-form/dialog-add-user/dialog-add-user.component';
-import { DialogModifUserComponent } from '../../dialog/modif-user-form/dialog-modif-user/dialog-modif-user.component';
 import { IUserOut } from 'src/app/interfaces/IUser';
+import { DialogUserComponent } from '../../dialog/user/dialog-user/dialog-user.component';
 
 @Component({
   selector: 'app-users-page',
@@ -79,15 +78,16 @@ export class UsersPageComponent implements OnInit {
 
   openAddDialog()
   {
-    this.dialog.open(DialogAddUserComponent , {
+    this.dialog.open(DialogUserComponent , {
+      data: { type:'add' },
       minWidth:'300px'
     });
   }
 
   openModifDialog(id:number)
   {
-    this.dialog.open(DialogModifUserComponent , {
-      data: { id: id },
+    this.dialog.open(DialogUserComponent , {
+      data: { id: id , type:'modif' },
       minWidth:'300px'
     });
   }

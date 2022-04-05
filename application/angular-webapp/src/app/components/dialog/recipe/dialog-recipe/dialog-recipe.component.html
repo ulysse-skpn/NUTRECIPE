@@ -1,6 +1,6 @@
 <h1 mat-dialog-title>Formulaire</h1>
 <div mat-dialog-content>
-    <p>Modifier une recette</p>
+    <p>{{ dialogTitle }}</p>
     
     <caption style="color:red">(*) Champs Obligatoires</caption>
 
@@ -85,11 +85,10 @@
         </div>
 
         <div mat-dialog-actions>
-            <button mat-button (click)="onNoClick()">Fermer</button>
+            <button mat-button type="button" (click)="onNoClick()">Fermer</button>
             <button mat-flat-button cdkFocusInitial color="primary" type="submit">Enregister</button>
         </div>
     </form>
 </div>
-
 
 
