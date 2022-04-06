@@ -2,5 +2,5 @@ projectKey=nutrecipe
 serverUrl=http://localhost:9000
 serverVersion=9.3.0.51899
 dashboardUrl=http://localhost:9000/dashboard?id=nutrecipe
-ceTaskId=AX_-g_7xxQUrl7bXgHf5
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AX_-g_7xxQUrl7bXgHf5
+ceTaskId=AX_-4jBzxQUrl7bXgHf7
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AX_-4jBzxQUrl7bXgHf7
