@@ -59,3 +59,9 @@ btn-toggle-nav > li > a
 {
     color: #f7f7f7;
 }
+
+.content
+{
+    font-size: 4rem;
+    padding:7rem 4rem 0 16rem;
+}

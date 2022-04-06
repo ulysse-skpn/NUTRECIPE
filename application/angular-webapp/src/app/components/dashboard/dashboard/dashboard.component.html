@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" routerLink="/dashboard">Tableau de bord</a>
+        <a class="navbar-brand" routerLink="/dashboard">NUTRECIPE</a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
@@ -44,5 +44,16 @@
         </li>
 
     </ul>
+</div>
+
+<div class="content">
+    <p>TABLEAU DE BORD</p>
+    <hr>
+    <br>
+    <div class="h3">Nombre d'ingredients : {{  ingredients_size }}</div>
+    <br>
+    <div class="h3">Nombre de recettes : {{  recipes_size }}</div>
+    <br>
+    <div class="h3">Nombre d'utilisateurs : {{  users_size }}</div>
 </div>
 

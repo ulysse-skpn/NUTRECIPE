@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl , FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { IUserIn } from 'src/app/interfaces/IUser';
 import { RootService } from 'src/app/services/root-service/root.service';
@@ -15,7 +16,8 @@ export class RegisterComponent {
   constructor(
     private route:Router,
     private rootService:RootService,
-    private storageService:StorageService
+    private storageService:StorageService,
+    private snackBar:MatSnackBar
   ) { }
 
   hide:boolean = true
@@ -53,12 +55,23 @@ export class RegisterComponent {
     }
 
     this.rootService.register(userIn).subscribe( async(res) => {
+
       await this.storageService.set( "access_token" , res.access_token )
       await this.storageService.set( "expiresIn" , res.expires_in.toString() )
 
-      this.route.routeReuseStrategy.shouldReuseRoute = () => false;
-      this.route.onSameUrlNavigation = 'reload';
-      this.route.navigate(["/dashboard"]);
+      const snackBarRef = this.snackBar.open("Utilisateur enregistré , vous allez être redirigé vers la page de connexion" , "" , {
+        duration: 3200
+      })
+
+      snackBarRef.afterDismissed().subscribe( () => {
+
+        this.route.routeReuseStrategy.shouldReuseRoute = () => false;
+
+        this.route.onSameUrlNavigation = 'reload';
+
+        this.route.navigate(["/"]);
+
+      })
     })
   }
 
