@@ -77,15 +77,13 @@ export class RootService {
 
   getToken()
   {
-    this.storageService.get("access_token").then( token => {
-      return token
-    })
+    return sessionStorage.getItem("access_token")
   }
 
   isLoggedIn():boolean
   { 
-    const token = this.getToken()   
-    return token !== undefined ? true : false
+    const token = sessionStorage.getItem("access_token")
+    return token !== null ? true : false
   }
 
   private handleError(error:any)

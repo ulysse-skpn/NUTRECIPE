@@ -18,7 +18,7 @@ const routes:Routes =
   { path: "forgotPassword" , component : ForgotPasswordComponent},
   
   
-  { path: "dashboard" , component : DashboardComponent , canActivate:[RouteGuard]},
+  { path: "dashboard" , component : DashboardComponent},
   { path: "users" , component : UsersPageComponent , canActivate:[RouteGuard]},
   { path: "recipes" , component : RecipesPageComponent , canActivate:[RouteGuard]},
   { path: "ingredients" , component : IngredientsPageComponent , canActivate:[RouteGuard]},

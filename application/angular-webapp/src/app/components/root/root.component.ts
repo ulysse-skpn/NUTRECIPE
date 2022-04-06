@@ -39,6 +39,12 @@ export class RootComponent {
     }
 
     this.rootService.login(credentials).subscribe( async(res:IUserOut) => {
+
+      if( res.user.role !== "admin" ) 
+      {
+        window.alert("Vous n'avez pas les droits pour vous connecter à l'application")
+        return
+      }
       await this.storageService.set( "access_token" , res.access_token )
       await this.storageService.set( "expiresIn" , res.expires_in.toString() )
       

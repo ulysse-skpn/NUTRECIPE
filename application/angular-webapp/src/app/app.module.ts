@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RootComponent } from './components/root/root.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -33,6 +33,7 @@ import { DialogIngredientComponent } from './components/dialog/ingredient/dialog
 import { DialogUserComponent } from './components/dialog/user/dialog-user/dialog-user.component';
 import { DialogRecipeComponent } from './components/dialog/recipe/dialog-recipe/dialog-recipe.component';
 import { NotAuthorizedComponent } from './components/not-authorized/not-authorized/not-authorized.component';
+import { AuthInterceptor } from './helpers/authconfig.interceptor';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,14 @@ import { NotAuthorizedComponent } from './components/not-authorized/not-authoriz
     MatDialogModule,
     MatSelectModule
   ],
-  providers: [],
+  providers: 
+  [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
