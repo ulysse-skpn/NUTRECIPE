@@ -8,6 +8,8 @@ import { UsersPageComponent } from './components/usersPage/users-page/users-page
 import { RecipesPageComponent } from './components/recipesPage/recipes-page/recipes-page.component';
 import { IngredientsPageComponent } from './components/ingredientsPage/ingredients-page/ingredients-page.component';
 import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
+import { RouteGuard } from './services/route-guard/route.guard';
+import { NotAuthorizedComponent } from './components/not-authorized/not-authorized/not-authorized.component';
 
 const routes:Routes = 
 [
@@ -16,10 +18,12 @@ const routes:Routes =
   { path: "forgotPassword" , component : ForgotPasswordComponent},
   
   
-  { path: "dashboard" , component : DashboardComponent},
-  { path: "users" , component : UsersPageComponent},
-  { path: "recipes" , component : RecipesPageComponent},
-  { path: "ingredients" , component : IngredientsPageComponent}
+  { path: "dashboard" , component : DashboardComponent , canActivate:[RouteGuard]},
+  { path: "users" , component : UsersPageComponent , canActivate:[RouteGuard]},
+  { path: "recipes" , component : RecipesPageComponent , canActivate:[RouteGuard]},
+  { path: "ingredients" , component : IngredientsPageComponent , canActivate:[RouteGuard]},
+
+  { path: "notauthorized" , component: NotAuthorizedComponent}
 ]
 
 @NgModule({

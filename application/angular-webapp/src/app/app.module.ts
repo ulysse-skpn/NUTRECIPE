@@ -32,6 +32,7 @@ import { UsersPageComponent } from './components/usersPage/users-page/users-page
 import { DialogIngredientComponent } from './components/dialog/ingredient/dialog-ingredient/dialog-ingredient.component';
 import { DialogUserComponent } from './components/dialog/user/dialog-user/dialog-user.component';
 import { DialogRecipeComponent } from './components/dialog/recipe/dialog-recipe/dialog-recipe.component';
+import { NotAuthorizedComponent } from './components/not-authorized/not-authorized/not-authorized.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { DialogRecipeComponent } from './components/dialog/recipe/dialog-recipe/
     UsersPageComponent,
     DialogIngredientComponent,
     DialogUserComponent,
-    DialogRecipeComponent
+    DialogRecipeComponent,
+    NotAuthorizedComponent
   ],
   imports: [
     BrowserModule,

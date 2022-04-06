@@ -75,10 +75,17 @@ export class RootService {
     this.route.navigate(["/"]);
   }
 
-
-  hasToken()
+  getToken()
   {
-    return !!this.storageService.get("access_token")
+    this.storageService.get("access_token").then( token => {
+      return token
+    })
+  }
+
+  isLoggedIn():boolean
+  { 
+    const token = this.getToken()   
+    return token !== undefined ? true : false
   }
 
   private handleError(error:any)
