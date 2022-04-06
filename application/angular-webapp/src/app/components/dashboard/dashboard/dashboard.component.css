@@ -36,11 +36,6 @@
     filter: invert(32%) sepia(58%) saturate(6331%) hue-rotate(194deg)
     brightness(97%) contrast(98%);
 }
-.whiteFilter 
-{
-    filter: invert(99%) sepia(24%) saturate(384%) hue-rotate(253deg)
-    brightness(113%) contrast(100%);
-}
 .redFilter 
 {
     filter: invert(51%) sepia(64%) saturate(5591%) hue-rotate(337deg)
