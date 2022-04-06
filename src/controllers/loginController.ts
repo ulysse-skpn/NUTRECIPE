@@ -27,7 +27,7 @@ export class LoginCtrl
                 {
                     const SECRET_KEY:string = "secretkey23456";
 
-                    const expiresIn = 24 * 60 * 60
+                    const expiresIn = 60 * 60 * 24
                     const accessToken = jwt.sign( {id:user.id} , SECRET_KEY , {
                         expiresIn: expiresIn
                     })

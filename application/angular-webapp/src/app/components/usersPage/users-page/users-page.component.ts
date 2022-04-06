@@ -8,6 +8,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { UsersService } from 'src/app/services/users/users.service';
 import { IUserOut } from 'src/app/interfaces/IUser';
 import { DialogUserComponent } from '../../dialog/user/dialog-user/dialog-user.component';
+import { JwtHelperService } from '@auth0/angular-jwt';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users-page',
@@ -39,12 +41,17 @@ export class UsersPageComponent implements OnInit {
   constructor(
     private userService:UsersService,
     private snackBar: MatSnackBar,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private jwtHelper: JwtHelperService,
+    private router:Router
   ) { }
 
   ngOnInit(): void 
   {
-    this.sizeIngredientsArray()
+    const token = sessionStorage.getItem("access_token")
+
+    if( token && this.jwtHelper.isTokenExpired(token) ) this.router.navigate(["/"])
+    else this.sizeUsersArray()
   }
 
   add()
@@ -98,7 +105,7 @@ export class UsersPageComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLocaleLowerCase();
   }
 
-  sizeIngredientsArray()
+  sizeUsersArray()
   {
     this.userService.getSizeArrayUsers().subscribe( (res) => {
       this.pageSize = res.nbElem

@@ -9,6 +9,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { RecipesService } from 'src/app/services/recipes/recipes.service';
 import { IRecipeOut } from 'src/app/interfaces/IRecipe';
 import { DialogRecipeComponent } from '../../dialog/recipe/dialog-recipe/dialog-recipe.component';
+import { JwtHelperService } from '@auth0/angular-jwt';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipes-page',
@@ -40,13 +42,18 @@ export class RecipesPageComponent implements OnInit {
   constructor(
     private recipeService:RecipesService,
     private snackBar: MatSnackBar,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private jwtHelper: JwtHelperService,
+    private router:Router
   ) { }
 
 
   ngOnInit(): void 
   {
-    this.sizeIngredientsArray()
+    const token = sessionStorage.getItem("access_token")
+
+    if( token && this.jwtHelper.isTokenExpired(token) ) this.router.navigate(["/"])
+    else this.sizeRecipesArray()
   }
 
   add()
@@ -100,7 +107,7 @@ export class RecipesPageComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLocaleLowerCase();
   }
 
-  sizeIngredientsArray()
+  sizeRecipesArray()
   {
     this.recipeService.getSizeArrayRecipes().subscribe( (res) => {
       this.pageSize = res.nbElem

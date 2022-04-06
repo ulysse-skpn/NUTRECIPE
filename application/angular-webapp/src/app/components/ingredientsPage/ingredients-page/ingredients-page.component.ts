@@ -8,6 +8,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { IIngredientOut, ITableIngredient } from 'src/app/interfaces/IIngredient';
 import { DialogIngredientComponent } from '../../dialog/ingredient/dialog-ingredient/dialog-ingredient.component';
+import { JwtHelperService } from '@auth0/angular-jwt'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ingredients-page',
@@ -40,12 +42,17 @@ export class IngredientsPageComponent implements OnInit {
   constructor(
     private ingredientService:IngredientsService,
     private snackBar: MatSnackBar,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private jwtHelper: JwtHelperService,
+    private router:Router
   ) {}
 
   ngOnInit(): void 
   {
-    this.sizeIngredientsArray()
+    const token = sessionStorage.getItem("access_token")
+
+    if( token && this.jwtHelper.isTokenExpired(token) ) this.router.navigate(["/"])
+    else this.sizeIngredientsArray()
   }
 
   add()

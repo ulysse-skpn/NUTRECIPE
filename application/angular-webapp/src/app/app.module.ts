@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { RootComponent } from './components/root/root.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { JwtModule } from "@auth0/angular-jwt";
+
 // Angular Material
 import { MatCardModule } from '@angular/material/card'
 import { MatInputModule } from '@angular/material/input'
@@ -34,6 +36,10 @@ import { DialogUserComponent } from './components/dialog/user/dialog-user/dialog
 import { DialogRecipeComponent } from './components/dialog/recipe/dialog-recipe/dialog-recipe.component';
 import { NotAuthorizedComponent } from './components/not-authorized/not-authorized/not-authorized.component';
 import { AuthInterceptor } from './helpers/authconfig.interceptor';
+
+export function tokenGetter() {
+  return sessionStorage.getItem("access_token");
+}
 
 @NgModule({
   declarations: [
@@ -69,7 +75,19 @@ import { AuthInterceptor } from './helpers/authconfig.interceptor';
     MatSortModule,
     MatSnackBarModule,
     MatDialogModule,
-    MatSelectModule
+    MatSelectModule,
+    JwtModule.forRoot({
+      config:
+      {
+        tokenGetter: tokenGetter,
+        allowedDomains:
+        [
+          'https://127.0.0.1:3000',
+          'https://localhost:4000',
+          'https://fonts.gstatic.com/s/materialicons/v126/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2'
+        ]
+      }
+    })
   ],
   providers: 
   [
