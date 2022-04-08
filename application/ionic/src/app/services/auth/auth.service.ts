@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable , BehaviorSubject, pipe } from 'rxjs';
-import { Storage } from  '@ionic/storage';
+// import { Storage } from  '@ionic/storage';
 import { RegisterIn } from '../../interfaces/user/register_in';
 import { UserIn } from '../../interfaces/user/user-in';
 import { UserOut } from 'src/app/interfaces/user/user-out';
@@ -20,10 +20,10 @@ export class AuthService {
     private  storageService: Storage
   ) { }
   
-  host = '127.0.0.1';
+  host = '127.0.0.1'
   // port = '8100';
   port = '3000';
-  authSubject  =  new  BehaviorSubject<boolean>(this.hasToken());
+  authSubject  =  new  BehaviorSubject<boolean>(this.hasToken())
 
   register(user: RegisterIn): Observable<any>
   {
