@@ -1,9 +1,44 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <form [formGroup]="loginFormGroup">
+    <ion-card>
+      <ion-item>
+        <ion-label>Connexion</ion-label>
+      </ion-item>
+    
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input inputmode="email" type="email" required formControlName="emailControl" clear-input></ion-input>
+        </ion-item>
+        <div class="error" *ngIf="errorMessage.emailControl.errors?.required">Ce champ est requis</div>
+        <div class="error" *ngIf="errorMessage.emailControl.errors?.email">L'email n'est pas valide</div>
+        <div class="error" *ngIf="errorMessage.emailControl.errors?.pattern">L'email n'est pas bien formaté</div>
 
+        <ion-item>
+          <ion-label position="floating">Mot de passe</ion-label>
+          <ion-input inputmode="text" type="password" required formControlName="passwordControl" clear-input minlength="6"></ion-input>
+        </ion-item>
+        <div class="error" *ngIf="errorMessage.passwordControl.errors?.required">Ce champ est requis</div>
+        <div class="error" *ngIf="errorMessage.passwordControl.errors?.minlength">6 caractères minimum</div>
+
+        <ion-item>
+          <ion-button slot="end" color="tertiary" type="submit" (click)="onFormSubmit()" [disabled]="loginFormGroup.invalid">Valider</ion-button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </form>
+
+  <ion-item>
+    <ion-router-link color="primary" (click)="goToRegister()">go to register</ion-router-link>
+  </ion-item>
+
+  <ion-item>
+    <ion-router-link color="primary" (click)="goToForgotPassword()">go to forgot</ion-router-link>
+  </ion-item>
 </ion-content>
