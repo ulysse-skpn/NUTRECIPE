@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ICredentialsIn } from 'src/app/interfaces/ICredentials';
+import { IUserOut } from 'src/app/interfaces/IUser';
 import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
@@ -44,10 +45,18 @@ export class LoginPage {
       password:form.passwordControl
     } 
 
-    console.log(credentials);
-    // this.authService.login(credentials).subscribe( () => {
+    this.authService.login(credentials).subscribe( async(res:IUserOut) => {
 
-    // })
+      if( res.user.role !== "user" ) 
+      {
+        window.alert("Vous n'avez pas les droits pour vous connecter à l'application")
+        return
+      }
+      sessionStorage.setItem( "access_token" , res.access_token )
+      sessionStorage.setItem( "expiresIn" , res.expires_in.toString() )
+      
+      this.authService.redirectTo("tabs")
+    })
     
   }
 

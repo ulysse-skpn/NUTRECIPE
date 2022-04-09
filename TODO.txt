@@ -14,3 +14,10 @@ TODO Bearer token
 //INFORMATIONS IMPORTANTES
 Check //? For todo
 database utf8mb4_bin
+
+Soucis
+Wamp qui ne redémarre pas après redémarrage
+"vue mobile" sur navigateur ne prend pas en compte certains clics et certianes fonctions
+Trie des informations des api de recettes et d'ingrédients
+Travail plus long et complexe que prévu
+Doc des frameworks souvent incomplète

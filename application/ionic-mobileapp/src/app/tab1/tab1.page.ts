@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
+  selectTab:string = "list"
+
   constructor() {}
 
+  segmentChanged(event:any)
+  {
+    console.log(event);
+    alert(event)
+  }
 }

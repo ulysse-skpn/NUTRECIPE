@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { ForgotPasswordPage } from './pages/forgot-password/forgot-password/forgot-password.page';
-import { LoginPage } from './pages/login/login/login.page';
-import { RegisterPage } from './pages/register/register/register.page';
 
 const routes: Routes = [
   {
@@ -25,7 +22,11 @@ const routes: Routes = [
   {
     path: 'forgot-password',
     loadChildren: () => import('../app/pages/forgot-password/forgot-password/forgot-password.module').then(m => m.ForgotPasswordPageModule)
+  },  {
+    path: 'settings',
+    loadChildren: () => import('./pages/settings/settings/settings.module').then( m => m.SettingsPageModule)
   }
+
 ];
 @NgModule({
   imports: [
