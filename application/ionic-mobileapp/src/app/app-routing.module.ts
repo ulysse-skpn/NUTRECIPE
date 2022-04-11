@@ -22,9 +22,14 @@ const routes: Routes = [
   {
     path: 'forgot-password',
     loadChildren: () => import('../app/pages/forgot-password/forgot-password/forgot-password.module').then(m => m.ForgotPasswordPageModule)
-  },  {
+  },
+  {
     path: 'settings',
     loadChildren: () => import('./pages/settings/settings/settings.module').then( m => m.SettingsPageModule)
+  },
+  {
+    path: 'notauthorized',
+    loadChildren: () => import('./pages/not-authorized/not-authorized/not-authorized.module').then( m => m.NotAuthorizedPageModule )
   }
 
 ];

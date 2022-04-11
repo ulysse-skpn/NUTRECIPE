@@ -14,6 +14,7 @@ TODO Bearer token
 //INFORMATIONS IMPORTANTES
 Check //? For todo
 database utf8mb4_bin
+Utilisation de la méthode POST pour ne pas laisser la possibilité aux utilisateurs de 'jouer' avec les paramètres de l'url
 
 Soucis
 Wamp qui ne redémarre pas après redémarrage
@@ -21,3 +22,4 @@ Wamp qui ne redémarre pas après redémarrage
 Trie des informations des api de recettes et d'ingrédients
 Travail plus long et complexe que prévu
 Doc des frameworks souvent incomplète
+A chaque mise à jour du navigateur , l'apparence de la vue navigateur sur mobile peut changer

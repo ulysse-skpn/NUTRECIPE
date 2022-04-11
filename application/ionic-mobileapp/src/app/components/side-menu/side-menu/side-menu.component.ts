@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { SettingsPage } from 'src/app/pages/settings/settings/settings.page';
 import { AuthService } from 'src/app/services/auth/auth.service';
@@ -8,14 +8,20 @@ import { AuthService } from 'src/app/services/auth/auth.service';
   templateUrl: './side-menu.component.html',
   styleUrls: ['./side-menu.component.scss'],
 })
-export class SideMenuComponent {
+export class SideMenuComponent implements OnInit {
+
+  visible:boolean = false
+  modal: HTMLElement
 
   constructor(
     private authService:AuthService,
     private modalController:ModalController
   ) { }
 
-  modal: HTMLElement
+  ngOnInit(): void 
+  {
+    if( sessionStorage.getItem("access_token") ) this.visible = false
+  }
 
   async settings()
   {
@@ -39,5 +45,10 @@ export class SideMenuComponent {
   async logout()
   {
     await this.authService.logout()
+  }
+
+  goToLogin()
+  {
+    this.authService.redirectTo('login')
   }
 }

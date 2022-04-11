@@ -30,9 +30,22 @@ export class RecipesService {
     )
   }
 
-  getAllRecipes(pageIndex:number,pageSize:number):Observable<IRecipeOut[]>
+  getAllRecipes():Observable<IRecipeOut[]>
   {
-    const url = `http://${this.host}:${this.port}/recipes/pagination`
+    const url = `http://${this.host}:${this.port}/recipes`
+    return this.http.get<IRecipeOut[]>(url)
+    .pipe(
+      tap( (data:IRecipeOut[]) => {
+        console.log(data)
+      }),
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
+
+  getAllRecipesPagination(pageIndex:number,pageSize:number):Observable<IRecipeOut[]>
+  {
+    const url = `http://${this.host}:${this.port}/recipes`
     return this.http.post<IRecipeOut[]>(url,{pageIndex,pageSize})
     .pipe(
       tap( (data:IRecipeOut[]) => {

@@ -27,9 +27,7 @@
         <div class="error" *ngIf="errorMessage.passwordControl.errors?.required">Ce champ est requis</div>
         <div class="error" *ngIf="errorMessage.passwordControl.errors?.minlength">6 caractères minimum</div>
 
-        <ion-item>
-          <ion-button slot="end" color="tertiary" type="submit" (click)="onFormSubmit()" [disabled]="loginFormGroup.invalid">Valider</ion-button>
-        </ion-item>
+        <ion-button color="tertiary" type="submit" (click)="onFormSubmit()" [disabled]="loginFormGroup.invalid">Valider</ion-button>
       </ion-card-content>
     </ion-card>
   </form>

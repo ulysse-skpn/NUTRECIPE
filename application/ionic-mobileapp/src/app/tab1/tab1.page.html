@@ -1,20 +1,16 @@
+<app-side-menu></app-side-menu>
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
       Accueil
     </ion-title>
-    <ion-menu-button slot="end"></ion-menu-button>
+    <ion-menu-button slot="end" class="side-menu-button"></ion-menu-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!-- <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header> -->
 
-  <!-- <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="selectTab"> -->
   <ion-segment [(ngModel)]="selectTab">
     <ion-segment-button value="icon">
       <ion-label>Icône</ion-label>
@@ -24,16 +20,66 @@
     </ion-segment-button>
   </ion-segment>
 
-  <ion-searchbar animated debounce="500"></ion-searchbar>
+  <ion-searchbar inputmode="search" animated debounce="800" [(ngModel)]="searchTerm"></ion-searchbar>
 
   <div *ngIf="selectTab === 'icon'">
-    <h4>Icon</h4>
+
+    <cdk-virtual-scroll-viewport itemSize="90" style="height: 100vh" minBufferPx="900" maxBufferPx="1350">
+      <ion-list>
+        <!-- <ion-card *cdkVirtualFor="let recipe of recipeList | filter:searchTerm" (click)="detail(recipe.id)" (click)="expand($event)"> -->
+        <ion-card *cdkVirtualFor="let recipe of recipeList | filter:searchTerm" (click)="expand($event)">
+          
+          <ion-card-content>
+            
+            <img src="./../../assets/images/plate.svg" alt="">
+            <!-- <img src="{{ recipe?.image }}" alt=""> -->
+            <ion-card-title>{{ recipe.title }}</ion-card-title>
+
+            <ion-fab class="alignBookmarkButtons" horizontal="end" vertical="bottom" slot="fixed" (click)="bookmark(recipe)">
+              <ion-fab-button color="light">
+                <ion-icon class="bookmarkIcon" [ngClass]="{
+                  bookmarked: recipe.isBookmarked == true,
+                  notBookmarked: recipe.isBookmarked == false
+                }" name="heart-circle"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
+
+            <div *ngIf="visible === true">
+              {{ recipe.ingredients_list }}
+            </div>
+            
+          </ion-card-content>
+        </ion-card>
+      </ion-list>
+    </cdk-virtual-scroll-viewport>
+
   </div>
 
   <div *ngIf="selectTab === 'list'">
-    <h4>Liste</h4>
+
+    <cdk-virtual-scroll-viewport itemSize="90" style="height: 500px" minBufferPx="900" maxBufferPx="1350">
+      <ion-list>
+        <ion-card *cdkVirtualFor="let recipe of recipeList" (click)="detail(recipe.id)">
+          <ion-card-content>
+            <ion-avatar>
+              <img src="./../../assets/images/plate.svg" alt="">
+            </ion-avatar>
+            <ion-card-title>{{ recipe.title }}</ion-card-title>
+            
+            <ion-fab class="alignBookmarkButtons" horizontal="end" vertical="bottom" slot="fixed" (click)="bookmark(recipe)">
+              <ion-fab-button color="light">
+                <ion-icon class="bookmarkIcon" [ngClass]="{
+                  bookmarked: recipe.isBookmarked == true,
+                  notBookmarked: recipe.isBookmarked == false
+                }" name="heart-circle"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
+            
+          </ion-card-content>
+        </ion-card>
+      </ion-list>
+    </cdk-virtual-scroll-viewport>
+
   </div>
 
 </ion-content>
-
-<app-side-menu></app-side-menu>
