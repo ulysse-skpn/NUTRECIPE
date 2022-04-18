@@ -20,7 +20,7 @@ export class SideMenuComponent implements OnInit {
 
   ngOnInit(): void 
   {
-    if( sessionStorage.getItem("access_token") ) this.visible = false
+    if( sessionStorage.getItem("access_token") ) this.visible = true
   }
 
   async settings()

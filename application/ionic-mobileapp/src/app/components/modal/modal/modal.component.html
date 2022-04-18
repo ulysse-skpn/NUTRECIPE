@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngIf="type === 'recipe-details'">
 
   <h3 class="ion-padding">{{ title }}</h3>
 
@@ -65,5 +65,96 @@
       {{ step }}
     </div>
   </div>
+
+</ion-content>
+
+
+
+<ion-content *ngIf="type === 'ingredient-details'">
+
+  <div class="wrapper" *ngIf="image">
+    <img src="{{ image }}" alt="image de : {{product_name}}">
+  </div>
+
+  <div class="wrapper">
+    <ion-label>Appellation</ion-label>
+    <div>{{ product_name }}</div>
+  </div>
+
+  <hr>
+
+  <div class="wrapper">
+    <ion-label>Composition</ion-label>
+    <div>{{ ingredient_text }}</div>
+  </div>
+
+  <hr>
+
+  <div class="wrapper">
+    <ion-label>Glucides</ion-label>
+    <div>{{ carbohydrates }}</div>
+  </div>
+
+  <hr>
+
+  <div class="wrapper">
+    <ion-label>Protéines</ion-label>
+    <div>{{ proteins }}</div>
+  </div>
+
+  <hr>
+
+  <div class="wrapper">
+    <ion-label>Lipides</ion-label>
+    <div>{{ fats }}</div>
+  </div>
+
+  <hr>
+
+  <div class="wrapper">
+    <ion-label>Sel</ion-label>
+    <div>{{ salt }}</div>
+  </div>
+
+  <hr>
+
+  <div class="wrapper">
+    <ion-label>Calories</ion-label>
+    <div>{{ calories }}</div>
+  </div>
+
+  <hr>
+
+  <div class="wrapper">
+    <ion-label>Calories</ion-label>
+    <div>{{ calories }}</div>
+  </div>
+
+  <hr>
+
+  <div class="wrapper">
+    <ion-label>Groupe NOVA</ion-label>
+    <div>{{ nova_group }}</div>
+  </div>
+
+  <hr>
+
+  <div class="wrapper">
+    <ion-label>Catégories</ion-label>
+    <div>
+      {{ categories }}
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="wrapper" *ngIf="serving-size">
+    <ion-label>Portion</ion-label>
+    <div>{{ serving_size }}</div>
+  </div>
+
+  <hr>
+
+
 
 </ion-content>

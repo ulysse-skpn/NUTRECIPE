@@ -7,11 +7,17 @@ import { Tab2Page } from './tab2.page';
 import { Tab2PageRoutingModule } from './tab2-routing.module';
 import { SideMenuComponent } from '../components/side-menu/side-menu/side-menu.component';
 
+import { ScrollingModule } from '@angular/cdk/scrolling'
+import { Ng2SearchPipeModule } from 'ng2-search-filter'
+
+
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
+    ScrollingModule,
+    Ng2SearchPipeModule,
     Tab2PageRoutingModule
   ],
   declarations: [Tab2Page,SideMenuComponent]

@@ -9,6 +9,8 @@ import { ModalController } from '@ionic/angular';
 export class ModalComponent implements OnInit {
 
   @Input() type: string
+
+  // Recipe
   @Input() title:string
   @Input() prep:string
   @Input() cook:string
@@ -18,6 +20,19 @@ export class ModalComponent implements OnInit {
   @Input() instructions:any
   @Input() serving_size:string
   @Input() image:string
+
+  // Ingredient
+  @Input() product_name:string
+  @Input() ingredient_text:any
+  @Input() carbohydrates:number
+  @Input() proteins:number
+  @Input() fats:number
+  @Input() salt:number
+  @Input() calories:number
+  @Input() nova_group:string
+  @Input() categories_ingredient:string
+  @Input() serving_size_ingredient:string
+  @Input() image_ingredient:string
   
   constructor(
     private modalController:ModalController
@@ -25,8 +40,15 @@ export class ModalComponent implements OnInit {
 
   ngOnInit(): void
   {
-    this.ingredients_list = this.removeSpecialChars(this.ingredients_list)
-    this.instructions = this.removeSpecialChars(this.instructions)
+    if( this.type === "recipe-details" )
+    {
+      this.ingredients_list = this.removeSpecialChars(this.ingredients_list)
+      this.instructions = this.removeSpecialChars(this.instructions)
+    }
+    else
+    {
+      this.ingredient_text = this.removeSpecialChars(this.ingredient_text)
+    }
   }
 
   removeSpecialChars(string:string)
