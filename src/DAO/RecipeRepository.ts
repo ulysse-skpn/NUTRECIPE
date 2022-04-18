@@ -92,4 +92,20 @@ export class RecipeRepository implements IBaseRepository<Recipe>
         )
     }
 
+    async findAllPagination(limit:number,offset:number): Promise<Recipe[]> 
+    {
+        return this.recipeRepository.findAll(
+            {
+                offset:offset,
+                limit:limit,
+                include:
+                [
+                    {
+                        model:this.ingredientRepository, as:"recipe_has_ingredients"
+                    }
+                ]
+            }
+        )
+    }
+
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ToastController } from '@ionic/angular';
-import { IRecipeOut } from '../interfaces/IRecipe';
+import { ToastController , ModalController } from '@ionic/angular';
+import { ModalComponent } from '../components/modal/modal/modal.component';
 import { RecipesService } from '../services/recipes/recipes.service';
 
 @Component({
@@ -10,15 +10,17 @@ import { RecipesService } from '../services/recipes/recipes.service';
 })
 export class Tab1Page implements OnInit {
 
-  visible:boolean = false
   searchTerm:string = ""
   recipeArraySize!:number
-  recipeList:IRecipeOut[]
-  selectTab:string = "icon"
+  recipeList = []
+  selectTab:string = "card"
+  pageIndex:number = 0
+  pageSize:number = 30
 
   constructor(
     private recipeService:RecipesService,
-    private toastController:ToastController
+    private toastController:ToastController,
+    private modalController:ModalController
   ) {}
 
   ngOnInit(): void 
@@ -30,16 +32,44 @@ export class Tab1Page implements OnInit {
     this.loadRecipes()
   }
 
-  loadRecipes()
+  loadRecipes( pIndex:number = this.pageIndex , pSize:number = this.pageSize )
   {
-    this.recipeService.getAllRecipes().subscribe( async(res) => {
-      return this.recipeList = res.slice(0,20)
+    this.recipeService.getAllRecipesPagination( pIndex, pSize ).subscribe( async(res) => {
+      res.forEach(element => {
+        element['expanded'] = false
+        this.recipeList.push(element)
+      });
     })
   }
 
-  detail( id:number )
+  async detail( event:Event , id:number )
   {
-    // alert('Page detail')
+    event.stopPropagation()
+
+    this.recipeService.getRecipeById(id).subscribe( async(res) => {
+      
+      const modal = await this.modalController.create({
+        component:ModalComponent,
+        swipeToClose:true,
+        componentProps: { 
+          type:'recipe-details' , 
+          title:res.title,
+          prep:res.prep_time,
+          cook:res.cooking_time,
+          rest:res.rest_time,
+          categories:res.categories,
+          ingredients_list:res.ingredients_list,
+          instructions:res.instructions,
+          serving_size:res.serving_size,
+          image:res.image,
+        },
+        animated: true,
+        backdropDismiss:true
+      })
+  
+      return await modal.present()
+    })
+    
   }
 
 
@@ -70,10 +100,19 @@ export class Tab1Page implements OnInit {
     }).then(res => res.present());
   }
 
-  expand(event:Event)
+  loadData(event:any)
   {
-    console.log(event);
-    
-    this.visible = !this.visible
+      this.pageIndex = this.pageIndex + 1
+      
+      this.loadRecipes( this.pageIndex , this.pageSize )
+
+      event.target.complete()
+
+      if( this.recipeList.length === this.recipeArraySize ) event.target.disabled = true
+  }
+
+  expand(recipe)
+  {
+    recipe.expanded = !recipe.expanded
   }
 }

@@ -62,7 +62,24 @@ ion-searchbar , ion-item{
 }
 
 .notBookmarked{
-    color: #7f7f7f;
+    color: white;
+}
+
+.ionCardTitle{
+    font-size: 1rem;
+}
+
+.card{
+    word-break: break-word;
+    height: 25vh;
+    margin: 0;
+}
+
+.alignBookmarkButtons{
+    background: 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 
 

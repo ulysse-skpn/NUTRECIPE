@@ -17,6 +17,11 @@ export class RecipeServiceImpl implements IRecipeService
         return this.recipeRepository.findAll()
     }
 
+    async getAllRecipesPagination(limit:number , offset:number): Promise<Recipe[]>
+    {
+        return this.recipeRepository.findAllPagination(limit,offset)
+    }
+
     async getRecipeById(id: number): Promise<Recipe>
     {
         return this.recipeRepository.findById(id)

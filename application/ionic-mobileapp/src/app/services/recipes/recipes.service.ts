@@ -45,7 +45,7 @@ export class RecipesService {
 
   getAllRecipesPagination(pageIndex:number,pageSize:number):Observable<IRecipeOut[]>
   {
-    const url = `http://${this.host}:${this.port}/recipes`
+    const url = `http://${this.host}:${this.port}/recipes/pagination`
     return this.http.post<IRecipeOut[]>(url,{pageIndex,pageSize})
     .pipe(
       tap( (data:IRecipeOut[]) => {

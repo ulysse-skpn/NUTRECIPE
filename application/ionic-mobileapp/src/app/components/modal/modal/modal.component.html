@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Détails
+    </ion-title>
+    <ion-item slot="end" (click)="close()">Fermer</ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h3 class="ion-padding">{{ title }}</h3>
+
+  <div class="wrapper" *ngIf="image">
+    <!-- <img src="{{ image }}" alt="image de : {{title}}"> -->
+  </div>
+
+  <div class="wrapper" *ngIf="prep">
+    <ion-label>Temps de préparation</ion-label>
+    <div>{{ prep }}</div>
+  </div>
+
+  <div class="wrapper" *ngIf="cook">
+    <ion-label>Temps confection</ion-label>
+    <div>{{ cook }}</div>
+  </div>
+
+  <div class="wrapper" *ngIf="rest">
+    <ion-label>Temps de repos</ion-label>
+    <div>{{ rest }}</div>
+  </div>
+
+  <hr>
+
+  <div class="wrapper" *ngIf="serving-size">
+    <ion-label>Portion</ion-label>
+    <div>{{ serving_size }}</div>
+  </div>
+
+  <hr>
+
+  <div class="wrapper">
+    <ion-label>Catégories</ion-label>
+    <div>
+      {{ categories }}
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="wrapper">
+    <ion-label>Liste d'ingrédients</ion-label>
+    <div class="step" *ngFor="let ingredient of ingredients_list">
+      <ion-icon name="ellipse"></ion-icon>
+      {{ ingredient }}
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="wrapper">
+    <ion-label>Instructions</ion-label>
+    <div class="step" *ngFor="let step of instructions">
+      <ion-icon name="ellipse"></ion-icon>
+      {{ step }}
+    </div>
+  </div>
+
+</ion-content>

@@ -81,7 +81,7 @@ export class Routes
 
         app
             .route("/recipes/pagination")
-            .post(this.recipesController.getAll)
+            .post(this.recipesController.getAllPagination)
 
         app
             .route("/recipes/size")
