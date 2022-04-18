@@ -33,7 +33,7 @@
             <img src="./../../assets/images/plate.svg" alt="">
             <ion-card-title  (click)="detail($event , recipe.id)">{{ recipe.title }}</ion-card-title>
 
-            <ion-fab horizontal="end" vertical="bottom" slot="fixed" (click)="bookmark(recipe)">
+            <ion-fab horizontal="end" vertical="bottom" slot="fixed" (click)="bookmark(recipe)" *ngIf="connected">
               <ion-fab-button color="light">
                 <ion-icon class="bookmarkIcon" [ngClass]="{
                   bookmarked: recipe.isBookmarked == true,
@@ -45,12 +45,6 @@
             <div *ngIf="recipe.expanded">
               {{ recipe.ingredients_list }}
             </div>
-
-            <!-- <ion-modal [isOpen]="isModalOpen">
-              <ng-template>
-                TEST
-              </ng-template>
-            </ion-modal> -->
             
           </ion-card-content>
         </ion-card>
@@ -65,7 +59,7 @@
       <ion-grid>
         <ion-row>
           <ion-col sizeXs="6" *ngFor="let recipe of recipeList | filter:searchTerm">
-            <ion-card class="card">
+            <ion-card class="card" (click)="detail($event , recipe.id)">
               <ion-card-content>
                 
                 <ion-avatar>
@@ -73,7 +67,7 @@
                 </ion-avatar>
                 <ion-card-title ionButton class="ionCardTitle">{{ recipe.title }}</ion-card-title>
 
-                <div>
+                <div *ngIf="connected">
                   <button class="alignBookmarkButtons" slot="end" (click)="bookmark(recipe)">
                       <ion-icon class="bookmarkIcon" [ngClass]="{
                         bookmarked: recipe.isBookmarked == true,

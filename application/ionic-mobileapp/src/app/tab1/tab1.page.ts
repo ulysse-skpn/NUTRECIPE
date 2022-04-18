@@ -10,6 +10,7 @@ import { RecipesService } from '../services/recipes/recipes.service';
 })
 export class Tab1Page implements OnInit {
 
+  connected:boolean = false
   searchTerm:string = ""
   recipeArraySize!:number
   recipeList = []
@@ -25,6 +26,8 @@ export class Tab1Page implements OnInit {
 
   ngOnInit(): void 
   {
+    if( sessionStorage.getItem("access_token")) this.connected = true
+    
     this.recipeService.getSizeArrayRecipes().subscribe( async(res) => {
       this.recipeArraySize = res.nbElem
     })
