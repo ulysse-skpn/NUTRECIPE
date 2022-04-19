@@ -13,7 +13,6 @@ import { ModalComponent } from '../components/modal/modal/modal.component';
     IonicModule,
     CommonModule,
     FormsModule,
-
     TabsPageRoutingModule
   ],
   declarations: [TabsPage,ModalComponent]

@@ -11,7 +11,7 @@ export class TabsPage implements OnInit {
 
   ngOnInit(): void 
   {
-    if( sessionStorage.getItem("access_token") ) this.visible = false
+    if( sessionStorage.getItem("access_token") ) this.visible = true
   }
 
 }

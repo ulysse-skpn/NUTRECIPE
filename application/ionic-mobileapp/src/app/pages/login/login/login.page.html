@@ -32,11 +32,11 @@
     </ion-card>
   </form>
 
-  <ion-item>
-    <ion-router-link color="primary" (click)="goToRegister()">go to register</ion-router-link>
+  <ion-item button (click)="goToRegister()">
+    <ion-router-link color="warning">Inscription</ion-router-link>
   </ion-item>
 
-  <ion-item>
-    <ion-router-link color="primary" (click)="goToForgotPassword()">go to forgot</ion-router-link>
+  <ion-item button (click)="goToForgotPassword()">
+    <ion-router-link color="warning">Mot de passe oublié</ion-router-link>
   </ion-item>
 </ion-content>

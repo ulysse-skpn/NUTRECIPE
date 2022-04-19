@@ -7,6 +7,7 @@ https://medium.com/swlh/nodejs-code-evaluation-using-jest-sonarqube-and-docker-f
 TODO Tester ( pas les tests unitaires ) la partie angular du début à la fin [ connexion , CRUD , etc ]
 TODO Remove code smells Ionic
 TODO Enlever quantity et status d'ingrédients car il faut créer une table avec les ingrédients et les recettes par utilisateurs
+TODO Ajouter receiveEmail & receiveNotifications dans la table user
 TODO Generate Swagger
 TODO Revoir Relations Entities
 TODO Bearer token

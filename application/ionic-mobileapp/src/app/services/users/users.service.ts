@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { tap , catchError, retry } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { IUserIn, IUserOut } from 'src/app/interfaces/IUser';
+import { IUser, IUserIn, IUserOut } from 'src/app/interfaces/IUser';
 
 @Injectable({
   providedIn: 'root'
@@ -44,12 +44,12 @@ export class UsersService {
     )
   }
 
-  getUserById(id:number):Observable<IUserOut>
+  getUserById(id:number):Observable<IUser>
   {
     const url = `http://${this.host}:${this.port}/users/${id}`
-    return this.http.get<IUserOut>(url)
+    return this.http.get<IUser>(url)
     .pipe(
-      tap( (data:IUserOut) => {
+      tap( (data:IUser) => {
         console.log(data)
       }),
       retry(1),

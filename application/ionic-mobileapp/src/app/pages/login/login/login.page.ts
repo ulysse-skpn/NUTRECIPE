@@ -54,6 +54,7 @@ export class LoginPage {
       }
       sessionStorage.setItem( "access_token" , res.access_token )
       sessionStorage.setItem( "expiresIn" , res.expires_in.toString() )
+      sessionStorage.setItem( "id" , res.user.id.toString() )
       
       this.authService.redirectTo("tabs")
     })

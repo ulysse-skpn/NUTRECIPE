@@ -13,7 +13,6 @@ import { SideMenuComponent } from '../components/side-menu/side-menu/side-menu.c
     IonicModule,
     CommonModule,
     FormsModule,
-    RouterModule.forChild([{ path: '', component: Tab3Page }]),
     Tab3PageRoutingModule,
   ],
   declarations: [Tab3Page,SideMenuComponent]
