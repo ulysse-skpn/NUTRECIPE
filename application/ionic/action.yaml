@@ -1,6 +1,0 @@
-name: 'ulysse-skpn'
-description: 'Developer'
-author: 'Aston student'
-runs:
-  using: 'node12'
-  main: 'dist/index.js'
