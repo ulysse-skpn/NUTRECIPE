@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastController , ModalController } from '@ionic/angular';
 import { ModalComponent } from '../components/modal/modal/modal.component';
+import { IRecipeOut } from '../interfaces/IRecipe';
 import { RecipesService } from '../services/recipes/recipes.service';
 
 @Component({
@@ -14,6 +15,9 @@ export class Tab1Page implements OnInit {
   searchTerm:string = ""
   recipeArraySize!:number
   recipeList = []
+  randomRecipe:IRecipeOut
+  randomRecipeIngredientsList:string[]
+  randomRecipeInstructions:string[]
   selectTab:string = "card"
   pageIndex:number = 0
   pageSize:number = 30
@@ -101,6 +105,47 @@ export class Tab1Page implements OnInit {
       message: message,
       duration:2000
     }).then(res => res.present());
+  }
+
+  getRandomRecipe()
+  {
+    const randomId = this.randomInt()
+
+    this.recipeService.getRandomRecipe(randomId).subscribe( (res:IRecipeOut) => {
+      res['expanded'] = false
+      res.ingredients_list = this.removeSpecialChars(res.ingredients_list)
+      this.randomRecipeIngredientsList = this.createStep(res.ingredients_list,",")
+
+      res.instructions = this.removeSpecialChars(res.instructions)
+      this.randomRecipeInstructions = this.createStep(res.instructions,".")
+    
+      this.randomRecipe = res
+    })
+  }
+
+  randomInt()
+  {
+    return Math.floor( Math.random() * ( this.recipeArraySize + 1 ) )
+  }
+
+  removeSpecialChars(string:string)
+  {
+    return string.replace(/[\[\]"']+/g,'').split(",").toString()
+  }
+
+  createStep(string:string,separator:string)
+  { 
+    let result:any
+    const steps = string.split(separator)
+
+    result = steps.map( item => {
+      if( item.slice(0).startsWith(",") ) 
+        return item.slice(1)
+      else 
+        return item.charAt(0).toUpperCase() + item.slice(1)
+    })
+    
+    return result.slice(0,-1)
   }
 
   loadData(event:any)
