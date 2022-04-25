@@ -47,9 +47,11 @@ export class RegisterPage {
       phone_number: form.phoneNumberControl,
       email: form.emailControl,
       password: form.passwordControl,
-      role: 'user'
+      role: 'user',
+      receiveEmail: true,
+      receiveNotification:true
     }
-
+    
     this.authService.register(user).subscribe( async(res) => {
       
       sessionStorage.setItem( "access_token" , res.access_token )

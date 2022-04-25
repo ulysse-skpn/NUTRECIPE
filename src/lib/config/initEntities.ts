@@ -6,8 +6,8 @@ export class InitEntities
     public static init_ingredient()
     {
         database.query(`
-            INSERT IGNORE INTO ingredients (product_name, ingredient_text, carbohydrates, proteins, fats, salt, calories, nova_group, categories, serving_size, quantity, status, image) 
-            VALUES ( "ex_product_name" , "ex_ingredient_text" , 1.1 , 2.2 , 3.3 , 4.4 , 5.5 , "2" , "ex_categories" , "ex_serving_size" , 1 , false , "https://static.openfoodfacts.org/images/products/843/604/504/0053/front_fr.6.400.jpg")`
+            INSERT IGNORE INTO ingredients (product_name, ingredient_text, carbohydrates, proteins, fats, salt, calories, nova_group, categories, serving_size, image) 
+            VALUES ( "ex_product_name" , "ex_ingredient_text" , 1.1 , 2.2 , 3.3 , 4.4 , 5.5 , "2" , "ex_categories" , "ex_serving_size" , "https://static.openfoodfacts.org/images/products/843/604/504/0053/front_fr.6.400.jpg")`
         )
     }
 
@@ -24,8 +24,8 @@ export class InitEntities
     public static init_user()
     {
         database.query(`
-            INSERT IGNORE INTO users ( last_name , first_name , phone_number , email , password , role ) 
-            VALUES ( "SEKPON" , "ulysse" , "0627410018" , "u.sekpon@gmail.com" , "azerty" , "admin" )`
+            INSERT IGNORE INTO users ( last_name , first_name , phone_number , email , password , role , receiveEmail , receiveNotification ) 
+            VALUES ( "SEKPON" , "ulysse" , "0000000000" , "u.sekpon@gmail.com" , "azerty" , "admin" , true , false )`
         )
     }
 
@@ -33,8 +33,8 @@ export class InitEntities
     public static init_bookmark()
     {
         database.query(`
-            INSERT IGNORE INTO bookmarks ( label , category , saved ) 
-            VALUES ( "ex_label" , 1 , true )`
+            INSERT IGNORE INTO bookmarks ( type , itemId , saved ) 
+            VALUES ( "ingredients" , 1 , true )`
         )
     }
 }

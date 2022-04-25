@@ -37,10 +37,7 @@ export const fetchIngredients = () =>
 
         if( element.fields.image_url !== undefined ) image = element.fields.image_url || element.fields.image_small_url
 
-        const quantity = 0
-        const status = false
-
-        const ingredient = { product_name , ingredient_text , carbohydrates , proteins , fats , salt , calories , nova_group , categories , serving_size , quantity , status , image }
+        const ingredient = { product_name , ingredient_text , carbohydrates , proteins , fats , salt , calories , nova_group , categories , serving_size , image }
 
         ingredientList.push(ingredient)
     });

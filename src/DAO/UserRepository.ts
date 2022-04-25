@@ -9,7 +9,6 @@ export class UserRepository implements IBaseRepository<User>
     userRepository = database.getRepository(User)
     bookmarkRepository = database.getRepository(Bookmark)
 
-
     async exists(id: number): Promise<boolean> 
     {
         return !!this.userRepository.findByPk(id)

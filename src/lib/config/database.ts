@@ -7,7 +7,6 @@ import { Bookmark } from "../../entity/BookmarkEntity"
 import { logger } from "./winston"
 import { RecipeIngredients } from "../../entity/RecipeIngredientsEntity"
 import { UserBookmarks } from "../../entity/UserBookmarksEntity"
-import { RecipeBookmarks } from "../../entity/RecipeBookmarksEntity"
 import { InitEntities } from "./initEntities"
 import sequelize from "sequelize"
 import { fetchIngredients, fetchRecipes } from "../../fetchData"
@@ -32,7 +31,7 @@ export const database = new Sequelize({
 })
 
 // Entities & Intermediate Table
-database.addModels([Ingredient , Recipe , User , Bookmark, RecipeIngredients , UserBookmarks , RecipeBookmarks])
+database.addModels([Ingredient , Recipe , User , Bookmark, RecipeIngredients , UserBookmarks])
 
 database.authenticate()
     .then( async () => {

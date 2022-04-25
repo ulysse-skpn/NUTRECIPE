@@ -1,8 +1,7 @@
-import { AllowNull, Column, Table , DataType, BelongsToMany } from "sequelize-typescript";
+import { AllowNull, Column, Table , DataType,  BelongsTo, BelongsToMany, ForeignKey } from "sequelize-typescript";
 import { BaseModel } from "../model/baseModel";
 import { Bookmark } from "./BookmarkEntity";
 import { Ingredient } from "./IngredientEntity";
-import { RecipeBookmarks } from "./RecipeBookmarksEntity";
 import { RecipeIngredients } from "./RecipeIngredientsEntity";
 
 @Table
@@ -36,9 +35,13 @@ export class Recipe extends BaseModel<Recipe>
     @Column(DataType.TEXT)
     image!: string;
 
-    @BelongsToMany( () => Ingredient , { as: 'recipe_has_ingredients' , through: () => RecipeIngredients}  )
-    recipe_has_ingredients!: Recipe
+    @ForeignKey( () => Bookmark )
+    @Column
+    recipeId!:number
 
-    @BelongsToMany( () => Bookmark , { as: 'recipe_has_bookmarks' , through: () => RecipeBookmarks}  )
-    recipe_has_bookmarks!: Recipe
+    @BelongsTo( () => Bookmark )
+    bookmark!: Bookmark
+
+    @BelongsToMany( () => Ingredient , { as: 'recipe_ingredients' , through: () => RecipeIngredients}  )
+    recipe_ingredients!: Ingredient[]
 }

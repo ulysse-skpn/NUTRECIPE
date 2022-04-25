@@ -50,8 +50,6 @@ export class DialogIngredientComponent implements OnInit {
         caloriesControl : new FormControl( null , [Validators.required]),
         novaGroupControl : new FormControl("",[Validators.required]),
         servingSizeControl : new FormControl("",[Validators.required]),
-        quantityControl: new FormControl(0),
-        statusControl: new FormControl(0),
         categoriesControl : new FormControl(""),
         imageControlUrl : new FormControl( null ),
         imageControlFile : new FormControl( null )
@@ -69,8 +67,6 @@ export class DialogIngredientComponent implements OnInit {
         caloriesControl : new FormControl(),
         novaGroupControl : new FormControl(),
         servingSizeControl : new FormControl(),
-        quantityControl: new FormControl(),
-        statusControl: new FormControl(),
         categoriesControl : new FormControl(),
         imageControlUrl : new FormControl(),
         imageControlFile : new FormControl()
@@ -106,8 +102,6 @@ export class DialogIngredientComponent implements OnInit {
           caloriesControl : new FormControl( res.calories , [Validators.required]),
           novaGroupControl : new FormControl(res.nova_group,[Validators.required]),
           servingSizeControl : new FormControl(res.serving_size,[Validators.required]),
-          quantityControl: new FormControl(res.quantity),
-          statusControl: new FormControl(res.status),
           categoriesControl : new FormControl( categories ),
           imageControlUrl : new FormControl( res.image ),
           imageControlFile : new FormControl( null )
@@ -179,8 +173,6 @@ export class DialogIngredientComponent implements OnInit {
       nova_group: form.novaGroupControl,
       categories: categories,
       serving_size: form.servingSizeControl,
-      quantity: 0,
-      status: false,
       image: image,
     }
     

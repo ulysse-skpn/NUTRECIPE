@@ -16,13 +16,17 @@ export class SettingsPage implements OnInit {
   modifyButton:string = 'Modifier'
   isDisabled:boolean = true
   isModify:boolean = false
+  receiveEmail:boolean
+  receiveNotification:boolean
 
   settingFormGroup:FormGroup = new FormGroup({
     lastNameControl : new FormControl(),
     firstNameControl : new FormControl(),
     phoneNumberControl : new FormControl(),
     emailControl : new FormControl(),
-    passwordControl : new FormControl()
+    passwordControl : new FormControl(),
+    receiveEmailControl: new FormControl(),
+    receiveNotificationControl: new FormControl()
   })
 
   constructor(
@@ -37,7 +41,7 @@ export class SettingsPage implements OnInit {
   ngOnInit(): void 
   {
     let id:number
-
+    
     try 
     {
       if( !sessionStorage.getItem("id") ) return
@@ -51,7 +55,9 @@ export class SettingsPage implements OnInit {
           firstNameControl:  new FormControl( res.first_name , [ Validators.minLength(1) ]),
           phoneNumberControl:  new FormControl( res.phone_number , [ Validators.minLength(10) , Validators.maxLength(20) , Validators.pattern('^[0-9]+$')  ]),
           emailControl:  new FormControl( res.email , [ Validators.email , Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$') ]),
-          passwordControl : new FormControl( res.password ,[Validators.required, Validators.minLength(6) ])
+          passwordControl : new FormControl( res.password ,[Validators.required, Validators.minLength(6) ]),
+          receiveEmailControl: new FormControl( !res.receiveEmail ),
+          receiveNotificationControl: new FormControl( res.receiveNotification )
         })
       })
     } 
@@ -68,7 +74,7 @@ export class SettingsPage implements OnInit {
 
     const form = this.settingFormGroup.value
     const id = parseInt( sessionStorage.getItem('id') )
-
+    
     const user:IUserIn = 
     {
       last_name: form.lastNameControl,
@@ -76,7 +82,9 @@ export class SettingsPage implements OnInit {
       phone_number: form.phoneNumberControl,
       email: form.emailControl,
       password: form.passwordControl,
-      role: 'user'
+      role: 'user',
+      receiveEmail:form.receiveEmailControl,
+      receiveNotification:form.receiveNotificationControl
     }
     
     this.userService.updateUser( user , id).subscribe( async() => {

@@ -3,13 +3,11 @@ import { database } from "../lib/config/database"
 import { UpdateOptions , DestroyOptions } from "sequelize"
 import { Recipe } from "../entity/RecipeEntity"
 import { Ingredient } from "../entity/IngredientEntity"
-import { Bookmark } from "../entity/BookmarkEntity"
 
 export class RecipeRepository implements IBaseRepository<Recipe>
 {
     recipeRepository = database.getRepository(Recipe)
     ingredientRepository = database.getRepository(Ingredient)
-    bookmarkRepository = database.getRepository(Bookmark)
 
     async exists(id: number): Promise<boolean> 
     {
@@ -23,7 +21,7 @@ export class RecipeRepository implements IBaseRepository<Recipe>
                 include:
                 [
                     {
-                        model:this.ingredientRepository, as:"recipe_has_ingredients"
+                        model:this.ingredientRepository, as:"recipe_ingredients"
                     }
                 ]
             }
@@ -37,7 +35,7 @@ export class RecipeRepository implements IBaseRepository<Recipe>
                 include:
                 [
                     {
-                        model:this.ingredientRepository, as:"recipe_has_ingredients"
+                        model:this.ingredientRepository, as:"recipe_ingredients"
                     }
                 ]
             }
@@ -51,7 +49,7 @@ export class RecipeRepository implements IBaseRepository<Recipe>
                 include:
                 [
                     {
-                        model:this.ingredientRepository, as:"recipe_has_ingredients"
+                        model:this.ingredientRepository, as:"recipe_ingredients"
                     }
                 ]
             }    
@@ -85,7 +83,7 @@ export class RecipeRepository implements IBaseRepository<Recipe>
                 include:
                 [
                     {
-                        model:this.ingredientRepository, as:"recipe_has_ingredients"
+                        model:this.ingredientRepository, as:"recipe_ingredients"
                     }
                 ]
             }
@@ -101,7 +99,7 @@ export class RecipeRepository implements IBaseRepository<Recipe>
                 include:
                 [
                     {
-                        model:this.ingredientRepository, as:"recipe_has_ingredients"
+                        model:this.ingredientRepository, as:"recipe_ingredients"
                     }
                 ]
             }

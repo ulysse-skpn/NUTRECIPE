@@ -156,10 +156,6 @@ export const isIngredient = (obj:any) => {
     obj.hasOwnProperty("categories")
     &&
     obj.hasOwnProperty("serving_size")
-    && 
-    obj.hasOwnProperty("quantity") 
-    &&
-    obj.hasOwnProperty("status") 
     &&
     obj.hasOwnProperty("image") )    return true
     else return false

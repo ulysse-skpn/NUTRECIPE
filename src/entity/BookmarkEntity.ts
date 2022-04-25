@@ -1,6 +1,6 @@
-import { Column, Table , DataType, AllowNull, Unique, BelongsToMany } from "sequelize-typescript";
+import { Column, Table , DataType, AllowNull, Unique, BelongsToMany, HasMany } from "sequelize-typescript";
 import { BaseModel } from "../model/baseModel";
-import { RecipeBookmarks } from "./RecipeBookmarksEntity";
+import { Ingredient } from "./IngredientEntity";
 import { Recipe } from "./RecipeEntity";
 import { UserBookmarks } from "./UserBookmarksEntity";
 import { User } from "./UserEntity";
@@ -8,26 +8,24 @@ import { User } from "./UserEntity";
 @Table
 export class Bookmark extends BaseModel<Bookmark>
 {
-    @Unique
     @AllowNull(false)
     @Column
-    label!: string;
+    type!:string
 
-    //? 1 : categorie bookmark 1 
-    //? 2 : categorie bookmark 2
-    //? 3 : categorie bookmark 3
-    //? 4 : categorie bookmark 4    
     @AllowNull(false)
-    @Column(DataType.CHAR(1))
-    category!: number;
+    @Column
+    itemId!:number
 
     @AllowNull(false)
     @Column
     saved!: boolean;
 
-    @BelongsToMany( () => User , { as: 'bookmark_has_users' , through: () => UserBookmarks}  )
-    bookmark_has_users!: Bookmark
+    @HasMany( () => Ingredient )
+    ingredients!: Ingredient[]
+    
+    @HasMany( () => Recipe )
+    recipes!: Recipe[]
 
-    @BelongsToMany( () => Recipe , { as: 'bookmark_has_recipes' , through: () => RecipeBookmarks}  )
-    bookmark_has_recipes!: Bookmark
+    @BelongsToMany( () => User , { as: 'bookmark_has_users' , through: () => UserBookmarks}  )
+    bookmark_has_users!: User[]
 }

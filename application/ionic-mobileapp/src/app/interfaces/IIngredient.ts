@@ -10,8 +10,6 @@ export interface IIngredientIn
     nova_group:NOVA_GROUP
     categories:string
     serving_size:string
-    quantity:number
-    status:boolean
     image:string
 }
 
@@ -28,8 +26,6 @@ export interface IIngredientOut
     nova_group:NOVA_GROUP
     categories:string
     serving_size:string
-    quantity:number
-    status:boolean
     image:string
     createdAt:Date
     updatedAt:Date

@@ -1,6 +1,7 @@
 
-import { AllowNull, Column, Table , IsFloat , IsInt , DataType, BelongsToMany } from "sequelize-typescript";
+import { AllowNull, Column, Table , IsFloat , DataType, BelongsTo, BelongsToMany, ForeignKey } from "sequelize-typescript";
 import { BaseModel } from "../model/baseModel";
+import { Bookmark } from "./BookmarkEntity";
 import { Recipe } from "./RecipeEntity";
 import { RecipeIngredients } from "./RecipeIngredientsEntity";
 
@@ -44,18 +45,18 @@ export class Ingredient extends BaseModel<Ingredient>
     @Column
     serving_size!: string;
 
-    @IsInt
-    @Column(DataType.TINYINT)
-    quantity!: number;
-
-    @Column
-    status!: boolean;
-
     @Column(DataType.TEXT)
     image!: string;
 
-    @BelongsToMany( () => Recipe , { as: 'ingredients_in_recipe' , through: () => RecipeIngredients } )
-    ingredients_in_recipe!: Ingredient[]
+    @ForeignKey( () => Bookmark )
+    @Column
+    ingredientId!:number
+
+    @BelongsTo( () => Bookmark )
+    bookmark!: Bookmark
+
+    @BelongsToMany( () => Recipe , { as: 'recipe_ingredients' , through: () => RecipeIngredients}  )
+    recipe_ingredients!: Recipe[]
 }
 
 export enum NOVA_GROUP

@@ -71,7 +71,7 @@ export class IngredientsPageComponent implements OnInit {
     event.stopPropagation();
 
     const snackBarRef = this.snackBar.open( "Annuler action : 'Supprimer'" , "Undo" , { duration: 3000 } )
-    snackBarRef.afterDismissed().subscribe( (e) => {
+    snackBarRef.afterDismissed().subscribe( (e:any) => {
       if( e.dismissedByAction === true )
       {
         this.snackBar.open( "Annulation" , "" , { duration: 2000 } )

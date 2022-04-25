@@ -6,6 +6,8 @@ export interface IUserIn
     email:string
     password:string
     role:string
+    receiveEmail:boolean
+    receiveNotification:boolean
 }
 
 export interface IUserOut 
@@ -24,6 +26,8 @@ export interface IUser
     email:string
     password:string
     role:string
+    receiveEmail:boolean
+    receiveNotification:boolean
     created_at:string
     updated_at:string
 }
@@ -37,4 +41,6 @@ export interface IUserOutModif
     readonly email:string
     readonly password:string
     role:string
+    receiveEmail:boolean
+    receiveNotification:boolean
 }

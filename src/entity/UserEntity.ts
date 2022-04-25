@@ -33,6 +33,12 @@ export class User extends BaseModel<User>
     @Column
     role!: string;
 
+    @Column
+    receiveEmail!: boolean
+
+    @Column
+    receiveNotification!: boolean
+
     @BelongsToMany( () => Bookmark , { as: 'user_has_bookmarks' , through: () => UserBookmarks}  )
-    user_has_bookmarks!: User[]
+    user_has_bookmarks!: Bookmark[]
 }
