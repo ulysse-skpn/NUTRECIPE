@@ -7,5 +7,6 @@ export interface IBookmarkService
     getBookmarkById(id:number): Promise<Bookmark>
     addBookmark(item:Bookmark): Promise<Bookmark>
     updateBookmark(id:number,item:Bookmark): Promise<[affectedCount:number]> // number => Affected row
+    updateOrCreateBookmark(id:number,item:Bookmark): Promise<Bookmark | [affectedCount:number]>
     deleteBookmark(id:number): Promise<number>
 }

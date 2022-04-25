@@ -78,8 +78,8 @@ export class BookmarksCtrl
             if( isNaN(id) ) throw Error("Bookmark Id is not a number")
             if( !isBookmark(req.body) ) throw Error("Bookmark object is malformed")
             const bookmark: Bookmark = req.body
-
-            const result = await bookmarkServiceImpl.updateBookmark(id,bookmark)
+            
+            const result = await bookmarkServiceImpl.updateOrCreateBookmark(id,bookmark)
 
             if( result ) res.status(202).send(result)
             else res.status(404).send( ApiError.not_found("There is no bookmark with this id") )
@@ -115,8 +115,8 @@ export class BookmarksCtrl
 }
 
 const isBookmark = (obj:any) => {
-    if( obj.hasOwnProperty("label")
-    && obj.hasOwnProperty("category")
+    if( obj.hasOwnProperty("type")
+    && obj.hasOwnProperty("itemId")
     && obj.hasOwnProperty("saved")
     ) return true
     else return false

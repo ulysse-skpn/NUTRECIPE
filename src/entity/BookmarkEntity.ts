@@ -1,4 +1,4 @@
-import { Column, Table , DataType, AllowNull, Unique, BelongsToMany, HasMany } from "sequelize-typescript";
+import { Column, Table , AllowNull, BelongsToMany, HasMany } from "sequelize-typescript";
 import { BaseModel } from "../model/baseModel";
 import { Ingredient } from "./IngredientEntity";
 import { Recipe } from "./RecipeEntity";

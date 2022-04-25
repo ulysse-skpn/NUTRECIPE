@@ -144,6 +144,8 @@ export const isUser = (obj:any) => {
     && obj.hasOwnProperty("email")
     && obj.hasOwnProperty("password")
     && obj.hasOwnProperty("role")
+    && obj.hasOwnProperty("receiveEmail")
+    && obj.hasOwnProperty("receiveNotification")
     ) return true
     else return false
 }

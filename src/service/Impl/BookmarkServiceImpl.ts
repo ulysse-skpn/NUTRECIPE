@@ -32,6 +32,11 @@ export class BookmarkServiceImpl implements IBookmarkService
         return this.bookmarkRepository.put(id,item)
     }
 
+    async updateOrCreateBookmark(id: number, item: Bookmark): Promise<Bookmark | [affectedCount:number]>
+    {
+        return this.bookmarkRepository.updateOrCreate(id,item)
+    }
+
     async deleteBookmark(id: number): Promise<number>
     {
         return this.bookmarkRepository.delete(id)

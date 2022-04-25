@@ -50,4 +50,21 @@ export class BookmarkRepository implements IBaseRepository<Bookmark>
         return this.bookmarkRepository.findAll({include:[this.userRepository]})
     }
 
+    async updateOrCreate(id:number,item:Bookmark): Promise<Bookmark | [affectedCount:number]>
+    {
+        const foundItem = await this.bookmarkRepository.findOne({where:{itemId:id}})
+
+        if( !foundItem )
+        {
+            return this.bookmarkRepository.create(item)
+        }
+        
+        const options:UpdateOptions = 
+        {
+            where: {itemId:id}
+        }
+        
+        return this.bookmarkRepository.update(item,options)
+    }
+
 }

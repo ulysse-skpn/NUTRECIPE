@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastController , ModalController } from '@ionic/angular';
 import { ModalComponent } from '../components/modal/modal/modal.component';
+import { IBookmarkIn } from '../interfaces/IBookmark';
 import { IRecipeOut } from '../interfaces/IRecipe';
+import { BookmarksService } from '../services/bookmarks/bookmarks.service';
 import { RecipesService } from '../services/recipes/recipes.service';
 
 @Component({
@@ -24,6 +26,7 @@ export class Tab1Page implements OnInit {
 
   constructor(
     private recipeService:RecipesService,
+    private bookmarkService:BookmarksService,
     private toastController:ToastController,
     private modalController:ModalController
   ) {}
@@ -89,13 +92,28 @@ export class Tab1Page implements OnInit {
     {
       message = "Ajouté aux favoris"
 
-      // this.recipeService. //?
+      const bookmark:IBookmarkIn = 
+      {
+        type: 'recipe',
+        itemId: item.id,
+        saved: 1
+      }
+
+      this.bookmarkService.updateBookmark( bookmark , item.id ).subscribe()
     }
     else 
     {
       message = "Retrait des favoris"
 
-      // this.recipeService. //?
+      const bookmark:IBookmarkIn = 
+      {
+        type: 'recipe',
+        itemId: item.id,
+        saved: 0
+      }
+      
+      
+      this.bookmarkService.updateBookmark( bookmark , item.id ).subscribe()
     }
     this.showToast( message );
   }
