@@ -39,6 +39,6 @@ export class IngredientServiceImpl implements IIngredientService
     
     async getNumberElements()
     {
-        return database.query("SELECT COUNT(id) as nbElem FROM `ingredients`");
+        return database.query("SELECT COUNT(ingredientId) as nbElem FROM `ingredients`");
     }
 }

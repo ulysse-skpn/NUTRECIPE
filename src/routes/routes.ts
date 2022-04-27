@@ -1,5 +1,4 @@
 import { Application } from "express";
-import { BookmarksCtrl } from "../controllers/bookmarksController";
 import { IngredientsCtrl } from "../controllers/ingredientsController";
 import { RecipesCtrl } from "../controllers/recipesController";
 import { UsersCtrl } from "../controllers/usersController";
@@ -9,6 +8,8 @@ import { ForgotPasswordCtrl } from "../controllers/forgotPasswordController";
 import { RootCtrl } from "../controllers/rootController";
 import * as swagger from "swagger-ui-express"
 import swaggerDocument from "../lib/config/swagger.json"
+import { IngredientBookmarksCtrl } from "../controllers/ingredientBookmarksController";
+import { RecipeBookmarksCtrl } from "../controllers/recipeBookmarksController";
 
 
 
@@ -21,7 +22,8 @@ export class Routes
     public ingredientsController: IngredientsCtrl = new IngredientsCtrl()
     public recipesController: RecipesCtrl = new RecipesCtrl()
     public usersController: UsersCtrl = new UsersCtrl()
-    public bookmarksController: BookmarksCtrl = new BookmarksCtrl()
+    public ingredientBookmarksController: IngredientBookmarksCtrl = new IngredientBookmarksCtrl()
+    public recipeBookmarksController: RecipeBookmarksCtrl = new RecipeBookmarksCtrl()
 
 
     public routes(app: Application): void 
@@ -116,15 +118,22 @@ export class Routes
 
         //================================================
         //  BOOKMARKS
-        app
-            .route("/bookmarks")
-            .get(this.bookmarksController.getAll)
-            .post(this.bookmarksController.create)
 
         app
-            .route("/bookmarks/:id")
-            .get(this.bookmarksController.getById)
-            .put(this.bookmarksController.update)
-            .delete(this.bookmarksController.delete)
+            .route("/ingredientBookmarks")
+            .get(this.ingredientBookmarksController.getAll)
+
+        app
+            .route("/ingredientBookmarks/:id")
+            .put(this.ingredientBookmarksController.updateOrCreate)
+
+
+        app
+            .route("/recipeBookmarks")
+            .get(this.recipeBookmarksController.getAll)
+
+        app
+            .route("/recipeBookmarks/:id")
+            .put(this.recipeBookmarksController.updateOrCreate)
     }
 }

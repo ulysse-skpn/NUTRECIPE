@@ -2,12 +2,12 @@ import { Ingredient } from "../entity/IngredientEntity"
 import { IBaseRepository } from "./IBaseRepository"
 import { database } from "../lib/config/database"
 import { UpdateOptions , DestroyOptions } from "sequelize"
-import { Recipe } from "../entity/RecipeEntity"
+import { BookmarkIngredient } from "../entity/BookmarkIngredientEntity"
 
 export class IngredientRepository implements IBaseRepository<Ingredient>
 {
     ingredientRepository = database.getRepository(Ingredient)
-    recipeRepository = database.getRepository(Recipe)
+    bookmarkRepository = database.getRepository(BookmarkIngredient)
 
     async exists(id: number): Promise<boolean> 
     {
@@ -18,34 +18,27 @@ export class IngredientRepository implements IBaseRepository<Ingredient>
     {
         return this.ingredientRepository.findByPk(id,
             {
-                include:
-                [
-                    {model:this.recipeRepository , as:"recipe_ingredients"}
-                ]
+                include:{model:this.bookmarkRepository , as:'bookmarkIngredient' }
             }
         )
     }
 
-    async create(item: Ingredient): Promise<Ingredient> 
+    // async create(item: Ingredient): Promise<Ingredient> 
+    async create(item: any): Promise<Ingredient> 
     {
         return this.ingredientRepository.create(item,
             {
-                include:
-                [
-                    {model:this.recipeRepository , as:"recipe_ingredients"}
-                ]
+                include:{model:this.bookmarkRepository , as:'bookmarkIngredient'}
             }
         )
     }
 
-    async bulkCreate(item: Ingredient[]): Promise<Ingredient[]> 
+    // async bulkCreate(item: Ingredient[]): Promise<Ingredient[]> 
+    async bulkCreate(item: any): Promise<Ingredient[]> 
     {
         return this.ingredientRepository.bulkCreate(item,
             {
-                include:
-                [
-                    {model:this.recipeRepository , as:"recipe_ingredients"}
-                ]
+                include:{model:this.bookmarkRepository , as:'bookmarkIngredient'}
             }
         )
     }
@@ -76,9 +69,9 @@ export class IngredientRepository implements IBaseRepository<Ingredient>
             offset:offset,
             limit:limit,
             include:
-            [
-                {model:this.recipeRepository , as:"recipe_ingredients"}
-            ]
+            {
+                model:this.bookmarkRepository , as:'bookmarkIngredient'
+            }
         })
     }
 

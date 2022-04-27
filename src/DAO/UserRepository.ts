@@ -2,12 +2,10 @@ import { IBaseRepository } from "./IBaseRepository"
 import { database } from "../lib/config/database"
 import { UpdateOptions , DestroyOptions } from "sequelize"
 import { User } from "../entity/UserEntity"
-import { Bookmark } from "../entity/BookmarkEntity"
 
 export class UserRepository implements IBaseRepository<User>
 {
     userRepository = database.getRepository(User)
-    bookmarkRepository = database.getRepository(Bookmark)
 
     async exists(id: number): Promise<boolean> 
     {
@@ -16,12 +14,12 @@ export class UserRepository implements IBaseRepository<User>
 
     async findById(id: number): Promise<User | any> 
     {
-        return this.userRepository.findByPk(id , {include:[this.bookmarkRepository]})
+        return this.userRepository.findByPk(id)
     }
 
     async create(item: User): Promise<User> 
     {
-        return this.userRepository.create(item , {include:[this.bookmarkRepository]})
+        return this.userRepository.create(item)
     }
 
     async put(id: number, item: User): Promise<[affectedCount:number]> 
@@ -46,7 +44,7 @@ export class UserRepository implements IBaseRepository<User>
 
     async findAll(): Promise<User[]> 
     {
-        return this.userRepository.findAll({include:[this.bookmarkRepository]})
+        return this.userRepository.findAll()
     }
 
     async findByText(login:string): Promise<User|null>

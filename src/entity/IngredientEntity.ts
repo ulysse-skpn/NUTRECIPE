@@ -1,13 +1,16 @@
 
-import { AllowNull, Column, Table , IsFloat , DataType, BelongsTo, BelongsToMany, ForeignKey } from "sequelize-typescript";
-import { BaseModel } from "../model/baseModel";
-import { Bookmark } from "./BookmarkEntity";
-import { Recipe } from "./RecipeEntity";
-import { RecipeIngredients } from "./RecipeIngredientsEntity";
+import { AllowNull, Column, Table , IsFloat , DataType, PrimaryKey, Model, AutoIncrement, HasMany } from "sequelize-typescript";
+import { BookmarkIngredient } from "./BookmarkIngredientEntity";
 
 @Table
-export class Ingredient extends BaseModel<Ingredient>
+export class Ingredient extends Model
 {
+    @PrimaryKey
+    @AllowNull(false)
+    @AutoIncrement
+    @Column(DataType.INTEGER)
+    ingredientId!: number
+
     @AllowNull(false)
     @Column
     product_name!: string;
@@ -48,15 +51,9 @@ export class Ingredient extends BaseModel<Ingredient>
     @Column(DataType.TEXT)
     image!: string;
 
-    @ForeignKey( () => Bookmark )
-    @Column
-    ingredientId!:number
-
-    @BelongsTo( () => Bookmark )
-    bookmark!: Bookmark
-
-    @BelongsToMany( () => Recipe , { as: 'recipe_ingredients' , through: () => RecipeIngredients}  )
-    recipe_ingredients!: Recipe[]
+    @HasMany( () => BookmarkIngredient )
+    // bookmarkIngredient!:BookmarkIngredient[]
+    bookmarkIngredient!:BookmarkIngredient
 }
 
 export enum NOVA_GROUP

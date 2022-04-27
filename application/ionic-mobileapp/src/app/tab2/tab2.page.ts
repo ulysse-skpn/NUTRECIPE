@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController, ToastController } from '@ionic/angular';
 import { ModalComponent } from '../components/modal/modal/modal.component';
+import { IIngredientBookmarkIn } from '../interfaces/IBookmark';
+import { BookmarksService } from '../services/bookmarks/bookmarks.service';
 import { IngredientsService } from '../services/ingredients/ingredients.service';
 
 @Component({
@@ -20,6 +22,7 @@ export class Tab2Page implements OnInit {
 
   constructor(
     private ingredientService:IngredientsService,
+    private bookmarkService:BookmarksService,
     private toastController:ToastController,
     private modalController:ModalController
   ) {}
@@ -40,8 +43,11 @@ export class Tab2Page implements OnInit {
     this.ingredientService.getAllIngredients( pIndex, pSize ).subscribe( async(res) => {
       console.log(res);
       
-      res.forEach(element => {
+      res.forEach( (element:any) => {
         element['expanded'] = false
+
+        element.bookmarkIngredient[0] ? element['isBookmarked'] = element.bookmarkIngredient[0].saved : element['isBookmarked'] = null
+
         this.ingredientList.push(element)
       });
     })
@@ -80,23 +86,31 @@ export class Tab2Page implements OnInit {
   }
 
 
-  bookmark( item:any ) //?
+  bookmark( item:any )
   {
     item.isBookmarked = !item.isBookmarked
     
     let message!:string
+    let isSaved!:number
+
     if( item.isBookmarked == true )
     {
       message = "Ajouté aux favoris"
-
-      // this.ingredientService. //?
+      isSaved = 1
     }
     else 
     {
       message = "Retrait des favoris"
-
-      // this.ingredientService. //?
+      isSaved = 0
     }
+
+    const bookmark:IIngredientBookmarkIn =
+    {
+      ingredientId: item.ingredientId,
+      saved: isSaved
+    }
+
+    this.bookmarkService.updateIngredientBookmark( bookmark , item.ingredientId ).subscribe()
     this.showToast( message );
   }
 

@@ -3,15 +3,15 @@ import dotenv from "dotenv"
 import { Ingredient } from "../../entity/IngredientEntity"
 import { Recipe } from "../../entity/RecipeEntity"
 import { User } from "../../entity/UserEntity"
-import { Bookmark } from "../../entity/BookmarkEntity"
 import { logger } from "./winston"
-import { RecipeIngredients } from "../../entity/RecipeIngredientsEntity"
 import { UserBookmarks } from "../../entity/UserBookmarksEntity"
 import { InitEntities } from "./initEntities"
 import sequelize from "sequelize"
 import { fetchIngredients, fetchRecipes } from "../../fetchData"
 import { IngredientRepository } from "../../DAO/IngredientRepository"
 import { RecipeRepository } from "../../DAO/RecipeRepository"
+import { BookmarkIngredient } from "../../entity/BookmarkIngredientEntity"
+import { BookmarkRecipe } from "../../entity/BookmarkRecipeEntity"
 
 dotenv.config()
 
@@ -31,7 +31,7 @@ export const database = new Sequelize({
 })
 
 // Entities & Intermediate Table
-database.addModels([Ingredient , Recipe , User , Bookmark, RecipeIngredients , UserBookmarks])
+database.addModels([Ingredient , Recipe , User , UserBookmarks , BookmarkIngredient , BookmarkRecipe ])
 
 database.authenticate()
     .then( async () => {
@@ -42,7 +42,7 @@ database.authenticate()
 
                 await database.query("show tables" , {type: sequelize.QueryTypes.SHOWTABLES})
 
-                await database.query("SELECT COUNT(id) as elem FROM ingredients" , { plain:true , raw:true} )
+                await database.query("SELECT COUNT(ingredientId) as elem FROM ingredients" , { plain:true , raw:true} )
                     .then( async (e:any) => {
  
                             
@@ -59,10 +59,9 @@ database.authenticate()
                         }
 
                         logger.info( 'ingredients table initialized' )
-                              
                     })   
 
-                await database.query("SELECT COUNT(id) as elem FROM recipes" , { plain:true , raw:true} )
+                await database.query("SELECT COUNT(recipeId) as elem FROM recipes" , { plain:true , raw:true} )
                     .then( async (e:any) => {
 
 
@@ -75,26 +74,16 @@ database.authenticate()
 
                             await recipeRepository.bulkCreate( recipesList )
                         }
+
                         logger.info( 'recipes table initialized' )
-                        
-                            
                     })      
 
                 await database.query("SELECT COUNT(id) as elem FROM users" , { plain:true , raw:true} )
                     .then( async (e:any) => {
-
                         InitEntities.init_user()
                         logger.info( 'users table initialized' )
-                        
                     })       
 
-                await database.query("SELECT COUNT(id) as elem FROM bookmarks" , { plain:true , raw:true} )
-                    .then( async (e:any) => {
-
-                        InitEntities.init_bookmark()
-                        logger.info( 'boomarks table initialized' )
-                        
-                    })    
             })          
 
     } )

@@ -2,14 +2,12 @@ import { IBaseRepository } from "./IBaseRepository"
 import { database } from "../lib/config/database"
 import { UpdateOptions , DestroyOptions } from "sequelize"
 import { Recipe } from "../entity/RecipeEntity"
-import { Ingredient } from "../entity/IngredientEntity"
-import { Bookmark } from "../entity/BookmarkEntity"
+import { BookmarkRecipe } from "../entity/BookmarkRecipeEntity"
 
 export class RecipeRepository implements IBaseRepository<Recipe>
 {
     recipeRepository = database.getRepository(Recipe)
-    ingredientRepository = database.getRepository(Ingredient)
-    bookmarkRepository = database.getRepository(Bookmark)
+    bookmarkRepository = database.getRepository(BookmarkRecipe)
 
     async exists(id: number): Promise<boolean> 
     {
@@ -18,43 +16,30 @@ export class RecipeRepository implements IBaseRepository<Recipe>
 
     async findById(id: number): Promise<Recipe | any> 
     {
-        return this.recipeRepository.findByPk(id , 
+        return this.recipeRepository.findByPk(id,
             {
-                include:
-                [
-                    {
-                        model:this.ingredientRepository, as:"recipe_ingredients"
-                    }
-                ]
+                include:{model:this.bookmarkRepository , as:'bookmarkRecipe' }
             }
         )
     }
 
-    async create(item: Recipe): Promise<Recipe> 
+    // async create(item: Recipe): Promise<Recipe> 
+    async create(item: any): Promise<Recipe> 
     {
-        return this.recipeRepository.create(item ,
+        return this.recipeRepository.create(item,
             {
-                include:
-                [
-                    {
-                        model:this.ingredientRepository, as:"recipe_ingredients"
-                    }
-                ]
+                include:{model:this.bookmarkRepository , as:'bookmarkRecipe' }
             }
         )
     }
 
-    async bulkCreate(item: Recipe[]): Promise<Recipe[]> 
+    // async bulkCreate(item: Recipe[]): Promise<Recipe[]> 
+    async bulkCreate(item: any): Promise<Recipe[]> 
     {
         return this.recipeRepository.bulkCreate(item,
             {
-                include:
-                [
-                    {
-                        model:this.ingredientRepository, as:"recipe_ingredients"
-                    }
-                ]
-            }    
+                include:{model:this.bookmarkRepository , as:'bookmarkRecipe' }
+            }
         )
     }
 
@@ -80,16 +65,7 @@ export class RecipeRepository implements IBaseRepository<Recipe>
 
     async findAll(): Promise<Recipe[]> 
     {
-        return this.recipeRepository.findAll(
-            {
-                include:
-                [
-                    {
-                        model:this.ingredientRepository, as:"recipe_ingredients"
-                    }
-                ]
-            }
-        )
+        return this.recipeRepository.findAll({include:{model:this.bookmarkRepository , as:'bookmarkRecipe' }})
     }
 
     async findAllPagination(limit:number,offset:number): Promise<Recipe[]> 
@@ -99,11 +75,9 @@ export class RecipeRepository implements IBaseRepository<Recipe>
                 offset:offset,
                 limit:limit,
                 include:
-                [
-                    {
-                        model:this.ingredientRepository, as:"recipe_ingredients"
-                    }
-                ]
+                {
+                    model:this.bookmarkRepository , as:'bookmarkRecipe'
+                }
             }
         )
     }

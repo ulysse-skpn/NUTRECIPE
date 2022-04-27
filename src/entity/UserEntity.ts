@@ -1,6 +1,7 @@
 import { AllowNull, Column, Table , DataType, Unique, IsEmail, BelongsToMany, Length } from "sequelize-typescript";
 import { BaseModel } from "../model/baseModel";
-import { Bookmark } from "./BookmarkEntity";
+import { BookmarkIngredient } from "./BookmarkIngredientEntity";
+import { BookmarkRecipe } from "./BookmarkRecipeEntity";
 import { UserBookmarks } from "./UserBookmarksEntity";
 
 @Table
@@ -38,7 +39,4 @@ export class User extends BaseModel<User>
 
     @Column
     receiveNotification!: boolean
-
-    @BelongsToMany( () => Bookmark , { as: 'user_has_bookmarks' , through: () => UserBookmarks}  )
-    user_has_bookmarks!: Bookmark[]
 }

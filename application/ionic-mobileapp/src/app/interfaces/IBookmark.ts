@@ -1,17 +1,28 @@
 import { IIngredientOut } from "./IIngredient"
 import { IRecipeOut } from "./IRecipe"
 
-export interface IBookmarkIn
+export interface IIngredientBookmarkIn
 {
-    type:string
-    itemId:number
+    ingredientId:number
     saved:number
 }
 
-export interface IBookmarkOut
+export interface IIngredientBookmarkOut
 {
-    item:IIngredientOut|IRecipeOut
-    type:string
-    itemId:number
+    ingredient:IIngredientOut
+    ingredientId:number
+    saved:number
+}
+
+export interface IRecipeBookmarkIn
+{
+    recipeId:number
+    saved:number
+}
+
+export interface IRecipeBookmarkOut
+{
+    recipe:IRecipeOut
+    recipeId:number
     saved:number
 }

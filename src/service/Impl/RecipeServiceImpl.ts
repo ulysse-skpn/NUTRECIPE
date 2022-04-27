@@ -44,6 +44,6 @@ export class RecipeServiceImpl implements IRecipeService
     
     async getNumberElements()
     {
-        return database.query("SELECT COUNT(id) as nbElem FROM `recipes`");
+        return database.query("SELECT COUNT(recipeId) as nbElem FROM `recipes`");
     }
 }

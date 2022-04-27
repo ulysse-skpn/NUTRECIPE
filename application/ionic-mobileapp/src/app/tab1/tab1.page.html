@@ -35,7 +35,7 @@
           <ion-card-content>
             
             <img src="./../../assets/images/plate.svg" alt="">
-            <ion-card-title  (click)="detail($event , recipe.id)">{{ recipe.title }}</ion-card-title>
+            <ion-card-title  (click)="detail($event , recipe.recipeId)">{{ recipe.title }}</ion-card-title>
 
             <ion-fab horizontal="end" vertical="bottom" slot="fixed" (click)="bookmark(recipe)" *ngIf="connected">
               <ion-fab-button color="light">
@@ -63,7 +63,7 @@
       <ion-grid>
         <ion-row>
           <ion-col sizeXs="6" *ngFor="let recipe of recipeList | filter:searchTerm">
-            <ion-card class="card" (click)="detail($event , recipe.id)">
+            <ion-card class="card" (click)="detail($event , recipe.recipeId)">
               <ion-card-content>
                 
                 <ion-avatar>

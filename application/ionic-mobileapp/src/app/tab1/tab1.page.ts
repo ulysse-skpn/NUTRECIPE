@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastController , ModalController } from '@ionic/angular';
 import { ModalComponent } from '../components/modal/modal/modal.component';
-import { IBookmarkIn } from '../interfaces/IBookmark';
+import { IRecipeBookmarkIn } from '../interfaces/IBookmark';
 import { IRecipeOut } from '../interfaces/IRecipe';
 import { BookmarksService } from '../services/bookmarks/bookmarks.service';
 import { RecipesService } from '../services/recipes/recipes.service';
@@ -45,8 +45,11 @@ export class Tab1Page implements OnInit {
   loadRecipes( pIndex:number = this.pageIndex , pSize:number = this.pageSize )
   {
     this.recipeService.getAllRecipesPagination( pIndex, pSize ).subscribe( async(res) => {
-      res.forEach(element => {
+      res.forEach( (element:any) => {
         element['expanded'] = false
+        
+        element.bookmarkRecipe[0] ? element['isBookmarked'] = element.bookmarkRecipe[0].saved : element['isBookmarked'] = null
+
         this.recipeList.push(element)
       });
     })
@@ -83,38 +86,31 @@ export class Tab1Page implements OnInit {
   }
 
 
-  bookmark( item:any ) //?
+  bookmark( item:any )
   {
     item.isBookmarked = !item.isBookmarked
     
     let message!:string
+    let isSaved!:number
+
     if( item.isBookmarked == true )
     {
       message = "Ajouté aux favoris"
-
-      const bookmark:IBookmarkIn = 
-      {
-        type: 'recipe',
-        itemId: item.id,
-        saved: 1
-      }
-
-      this.bookmarkService.updateBookmark( bookmark , item.id ).subscribe()
+      isSaved = 1
     }
     else 
     {
       message = "Retrait des favoris"
-
-      const bookmark:IBookmarkIn = 
-      {
-        type: 'recipe',
-        itemId: item.id,
-        saved: 0
-      }
-      
-      
-      this.bookmarkService.updateBookmark( bookmark , item.id ).subscribe()
+      isSaved = 0
     }
+
+    const bookmark:IRecipeBookmarkIn = 
+    {
+      recipeId: item.recipeId,
+      saved: isSaved
+    }
+    
+    this.bookmarkService.updateRecipeBookmark( bookmark , item.recipeId ).subscribe()
     this.showToast( message );
   }
 

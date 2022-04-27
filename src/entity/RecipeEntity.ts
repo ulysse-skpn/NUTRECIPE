@@ -1,12 +1,15 @@
-import { AllowNull, Column, Table , DataType,  BelongsTo, BelongsToMany, ForeignKey } from "sequelize-typescript";
-import { BaseModel } from "../model/baseModel";
-import { Bookmark } from "./BookmarkEntity";
-import { Ingredient } from "./IngredientEntity";
-import { RecipeIngredients } from "./RecipeIngredientsEntity";
+import { AllowNull, Column, Table , DataType, HasMany, PrimaryKey, AutoIncrement, Model } from "sequelize-typescript";
+import { BookmarkRecipe } from "./BookmarkRecipeEntity";
 
 @Table
-export class Recipe extends BaseModel<Recipe>
+export class Recipe extends Model
 {
+    @PrimaryKey
+    @AllowNull(false)
+    @AutoIncrement
+    @Column(DataType.INTEGER)
+    recipeId!: number
+    
     @AllowNull(false)
     @Column
     title!: string;
@@ -35,13 +38,7 @@ export class Recipe extends BaseModel<Recipe>
     @Column(DataType.TEXT)
     image!: string;
 
-    @ForeignKey( () => Bookmark )
-    @Column
-    recipeId!:number
-
-    @BelongsTo( () => Bookmark )
-    bookmark!: Bookmark
-
-    @BelongsToMany( () => Ingredient , { as: 'recipe_ingredients' , through: () => RecipeIngredients}  )
-    recipe_ingredients!: Ingredient[]
+    @HasMany( () => BookmarkRecipe )
+    // bookmarkRecipe!:BookmarkRecipe[]
+    bookmarkRecipe!:BookmarkRecipe
 }
