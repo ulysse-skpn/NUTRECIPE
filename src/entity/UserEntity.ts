@@ -1,12 +1,14 @@
-import { AllowNull, Column, Table , DataType, Unique, IsEmail, BelongsToMany, Length } from "sequelize-typescript";
-import { BaseModel } from "../model/baseModel";
-import { BookmarkIngredient } from "./BookmarkIngredientEntity";
-import { BookmarkRecipe } from "./BookmarkRecipeEntity";
-import { UserBookmarks } from "./UserBookmarksEntity";
+import { AllowNull, Column, Table , DataType, Unique, IsEmail, Length, Model, PrimaryKey, AutoIncrement } from "sequelize-typescript";
 
 @Table
-export class User extends BaseModel<User>
+export class User extends Model
 {
+    @PrimaryKey
+    @AllowNull(false)
+    @AutoIncrement
+    @Column(DataType.INTEGER)
+    userId!: number
+
     @AllowNull(false)
     @Column
     last_name!: string;

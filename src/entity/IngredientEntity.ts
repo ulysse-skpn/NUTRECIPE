@@ -1,5 +1,5 @@
 
-import { AllowNull, Column, Table , IsFloat , DataType, PrimaryKey, Model, AutoIncrement, HasMany } from "sequelize-typescript";
+import { AllowNull, Column, Table , IsFloat , DataType, PrimaryKey, Model, AutoIncrement, HasMany, HasOne } from "sequelize-typescript";
 import { BookmarkIngredient } from "./BookmarkIngredientEntity";
 
 @Table
@@ -51,8 +51,10 @@ export class Ingredient extends Model
     @Column(DataType.TEXT)
     image!: string;
 
-    @HasMany( () => BookmarkIngredient )
-    // bookmarkIngredient!:BookmarkIngredient[]
+    // @HasMany( () => BookmarkIngredient )
+    // bookmarkIngredient!:BookmarkIngredient
+
+    @HasOne( () => BookmarkIngredient )
     bookmarkIngredient!:BookmarkIngredient
 }
 

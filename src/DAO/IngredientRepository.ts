@@ -16,29 +16,39 @@ export class IngredientRepository implements IBaseRepository<Ingredient>
 
     async findById(id: number): Promise<Ingredient | any> 
     {
-        return this.ingredientRepository.findByPk(id,
+        return this.ingredientRepository.findByPk(id
+            ,
             {
-                include:{model:this.bookmarkRepository , as:'bookmarkIngredient' }
+                include:
+                {
+                    model:this.bookmarkRepository , as:"bookmarkIngredient"
+                }
             }
         )
     }
 
-    // async create(item: Ingredient): Promise<Ingredient> 
-    async create(item: any): Promise<Ingredient> 
+    async create(item: Partial<Ingredient>): Promise<Ingredient> //?
     {
-        return this.ingredientRepository.create(item,
+        return this.ingredientRepository.create(item
+            ,
             {
-                include:{model:this.bookmarkRepository , as:'bookmarkIngredient'}
+                include:
+                {
+                    model:this.bookmarkRepository , as:"bookmarkIngredient"
+                }
             }
         )
     }
 
-    // async bulkCreate(item: Ingredient[]): Promise<Ingredient[]> 
-    async bulkCreate(item: any): Promise<Ingredient[]> 
+    async bulkCreate(item: Partial<Ingredient>[]): Promise<Ingredient[]> //?
     {
-        return this.ingredientRepository.bulkCreate(item,
+        return this.ingredientRepository.bulkCreate(item
+            ,
             {
-                include:{model:this.bookmarkRepository , as:'bookmarkIngredient'}
+                include:
+                {
+                    model:this.bookmarkRepository , as:"bookmarkIngredient"
+                }
             }
         )
     }
@@ -70,7 +80,7 @@ export class IngredientRepository implements IBaseRepository<Ingredient>
             limit:limit,
             include:
             {
-                model:this.bookmarkRepository , as:'bookmarkIngredient'
+                model:this.bookmarkRepository , as:"bookmarkIngredient"
             }
         })
     }

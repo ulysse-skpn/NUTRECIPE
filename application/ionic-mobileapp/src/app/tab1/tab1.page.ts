@@ -48,7 +48,7 @@ export class Tab1Page implements OnInit {
       res.forEach( (element:any) => {
         element['expanded'] = false
         
-        element.bookmarkRecipe[0] ? element['isBookmarked'] = element.bookmarkRecipe[0].saved : element['isBookmarked'] = null
+        // element.bookmarkRecipe[0] ? element['isBookmarked'] = element.bookmarkRecipe[0].saved : element['isBookmarked'] = null
 
         this.recipeList.push(element)
       });
@@ -104,9 +104,15 @@ export class Tab1Page implements OnInit {
       isSaved = 0
     }
 
+    
+    if( !sessionStorage.getItem("userId") ) return
+
+    const userId = parseInt( sessionStorage.getItem("userId") )
+
     const bookmark:IRecipeBookmarkIn = 
     {
       recipeId: item.recipeId,
+      userId:userId,
       saved: isSaved
     }
     

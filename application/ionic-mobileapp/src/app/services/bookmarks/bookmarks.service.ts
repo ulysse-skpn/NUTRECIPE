@@ -17,9 +17,9 @@ export class BookmarksService {
   private host = environment.host
   private port = environment.port
 
-  getAllIngredientBookmarks():Observable<IIngredientBookmarkOut[]>
+  getAllIngredientBookmarks():Observable<any>
   {
-    const url = `http://${this.host}:${this.port}/ingredientBookmarks`
+    const url = `http://${this.host}:${this.port}/userBookmarks/ingredient`
     return this.http.get<IIngredientBookmarkOut[]>(url)
     .pipe(
       tap( (data:IIngredientBookmarkOut[]) => {
@@ -30,12 +30,25 @@ export class BookmarksService {
     )
   }
 
-  getAllRecipeBookmarks():Observable<IRecipeBookmarkOut[]>
-  {
-    const url = `http://${this.host}:${this.port}/recipeBookmarks`
-    return this.http.get<IRecipeBookmarkOut[]>(url)
+
+  updateIngredientBookmark(bookmark:any,id:number):Observable<any>
+  {    
+    const url = `http://${this.host}:${this.port}/userBookmarks/ingredient/${id}`
+    return this.http.put<any>(url,bookmark)
     .pipe(
-      tap( (data:IRecipeBookmarkOut[]) => {
+      tap( (data:any) => console.log(data) ),
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
+
+
+  getAllRecipeBookmarks():Observable<any>
+  {
+    const url = `http://${this.host}:${this.port}/userBookmarks/recipe`
+    return this.http.get<IIngredientBookmarkOut[]>(url)
+    .pipe(
+      tap( (data:IIngredientBookmarkOut[]) => {
         console.log(data)
       }),
       retry(1),
@@ -43,9 +56,10 @@ export class BookmarksService {
     )
   }
 
-  updateIngredientBookmark(bookmark:IIngredientBookmarkIn,id:number):Observable<any>
+
+  updateRecipeBookmark(bookmark:any,id:number):Observable<any>
   {    
-    const url = `http://${this.host}:${this.port}/ingredientBookmarks/${id}`
+    const url = `http://${this.host}:${this.port}/userBookmarks/recipe/${id}`
     return this.http.put<any>(url,bookmark)
     .pipe(
       tap( (data:any) => console.log(data) ),
@@ -54,16 +68,6 @@ export class BookmarksService {
     )
   }
 
-  updateRecipeBookmark(bookmark:IRecipeBookmarkIn,id:number):Observable<any>
-  {
-    const url = `http://${this.host}:${this.port}/recipeBookmarks/${id}`
-    return this.http.put<any>(url,bookmark)
-    .pipe(
-      tap( (data:any) => console.log(data) ),
-      retry(1),
-      catchError(this.handleError)
-    )
-  }
 
   private handleError(error:any)
   {

@@ -4,7 +4,6 @@ import { Ingredient } from "../../entity/IngredientEntity"
 import { Recipe } from "../../entity/RecipeEntity"
 import { User } from "../../entity/UserEntity"
 import { logger } from "./winston"
-import { UserBookmarks } from "../../entity/UserBookmarksEntity"
 import { InitEntities } from "./initEntities"
 import sequelize from "sequelize"
 import { fetchIngredients, fetchRecipes } from "../../fetchData"
@@ -31,7 +30,7 @@ export const database = new Sequelize({
 })
 
 // Entities & Intermediate Table
-database.addModels([Ingredient , Recipe , User , UserBookmarks , BookmarkIngredient , BookmarkRecipe ])
+database.addModels([Ingredient , Recipe , User , BookmarkIngredient , BookmarkRecipe ])
 
 database.authenticate()
     .then( async () => {
@@ -78,7 +77,7 @@ database.authenticate()
                         logger.info( 'recipes table initialized' )
                     })      
 
-                await database.query("SELECT COUNT(id) as elem FROM users" , { plain:true , raw:true} )
+                await database.query("SELECT COUNT(userId) as elem FROM users" , { plain:true , raw:true} )
                     .then( async (e:any) => {
                         InitEntities.init_user()
                         logger.info( 'users table initialized' )

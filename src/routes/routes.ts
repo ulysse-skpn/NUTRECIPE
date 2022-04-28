@@ -8,8 +8,8 @@ import { ForgotPasswordCtrl } from "../controllers/forgotPasswordController";
 import { RootCtrl } from "../controllers/rootController";
 import * as swagger from "swagger-ui-express"
 import swaggerDocument from "../lib/config/swagger.json"
-import { IngredientBookmarksCtrl } from "../controllers/ingredientBookmarksController";
-import { RecipeBookmarksCtrl } from "../controllers/recipeBookmarksController";
+import { BookmarkIngredientCtrl } from "../controllers/bookmarkIngredientController";
+import { BookmarkRecipeCtrl } from "../controllers/bookmarkRecipeController";
 
 
 
@@ -22,8 +22,8 @@ export class Routes
     public ingredientsController: IngredientsCtrl = new IngredientsCtrl()
     public recipesController: RecipesCtrl = new RecipesCtrl()
     public usersController: UsersCtrl = new UsersCtrl()
-    public ingredientBookmarksController: IngredientBookmarksCtrl = new IngredientBookmarksCtrl()
-    public recipeBookmarksController: RecipeBookmarksCtrl = new RecipeBookmarksCtrl()
+    public bookmarkIngredientController: BookmarkIngredientCtrl = new BookmarkIngredientCtrl()
+    public bookmarkRecipeController: BookmarkRecipeCtrl = new BookmarkRecipeCtrl()
 
 
     public routes(app: Application): void 
@@ -120,20 +120,19 @@ export class Routes
         //  BOOKMARKS
 
         app
-            .route("/ingredientBookmarks")
-            .get(this.ingredientBookmarksController.getAll)
+            .route("/userBookmarks/ingredient")
+            .get(this.bookmarkIngredientController.getAll)
 
         app
-            .route("/ingredientBookmarks/:id")
-            .put(this.ingredientBookmarksController.updateOrCreate)
-
-
-        app
-            .route("/recipeBookmarks")
-            .get(this.recipeBookmarksController.getAll)
+            .route("/userBookmarks/ingredient/:id")
+            .put(this.bookmarkIngredientController.updateOrCreate)
 
         app
-            .route("/recipeBookmarks/:id")
-            .put(this.recipeBookmarksController.updateOrCreate)
+            .route("/userBookmarks/recipe")
+            .get(this.bookmarkRecipeController.getAll)
+
+        app
+            .route("/userBookmarks/recipe/:id")
+            .put(this.bookmarkRecipeController.updateOrCreate)
     }
 }

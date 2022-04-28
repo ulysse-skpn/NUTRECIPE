@@ -19,7 +19,7 @@ export interface IUserOut
 
 export interface IUser 
 {
-    id:number
+    userId:number
     last_name:string
     first_name:string
     phone_number:string

@@ -41,12 +41,11 @@ export class Tab2Page implements OnInit {
   loadIngredients( pIndex:number = this.pageIndex , pSize:number = this.pageSize )
   {
     this.ingredientService.getAllIngredients( pIndex, pSize ).subscribe( async(res) => {
-      console.log(res);
       
       res.forEach( (element:any) => {
         element['expanded'] = false
-
-        element.bookmarkIngredient[0] ? element['isBookmarked'] = element.bookmarkIngredient[0].saved : element['isBookmarked'] = null
+        
+        // element.bookmarkIngredient[0] ? element['isBookmarked'] = element.bookmarkIngredient[0].saved : element['isBookmarked'] = null
 
         this.ingredientList.push(element)
       });
@@ -104,9 +103,15 @@ export class Tab2Page implements OnInit {
       isSaved = 0
     }
 
+
+    if( !sessionStorage.getItem("userId") ) return
+
+    const userId = parseInt( sessionStorage.getItem("userId") )
+
     const bookmark:IIngredientBookmarkIn =
     {
       ingredientId: item.ingredientId,
+      userId:userId,
       saved: isSaved
     }
 

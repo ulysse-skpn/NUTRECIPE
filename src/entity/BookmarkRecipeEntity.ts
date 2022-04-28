@@ -1,17 +1,27 @@
-import { Column, Table , AllowNull , ForeignKey, Model, BelongsTo } from "sequelize-typescript";
+import { AllowNull, Column, Table , Model, ForeignKey, BelongsTo } from "sequelize-typescript";
 import { Recipe } from "./RecipeEntity";
+import { User } from "./UserEntity";
 
 @Table
 export class BookmarkRecipe extends Model
 {
-    @AllowNull(false)
     @ForeignKey( () => Recipe )
-    @Column 
+    @AllowNull(false)
+    @Column
     recipeId!:number
 
     @BelongsTo( () => Recipe )
-    ingredient!: Recipe
+    recipe!:Recipe
 
+    @ForeignKey( () => User )
+    @AllowNull(false)
+    @Column
+    userId!:number
+
+    @BelongsTo( () => User )
+    user!:User
+
+    @AllowNull(false)
     @Column
     saved!:boolean
 }

@@ -16,29 +16,39 @@ export class RecipeRepository implements IBaseRepository<Recipe>
 
     async findById(id: number): Promise<Recipe | any> 
     {
-        return this.recipeRepository.findByPk(id,
+        return this.recipeRepository.findByPk(id
+            ,
             {
-                include:{model:this.bookmarkRepository , as:'bookmarkRecipe' }
+                include:
+                {
+                    model:this.bookmarkRepository , as:"bookmarkRecipe"
+                }
             }
         )
     }
 
-    // async create(item: Recipe): Promise<Recipe> 
-    async create(item: any): Promise<Recipe> 
+    async create(item: Partial<Recipe>): Promise<Recipe> //?
     {
-        return this.recipeRepository.create(item,
+        return this.recipeRepository.create(item
+            ,
             {
-                include:{model:this.bookmarkRepository , as:'bookmarkRecipe' }
+                include:
+                {
+                    model:this.bookmarkRepository , as:"bookmarkRecipe"
+                }
             }
         )
     }
 
-    // async bulkCreate(item: Recipe[]): Promise<Recipe[]> 
-    async bulkCreate(item: any): Promise<Recipe[]> 
+    async bulkCreate(item: Partial<Recipe>[]): Promise<Recipe[]> //?
     {
-        return this.recipeRepository.bulkCreate(item,
+        return this.recipeRepository.bulkCreate(item
+            ,
             {
-                include:{model:this.bookmarkRepository , as:'bookmarkRecipe' }
+                include:
+                {
+                    model:this.bookmarkRepository , as:"bookmarkRecipe"
+                }
             }
         )
     }
@@ -65,7 +75,7 @@ export class RecipeRepository implements IBaseRepository<Recipe>
 
     async findAll(): Promise<Recipe[]> 
     {
-        return this.recipeRepository.findAll({include:{model:this.bookmarkRepository , as:'bookmarkRecipe' }})
+        return this.recipeRepository.findAll()
     }
 
     async findAllPagination(limit:number,offset:number): Promise<Recipe[]> 
@@ -76,7 +86,7 @@ export class RecipeRepository implements IBaseRepository<Recipe>
                 limit:limit,
                 include:
                 {
-                    model:this.bookmarkRepository , as:'bookmarkRecipe'
+                    model:this.bookmarkRepository , as:"bookmarkRecipe"
                 }
             }
         )

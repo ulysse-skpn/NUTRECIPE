@@ -1,8 +1,9 @@
 import { BookmarkRecipe } from "../entity/BookmarkRecipeEntity"
 
-export interface IRecipeBookmarkService
+
+export interface IBookmarkRecipeService
 {
-    recipeBookmarkExist(id:number): Promise<boolean>
     getAllRecipeBookmarks(): Promise<BookmarkRecipe[]>
+    getRecipeBookmarkById(id:number): Promise<BookmarkRecipe | null>
     updateOrCreateRecipeBookmark(id:number,item:BookmarkRecipe): Promise<BookmarkRecipe | [affectedCount:number]> // number => Affected row
 }

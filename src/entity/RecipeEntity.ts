@@ -1,4 +1,4 @@
-import { AllowNull, Column, Table , DataType, HasMany, PrimaryKey, AutoIncrement, Model } from "sequelize-typescript";
+import { AllowNull, Column, Table , DataType, PrimaryKey, AutoIncrement, Model, HasMany, HasOne } from "sequelize-typescript";
 import { BookmarkRecipe } from "./BookmarkRecipeEntity";
 
 @Table
@@ -38,7 +38,9 @@ export class Recipe extends Model
     @Column(DataType.TEXT)
     image!: string;
 
-    @HasMany( () => BookmarkRecipe )
-    // bookmarkRecipe!:BookmarkRecipe[]
+    // @HasMany( () => BookmarkRecipe )
+    // bookmarkRecipe!:BookmarkRecipe
+
+    @HasOne( () => BookmarkRecipe )
     bookmarkRecipe!:BookmarkRecipe
 }

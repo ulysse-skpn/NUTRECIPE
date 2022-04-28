@@ -14,12 +14,16 @@ export class UserRepository implements IBaseRepository<User>
 
     async findById(id: number): Promise<User | any> 
     {
-        return this.userRepository.findByPk(id)
+        return this.userRepository.findByPk(id
+
+        )
     }
 
-    async create(item: User): Promise<User> 
+    async create(item: Partial<User>): Promise<User> 
     {
-        return this.userRepository.create(item)
+        return this.userRepository.create(item
+
+        )
     }
 
     async put(id: number, item: User): Promise<[affectedCount:number]> 
@@ -44,22 +48,30 @@ export class UserRepository implements IBaseRepository<User>
 
     async findAll(): Promise<User[]> 
     {
-        return this.userRepository.findAll()
+        return this.userRepository.findAll(
+
+        )
     }
 
     async findByText(login:string): Promise<User|null>
     {
-        return this.userRepository.findOne({ where:{email:login} })
+        return this.userRepository.findOne({ where:{email:login} 
+
+        })
     }
 
     async findByLogin(login:string): Promise<User|null>
     {
-        return this.userRepository.findOne({ where:{ email:login } })
+        return this.userRepository.findOne({ where:{ email:login } 
+
+        })
     }
 
     async findByLoginPassword(login:string,password:string): Promise<User|null>
     {
-        return this.userRepository.findOne({ where:{ email:login , password:password } })
+        return this.userRepository.findOne({ where:{ email:login , password:password } 
+
+        })
     }
 
     async patchPassword(login:string,password:string): Promise<[affectedCount:number]>
