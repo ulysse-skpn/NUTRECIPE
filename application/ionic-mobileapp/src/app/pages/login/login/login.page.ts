@@ -1,21 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ICredentialsIn } from 'src/app/interfaces/ICredentials';
 import { IUserOut } from 'src/app/interfaces/IUser';
 import { AuthService } from 'src/app/services/auth/auth.service';
+import { JwtHelperService } from '@auth0/angular-jwt'
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage {
+export class LoginPage implements OnInit {
 
   constructor(
     private router:Router,
+    private jwtHelper: JwtHelperService,
     private authService:AuthService
   ) { }
+
+  ngOnInit(): void 
+  {
+    const token = sessionStorage.getItem("access_token")
+
+    if( token && !this.jwtHelper.isTokenExpired(token) ) this.router.navigate(["/tabs/tab1"])
+  }
 
 
   loginFormGroup = new FormGroup({
