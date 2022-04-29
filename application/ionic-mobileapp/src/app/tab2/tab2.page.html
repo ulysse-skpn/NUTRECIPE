@@ -30,10 +30,10 @@
           
           <ion-card-content>
             
-            <img src="{{ ingredient.image }}" alt="">
+            <img src="{{ ingredient.image }}" alt="image indisponible">
             <ion-card-title  (click)="detail($event , ingredient.ingredientId)">{{ ingredient.product_name }}</ion-card-title>
 
-            <ion-fab horizontal="end" vertical="bottom" slot="fixed" (click)="bookmark(ingredient)" *ngIf="connected">
+            <ion-fab horizontal="end" vertical="bottom" slot="fixed" (click)="bookmark( $event , ingredient)" *ngIf="connected">
               <ion-fab-button color="light">
                 <ion-icon class="bookmarkIcon" [ngClass]="{
                   bookmarked: ingredient.isBookmarked == true,
@@ -63,12 +63,12 @@
               <ion-card-content>
                 
                 <ion-avatar>
-                  <img src="./../../assets/images/plate.svg" alt="">
+                  <img src="{{ ingredient.image }}" alt="image indisponible">
                 </ion-avatar>
                 <ion-card-title ionButton class="ionCardTitle">{{ ingredient.product_name }}</ion-card-title>
 
                 <div *ngIf="connected">
-                  <button class="alignBookmarkButtons" slot="end" (click)="bookmark(ingredient)">
+                  <button class="alignBookmarkButtons" slot="end" (click)="bookmark($event , ingredient)">
                       <ion-icon class="bookmarkIcon" [ngClass]="{
                         bookmarked: ingredient.isBookmarked == true,
                         notBookmarked: ingredient.isBookmarked == false

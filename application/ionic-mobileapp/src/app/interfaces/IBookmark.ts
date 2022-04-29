@@ -5,7 +5,7 @@ export interface IIngredientBookmarkIn
 {
     ingredientId:number
     userId:number
-    saved:number
+    saved:boolean
 }
 
 export interface IIngredientBookmarkOut
@@ -13,14 +13,14 @@ export interface IIngredientBookmarkOut
     ingredient:IIngredientOut
     ingredientId:number
     userId:number
-    saved:number
+    saved:boolean
 }
 
 export interface IRecipeBookmarkIn
 {
     recipeId:number
     userId:number
-    saved:number
+    saved:boolean
 }
 
 export interface IRecipeBookmarkOut
@@ -28,5 +28,5 @@ export interface IRecipeBookmarkOut
     recipe:IRecipeOut
     recipeId:number
     userId:number
-    saved:number
+    saved:boolean
 }

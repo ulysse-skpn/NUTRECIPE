@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry, tap } from 'rxjs/operators';
-import { IIngredientBookmarkIn, IIngredientBookmarkOut , IRecipeBookmarkIn, IRecipeBookmarkOut } from 'src/app/interfaces/IBookmark';
+import { IIngredientBookmarkOut, IRecipeBookmarkOut } from 'src/app/interfaces/IBookmark';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -17,7 +17,7 @@ export class BookmarksService {
   private host = environment.host
   private port = environment.port
 
-  getAllIngredientBookmarks():Observable<any>
+  getAllIngredientBookmarks():Observable<IIngredientBookmarkOut[]>
   {
     const url = `http://${this.host}:${this.port}/userBookmarks/ingredient`
     return this.http.get<IIngredientBookmarkOut[]>(url)
@@ -43,12 +43,12 @@ export class BookmarksService {
   }
 
 
-  getAllRecipeBookmarks():Observable<any>
+  getAllRecipeBookmarks():Observable<IRecipeBookmarkOut[]>
   {
     const url = `http://${this.host}:${this.port}/userBookmarks/recipe`
-    return this.http.get<IIngredientBookmarkOut[]>(url)
+    return this.http.get<IRecipeBookmarkOut[]>(url)
     .pipe(
-      tap( (data:IIngredientBookmarkOut[]) => {
+      tap( (data:IRecipeBookmarkOut[]) => {
         console.log(data)
       }),
       retry(1),

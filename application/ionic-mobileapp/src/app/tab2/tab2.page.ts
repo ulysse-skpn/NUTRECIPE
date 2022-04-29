@@ -45,7 +45,7 @@ export class Tab2Page implements OnInit {
       res.forEach( (element:any) => {
         element['expanded'] = false
         
-        // element.bookmarkIngredient[0] ? element['isBookmarked'] = element.bookmarkIngredient[0].saved : element['isBookmarked'] = null
+        element.bookmarkIngredient ? element['isBookmarked'] = element.bookmarkIngredient.saved : element['isBookmarked'] = null
 
         this.ingredientList.push(element)
       });
@@ -85,22 +85,24 @@ export class Tab2Page implements OnInit {
   }
 
 
-  bookmark( item:any )
+  bookmark( event:Event , item:any )
   {
+    event.stopPropagation()
+    
     item.isBookmarked = !item.isBookmarked
     
     let message!:string
-    let isSaved!:number
+    let isSaved!:boolean
 
     if( item.isBookmarked == true )
     {
       message = "Ajouté aux favoris"
-      isSaved = 1
+      isSaved = true
     }
     else 
     {
       message = "Retrait des favoris"
-      isSaved = 0
+      isSaved = false
     }
 
 

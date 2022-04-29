@@ -13,6 +13,7 @@ export class BookmarkIngredientRepository implements IBookmarkRepository<Bookmar
     async findAll(): Promise<BookmarkIngredient[]> 
     {
         return this.bookmarkRepository.findAll({
+            where:{saved:1},
             include:
             {
                 model:this.ingredientRepository

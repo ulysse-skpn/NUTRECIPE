@@ -14,6 +14,7 @@ export class BookmarkRecipeRepository implements IBookmarkRepository<BookmarkRec
     {
         return this.bookmarkRepository.findAll(
             {
+                where:{saved:1},
                 include:
                 {
                     model:this.recipeRepository
