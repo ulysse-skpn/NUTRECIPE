@@ -20,7 +20,7 @@ export class Tab1Page implements OnInit {
   randomRecipe:IRecipeOut
   randomRecipeIngredientsList:string[]
   randomRecipeInstructions:string[]
-  selectTab:string = "card"
+  selectTab!:string
   pageIndex:number = 0
   pageSize:number = 30
 
@@ -34,6 +34,8 @@ export class Tab1Page implements OnInit {
   ngOnInit(): void 
   {
     if( sessionStorage.getItem("access_token")) this.connected = true
+
+    if( sessionStorage.getItem("tab1_segment") ) this.selectTab = sessionStorage.getItem("tab1_segment")
     
     this.recipeService.getSizeArrayRecipes().subscribe( async(res) => {
       this.recipeArraySize = res.nbElem
@@ -184,5 +186,10 @@ export class Tab1Page implements OnInit {
   expand(recipe)
   {
     recipe.expanded = !recipe.expanded
+  }
+
+  saveTab(tab:string)
+  {
+    sessionStorage.setItem( "tab1_segment" , tab )
   }
 }

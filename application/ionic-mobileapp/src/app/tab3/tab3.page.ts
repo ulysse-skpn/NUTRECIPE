@@ -15,7 +15,7 @@ import { ModalComponent } from '../components/modal/modal/modal.component';
 export class Tab3Page implements OnInit {
 
   connected:boolean = false
-  selectTab:string = "all"
+  selectTab!:string
   searchTerm:string = ""
   recipeList = []
   ingredientList = []
@@ -31,7 +31,10 @@ export class Tab3Page implements OnInit {
   ngOnInit(): void 
   {
     if( sessionStorage.getItem("access_token") ) this.connected = true
-  
+
+    if( sessionStorage.getItem("tab3_segment") ) this.selectTab = sessionStorage.getItem("tab3_segment")
+    else this.selectTab = 'all'
+    
     this.loadIngredientBookmarks()
     this.loadRecipeBookmarks()
   }
@@ -185,5 +188,10 @@ export class Tab3Page implements OnInit {
   expand(item:any)
   {
     item.expanded = !item.expanded
+  }
+
+  saveTab(tab:string)
+  {
+    sessionStorage.setItem( "tab3_segment" , tab )
   }
 }

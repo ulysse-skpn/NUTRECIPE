@@ -16,9 +16,9 @@ export class Tab2Page implements OnInit {
   searchTerm:string = ""
   ingredientArraySize!:number
   ingredientList = []
-  selectTab:string = "card"
+  selectTab!:string
   pageIndex:number = 0
-  pageSize:number = 5
+  pageSize:number = 10
 
   constructor(
     private ingredientService:IngredientsService,
@@ -30,6 +30,8 @@ export class Tab2Page implements OnInit {
   ngOnInit(): void 
   {
     if( sessionStorage.getItem("access_token")) this.connected = true
+
+    if( sessionStorage.getItem("tab2_segment") ) this.selectTab = sessionStorage.getItem("tab2_segment")
     
     this.ingredientService.getSizeArrayIngredients().subscribe( async(res) => {
       this.ingredientArraySize = res.nbElem
@@ -142,5 +144,10 @@ export class Tab2Page implements OnInit {
   expand(ingredient)
   {
     ingredient.expanded = !ingredient.expanded
+  }
+
+  saveTab(tab:string)
+  {
+    sessionStorage.setItem( "tab2_segment" , tab )
   }
 }

@@ -11,14 +11,14 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-segment [(ngModel)]="selectTab">
-    <ion-segment-button value="all">
+  <ion-segment [(ngModel)]="selectTab" slot="fixed">
+    <ion-segment-button value="all" (click)="saveTab('all')">
       <ion-label>Tout</ion-label>
     </ion-segment-button>
-    <ion-segment-button value="recipe">
+    <ion-segment-button value="recipe" (click)="saveTab('recipe')">
       <ion-label>Recette</ion-label>
     </ion-segment-button>
-    <ion-segment-button value="ingredient">
+    <ion-segment-button value="ingredient" (click)="saveTab('ingredient')">
       <ion-label>Ingredient</ion-label>
     </ion-segment-button>
   </ion-segment>
