@@ -57,7 +57,7 @@ export class RecipeRepository implements IBaseRepository<Recipe>
     {
         const options:UpdateOptions = 
         {
-            where:{id:id},
+            where:{recipeId:id},
             limit:1
         }
         return this.recipeRepository.update(item,options)
@@ -67,7 +67,7 @@ export class RecipeRepository implements IBaseRepository<Recipe>
     {
         const options:DestroyOptions = 
         {
-            where:{id:id},
+            where:{recipeId:id},
             limit:1
         }
         return this.recipeRepository.destroy(options)

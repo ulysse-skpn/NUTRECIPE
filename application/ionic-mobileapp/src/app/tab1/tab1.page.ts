@@ -36,6 +36,7 @@ export class Tab1Page implements OnInit {
     if( sessionStorage.getItem("access_token")) this.connected = true
 
     if( sessionStorage.getItem("tab1_segment") ) this.selectTab = sessionStorage.getItem("tab1_segment")
+    else this.selectTab = 'card'
     
     this.recipeService.getSizeArrayRecipes().subscribe( async(res) => {
       this.recipeArraySize = res.nbElem

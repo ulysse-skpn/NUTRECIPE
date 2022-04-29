@@ -6,7 +6,6 @@ https://medium.com/swlh/nodejs-code-evaluation-using-jest-sonarqube-and-docker-f
 
 TODO Splash screen
 TODO Refaire requêtes POSTMAN
-TODO Voir comment faire constraints unique combine
 TODO Tester ( pas les tests unitaires ) la partie angular du début à la fin [ connexion , CRUD , etc ]
 TODO Generate Swagger
 TODO Bearer token

@@ -12,6 +12,7 @@ import { AuthService } from 'src/app/services/auth/auth.service';
 })
 export class RegisterPage {
 
+  buttonVisible = true
   constructor(
     private router:Router,
     private authService:AuthService,
@@ -37,6 +38,13 @@ export class RegisterPage {
     if( !this.registerFormGroup.valid ) return
 
     const form = this.registerFormGroup.value
+    if( form.passwordControl !== form.passwordConfirmControl  ) 
+    {
+      alert('Les mots de passe ne sont pas identiques...')
+      return
+    }
+
+    this.buttonVisible = false
     
     if( form.passwordControl !== form.passwordConfirmControl ) return 
 

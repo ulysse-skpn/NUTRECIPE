@@ -57,7 +57,7 @@ export class IngredientRepository implements IBaseRepository<Ingredient>
     {
         const options:UpdateOptions = 
         {
-            where:{id:id},
+            where:{ingredientId:id},
             limit:1
         }
         return this.ingredientRepository.update(item,options)
@@ -67,7 +67,7 @@ export class IngredientRepository implements IBaseRepository<Ingredient>
     {
         const options:DestroyOptions = 
         {
-            where:{id:id},
+            where:{ingredientId:id},
             limit:1
         }
         return this.ingredientRepository.destroy(options)

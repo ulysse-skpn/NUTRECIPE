@@ -8,6 +8,8 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "copy-cap": "npx cap copy android",
+    "ionic-cap": "ionic capacitor run android",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -48,6 +50,7 @@
     "@angular/compiler": "~13.2.2",
     "@angular/compiler-cli": "~13.2.2",
     "@angular/language-service": "~13.2.2",
+    "@auth0/angular-jwt": "^5.0.2",
     "@capacitor/cli": "3.4.3",
     "@ionic/angular-toolkit": "^6.0.0",
     "@types/jasmine": "~3.6.0",

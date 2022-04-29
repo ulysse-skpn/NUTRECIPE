@@ -4,6 +4,8 @@ import { ActionSheetController, ModalController, ToastController } from '@ionic/
 import { IUserIn } from 'src/app/interfaces/IUser';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { UsersService } from 'src/app/services/users/users.service';
+import { JwtHelperService } from '@auth0/angular-jwt'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-settings',
@@ -34,7 +36,9 @@ export class SettingsPage implements OnInit {
     private actionSheetController:ActionSheetController,
     private toastController:ToastController,
     private userService:UsersService,
-    private authService:AuthService
+    private authService:AuthService,
+    private jwtHelper: JwtHelperService,
+    private router:Router
   ) { }
 
 
@@ -44,9 +48,12 @@ export class SettingsPage implements OnInit {
     
     try 
     {
-      if( !sessionStorage.getItem("id") ) return
+      const token = sessionStorage.getItem("access_token")
+      if( token && this.jwtHelper.isTokenExpired(token) || !token ) this.router.navigate(["/notauthorized"])
 
-      id = parseInt(sessionStorage.getItem("id"))
+      if( !token ) return
+
+      id = parseInt(sessionStorage.getItem("userId"))
 
       this.userService.getUserById(id).subscribe( async(res) => {
         
@@ -56,7 +63,7 @@ export class SettingsPage implements OnInit {
           phoneNumberControl:  new FormControl( res.phone_number , [ Validators.minLength(10) , Validators.maxLength(20) , Validators.pattern('^[0-9]+$')  ]),
           emailControl:  new FormControl( res.email , [ Validators.email , Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$') ]),
           passwordControl : new FormControl( res.password ,[Validators.required, Validators.minLength(6) ]),
-          receiveEmailControl: new FormControl( !res.receiveEmail ),
+          receiveEmailControl: new FormControl( res.receiveEmail ),
           receiveNotificationControl: new FormControl( res.receiveNotification )
         })
       })
@@ -69,11 +76,11 @@ export class SettingsPage implements OnInit {
   }
 
   async dismissModal()
-  {
-    if( !this.settingFormGroup.valid || !sessionStorage.getItem('id') ) return
+  { 
+    if( !this.settingFormGroup.valid || !sessionStorage.getItem('userId') ) return
 
     const form = this.settingFormGroup.value
-    const id = parseInt( sessionStorage.getItem('id') )
+    const id = parseInt( sessionStorage.getItem('userId') )
     
     const user:IUserIn = 
     {
@@ -133,9 +140,9 @@ export class SettingsPage implements OnInit {
 
   deleteUser()
   {
-    if( !sessionStorage.getItem("id") ) return
+    if( !sessionStorage.getItem("userId") ) return
 
-    const id = parseInt( sessionStorage.getItem("id") )
+    const id = parseInt( sessionStorage.getItem("userId") )
 
     this.userService.deleteUser(id).subscribe( async() => {
       const toast = await this.toastController.create({

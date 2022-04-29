@@ -5,6 +5,8 @@ import { IIngredientBookmarkIn , IRecipeBookmarkIn } from 'src/app/interfaces/IB
 import { IngredientsService } from '../services/ingredients/ingredients.service';
 import { RecipesService } from '../services/recipes/recipes.service';
 import { ModalComponent } from '../components/modal/modal/modal.component';
+import { JwtHelperService } from '@auth0/angular-jwt'
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -25,12 +27,17 @@ export class Tab3Page implements OnInit {
     private ingredientService:IngredientsService,
     private recipeService:RecipesService,
     private toastController:ToastController,
-    private modalController:ModalController
+    private modalController:ModalController,
+    private jwtHelper: JwtHelperService,
+    private router:Router
   ) {}
 
   ngOnInit(): void 
   {
-    if( sessionStorage.getItem("access_token") ) this.connected = true
+    const token = sessionStorage.getItem("access_token")
+
+    if( token && this.jwtHelper.isTokenExpired(token) || !token ) this.router.navigate(["/notauthorized"])
+    if( token ) this.connected = true
 
     if( sessionStorage.getItem("tab3_segment") ) this.selectTab = sessionStorage.getItem("tab3_segment")
     else this.selectTab = 'all'
