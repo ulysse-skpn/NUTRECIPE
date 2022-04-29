@@ -1,7 +1,6 @@
 # dependencies
 node_modules/
-application/angular/node_modules
-application/ionic/node_modules
+application/angular-webapp/node_modules
 application/ionic-mobileapp/node_modules
 
 # System Files
