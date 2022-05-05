@@ -6,6 +6,7 @@
   "scripts": {
     "test": "test",
     "start:dev": "nodemon",
+    "build":"tsc",
     "sonar": "node sonar-project.js",
     "cypress:open":"cypress open"
   },
@@ -42,8 +43,6 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "helmet": "^5.0.2",
-    "jest": "^27.5.1",
-    "jest-sonar-reporter": "^2.0.0",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
     "mysql2": "^2.3.3",
