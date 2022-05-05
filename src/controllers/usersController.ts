@@ -8,16 +8,10 @@ export class UsersCtrl
 {   
     async getAll(req:Request , res:Response)
     {
-        let pageSize:number , offset:number
         const userServiceImpl:UserServiceImpl = new UserServiceImpl()
 
         try 
         {
-            pageSize = parseInt(req.body.pageSize)
-            offset = parseInt(req.body.pageIndex) * parseInt(req.body.pageSize)
-            if( isNaN(pageSize) ) throw Error("Limit is not a number")
-            if( isNaN(offset) ) throw Error("Offset is not a number")
-
             const usersList:User[] = await userServiceImpl.getAllUsers()
             res.status(200).send(usersList)
         } 

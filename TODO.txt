@@ -5,8 +5,8 @@ DAO
 https://medium.com/swlh/nodejs-code-evaluation-using-jest-sonarqube-and-docker-f6b41b2c319d
 
 TODO Splash screen
-TODO Refaire requêtes POSTMAN
 TODO Test Unitaires et Commentaire Code
+TODO Refaire requêtes POSTMAN
 TODO Tester ( pas les tests unitaires ) la partie angular du début à la fin [ connexion , CRUD , etc ]
 TODO Generate Swagger
 TODO Bearer token ( Pas Obligé car Route Guard ) 
@@ -18,8 +18,10 @@ Utilisation de la méthode POST pour ne pas laisser la possibilité aux utilisat
 
 Soucis
 Wamp qui ne redémarre pas après redémarrage
-"vue mobile" sur navigateur ne prend pas en compte certains clics et certianes fonctions
+"Vue mobile" sur navigateur ne prend pas en compte certaines fonctions
+Pas de possbilité de tester sur IOS car pas de mac book ou autre
 Trie des informations des api de recettes et d'ingrédients
 Travail plus long et complexe que prévu
 Doc des frameworks souvent incomplète
 A chaque mise à jour du navigateur , l'apparence de la vue navigateur sur mobile peut changer
+Difficulté sur les relations des entités

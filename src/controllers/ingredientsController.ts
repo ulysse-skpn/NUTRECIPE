@@ -23,7 +23,7 @@ export class IngredientsCtrl
         } 
         catch (err:any) 
         {
-            logger.error( `Method => GET ALL Ingredients : ${err.message}` )
+            logger.error( `Method => POST Pagination Ingredients : ${err.message}` )
             res.status(400).send( ApiError.badRequest(err.message) )
         }
     }
