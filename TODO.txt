@@ -5,6 +5,7 @@ DAO
 https://medium.com/swlh/nodejs-code-evaluation-using-jest-sonarqube-and-docker-f6b41b2c319d
 
 TODO Splash screen
+TODO Test app sur tél
 TODO Test Unitaires et Commentaire Code
 TODO Refaire requêtes POSTMAN
 TODO Tester ( pas les tests unitaires ) la partie angular du début à la fin [ connexion , CRUD , etc ]
