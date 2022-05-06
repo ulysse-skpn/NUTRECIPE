@@ -40,6 +40,8 @@ export class Tab1Page implements OnInit {
     
     this.recipeService.getSizeArrayRecipes().subscribe( async(res) => {
       this.recipeArraySize = res.nbElem
+      
+      if( this.selectTab === "random" ) this.getRandomRecipe()
     })
 
     this.loadRecipes()
@@ -144,7 +146,7 @@ export class Tab1Page implements OnInit {
       res.instructions = this.removeSpecialChars(res.instructions)
       this.randomRecipeInstructions = this.createStep(res.instructions,".")
     
-      this.randomRecipe = res
+      return this.randomRecipe = res
     })
   }
 
@@ -184,8 +186,9 @@ export class Tab1Page implements OnInit {
       if( this.recipeList.length === this.recipeArraySize ) event.target.disabled = true
   }
 
-  expand(recipe)
+  expand( event:Event , recipe)
   {
+    event.stopPropagation()
     recipe.expanded = !recipe.expanded
   }
 

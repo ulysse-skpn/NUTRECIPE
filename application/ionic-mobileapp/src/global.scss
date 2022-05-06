@@ -35,6 +35,10 @@ ion-tab-bar , ion-toolbar{
     --color: whitesmoke;
 }
 
+.list{
+    background-color: transparent!important;
+}
+
 ion-icon , ion-label , .side-menu-button{
     color:white;
     cursor: pointer;
@@ -44,8 +48,20 @@ ion-segment{
     --background: #72ba9c;
 }
 
-ion-searchbar , ion-item{
+ion-searchbar , ion-item , ion-item-divider{
     --background: #7a7e9e;
+}
+
+ion-card{
+    --background: #1d1e2c;
+}
+
+ion-content{
+    --padding-top: 1.5rem;
+}
+
+.list-card{
+    box-shadow: 5px 11px 15px 1px rgba(0,0,0,0.81);
 }
 
 .tab-selected {
@@ -90,5 +106,12 @@ ion-searchbar , ion-item{
     padding:0.5rem
 }
 
+.random > ion-card{
+    color: #fcf5c0;
+}
+
+.img-random{
+    box-shadow: 5px 11px 15px 1px rgba(0,0,0,0.81);
+}
 
 

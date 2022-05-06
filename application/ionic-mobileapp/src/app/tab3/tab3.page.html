@@ -31,7 +31,7 @@
       <ion-label>Recettes</ion-label>
     </ion-item-divider>
     
-    <ion-list>
+    <ion-list class="list">
       <ion-grid>
         <ion-row>
           <ion-col sizeXs="6" *ngFor="let recipe of recipeList | filter:searchTerm">
@@ -67,7 +67,7 @@
       <ion-label>Ingrédients</ion-label>
     </ion-item-divider>
 
-    <ion-list>
+    <ion-list class="list">
 
       <ion-grid>
         <ion-row>
@@ -104,7 +104,7 @@
 
   <div *ngIf="selectTab === 'recipe'">
 
-    <ion-list>
+    <ion-list class="list">
       <ion-grid>
         <ion-row>
           <ion-col sizeXs="6" *ngFor="let recipe of recipeList | filter:searchTerm">

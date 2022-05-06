@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'ionic-mobileapp',
+  appName: 'NUTRECIPE',
   webDir: 'www',
   bundledWebRuntime: false
 };

@@ -27,6 +27,8 @@ export class AuthService {
     return this.http.post<IUserOut>(url,credentials,{headers:reqHeader})
                     .pipe(
                       tap( (data:IUserOut) => {
+                        // alert(JSON.stringify(data))
+                        // return
                         console.log(data)
                       }),
                       retry(1),

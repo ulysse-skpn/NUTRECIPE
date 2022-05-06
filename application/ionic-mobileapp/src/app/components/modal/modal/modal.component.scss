@@ -13,3 +13,20 @@ ion-icon{
 .wrapper{
     padding:0.5rem
 }
+
+ion-content{
+    --background: #383b54!important;
+}
+
+ion-card{
+    --color: #fcf5c0;
+}
+
+h1{
+    font-weight: bold;
+}
+
+
+img{
+    box-shadow: 5px 11px 15px 1px rgba(0,0,0,0.81);
+}

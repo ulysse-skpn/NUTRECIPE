@@ -74,9 +74,9 @@ export class Tab2Page implements OnInit {
           salt:res.salt,
           calories:res.calories,
           nova_group:res.nova_group,
-          categories:res.categories,
-          serving_size:res.serving_size,
-          image:res.image,
+          categories_ingredient:res.categories,
+          serving_size_ingredient:res.serving_size,
+          image_ingredient:res.image,
         },
         animated: true,
         backdropDismiss:true
@@ -142,8 +142,9 @@ export class Tab2Page implements OnInit {
       if( this.ingredientList.length === this.ingredientArraySize ) event.target.disabled = true
   }
 
-  expand(ingredient)
+  expand( event:Event , ingredient)
   {
+    event.stopPropagation()
     ingredient.expanded = !ingredient.expanded
   }
 

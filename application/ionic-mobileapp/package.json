@@ -8,7 +8,7 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "copy-cap": "npx cap copy android",
+    "ionic-build":"ionic build && ionic cap copy && ionic cap sync",
     "ionic-cap": "ionic capacitor run android",
     "lint": "ng lint",
     "e2e": "ng e2e"
