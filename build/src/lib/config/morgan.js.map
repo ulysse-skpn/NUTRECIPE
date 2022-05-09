@@ -1,0 +1,1 @@
+{"version":3,"file":"morgan.js","sourceRoot":"","sources":["../../../../src/lib/config/morgan.ts"],"names":[],"mappings":";;;;;;AAAA,oDAA2B;AAC3B,uCAAkC;AAErB,QAAA,gBAAgB,GAAG,IAAA,gBAAM,EAClC,+DAA+D,EAC/D;IACI,MAAM,EAAE;QACJ,mEAAmE;QACnE,KAAK,EAAE,CAAC,OAAc,EAAE,EAAE,CAAC,gBAAM,CAAC,IAAI,CAAC,OAAO,CAAC;KAClD;CACJ,CACJ,CAAA"}
