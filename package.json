@@ -7,7 +7,7 @@
     "test": "test",
     "start:dev": "nodemon",
     "build": "tsc",
-    "typedoc-g":"npx typedoc src/",
+    "typedoc-g": "npx typedoc --entryPointStrategy expand ./src",
     "sonar": "node sonar-project.js",
     "cypress:open": "cypress open"
   },

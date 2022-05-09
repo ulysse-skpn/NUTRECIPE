@@ -167,7 +167,7 @@ export class IngredientsCtrl
 
 
     /**
-     * Get an ingredient by id
+     * Get create an ingredient
      * @async
      * @method
      * @param {Request} req express request
