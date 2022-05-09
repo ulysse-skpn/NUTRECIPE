@@ -6,23 +6,54 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { LoginServiceImpl } from "../service/Impl/LoginServiceImpl";
 
+/**
+ * @classdesc Controller of login page
+ */
 export class LoginCtrl
 {
+    /**
+     * @typedef {Object} forbidden
+     * @typedef {Object} badRequest
+     * @typedef {Object} not_found
+     * @param {Request} req express request
+     * @param {Response} res express response
+     * @throws { forbidden } The password does not correspond to the user
+     * @throws { badRequest } 
+     * @throws { not_found } User is not found
+     */
     async login(req:Request , res:Response)
     {   
+        /**
+         * instantiate login service implementation
+         * @typedef {Object} LoginServiceImpl
+         * @type {LoginServiceImpl}
+         * @class
+         * @instance
+         */
         const loginServiceImpl:LoginServiceImpl = new LoginServiceImpl()
 
         try 
         {
             const login:string = req.body.email
             const password:string = req.body.password
-
             
+            /**
+             * find if a user exists
+             * @typedef {Object} User
+             * @type {(User|null)}
+             * @function userExist
+             * @param {string} login
+             */
             const user:User|null = await loginServiceImpl.userExist(login)
             
             if( user )
             {
+                /**
+                * Compare the password of the user from the database with the password from the client side
+                * @type {boolean}
+                */
                 const result: boolean = bcrypt.compareSync( password , user.password )
+                
                 if( result === true )
                 {
                     const SECRET_KEY:string = "secretkey23456";

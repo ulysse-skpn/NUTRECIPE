@@ -5,24 +5,61 @@ import { ForgotPasswordServiceImpl } from "../service/Impl/ForgotPasswordService
 import crypto from 'crypto';
 import { User } from "../entity/UserEntity";
 
+/**
+ * @classdesc Controller of forgot password page
+ */
 export class ForgotPasswordCtrl
 {
+    /**
+     * @typedef {Object} internal_server_error
+     * @typedef {Object} unknown_error
+     * @typedef {Object} not_found
+     * @param {Request} req express request
+     * @param {Response} res express response
+     * @throws { internal_server_error } The new password was not inserted in database
+     * @throws { unknown_error }
+     * @throws { not_found } User is not found
+     */
     async forgotPassword(req:Request,res:Response)
     {
+        /**
+         * instantiate forgot password service implementation
+         * @typedef {Object} ForgotPasswordServiceImpl
+         * @type {ForgotPasswordServiceImpl}
+         * @class
+         * @instance
+         */
         const forgotPasswordServiceImpl:ForgotPasswordServiceImpl = new ForgotPasswordServiceImpl()
 
         try 
         {
             const login:string = req.body.email
 
+            /**
+             * find a user by his login (email)
+             * @typedef {Object} User
+             * @type {(User|null)}
+             * @function findUserByLogin
+             * @param {string} login
+             */
             const user:User|null = await forgotPasswordServiceImpl.findUserByLogin(login)
+
             if( user )
             {
-                const password = await generateNewPassword()
+                /**
+                 * new password for the user
+                 */
+                const password:string = await generateNewPassword()
     
                 if( password )
                 {
-                    const result = await forgotPasswordServiceImpl.saveNewPassword(login,password)
+                    /**
+                     * @type {[affectedCount:number]} affected count
+                     * @function saveNewPassword
+                     * @param {string} login
+                     * @param {string} password
+                     */
+                    const result: [affectedCount: number] = await forgotPasswordServiceImpl.saveNewPassword(login,password)
                     const newPassword = 
                     {
                         newPassword : password
@@ -44,7 +81,12 @@ export class ForgotPasswordCtrl
 
 }
 
-const generateNewPassword = async () =>
+/**
+ * @async
+ * @function generateNewPassword generate a random new password (length : 10) for the user
+ * @returns {string} password
+ */
+const generateNewPassword = async (): Promise<string> =>
 {
     const chars: string = "0123456789abcdefghijklmnopqrstuvwxyz!@#$*ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const passwordLength: number = 10;

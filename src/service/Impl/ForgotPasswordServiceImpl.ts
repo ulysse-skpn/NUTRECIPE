@@ -6,7 +6,7 @@ export class ForgotPasswordServiceImpl implements IForgotPasswordService
 {
     userRepository:UserRepository = new UserRepository()
 
-    async saveNewPassword(login:string, newPassword: string): Promise<[affecteCount:number]> 
+    async saveNewPassword(login:string, newPassword: string): Promise<[affectedCount:number]> 
     {
         const user:User|null = await this.userRepository.findByText(login)
 

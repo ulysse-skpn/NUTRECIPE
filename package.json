@@ -6,9 +6,10 @@
   "scripts": {
     "test": "test",
     "start:dev": "nodemon",
-    "build":"tsc",
+    "build": "tsc",
+    "typedoc-g":"npx typedoc src/",
     "sonar": "node sonar-project.js",
-    "cypress:open":"cypress open"
+    "cypress:open": "cypress open"
   },
   "jest": {
     "testEnvironment": "node",
@@ -54,6 +55,7 @@
     "supertest": "^6.2.2",
     "swagger-ui-express": "^4.3.0",
     "ts-node": "^10.7.0",
+    "typedoc": "^0.22.15",
     "typescript": "^4.6.2",
     "winston": "^3.6.0"
   }
