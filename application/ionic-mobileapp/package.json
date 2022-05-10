@@ -7,8 +7,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
-    "ionic-build":"ionic build && ionic cap copy && ionic cap sync",
+    "test": "ng test --code-coverage",
+    "ionic-build": "ionic build && ionic cap copy && ionic cap sync",
     "ionic-cap": "ionic capacitor run android",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -68,6 +68,7 @@
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",
     "karma-coverage-istanbul-reporter": "~3.0.2",
+    "karma-firefox-launcher": "^2.1.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
     "ng2-search-filter": "^0.5.1",

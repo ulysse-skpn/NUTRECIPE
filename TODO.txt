@@ -3,9 +3,15 @@ https://medium.com/swlh/nodejs-code-evaluation-using-jest-sonarqube-and-docker-f
 TODO Splash screen
 TODO Test app sur tél
 TODO Test Unitaires
+TODO CI/CD
+TODO Si un élément existe déjà , lors d'une insertion l'application plante
 TODO Tester ( pas les tests unitaires ) la partie angular du début à la fin [ connexion , CRUD , etc ]
-TODO Generate Swagger
+
+Si il reste du temps :
+{
+TODO Generate Swagger ()
 TODO Bearer token ( Pas Obligé car Route Guard ) 
+}
 
 //INFORMATIONS IMPORTANTES
 Check //? For todo

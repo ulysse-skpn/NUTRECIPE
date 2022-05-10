@@ -8,6 +8,7 @@
     "start:dev": "nodemon",
     "build": "tsc",
     "typedoc-g": "npx typedoc --entryPointStrategy expand ./src",
+    "swagger": "tsoa spec",
     "sonar": "node sonar-project.js",
     "cypress:open": "cypress open"
   },
@@ -55,6 +56,7 @@
     "supertest": "^6.2.2",
     "swagger-ui-express": "^4.3.0",
     "ts-node": "^10.7.0",
+    "tsoa": "^4.0.0",
     "typedoc": "^0.22.15",
     "typescript": "^4.6.2",
     "winston": "^3.6.0"
