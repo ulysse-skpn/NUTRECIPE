@@ -44,7 +44,7 @@ export class AuthService {
     return this.http.post<IUserOut>(url,user,{ headers: reqHeader })
                     .pipe(
                       tap( (data:IUserOut) => {
-                        console.log(data)
+                        // console.log(data)
                       }),
                       retry(1),
                       catchError(this.handleError)

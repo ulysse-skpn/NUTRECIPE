@@ -11,7 +11,6 @@ import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-
 export function tokenGetter() {
   return sessionStorage.getItem("access_token");
 }
@@ -74,8 +73,8 @@ fdescribe('LoginPage', () => {
 
   it('should render input elements', () => {
     const _elements_ = fixture.debugElement.nativeElement;
-    const emailInput = _elements_.querySelector('input[type="email"]');
-    const passwordInput = _elements_.querySelector('input[type="password"]');
+    const emailInput = _elements_.querySelector('.email');
+    const passwordInput = _elements_.querySelector('.password');
     expect(emailInput).toBeTruthy();
     expect(passwordInput).toBeTruthy();
   });
