@@ -49,24 +49,29 @@ export class SettingsPage implements OnInit {
     try 
     {
       const token = sessionStorage.getItem("access_token")
-      if( token && this.jwtHelper.isTokenExpired(token) || !token ) this.router.navigate(["/notauthorized"])
-
-      if( !token ) return
-
-      id = parseInt(sessionStorage.getItem("userId"))
-
-      this.userService.getUserById(id).subscribe( async(res) => {
-        
-        this.settingFormGroup = new FormGroup({
-          lastNameControl:  new FormControl( res.last_name , [ Validators.minLength(1) ]),
-          firstNameControl:  new FormControl( res.first_name , [ Validators.minLength(1) ]),
-          phoneNumberControl:  new FormControl( res.phone_number , [ Validators.minLength(10) , Validators.maxLength(20) , Validators.pattern('^[0-9]+$')  ]),
-          emailControl:  new FormControl( res.email , [ Validators.email , Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$') ]),
-          passwordControl : new FormControl( res.password ,[Validators.required, Validators.minLength(6) ]),
-          receiveEmailControl: new FormControl( res.receiveEmail ),
-          receiveNotificationControl: new FormControl( res.receiveNotification )
+      if( token === null || this.jwtHelper.isTokenExpired(token) ) 
+      {
+        this.router.navigate(["/notauthorized"])
+        return
+      }
+      else
+      {
+        id = parseInt(sessionStorage.getItem("userId"))
+  
+        this.userService.getUserById(id).subscribe( async(res) => {
+          
+          this.settingFormGroup = new FormGroup({
+            lastNameControl:  new FormControl( res.last_name , [ Validators.minLength(1) ]),
+            firstNameControl:  new FormControl( res.first_name , [ Validators.minLength(1) ]),
+            phoneNumberControl:  new FormControl( res.phone_number , [ Validators.minLength(10) , Validators.maxLength(20) , Validators.pattern('^[0-9]+$')  ]),
+            emailControl:  new FormControl( res.email , [ Validators.email , Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$') ]),
+            passwordControl : new FormControl( res.password ,[Validators.required, Validators.minLength(6) ]),
+            receiveEmailControl: new FormControl( res.receiveEmail ),
+            receiveNotificationControl: new FormControl( res.receiveNotification )
+          })
         })
-      })
+      }
+
     } 
     catch (error) 
     {
@@ -103,11 +108,11 @@ export class SettingsPage implements OnInit {
   modify()
   {
     this.isDisabled = !this.isDisabled
-    if( this.isDisabled )
+    if( this.isDisabled === true )
     {
       this.modifyButton = "Modifier"
     }
-    else
+    else if( this.isDisabled === false )
     {
       this.modifyButton = "Annuler"
     }
@@ -119,6 +124,7 @@ export class SettingsPage implements OnInit {
       header: 'Suppression de compte',
       subHeader: 'La suppression du compte est définitive',
       buttons: [{
+        cssClass:"action_sheet_delete",
         text: 'Supprimer',
         role: 'destructive',
         data: {
@@ -128,6 +134,7 @@ export class SettingsPage implements OnInit {
           this.deleteUser()
         }
       }, {
+        cssClass:"action_sheet_cancel",
         text: 'Annuler',
         handler: () => {
           return
@@ -140,27 +147,41 @@ export class SettingsPage implements OnInit {
 
   deleteUser()
   {
-    if( !sessionStorage.getItem("userId") ) return
+    const userId = sessionStorage.getItem("userId")
+    if( !userId === null ) return
 
     const id = parseInt( sessionStorage.getItem("userId") )
 
-    this.userService.deleteUser(id).subscribe( async() => {
-      const toast = await this.toastController.create({
-        message: 'Vous allez être redirigé vers la page de connexion dans quelques instants ...',
-        duration: 3000,
+    if( id !== null )
+    {
+      this.userService.deleteUser(id).subscribe( async() => {
+        const toast = await this.toastController.create({
+          message: 'Vous allez être redirigé vers la page de connexion dans quelques instants ...',
+          duration: 3000,
+        })
+  
+        await toast.present().then( async() => {
+          await this.modalController.dismiss()
+        })
+  
+        await toast.onDidDismiss().then( async() => {
+          await this.authService.logout()
+        })
       })
-
-      await toast.present().then( async() => {
-        await this.modalController.dismiss()
-      })
-
-      await toast.onDidDismiss().then( async() => {
-        await this.authService.logout()
-      })
-    })
+    }
   }
 
   get errorMessage() {
     return this.settingFormGroup.controls;
+  }
+
+  getFormValue()
+  {
+    return this.settingFormGroup.value
+  }
+
+  setFormValidity(bool:boolean)
+  {
+    return bool
   }
 }

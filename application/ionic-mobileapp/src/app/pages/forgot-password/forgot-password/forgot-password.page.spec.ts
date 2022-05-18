@@ -16,7 +16,7 @@ export function tokenGetter() {
     return sessionStorage.getItem("access_token");
 }
 
-fdescribe('ForgotPasswordPage', () => {
+describe('ForgotPasswordPage', () => {
     let component: ForgotPasswordPage;
     let fixture: ComponentFixture<ForgotPasswordPage>;
     let el:HTMLElement

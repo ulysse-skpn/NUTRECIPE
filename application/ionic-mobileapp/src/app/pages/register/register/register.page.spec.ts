@@ -15,7 +15,7 @@ export function tokenGetter() {
   return sessionStorage.getItem("access_token");
 }
 
-fdescribe('RegisterPage', () => {
+describe('RegisterPage', () => {
   let component: RegisterPage;
   let fixture: ComponentFixture<RegisterPage>;
   let el:HTMLElement

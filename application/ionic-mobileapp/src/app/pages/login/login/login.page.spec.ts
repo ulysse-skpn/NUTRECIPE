@@ -15,7 +15,7 @@ export function tokenGetter() {
   return sessionStorage.getItem("access_token");
 }
 
-fdescribe('LoginPage', () => {
+describe('LoginPage', () => {
   let component: LoginPage;
   let fixture: ComponentFixture<LoginPage>;
   let el:HTMLElement
@@ -47,7 +47,7 @@ fdescribe('LoginPage', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should call onFormSubmit', () => {
+  it('should call onFormSubmit method', () => {
     fixture.detectChanges()
     spyOn<LoginPage , any>(component,'onFormSubmit')
     el = fixture.debugElement.query(By.css('.valButton')).nativeElement
@@ -55,7 +55,7 @@ fdescribe('LoginPage', () => {
     expect(component.onFormSubmit).toHaveBeenCalled()
   });
 
-  it('should call goToRegister', () => {
+  it('should call goToRegister method', () => {
     fixture.detectChanges()
     spyOn<LoginPage , any>(component,'goToRegister')
     el = fixture.debugElement.query(By.css('.goToRegisterButton')).nativeElement
@@ -63,7 +63,7 @@ fdescribe('LoginPage', () => {
     expect(component.goToRegister).toHaveBeenCalled()
   });
 
-  it('should call goToForgotPassword', () => {
+  it('should call goToForgotPassword method', () => {
     fixture.detectChanges()
     spyOn<LoginPage , any>(component,'goToForgotPassword')
     el = fixture.debugElement.query(By.css('.goToForgotPasswordButton')).nativeElement

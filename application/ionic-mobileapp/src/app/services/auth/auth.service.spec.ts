@@ -7,7 +7,7 @@ import { mockPassword, mockUserOut } from 'src/app/mocks/authMock';
 import { AuthService } from './auth.service';
 
 
-fdescribe('AuthService', () => {
+describe('AuthService', () => {
   let authService: AuthService
   let httpMock: HttpTestingController
   let url = 'http://localhost:3000';

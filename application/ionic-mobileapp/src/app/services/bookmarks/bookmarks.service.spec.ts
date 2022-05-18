@@ -6,7 +6,7 @@ import { mockIngredientBookmarkList, mockRecipeBookmarkList } from 'src/app/mock
 
 import { BookmarksService } from './bookmarks.service';
 
-fdescribe('BookmarksService', () => {
+describe('BookmarksService', () => {
   let bookmarkService: BookmarksService
   let httpMock: HttpTestingController
   let url = 'http://localhost:3000/userBookmarks'

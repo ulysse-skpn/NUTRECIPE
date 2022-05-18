@@ -5,7 +5,7 @@ import { RouteGuard } from './route.guard';
 import { AuthService } from '../auth/auth.service';
 import { Router } from '@angular/router';
 
-fdescribe('RouteGuard', () => {
+describe('RouteGuard', () => {
   let authService: AuthService
   let routeGuard: RouteGuard;
   let httpMock: HttpTestingController
@@ -28,9 +28,9 @@ fdescribe('RouteGuard', () => {
       }
     ]
     });
-    routeGuard = TestBed.inject(RouteGuard);
-    authService = TestBed.inject(AuthService);
-    httpMock = TestBed.inject(HttpTestingController);
+    routeGuard = TestBed.inject(RouteGuard)
+    authService = TestBed.inject(AuthService)
+    httpMock = TestBed.inject(HttpTestingController)
   });
 
   it('Route guard service should be created', () => {
