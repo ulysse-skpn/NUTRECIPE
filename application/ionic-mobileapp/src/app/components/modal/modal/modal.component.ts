@@ -45,7 +45,7 @@ export class ModalComponent implements OnInit {
       this.ingredients_list = this.removeSpecialChars(this.ingredients_list)
       this.instructions = this.removeSpecialChars(this.instructions)
     }
-    else
+    else if( this.type === "ingredient-details" )
     {
       this.ingredient_text = this.removeSpecialChars(this.ingredient_text)
     }

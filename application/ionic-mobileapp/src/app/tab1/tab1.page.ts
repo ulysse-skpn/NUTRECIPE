@@ -33,9 +33,9 @@ export class Tab1Page implements OnInit {
 
   ngOnInit(): void 
   {
-    if( sessionStorage.getItem("access_token")) this.connected = true
+    if( sessionStorage.getItem("access_token") !== null ) this.connected = true
 
-    if( sessionStorage.getItem("tab1_segment") ) this.selectTab = sessionStorage.getItem("tab1_segment")
+    if( sessionStorage.getItem("tab1_segment") !== null ) this.selectTab = sessionStorage.getItem("tab1_segment")
     else this.selectTab = 'card'
     
     this.recipeService.getSizeArrayRecipes().subscribe( async(res) => {
@@ -100,7 +100,7 @@ export class Tab1Page implements OnInit {
     let message!:string
     let isSaved!:boolean
 
-    if( item.isBookmarked == true )
+    if( item.isBookmarked === true )
     {
       message = "Ajouté aux favoris"
       isSaved = true
@@ -112,7 +112,7 @@ export class Tab1Page implements OnInit {
     }
 
     
-    if( !sessionStorage.getItem("userId") ) return
+    if( sessionStorage.getItem("userId") === null ) return
 
     const userId = parseInt( sessionStorage.getItem("userId") )
 

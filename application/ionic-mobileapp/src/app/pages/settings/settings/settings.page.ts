@@ -22,11 +22,11 @@ export class SettingsPage implements OnInit {
   receiveNotification:boolean
 
   settingFormGroup:FormGroup = new FormGroup({
-    lastNameControl : new FormControl(),
-    firstNameControl : new FormControl(),
-    phoneNumberControl : new FormControl(),
-    emailControl : new FormControl(),
-    passwordControl : new FormControl(),
+    lastNameControl : new FormControl([ Validators.minLength(1) ]),
+    firstNameControl : new FormControl([ Validators.minLength(1) ]),
+    phoneNumberControl : new FormControl([ Validators.minLength(10) , Validators.maxLength(20) , Validators.pattern('^[0-9]+$')  ]),
+    emailControl : new FormControl([ Validators.email , Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$') ]),
+    passwordControl : new FormControl([Validators.required, Validators.minLength(6) ]),
     receiveEmailControl: new FormControl(),
     receiveNotificationControl: new FormControl()
   })
@@ -82,7 +82,7 @@ export class SettingsPage implements OnInit {
 
   async dismissModal()
   { 
-    if( !this.settingFormGroup.valid || !sessionStorage.getItem('userId') ) return
+    if( sessionStorage.getItem('userId') === null ) return
 
     const form = this.settingFormGroup.value
     const id = parseInt( sessionStorage.getItem('userId') )
@@ -180,8 +180,4 @@ export class SettingsPage implements OnInit {
     return this.settingFormGroup.value
   }
 
-  setFormValidity(bool:boolean)
-  {
-    return bool
-  }
 }

@@ -34,7 +34,7 @@
     <ion-list class="list">
       <ion-grid>
         <ion-row>
-          <ion-col sizeXs="6" *ngFor="let recipe of recipeList | filter:searchTerm">
+          <ion-col class="card-recipe" sizeXs="6" *ngFor="let recipe of recipeList | filter:searchTerm">
             <ion-card class="card" (click)="detailRecipe($event , recipe.recipeId)" *ngIf="recipe.isBookmarked">
               <ion-card-content>
                 

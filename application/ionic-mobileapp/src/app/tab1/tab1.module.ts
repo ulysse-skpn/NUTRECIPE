@@ -9,12 +9,14 @@ import { SideMenuComponent } from '../components/side-menu/side-menu/side-menu.c
 
 import { ScrollingModule } from '@angular/cdk/scrolling'
 import { Ng2SearchPipeModule } from 'ng2-search-filter'
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
+    BrowserModule,
     ScrollingModule,
     Ng2SearchPipeModule,
     Tab1PageRoutingModule

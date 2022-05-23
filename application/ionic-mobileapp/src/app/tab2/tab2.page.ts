@@ -29,9 +29,9 @@ export class Tab2Page implements OnInit {
 
   ngOnInit(): void 
   {
-    if( sessionStorage.getItem("access_token")) this.connected = true
+    if( sessionStorage.getItem("access_token") !== null ) this.connected = true
 
-    if( sessionStorage.getItem("tab2_segment") ) this.selectTab = sessionStorage.getItem("tab2_segment")
+    if( sessionStorage.getItem("tab2_segment") != null ) this.selectTab = sessionStorage.getItem("tab2_segment")
     else this.selectTab = 'card'
     
     this.ingredientService.getSizeArrayIngredients().subscribe( async(res) => {

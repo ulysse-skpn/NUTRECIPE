@@ -10,7 +10,7 @@ import { AuthService } from './auth.service';
 describe('AuthService', () => {
   let authService: AuthService
   let httpMock: HttpTestingController
-  let url = 'http://localhost:3000';
+  let url = 'http://localhost:3000'
 
   const authServiceSpy = jasmine.createSpyObj("AuthService",
   ['login','register','forgotPassword','logout','redirectTo','emptySession', 'getToken','isLoggedIn','handleError'])
@@ -27,8 +27,8 @@ describe('AuthService', () => {
         }
       ]
     });
-    authService = TestBed.inject(AuthService);
-    httpMock = TestBed.inject(HttpTestingController);
+    authService = TestBed.inject(AuthService)
+    httpMock = TestBed.inject(HttpTestingController)
   });
 
   afterEach( () => {

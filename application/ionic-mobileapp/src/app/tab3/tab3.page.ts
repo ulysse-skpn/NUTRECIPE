@@ -17,7 +17,7 @@ import { Router } from '@angular/router';
 export class Tab3Page implements OnInit {
 
   connected:boolean = false
-  selectTab!:string
+  selectTab:string = "all"
   searchTerm:string = ""
   recipeList = []
   ingredientList = []
@@ -36,8 +36,8 @@ export class Tab3Page implements OnInit {
   {
     const token = sessionStorage.getItem("access_token")
 
-    if( token && this.jwtHelper.isTokenExpired(token) || !token ) this.router.navigate(["/notauthorized"])
-    if( token ) this.connected = true
+    if( this.jwtHelper.isTokenExpired(token) ) this.router.navigate(["/notauthorized"])
+    this.connected = true
 
     if( sessionStorage.getItem("tab3_segment") ) this.selectTab = sessionStorage.getItem("tab3_segment")
     else this.selectTab = 'all'
@@ -139,7 +139,7 @@ export class Tab3Page implements OnInit {
   {
     event.stopPropagation()
 
-    if( !sessionStorage.getItem("userId") ) return
+    if( sessionStorage.getItem("userId") === null ) return
 
     const id = parseInt( sessionStorage.getItem("userId") )
 

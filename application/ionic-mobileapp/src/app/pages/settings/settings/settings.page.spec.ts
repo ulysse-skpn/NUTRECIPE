@@ -1,5 +1,7 @@
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { Router, RouterModule } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -13,14 +15,13 @@ import { NotAuthorizedPage } from '../../not-authorized/not-authorized/not-autho
 
 import { SettingsPage } from './settings.page';
 
-
 function tokenGetter() {
   return sessionStorage.getItem("access_token");
 }
 
 const actionSheetControllerStub = new ActionSheetController() 
 
-fdescribe('SettingsPage', () => {
+describe('SettingsPage', () => {
   let component: SettingsPage
   let fixture: ComponentFixture<SettingsPage>
   let httpMock: HttpTestingController
@@ -75,12 +76,13 @@ fdescribe('SettingsPage', () => {
 
     userServiceSpy = jasmine.createSpyObj<UsersService>('UserService',
     {
-      getUserById: of(mockUser)
+      getUserById: of(mockUser),
+      deleteUser: of([1]),
     })
 
     TestBed.configureTestingModule({
       declarations: [ SettingsPage ],
-      imports: [IonicModule.forRoot() , HttpClientTestingModule , RouterModule , RouterTestingModule.withRoutes([
+      imports: [IonicModule.forRoot() , HttpClientTestingModule , RouterModule , ReactiveFormsModule , RouterTestingModule.withRoutes([
         {
           path:'settings' , component: SettingsPage
         },
@@ -116,7 +118,8 @@ fdescribe('SettingsPage', () => {
         {
           provide:JwtHelperService
         }
-      ]
+      ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(SettingsPage);
@@ -184,14 +187,31 @@ fdescribe('SettingsPage', () => {
   });
 
 
-  it('should call dismissModal method', fakeAsync( () => {
+  it('should call dismissModal method', async() => {
     spyOn<SettingsPage,any>(component,'dismissModal').and.callThrough()
     el = fixture.debugElement.query(By.css(".dismiss")).nativeElement
     el.click()
-    tick()
-    expect(component.dismissModal).toHaveBeenCalled()
-    httpMock.match(`${url}/users/${2}`)
-  }));
+    
+    sessionStorage.setItem("userId","2")
+    const id = parseInt(sessionStorage.getItem("userId"))
+    expect(id).not.toEqual(null)
+
+    fixture.whenStable().then( () => {
+      fixture.detectChanges()
+      expect(component.dismissModal).toHaveBeenCalled()
+      httpMock.match(`${url}/users/${2}`)
+    })
+  });
+
+  it('dismissModal method should return when userId in sessionStorage is null', () => {
+    spyOn<SettingsPage,any>(component,'dismissModal').and.callThrough()
+    el = fixture.debugElement.query(By.css(".dismiss")).nativeElement
+    el.click()
+    
+    sessionStorage.setItem("userId",null)
+    const id = sessionStorage.getItem("userId")
+    expect(id).toEqual(null)
+  });
 
   it('should call modify method when form is disabled', () => {
     component.isDisabled = true
@@ -284,10 +304,4 @@ fdescribe('SettingsPage', () => {
     expect(component.getFormValue).toHaveBeenCalled()
   });
 
-  it('should call setFormValidity method', () => {
-    spyOn<SettingsPage,any>(component,'setFormValidity').and.callThrough()
-    component.setFormValidity(true)
-    expect(component.setFormValidity).toHaveBeenCalled()
-    expect(component.setFormValidity).toHaveBeenCalledWith(true)
-  });
 });

@@ -35,18 +35,16 @@ export class RegisterPage {
 
   onFormSubmit()
   { 
-    if( !this.registerFormGroup.valid ) return
-
     const form = this.registerFormGroup.value
     if( form.passwordControl !== form.passwordConfirmControl  ) 
     {
       alert('Les mots de passe ne sont pas identiques...')
       return
     }
+    
+    if( this.registerFormGroup.valid === false ) return
 
     this.buttonVisible = false
-    
-    if( form.passwordControl !== form.passwordConfirmControl ) return 
 
     const user:IUserIn = 
     {

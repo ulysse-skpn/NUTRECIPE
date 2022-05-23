@@ -47,8 +47,8 @@ export class SideMenuComponent implements OnInit {
     await this.authService.logout()
   }
 
-  goToLogin()
+  async goToLogin()
   {
-    this.authService.redirectTo('login')
+    await this.authService.redirectTo('login')
   }
 }

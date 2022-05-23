@@ -22,8 +22,7 @@ export class LoginPage implements OnInit {
   ngOnInit(): void 
   {
     const token = sessionStorage.getItem("access_token")
-
-    if( token && !this.jwtHelper.isTokenExpired(token) ) this.router.navigate(["/tabs/tab1"])
+    if( token && this.jwtHelper.isTokenExpired(token) === false ) this.router.navigate(["/tabs/tab1"])
   }
 
 
