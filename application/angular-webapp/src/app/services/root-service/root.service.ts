@@ -65,10 +65,10 @@ export class RootService {
                     )
   }
 
-  async logout()
+  logout()
   {
-    await this.storageService.remove("access_token")
-    await this.storageService.remove("expiresIn")
+    sessionStorage.removeItem("access_token")
+    sessionStorage.removeItem("expiresIn")
     
     this.route.routeReuseStrategy.shouldReuseRoute = () => false;
     this.route.onSameUrlNavigation = 'reload';

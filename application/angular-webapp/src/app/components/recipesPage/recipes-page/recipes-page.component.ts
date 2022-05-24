@@ -112,11 +112,11 @@ export class RecipesPageComponent implements OnInit {
     this.recipeService.getSizeArrayRecipes().subscribe( (res) => {
       this.pageSize = res.nbElem
 
-      this.loadIngredients()
+      this.loadRecipes()
     })
   }
 
-  loadIngredients( pageIndex = this.pageIndex , pageSize = this.pageSize )
+  loadRecipes( pageIndex = this.pageIndex , pageSize = this.pageSize )
   {
     this.isLoading = true
 

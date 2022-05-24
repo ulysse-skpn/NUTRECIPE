@@ -106,7 +106,7 @@ export class DialogRecipeComponent implements OnInit {
   
   save()
   {
-    if( !this.recipeFormGroup.valid ) return
+    if( this.recipeFormGroup.valid === false ) return
     
     let msg 
 

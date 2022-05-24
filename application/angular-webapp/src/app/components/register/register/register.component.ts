@@ -4,7 +4,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { IUserIn } from 'src/app/interfaces/IUser';
 import { RootService } from 'src/app/services/root-service/root.service';
-import { StorageService } from 'src/app/services/storage/storage.service';
 
 @Component({
   selector: 'app-register',
@@ -16,7 +15,6 @@ export class RegisterComponent {
   constructor(
     private route:Router,
     private rootService:RootService,
-    private storageService:StorageService,
     private snackBar:MatSnackBar
   ) { }
 
@@ -38,7 +36,7 @@ export class RegisterComponent {
 
   onFormSubmit()
   {
-    if( !this.registerFormGroup.valid ) return
+    if( this.registerFormGroup.valid === false ) return
 
     const form = this.registerFormGroup.value
 
@@ -46,18 +44,20 @@ export class RegisterComponent {
     const phone_number = form.phoneNumberControl.length === 0 ? null : form.phoneNumberControl
     const userIn:IUserIn =
     {
-      last_name : form.lastNameControl,
-      first_name : form.firstNameControl,
-      phone_number : phone_number,
-      email : form.emailControl,
-      password : form.passwordControl,
-      role: "admin"
+      last_name: form.lastNameControl,
+      first_name: form.firstNameControl,
+      phone_number: phone_number,
+      email: form.emailControl,
+      password: form.passwordControl,
+      role: "admin",
+      receiveEmail: false,
+      receiveNotification: false
     }
 
-    this.rootService.register(userIn).subscribe( async(res) => {
+    this.rootService.register(userIn).subscribe( (res) => {
 
-      await this.storageService.set( "access_token" , res.access_token )
-      await this.storageService.set( "expiresIn" , res.expires_in.toString() )
+      sessionStorage.setItem( "access_token" , res.access_token )
+      sessionStorage.setItem( "expiresIn" , res.expires_in.toString() )
 
       const snackBarRef = this.snackBar.open("Utilisateur enregistré , vous allez être redirigé vers la page de connexion" , "" , {
         duration: 3200

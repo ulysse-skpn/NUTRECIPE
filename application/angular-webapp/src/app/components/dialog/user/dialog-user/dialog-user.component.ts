@@ -97,7 +97,7 @@ export class DialogUserComponent implements OnInit {
 
   save()
   {
-    if( !this.userFormGroup.valid ) return
+    if( this.userFormGroup.valid === false ) return
 
     let msg 
 
@@ -111,12 +111,14 @@ export class DialogUserComponent implements OnInit {
 
     const user:IUserIn = 
     {
-      last_name: form.lastNameControl ,
-      first_name: form.firstNameControl ,
-      phone_number: form.phoneNumberControl ,
-      email: form.emailControl ,
-      password: form.passwordControl ,
-      role: form.roleControl 
+      last_name: form.lastNameControl,
+      first_name: form.firstNameControl,
+      phone_number: form.phoneNumberControl,
+      email: form.emailControl,
+      password: form.passwordControl,
+      role: form.roleControl,
+      receiveEmail: false,
+      receiveNotification: false
     }
 
     const snackBarRef = this.snackBar.open( `Annuler action : ${msg}` , "Undo" , { duration: 3000 } )

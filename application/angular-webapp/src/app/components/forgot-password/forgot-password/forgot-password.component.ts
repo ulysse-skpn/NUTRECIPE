@@ -25,7 +25,7 @@ export class ForgotPasswordComponent {
     {
       email : this.emailControl.value
     }
-    this.rootService.forgotPassword(email).subscribe( async(res) => {
+    this.rootService.forgotPassword(email).subscribe( (res) => {
       this.newPassword = res.newPassword
     })
   }

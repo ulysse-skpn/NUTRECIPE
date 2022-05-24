@@ -110,11 +110,11 @@ export class UsersPageComponent implements OnInit {
     this.userService.getSizeArrayUsers().subscribe( (res) => {
       this.pageSize = res.nbElem
 
-      this.loadIngredients()
+      this.loadUsers()
     })
   }
 
-  loadIngredients( pageIndex = this.pageIndex , pageSize = this.pageSize )
+  loadUsers( pageIndex = this.pageIndex , pageSize = this.pageSize )
   {
     this.isLoading = true
 

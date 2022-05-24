@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { ICredentialsIn } from 'src/app/interfaces/ICredentials';
 import { IUserOut } from 'src/app/interfaces/IUser';
 import { RootService } from 'src/app/services/root-service/root.service';
-import { StorageService } from 'src/app/services/storage/storage.service';
 
 @Component({
   selector: 'app-root-nutrecipe',
@@ -15,7 +14,6 @@ export class RootComponent {
 
   constructor(
     private rootService:RootService,
-    private storageService:StorageService,
     private route:Router
   ) { }
   
@@ -28,7 +26,7 @@ export class RootComponent {
   
   login()
   {
-    if( !this.loginFormGroup.valid ) return
+    if( this.loginFormGroup.valid === false ) return
 
     const form = this.loginFormGroup.value
 
@@ -38,15 +36,15 @@ export class RootComponent {
       password:form.passwordControl
     }
 
-    this.rootService.login(credentials).subscribe( async(res:IUserOut) => {
+    this.rootService.login(credentials).subscribe( (res:IUserOut) => {
 
       if( res.user.role !== "admin" ) 
       {
         window.alert("Vous n'avez pas les droits pour vous connecter à l'application")
         return
       }
-      await this.storageService.set( "access_token" , res.access_token )
-      await this.storageService.set( "expiresIn" , res.expires_in.toString() )
+      sessionStorage.setItem( "access_token" , res.access_token )
+      sessionStorage.setItem( "expiresIn" , res.expires_in.toString() )
       
       this.route.routeReuseStrategy.shouldReuseRoute = () => false;
       this.route.onSameUrlNavigation = 'reload';

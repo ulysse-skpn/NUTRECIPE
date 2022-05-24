@@ -37,7 +37,7 @@ export interface ITableIngredient
     product_name:string
 }
 
-enum NOVA_GROUP
+export enum NOVA_GROUP
 {
     ONE = 1,
     TWO = 2,

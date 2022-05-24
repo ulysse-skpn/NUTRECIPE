@@ -129,6 +129,6 @@ export class IngredientsPageComponent implements OnInit {
 
   setPageSizeOptions(setPageSizeOptionsInput: string) 
   {
-    if (setPageSizeOptionsInput) this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(str => +str)
+    if (setPageSizeOptionsInput != null) this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(str => +str)
   }
 }

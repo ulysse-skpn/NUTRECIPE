@@ -118,7 +118,7 @@ export class DialogIngredientComponent implements OnInit {
 
   save()
   {
-    if( !this.ingredientFormGroup.valid ) return
+    if( this.ingredientFormGroup.valid === false ) return
 
     let msg 
 
@@ -135,7 +135,7 @@ export class DialogIngredientComponent implements OnInit {
     let ingredient_text
     let categories
 
-    if( form.ingredientTextControl )
+    if( form.ingredientTextControl != null )
     {
       ingredient_text = form.ingredientTextControl
       ingredient_text = ingredient_text.replace(/[".]/g ," ")
@@ -145,7 +145,7 @@ export class DialogIngredientComponent implements OnInit {
     }
     else ingredient_text = ""
 
-    if( form.categoriesControl )
+    if( form.categoriesControl != null )
     {
       categories = form.categoriesControl
       categories = categories.replace(/[".]/g ," ")

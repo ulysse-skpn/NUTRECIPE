@@ -50,9 +50,9 @@ export class DashboardComponent implements OnInit {
     })
   }
 
-  async logout()
+  logout()
   {
-    await this.rootService.logout()
+    this.rootService.logout()
   }
 
 }
