@@ -28,6 +28,15 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm run test
-      env: 
-        CI: true
+    
+    - name: Cypress run
+    - uses: cypress-io/github-action@v2
+      with:
+        browser: chrome
+        headless: true
+        start: npm run start:dev
+        wait-on: "http://localhost:3000"
+      env:
+        CYPRESS_host: "127.0.0.1"
+        CYPRESS_port: 3000
+    #- run: npm run test
