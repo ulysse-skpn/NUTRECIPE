@@ -29,8 +29,8 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     
-    - name: Cypress run
     - uses: cypress-io/github-action@v2
+    - name: Cypress run
       with:
         browser: chrome
         headless: true
