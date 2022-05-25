@@ -23,7 +23,7 @@ jobs:
       DB_DATABASE: nutrecipe
       DB_USER: root
       DB_PASSWORD: root
-      MYSQL_DB: nutrecipe
+      MYSQL_DATABASE: nutrecipe
     steps:
     - name: Set up MySQL
       run: |
