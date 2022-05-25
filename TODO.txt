@@ -4,7 +4,7 @@ TODO Splash screen
 TODO CI/CD
 TODO Tester ( pas les tests unitaires ) la partie angular du début à la fin [ connexion , CRUD , etc ] sur ordi et téléphone
 TODO Refaire présentation powerpoint
-TODO Refaire dossier professionnel
+TODO Refaire dossier professionnel 
 
 Si il reste du temps :
 {
