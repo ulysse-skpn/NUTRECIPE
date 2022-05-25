@@ -17,11 +17,11 @@ export class User extends Model
     @Column
     first_name!: string;
 
-    @Unique
+    // @Unique
     @Column(DataType.STRING(20))
     phone_number!: string;
 
-    @Unique
+    // @Unique
     @IsEmail
     @AllowNull(false)
     @Column
