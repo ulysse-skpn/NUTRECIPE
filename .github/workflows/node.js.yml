@@ -29,8 +29,8 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     
-    - uses: cypress-io/github-action@v2
-    - name: Cypress run
+    - name: Cypress run (Chrome)
+      uses: cypress-io/github-action@v2
       with:
         browser: chrome
         headless: true
@@ -39,4 +39,3 @@ jobs:
       env:
         CYPRESS_host: "127.0.0.1"
         CYPRESS_port: 3000
-    - run: npm run test
