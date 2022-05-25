@@ -40,6 +40,6 @@ export class UserServiceImpl implements IUserService
     
     async getNumberElements()
     {
-        return database.query("SELECT COUNT(id) as nbElem FROM `users`");
+        return database.query("SELECT COUNT(userId) as nbElem FROM `users`");
     }
 }

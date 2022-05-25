@@ -4,7 +4,6 @@
   "description": "Application de gestion de recettes et d'ingrédients",
   "main": "app.js",
   "scripts": {
-    "test": "test",
     "start:dev": "nodemon",
     "build": "tsc",
     "typedoc-g": "npx typedoc --entryPointStrategy expand ./src",
