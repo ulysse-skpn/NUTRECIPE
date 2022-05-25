@@ -45,3 +45,6 @@ jobs:
         headless: true
         start: npm run start:dev
         wait-on: "http://127.0.0.1:3000"
+      env:
+        CYPRESS_host: "http://localhost"
+        CYPRESS_port: 4020
