@@ -28,4 +28,22 @@ export class InitEntities
             VALUES ( "SEKPON" , "ulysse" , "0000000000" , "u.sekpon@gmail.com" , "azerty" , "admin" , true , false )`
         )
     }
+
+    // ================ INIT One Bookmark Ingredient ================
+    public static init_bookmark_ingredient()
+    {
+        database.query(`
+            INSERT IGNORE INTO bookmarkingredients ( ingredientId , userId , saved ) 
+            VALUES ( 1 , 1 , 1 )`
+        )
+    }
+
+    // ================ INIT One Bookmark Recipe ================
+    public static init_bookmark_recipe()
+    {
+        database.query(`
+            INSERT IGNORE INTO bookmarkrecipes ( recipeId , userId , saved ) 
+            VALUES ( 1 , 1 , 1 )`
+        )
+    }
 }

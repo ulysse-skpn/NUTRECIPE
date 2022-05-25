@@ -1,11 +1,8 @@
 https://medium.com/swlh/nodejs-code-evaluation-using-jest-sonarqube-and-docker-f6b41b2c319d
 
 TODO Splash screen
-TODO Test app sur tél
-TODO Test Unitaires
 TODO CI/CD
-TODO Si un élément existe déjà , lors d'une insertion l'application plante
-TODO Tester ( pas les tests unitaires ) la partie angular du début à la fin [ connexion , CRUD , etc ]
+TODO Tester ( pas les tests unitaires ) la partie angular du début à la fin [ connexion , CRUD , etc ] sur ordi et téléphone
 
 Si il reste du temps :
 {
@@ -19,7 +16,7 @@ database utf8mb4_bin
 Utilisation de la méthode POST pour ne pas laisser la possibilité aux utilisateurs de 'jouer' avec les paramètres de l'url
 
 Soucis
-Wamp qui ne redémarre pas après redémarrage
+Wamp qui ne veut pas démarrer après redémarrage de l'ordinateur
 "Vue mobile" sur navigateur ne prend pas en compte certaines fonctions
 Pas de possbilité de tester sur IOS car pas de mac book ou autre
 Trie des informations des api de recettes et d'ingrédients

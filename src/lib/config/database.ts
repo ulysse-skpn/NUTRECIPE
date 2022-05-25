@@ -83,6 +83,18 @@ database.authenticate()
                         logger.info( 'users table initialized' )
                     })       
 
+                await database.query("SELECT COUNT(id) as elem FROM bookmarkingredients" , { plain:true , raw:true} )
+                    .then( async (e:any) => {
+                        InitEntities.init_bookmark_ingredient()
+                        logger.info( 'bookmarkingredients table initialized' )
+                    })    
+                    
+                await database.query("SELECT COUNT(id) as elem FROM bookmarkrecipes" , { plain:true , raw:true} )
+                    .then( async (e:any) => {
+                        InitEntities.init_bookmark_recipe()
+                        logger.info( 'bookmarkrecipes table initialized' )
+                    })       
+
             })          
 
     } )

@@ -2,7 +2,8 @@
 	"info": {
 		"_postman_id": "93505a09-a2cd-449b-9e98-66df96f2b92e",
 		"name": "NUTRECIPE",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11611867"
 	},
 	"item": [
 		{
@@ -950,6 +951,57 @@
 							"response": []
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Bookmarks",
+			"item": [
+				{
+					"name": "GET ALL Ingredient Bookmarks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/userBookmarks/ingredient",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"userBookmarks",
+								"ingredient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL Recipe Bookmarks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/userBookmarks/recipe",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"userBookmarks",
+								"recipe"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
