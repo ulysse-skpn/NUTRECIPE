@@ -4,6 +4,7 @@
   "description": "Application de gestion de recettes et d'ingrédients",
   "main": "app.js",
   "scripts": {
+    "test":"concurrently \"npm run start:dev\" \"npm run cypress:open\"",
     "start:dev": "nodemon",
     "build": "tsc",
     "typedoc-g": "npx typedoc --entryPointStrategy expand ./src",
