@@ -39,4 +39,4 @@ jobs:
       env:
         CYPRESS_host: "127.0.0.1"
         CYPRESS_port: 3000
-    #- run: npm run test
+    - run: npm run test
