@@ -34,13 +34,15 @@ jobs:
           mysql database: 'my_db'
           mysql user: root
           mysql password: root
-          sql-file: ./nutrecipe.sql
           
       - name: Start MySQL
         run: sudo service mysql start
         
       - name: Verify MySQL
         run: mysql --user=root --password=root
+        
+      - name: Init Database
+        run: mysql --user=root --password=root -e "./nutrecipe.sql"
         
       - name: List existing SQL databases
         run: mysql --user=root --password=root --execute="show databases;"
