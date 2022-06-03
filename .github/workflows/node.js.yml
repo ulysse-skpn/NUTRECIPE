@@ -42,7 +42,9 @@ jobs:
         run: mysql --user=root --password=root
         
       - name: Create table nutrecipe
-        run: mysql --user=root --password=root --execute "CREATE DATABASE NUTRECIPE"
+        run: |
+          mysql --user=root --password=root --execute "CREATE DATABASE NUTRECIPE"
+          mysql --user=root --password=root --execute "CREATE TABLE ingredients"
         
       - name: List existing SQL databases
         run: mysql --user=root --password=root --execute="show databases;"
