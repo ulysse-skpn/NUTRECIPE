@@ -42,4 +42,4 @@ jobs:
         run: mysql --user=root --password=root
         
       - name: List existing SQL databases
-        run: mysql --user=root --password=root --execute="show databases;" <--- my_db is not shown
+        run: mysql --user=root --password=root --execute="show databases;"
