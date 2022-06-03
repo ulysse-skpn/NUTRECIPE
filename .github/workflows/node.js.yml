@@ -56,5 +56,5 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
     
-      #- name: Launch Server
-        #run: npm run start:dev
+      - name: Launch Server
+        run: npm run start:dev
