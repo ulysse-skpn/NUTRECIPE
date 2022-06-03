@@ -41,8 +41,11 @@ jobs:
       - name: Verify MySQL
         run: mysql --user=root --password=root
         
-      - name: Init Database
-        run: mysql --help
+      - name: Create NUTRECIPE Database
+        run: mysql --user=root --password=root --execute="CREATE DATABASE IF NOT EXISTS NUTRECIPE;"
+        
+      - name: TEST
+        run: mysql --user=root --password=root -D NUTRECIPE
         
       - name: List existing SQL databases
         run: mysql --user=root --password=root --execute="show databases;"
