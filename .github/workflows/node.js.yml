@@ -42,7 +42,7 @@ jobs:
         run: mysql --user=root --password=root
         
       - name: Init Database
-        run: mysql --user=root --password=root -e "./nutrecipe.sql"
+        run: mysql --user=root --password=root ./nutrecipe.sql
         
       - name: List existing SQL databases
         run: mysql --user=root --password=root --execute="show databases;"
