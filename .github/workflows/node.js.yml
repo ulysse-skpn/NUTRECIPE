@@ -20,7 +20,6 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     
     steps:
-      - name: Config MySQL
       - uses: mirromutth/mysql-action@v1.1
         with:
           host port: 3306 # The port of host
