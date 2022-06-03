@@ -54,7 +54,7 @@ jobs:
         run: mysql --user=root --password=root -D NUTRECIPE --execute="CREATE TABLE IF NOT EXISTS USERS ( userId int );"
         
       - name: Create bookmarkingredients table
-        run: mysql --user=root --password=root -D NUTRECIPE --execute="CREATE TABLE IF NOT EXISTS BOOKMARKINGREDIENTS (   `id` int NOT NULL AUTO_INCREMENT,`ingredientId` int NOT NULL,`userId` int NOT NULL,`saved` tinyint(1) NOT NULL,`createdAt` datetime NOT NULL,`updatedAt` datetime NOT NULL,PRIMARY KEY (`id`),KEY `ingredientId` (`ingredientId`),KEY `userId` (`userId`)) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;"
+        run: mysql --user=root --password=root -D NUTRECIPE --execute="CREATE TABLE IF NOT EXISTS BOOKMARKINGREDIENTS ( id int NOT NULL AUTO_INCREMENT,ingredientId int NOT NULL,userId int NOT NULL,saved tinyint(1) NOT NULL,createdAt datetime NOT NULL,updatedAt datetime NOT NULL,PRIMARY KEY (id),KEY ingredientId (ingredientId),KEY userId (userId)) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;"
         
       - name: Create bookmarkrecipes table
         run: mysql --user=root --password=root -D NUTRECIPE --execute="CREATE TABLE IF NOT EXISTS BOOKMARKRECIPES ( ingId int );"
