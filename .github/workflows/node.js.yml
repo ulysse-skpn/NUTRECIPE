@@ -18,21 +18,21 @@ jobs:
       matrix:
         node-version: [16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        
+    services:
+      mysql:
+        image: mysql:latest
+        env:
+          MYSQL_DATABASE: nutrecipe
+          MYSQL_HOST: 127.0.0.1
+          MYSQL_USER: root
+          MYSQL_PASSWORD: root
+          MYSQL_ROOT_PASSWORD: root
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     
     steps:
-      - name: Shutdown Ubuntu MySQL (SUDO)
-        run: sudo service mysql stop # Shutdown the Default MySQL, "sudo" is necessary, please not remove it
-        
-      - uses: mirromutth/mysql-action@v1.1
-        with:
-          host port: 3306 # The port of host
-          character set server: 'utf8mb4_bin' # The '--character-set-server' option for mysqld
-          mysql version: '8.0' # Optional, default value is "latest". The version of the MySQL
-          mysql database: 'nutrecipe' # Optional, default value is "test". The specified database which will be create
-          mysql root password: 'root' # Required if "mysql user" is empty, default is empty. The root superuser password
-          mysql user: '' # Required if "mysql root password" is empty, default is empty. The superuser for the specified database. Of course you can use secrets, too
-          mysql password: 'root' # Required if "mysql user" exists. The password for the mysql user
-          
       - name: Wait for MySQL
         run: |
           while ! mysqladmin ping --host=127.0.0.1 --password=root --silent; do
