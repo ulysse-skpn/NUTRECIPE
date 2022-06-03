@@ -34,15 +34,13 @@ jobs:
           mysql database: 'my_db'
           mysql user: root
           mysql password: root
+          sql-file: ./nutrecipe.sql
           
       - name: Start MySQL
         run: sudo service mysql start
         
       - name: Verify MySQL
         run: mysql --user=root --password=root
-        
-      - name: Create table nutrecipe
-        run: mysql --user=root --password=root --execute "CREATE DATABASE IF NOT EXISTS NUTRECIPE;USE NUTRECIPE;CREATE TABLE IF NOT EXISTS INGREDIENTS ( ingredientId int );"
         
       - name: List existing SQL databases
         run: mysql --user=root --password=root --execute="show databases;"
