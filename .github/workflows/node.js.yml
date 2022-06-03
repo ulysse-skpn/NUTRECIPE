@@ -19,38 +19,13 @@ jobs:
         node-version: [16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     
-    env:
-      DB_DATABASE: nutrecipe
-      DB_USER: root
-      DB_PASSWORD: root
-      MYSQL_DATABASE: nutrecipe
     steps:
-    - name: Set up MySQL
-      run: |
-        sudo /etc/init.d/mysql start
-        mysql -e 'CREATE DATABASE ${{ env.DB_DATABASE }};' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }}
-    - name: List existing SQL databases
-      run: mysql --user=root --password=root --execute="show databases;"
-
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    
-    - name: Launch Server
-      run: npm run start:dev
-        
-    #- name: Cypress run (Chrome)
-     # uses: cypress-io/github-action@v2
-      #with:
-        #browser: chrome
-        #headless: true
-        #start: npm run start:dev
-        #wait-on: "http://127.0.0.1:3000"
-      #env:
-        #CYPRESS_host: "http://localhost"
-        #CYPRESS_port: 4020
+      - uses: mirromutth/mysql-action@v1.1
+        with:
+          host port: 3306 # The port of host
+          character set server: 'utf8mb4_bin' # The '--character-set-server' option for mysqld
+          mysql version: '8.0' # Optional, default value is "latest". The version of the MySQL
+          mysql database: 'nutrecipe' # Optional, default value is "test". The specified database which will be create
+          mysql root password: 'root' # Required if "mysql user" is empty, default is empty. The root superuser password
+          mysql user: 'root' # Required if "mysql root password" is empty, default is empty. The superuser for the specified database. Of course you can use secrets, too
+          mysql password: 'root' # Required if "mysql user" exists. The password for the "mysql user"
