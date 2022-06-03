@@ -18,26 +18,11 @@ jobs:
       matrix:
         node-version: [16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-        
-    services:
-      mysql:
-        image: mysql:latest
-        env:
-          MYSQL_DATABASE: nutrecipe
-          MYSQL_HOST: 127.0.0.1
-          MYSQL_USER: root
-          MYSQL_PASSWORD: root
-          MYSQL_ROOT_PASSWORD: root
-        ports:
-          - 3306:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     
     steps:
-      - name: Wait for MySQL
-        run: |
-          while ! mysqladmin ping --host=127.0.0.1 --password=root --silent; do
-            sleep 1
-          done
-
-      - name: List existing SQL databases
-        run: mysql --user=root --password=root --execute="show databases;"
+      - uses: actions/checkout@v3
+      - uses: shogo82148/actions-setup-mysql@v1
+        with:
+          mysql-version: '8.0'
+      - run: mysql -e 'CREATE DATABASE nutrecipe;' --user=root --password=root
+      - run: mysql -h127.0.0.1 --user=root --password=root -e 'show databases;'
