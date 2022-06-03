@@ -32,4 +32,4 @@ jobs:
           mysql password: 'root' # Required if "mysql user" exists. The password for the "mysql user"
           
       - name: List existing SQL databases
-        run: mysql --user=root --password=root --execute="show databases;"
+        #run: mysql --user=root --password=root --execute="show databases;"
