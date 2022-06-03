@@ -43,8 +43,11 @@ jobs:
         
       - name: Create table nutrecipe
         run: |
-          mysql --user=root --password=root --execute "SELECT 'CREATE DATABASE IF NOT EXISTS NUTRECIPE';"
-          mysql --user=root --password=root --execute "use my_db.NUTRECIPE"
+          mysql --user=root --password=root --execute "CREATE DATABASE IF NOT EXISTS NUTRECIPE;"
+          mysql --user=root --password=root NUTRECIPE
+      
+      - name: TEST
+        run: mysql --user=root --password=root --execute="SELECT DATABASE ()"
         
       - name: List existing SQL databases
         run: mysql --user=root --password=root --execute="show databases;"
