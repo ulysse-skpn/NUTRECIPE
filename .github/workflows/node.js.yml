@@ -43,7 +43,7 @@ jobs:
     
     - name: Launch Server
       with:
-        start: npm run start:dev
+        run: npm run start:dev
         wait-on: "http://127.0.0.1:3000"
         
     #- name: Cypress run (Chrome)
