@@ -44,6 +44,9 @@ jobs:
       - name: Create table nutrecipe
         run: |
           mysql --user=root --password=root --execute "CREATE DATABASE NUTRECIPE"
+          mysql -e "SELECT DATABASE ()"
+          mysql -e USE NUTRECIPE
+          mysql -e "SELECT DATABASE ()"
           mysql --user=root --password=root --execute "CREATE TABLE ingredients"
         
       - name: List existing SQL databases
