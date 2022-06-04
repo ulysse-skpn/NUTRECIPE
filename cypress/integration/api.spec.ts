@@ -533,22 +533,22 @@ describe('Nutrecipe API', () => {
                 });
         });
 
-        it('should return a new password to the user', () => {
-            cy.request({
-                method: 'POST',
-                url: `${url}/forgotPassword`,
-                body:
-                {
-                    "email":"u.sekpon@gmail.com"
-                }
-            })
-                .should((response) => {
-                    const res = response.body
-                    console.log(response)
+        //it('should return a new password to the user', () => {
+            //cy.request({
+                //method: 'POST',
+                //url: `${url}/forgotPassword`,
+                //body:
+                //{
+                    //"email":"u.sekpon@gmail.com"
+                //}
+            //})
+                //.should((response) => {
+                    //const res = response.body
+                    //console.log(response)
                     
                     // expect(response.status).to.eq(200)
-                });
-        });
+                //});
+        //});
 
     });
 
