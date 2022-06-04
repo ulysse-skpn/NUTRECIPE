@@ -41,7 +41,7 @@ database.authenticate()
 
                 await database.query("show tables" , {type: sequelize.QueryTypes.SHOWTABLES})
 
-                await database.query("SELECT COUNT(ingredientId) as elem FROM INGREDIENTS" , { plain:true , raw:true} )
+                await database.query("SELECT COUNT(ingredientId) as elem FROM ingredients" , { plain:true , raw:true} )
                     .then( async (e:any) => {
  
                             
@@ -60,7 +60,7 @@ database.authenticate()
                         logger.info( 'ingredients table initialized' )
                     })   
 
-                await database.query("SELECT COUNT(recipeId) as elem FROM RECIPES" , { plain:true , raw:true} )
+                await database.query("SELECT COUNT(recipeId) as elem FROM recipes" , { plain:true , raw:true} )
                     .then( async (e:any) => {
 
 
@@ -77,19 +77,19 @@ database.authenticate()
                         logger.info( 'recipes table initialized' )
                     })      
 
-                await database.query("SELECT COUNT(userId) as elem FROM USERS" , { plain:true , raw:true} )
+                await database.query("SELECT COUNT(userId) as elem FROM users" , { plain:true , raw:true} )
                     .then( async (e:any) => {
                         InitEntities.init_user()
                         logger.info( 'users table initialized' )
                     })       
 
-                await database.query("SELECT COUNT(id) as elem FROM BOOKMARKINGREDIENTS" , { plain:true , raw:true} )
+                await database.query("SELECT COUNT(id) as elem FROM bookmarkingredients" , { plain:true , raw:true} )
                     .then( async (e:any) => {
                         InitEntities.init_bookmark_ingredient()
                         logger.info( 'bookmarkingredients table initialized' )
                     })    
                     
-                await database.query("SELECT COUNT(id) as elem FROM BOOKMARKRECIPES" , { plain:true , raw:true} )
+                await database.query("SELECT COUNT(id) as elem FROM bookmarkrecipes" , { plain:true , raw:true} )
                     .then( async (e:any) => {
                         InitEntities.init_bookmark_recipe()
                         logger.info( 'bookmarkrecipes table initialized' )
