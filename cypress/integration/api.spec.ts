@@ -289,6 +289,40 @@ describe('Nutrecipe API', () => {
 
 
     context('Users', () => {
+        
+        it('should create a user and return the created user', () => {
+            cy.request({
+                method: 'POST',
+                url: `${url}/users`,
+                body:
+                {
+                    "last_name":"last_name",
+                    "first_name":"first_name",
+                    "phone_number":"phone_number2",
+                    "email":"email@test2.com",
+                    "password":"password",
+                    "role":"user",
+                    "receiveEmail":1,
+                    "receiveNotification":1,
+                }
+            })
+                .should((response) => {
+                    const res = response.body
+    
+                    expect(response.status).to.eq(201)
+                    expect(res).to.have.property('userId')
+                    expect(res).to.have.property('last_name')
+                    expect(res).to.have.property('first_name')
+                    expect(res).to.have.property('phone_number')
+                    expect(res).to.have.property('email')
+                    expect(res).to.have.property('password')
+                    expect(res).to.have.property('role')
+                    expect(res).to.have.property('receiveEmail')
+                    expect(res).to.have.property('receiveNotification')
+                    expect(res).to.have.property('createdAt')
+                    expect(res).to.have.property('updatedAt')
+                });
+        });
 
         it('should the number of users in the database', () => {
             cy.request({
@@ -329,40 +363,6 @@ describe('Nutrecipe API', () => {
             })
                 .should((response) => {
                     expect(response.status).to.eq(200)
-                });
-        });
-
-        it('should create a user and return the created user', () => {
-            cy.request({
-                method: 'POST',
-                url: `${url}/users`,
-                body:
-                {
-                    "last_name":"last_name",
-                    "first_name":"first_name",
-                    "phone_number":"phone_number2",
-                    "email":"email@test2.com",
-                    "password":"password",
-                    "role":"user",
-                    "receiveEmail":1,
-                    "receiveNotification":1,
-                }
-            })
-                .should((response) => {
-                    const res = response.body
-    
-                    expect(response.status).to.eq(201)
-                    expect(res).to.have.property('userId')
-                    expect(res).to.have.property('last_name')
-                    expect(res).to.have.property('first_name')
-                    expect(res).to.have.property('phone_number')
-                    expect(res).to.have.property('email')
-                    expect(res).to.have.property('password')
-                    expect(res).to.have.property('role')
-                    expect(res).to.have.property('receiveEmail')
-                    expect(res).to.have.property('receiveNotification')
-                    expect(res).to.have.property('createdAt')
-                    expect(res).to.have.property('updatedAt')
                 });
         });
 
@@ -511,7 +511,7 @@ describe('Nutrecipe API', () => {
                     const res = response.body
                     console.log(response)
                     
-                    // expect(response.status).to.eq(200)
+                    expect(response.status).to.eq(201)
                 });
         });
 
@@ -529,7 +529,7 @@ describe('Nutrecipe API', () => {
                     const res = response.body
                     console.log(response)
                     
-                    // expect(response.status).to.eq(200)
+                    expect(response.status).to.eq(200)
                 });
         });
 
