@@ -511,7 +511,7 @@ describe('Nutrecipe API', () => {
                     const res = response.body
                     console.log(response)
                     
-                    expect(response.status).to.eq(201)
+                    expect(response.status).to.eq(200)
                 });
         });
 
