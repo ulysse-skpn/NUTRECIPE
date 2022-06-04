@@ -26,7 +26,11 @@ export const database = new Sequelize({
     username:process.env.DB_USER,
     password:process.env.DB_PASSWORD,
     models: [__dirname + "/entity"],
-    timezone:timezone()
+    timezone:timezone(),
+    define:
+    {
+        freezeTableName:true
+    }
 })
 
 // Entities & Intermediate Table
