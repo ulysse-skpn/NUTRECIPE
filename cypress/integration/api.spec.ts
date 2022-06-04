@@ -532,23 +532,46 @@ describe('Nutrecipe API', () => {
                     expect(response.status).to.eq(201)
                 });
         });
+        
+        it('should create a user and return the created user', () => {
+            cy.request({
+                method: 'POST',
+                url: `${url}/users`,
+                body:
+                {
+                    "last_name":"lastName",
+                    "first_name":"firstName",
+                    "phone_number":"phoneNumber",
+                    "email":"u.sekpon@gmail.com",
+                    "password":"password_password",
+                    "role":"user",
+                    "receiveEmail":1,
+                    "receiveNotification":1,
+                }
+            })
+                .should((response) => {
+                    const res = response.body
+    
+                    expect(response.status).to.eq(201)
+                });
+        });
 
-        //it('should return a new password to the user', () => {
-            //cy.request({
-                //method: 'POST',
-                //url: `${url}/forgotPassword`,
-                //body:
-                //{
-                    //"email":"u.sekpon@gmail.com"
-                //}
-            //})
-                //.should((response) => {
-                    //const res = response.body
-                    //console.log(response)
+        it('should return a new password to the user', () => {
+            cy.request({
+                method: 'POST',
+                url: `${url}/forgotPassword`,
+                body:
+                {
+                    "email":"u.sekpon@gmail.com"
+                }
+            })
+                .should((response) => {
+                    const res = response.body
+                    console.log(response)
                     
-                    // expect(response.status).to.eq(200)
-                //});
-        //});
+                    expect(response.status).to.eq(200)
+                });
+        });
 
     });
 
