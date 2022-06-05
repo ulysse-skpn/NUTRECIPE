@@ -21,7 +21,7 @@ function tokenGetter() {
 
 const actionSheetControllerStub = new ActionSheetController() 
 
-fdescribe('SettingsPage', () => {
+describe('SettingsPage', () => {
   let component: SettingsPage
   let fixture: ComponentFixture<SettingsPage>
   let userService:UsersService
