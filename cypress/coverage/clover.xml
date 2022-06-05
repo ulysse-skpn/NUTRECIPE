@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1654470886944" clover="3.2.0">
+  <project timestamp="1654470886946" name="All files">
+    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="81" files="256" classes="256"/>
+    <package name="NUTRECIPE">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="cypress.config.ts" path="C:/www/NUTRECIPE/cypress.config.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="sonar-project.js" path="C:/www/NUTRECIPE/sonar-project.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="karma.conf.js" path="C:/www/NUTRECIPE/application/angular-webapp/karma.conf.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.coverage.angular-webapp">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="block-navigation.js" path="C:/www/NUTRECIPE/application/angular-webapp/coverage/angular-webapp/block-navigation.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="prettify.js" path="C:/www/NUTRECIPE/application/angular-webapp/coverage/angular-webapp/prettify.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="sorter.js" path="C:/www/NUTRECIPE/application/angular-webapp/coverage/angular-webapp/sorter.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.coverage.angular-webapp.lcov-report">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="block-navigation.js" path="C:/www/NUTRECIPE/application/angular-webapp/coverage/angular-webapp/lcov-report/block-navigation.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="prettify.js" path="C:/www/NUTRECIPE/application/angular-webapp/coverage/angular-webapp/lcov-report/prettify.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="sorter.js" path="C:/www/NUTRECIPE/application/angular-webapp/coverage/angular-webapp/lcov-report/sorter.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="main.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/main.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="polyfills.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/polyfills.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="test.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/test.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="app-routing.module.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/app-routing.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="app.component.spec.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/app.component.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="app.component.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/app.component.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="app.module.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/app.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.components.dashboard.dashboard">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="dashboard.component.spec.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/dashboard/dashboard/dashboard.component.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="dashboard.component.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/dashboard/dashboard/dashboard.component.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.components.dialog.ingredient.dialog-ingredient">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="dialog-ingredient.component.spec.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/dialog/ingredient/dialog-ingredient/dialog-ingredient.component.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="dialog-ingredient.component.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/dialog/ingredient/dialog-ingredient/dialog-ingredient.component.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.components.dialog.recipe.dialog-recipe">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="dialog-recipe.component.spec.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/dialog/recipe/dialog-recipe/dialog-recipe.component.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="dialog-recipe.component.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/dialog/recipe/dialog-recipe/dialog-recipe.component.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.components.dialog.user.dialog-user">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="dialog-user.component.spec.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/dialog/user/dialog-user/dialog-user.component.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="dialog-user.component.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/dialog/user/dialog-user/dialog-user.component.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.components.forgot-password.forgot-password">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="forgot-password.component.spec.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/forgot-password/forgot-password/forgot-password.component.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="forgot-password.component.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/forgot-password/forgot-password/forgot-password.component.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.components.ingredientsPage.ingredients-page">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="ingredients-page.component.spec.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/ingredientsPage/ingredients-page/ingredients-page.component.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="ingredients-page.component.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/ingredientsPage/ingredients-page/ingredients-page.component.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.components.not-authorized.not-authorized">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="not-authorized.component.spec.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/not-authorized/not-authorized/not-authorized.component.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="not-authorized.component.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/not-authorized/not-authorized/not-authorized.component.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.components.recipesPage.recipes-page">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="recipes-page.component.spec.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/recipesPage/recipes-page/recipes-page.component.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="recipes-page.component.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/recipesPage/recipes-page/recipes-page.component.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.components.register.register">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="register.component.spec.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/register/register/register.component.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="register.component.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/register/register/register.component.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.components.root">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="root.component.spec.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/root/root.component.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="root.component.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/root/root.component.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.components.usersPage.users-page">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="users-page.component.spec.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/usersPage/users-page/users-page.component.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="users-page.component.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/components/usersPage/users-page/users-page.component.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.helpers">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="authconfig.interceptor.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/helpers/authconfig.interceptor.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.interfaces">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="ICredentials.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/interfaces/ICredentials.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IIngredient.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/interfaces/IIngredient.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IRecipe.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/interfaces/IRecipe.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IUser.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/interfaces/IUser.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.mocks">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="authMock.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/mocks/authMock.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="bookmarkMock.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/mocks/bookmarkMock.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="itemMock.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/mocks/itemMock.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="userMock.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/mocks/userMock.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.services.ingredients">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="ingredients.service.spec.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/services/ingredients/ingredients.service.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="ingredients.service.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/services/ingredients/ingredients.service.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.services.recipes">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="recipes.service.spec.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/services/recipes/recipes.service.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="recipes.service.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/services/recipes/recipes.service.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.services.root-service">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="root.service.spec.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/services/root-service/root.service.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="root.service.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/services/root-service/root.service.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.services.route-guard">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="route.guard.spec.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/services/route-guard/route.guard.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="route.guard.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/services/route-guard/route.guard.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.services.storage">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="storage.service.spec.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/services/storage/storage.service.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="storage.service.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/services/storage/storage.service.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.app.services.users">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="users.service.spec.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/services/users/users.service.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="users.service.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/app/services/users/users.service.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.angular-webapp.src.environments">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="environment.prod.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/environments/environment.prod.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="environment.ts" path="C:/www/NUTRECIPE/application/angular-webapp/src/environments/environment.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="capacitor.config.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/capacitor.config.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="karma.conf.js" path="C:/www/NUTRECIPE/application/ionic-mobileapp/karma.conf.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.coverage.ngv">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="block-navigation.js" path="C:/www/NUTRECIPE/application/ionic-mobileapp/coverage/ngv/block-navigation.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="prettify.js" path="C:/www/NUTRECIPE/application/ionic-mobileapp/coverage/ngv/prettify.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="sorter.js" path="C:/www/NUTRECIPE/application/ionic-mobileapp/coverage/ngv/sorter.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.coverage.ngv.lcov-report">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="block-navigation.js" path="C:/www/NUTRECIPE/application/ionic-mobileapp/coverage/ngv/lcov-report/block-navigation.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="prettify.js" path="C:/www/NUTRECIPE/application/ionic-mobileapp/coverage/ngv/lcov-report/prettify.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="sorter.js" path="C:/www/NUTRECIPE/application/ionic-mobileapp/coverage/ngv/lcov-report/sorter.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.e2e">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="protractor.conf.js" path="C:/www/NUTRECIPE/application/ionic-mobileapp/e2e/protractor.conf.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.e2e.src">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="app.e2e-spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/e2e/src/app.e2e-spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="app.po.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/e2e/src/app.po.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="main.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/main.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="polyfills.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/polyfills.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="test.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/test.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="zone-flags.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/zone-flags.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="app-routing.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/app-routing.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="app.component.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/app.component.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="app.component.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/app.component.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="app.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/app.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.components.modal.modal">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="modal.component.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/components/modal/modal/modal.component.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="modal.component.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/components/modal/modal/modal.component.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.components.side-menu.side-menu">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="side-menu.component.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/components/side-menu/side-menu/side-menu.component.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="side-menu.component.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/components/side-menu/side-menu/side-menu.component.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.helpers">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="authconfig.interceptor.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/helpers/authconfig.interceptor.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.interfaces">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="IBookmark.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/interfaces/IBookmark.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="ICredentials.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/interfaces/ICredentials.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IIngredient.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/interfaces/IIngredient.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IRecipe.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/interfaces/IRecipe.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IUser.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/interfaces/IUser.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.mocks">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="authMock.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/mocks/authMock.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="bookmarkMock.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/mocks/bookmarkMock.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.pages.forgot-password.forgot-password">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="forgot-password-routing.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/forgot-password/forgot-password/forgot-password-routing.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="forgot-password.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/forgot-password/forgot-password/forgot-password.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="forgot-password.page.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/forgot-password/forgot-password/forgot-password.page.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="forgot-password.page.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/forgot-password/forgot-password/forgot-password.page.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.pages.login.login">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="login-routing.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/login/login/login-routing.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="login.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/login/login/login.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="login.page.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/login/login/login.page.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="login.page.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/login/login/login.page.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.pages.not-authorized.not-authorized">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="not-authorized-routing.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/not-authorized/not-authorized/not-authorized-routing.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="not-authorized.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/not-authorized/not-authorized/not-authorized.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="not-authorized.page.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/not-authorized/not-authorized/not-authorized.page.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="not-authorized.page.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/not-authorized/not-authorized/not-authorized.page.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.pages.register.register">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="register-routing.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/register/register/register-routing.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="register.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/register/register/register.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="register.page.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/register/register/register.page.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="register.page.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/register/register/register.page.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.pages.settings.settings">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="settings-routing.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/settings/settings/settings-routing.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="settings.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/settings/settings/settings.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="settings.page.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/settings/settings/settings.page.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="settings.page.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/settings/settings/settings.page.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.pages.splash-screen">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="splash-screen-routing.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/splash-screen/splash-screen-routing.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="splash-screen.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/splash-screen/splash-screen.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="splash-screen.page.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/splash-screen/splash-screen.page.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="splash-screen.page.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/pages/splash-screen/splash-screen.page.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.services.auth">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="auth.service.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/services/auth/auth.service.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="auth.service.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/services/auth/auth.service.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.services.bookmarks">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="bookmarks.service.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/services/bookmarks/bookmarks.service.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="bookmarks.service.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/services/bookmarks/bookmarks.service.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.services.ingredients">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="ingredients.service.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/services/ingredients/ingredients.service.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="ingredients.service.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/services/ingredients/ingredients.service.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.services.recipes">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="recipes.service.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/services/recipes/recipes.service.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="recipes.service.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/services/recipes/recipes.service.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.services.route-guard">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="route.guard.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/services/route-guard/route.guard.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="route.guard.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/services/route-guard/route.guard.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.services.users">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="users.service.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/services/users/users.service.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="users.service.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/services/users/users.service.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.tab1">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="tab1-routing.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/tab1/tab1-routing.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="tab1.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/tab1/tab1.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="tab1.page.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/tab1/tab1.page.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="tab1.page.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/tab1/tab1.page.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.tab2">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="tab2-routing.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/tab2/tab2-routing.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="tab2.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/tab2/tab2.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="tab2.page.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/tab2/tab2.page.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="tab2.page.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/tab2/tab2.page.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.tab3">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="tab3-routing.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/tab3/tab3-routing.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="tab3.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/tab3/tab3.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="tab3.page.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/tab3/tab3.page.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="tab3.page.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/tab3/tab3.page.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.app.tabs">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="tabs-routing.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/tabs/tabs-routing.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="tabs.module.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/tabs/tabs.module.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="tabs.page.spec.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/tabs/tabs.page.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="tabs.page.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/app/tabs/tabs.page.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.application.ionic-mobileapp.src.environments">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="environment.prod.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/environments/environment.prod.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="environment.ts" path="C:/www/NUTRECIPE/application/ionic-mobileapp/src/environments/environment.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.build">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.js" path="C:/www/NUTRECIPE/build/index.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.build.src">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="app.js" path="C:/www/NUTRECIPE/build/src/app.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="fetchData.js" path="C:/www/NUTRECIPE/build/src/fetchData.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="server.js" path="C:/www/NUTRECIPE/build/src/server.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.build.src.DAO">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="BookmarkIngredientRepository.js" path="C:/www/NUTRECIPE/build/src/DAO/BookmarkIngredientRepository.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="BookmarkRecipeRepository.js" path="C:/www/NUTRECIPE/build/src/DAO/BookmarkRecipeRepository.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IBaseRepository.js" path="C:/www/NUTRECIPE/build/src/DAO/IBaseRepository.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IBookmarkRepository.js" path="C:/www/NUTRECIPE/build/src/DAO/IBookmarkRepository.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IngredientRepository.js" path="C:/www/NUTRECIPE/build/src/DAO/IngredientRepository.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="RecipeRepository.js" path="C:/www/NUTRECIPE/build/src/DAO/RecipeRepository.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="UserRepository.js" path="C:/www/NUTRECIPE/build/src/DAO/UserRepository.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.build.src.controllers">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="bookmarkIngredientController.js" path="C:/www/NUTRECIPE/build/src/controllers/bookmarkIngredientController.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="bookmarkRecipeController.js" path="C:/www/NUTRECIPE/build/src/controllers/bookmarkRecipeController.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="forgotPasswordController.js" path="C:/www/NUTRECIPE/build/src/controllers/forgotPasswordController.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="ingredientsController.js" path="C:/www/NUTRECIPE/build/src/controllers/ingredientsController.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="loginController.js" path="C:/www/NUTRECIPE/build/src/controllers/loginController.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="recipesController.js" path="C:/www/NUTRECIPE/build/src/controllers/recipesController.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="registerController.js" path="C:/www/NUTRECIPE/build/src/controllers/registerController.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="rootController.js" path="C:/www/NUTRECIPE/build/src/controllers/rootController.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="usersController.js" path="C:/www/NUTRECIPE/build/src/controllers/usersController.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.build.src.entity">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="BookmarkIngredientEntity.js" path="C:/www/NUTRECIPE/build/src/entity/BookmarkIngredientEntity.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="BookmarkRecipeEntity.js" path="C:/www/NUTRECIPE/build/src/entity/BookmarkRecipeEntity.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IngredientEntity.js" path="C:/www/NUTRECIPE/build/src/entity/IngredientEntity.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="RecipeEntity.js" path="C:/www/NUTRECIPE/build/src/entity/RecipeEntity.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="UserBookmarksEntity.js" path="C:/www/NUTRECIPE/build/src/entity/UserBookmarksEntity.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="UserEntity.js" path="C:/www/NUTRECIPE/build/src/entity/UserEntity.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.build.src.handlers">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="ApiError.js" path="C:/www/NUTRECIPE/build/src/handlers/ApiError.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="errorHandler.js" path="C:/www/NUTRECIPE/build/src/handlers/errorHandler.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="httpStatusCode.js" path="C:/www/NUTRECIPE/build/src/handlers/httpStatusCode.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.build.src.lib.config">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="database.js" path="C:/www/NUTRECIPE/build/src/lib/config/database.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="initEntities.js" path="C:/www/NUTRECIPE/build/src/lib/config/initEntities.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="morgan.js" path="C:/www/NUTRECIPE/build/src/lib/config/morgan.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="sonarqube.js" path="C:/www/NUTRECIPE/build/src/lib/config/sonarqube.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="winston.js" path="C:/www/NUTRECIPE/build/src/lib/config/winston.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.build.src.model">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="baseModel.js" path="C:/www/NUTRECIPE/build/src/model/baseModel.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.build.src.routes">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="routes.js" path="C:/www/NUTRECIPE/build/src/routes/routes.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.build.src.service">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="IBookmarkIngredientService.js" path="C:/www/NUTRECIPE/build/src/service/IBookmarkIngredientService.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IBookmarkRecipeService.js" path="C:/www/NUTRECIPE/build/src/service/IBookmarkRecipeService.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IForgotPasswordService.js" path="C:/www/NUTRECIPE/build/src/service/IForgotPasswordService.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IIngredientService.js" path="C:/www/NUTRECIPE/build/src/service/IIngredientService.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="ILoginService.js" path="C:/www/NUTRECIPE/build/src/service/ILoginService.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IRecipeService.js" path="C:/www/NUTRECIPE/build/src/service/IRecipeService.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IRegisterService.js" path="C:/www/NUTRECIPE/build/src/service/IRegisterService.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IUserService.js" path="C:/www/NUTRECIPE/build/src/service/IUserService.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.build.src.service.Impl">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="BookmarkIngredientServiceImpl.js" path="C:/www/NUTRECIPE/build/src/service/Impl/BookmarkIngredientServiceImpl.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="BookmarkRecipeServiceImpl.js" path="C:/www/NUTRECIPE/build/src/service/Impl/BookmarkRecipeServiceImpl.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="ForgotPasswordServiceImpl.js" path="C:/www/NUTRECIPE/build/src/service/Impl/ForgotPasswordServiceImpl.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IngredientServiceImpl.js" path="C:/www/NUTRECIPE/build/src/service/Impl/IngredientServiceImpl.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="LoginServiceImpl.js" path="C:/www/NUTRECIPE/build/src/service/Impl/LoginServiceImpl.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="RecipeServiceImpl.js" path="C:/www/NUTRECIPE/build/src/service/Impl/RecipeServiceImpl.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="RegisterServiceImpl.js" path="C:/www/NUTRECIPE/build/src/service/Impl/RegisterServiceImpl.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="UserServiceImpl.js" path="C:/www/NUTRECIPE/build/src/service/Impl/UserServiceImpl.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.cypress.integration">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="api.spec.ts" path="C:/www/NUTRECIPE/cypress/integration/api.spec.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.cypress.plugins">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="cy-ts-preprocessor.js" path="C:/www/NUTRECIPE/cypress/plugins/cy-ts-preprocessor.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="index.js" path="C:/www/NUTRECIPE/cypress/plugins/index.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.cypress.support">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="commands.js" path="C:/www/NUTRECIPE/cypress/support/commands.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="index.js" path="C:/www/NUTRECIPE/cypress/support/index.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.docs.assets">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="main.js" path="C:/www/NUTRECIPE/docs/assets/main.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="search.js" path="C:/www/NUTRECIPE/docs/assets/search.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.src">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="app.ts" path="C:/www/NUTRECIPE/src/app.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="fetchData.ts" path="C:/www/NUTRECIPE/src/fetchData.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="server.ts" path="C:/www/NUTRECIPE/src/server.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.src.DAO">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="BookmarkIngredientRepository.ts" path="C:/www/NUTRECIPE/src/DAO/BookmarkIngredientRepository.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="BookmarkRecipeRepository.ts" path="C:/www/NUTRECIPE/src/DAO/BookmarkRecipeRepository.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IBaseRepository.ts" path="C:/www/NUTRECIPE/src/DAO/IBaseRepository.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IBookmarkRepository.ts" path="C:/www/NUTRECIPE/src/DAO/IBookmarkRepository.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IngredientRepository.ts" path="C:/www/NUTRECIPE/src/DAO/IngredientRepository.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="RecipeRepository.ts" path="C:/www/NUTRECIPE/src/DAO/RecipeRepository.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="UserRepository.ts" path="C:/www/NUTRECIPE/src/DAO/UserRepository.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.src.controllers">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="bookmarkIngredientController.ts" path="C:/www/NUTRECIPE/src/controllers/bookmarkIngredientController.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="bookmarkRecipeController.ts" path="C:/www/NUTRECIPE/src/controllers/bookmarkRecipeController.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="forgotPasswordController.ts" path="C:/www/NUTRECIPE/src/controllers/forgotPasswordController.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="ingredientsController.ts" path="C:/www/NUTRECIPE/src/controllers/ingredientsController.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="loginController.ts" path="C:/www/NUTRECIPE/src/controllers/loginController.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="recipesController.ts" path="C:/www/NUTRECIPE/src/controllers/recipesController.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="registerController.ts" path="C:/www/NUTRECIPE/src/controllers/registerController.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="rootController.ts" path="C:/www/NUTRECIPE/src/controllers/rootController.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="usersController.ts" path="C:/www/NUTRECIPE/src/controllers/usersController.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.src.entity">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="BookmarkIngredientEntity.ts" path="C:/www/NUTRECIPE/src/entity/BookmarkIngredientEntity.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="BookmarkRecipeEntity.ts" path="C:/www/NUTRECIPE/src/entity/BookmarkRecipeEntity.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IngredientEntity.ts" path="C:/www/NUTRECIPE/src/entity/IngredientEntity.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="RecipeEntity.ts" path="C:/www/NUTRECIPE/src/entity/RecipeEntity.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="UserBookmarksEntity.ts" path="C:/www/NUTRECIPE/src/entity/UserBookmarksEntity.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="UserEntity.ts" path="C:/www/NUTRECIPE/src/entity/UserEntity.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.src.handlers">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="ApiError.ts" path="C:/www/NUTRECIPE/src/handlers/ApiError.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="errorHandler.ts" path="C:/www/NUTRECIPE/src/handlers/errorHandler.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="httpStatusCode.ts" path="C:/www/NUTRECIPE/src/handlers/httpStatusCode.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.src.lib.config">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="database.ts" path="C:/www/NUTRECIPE/src/lib/config/database.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="initEntities.ts" path="C:/www/NUTRECIPE/src/lib/config/initEntities.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="morgan.ts" path="C:/www/NUTRECIPE/src/lib/config/morgan.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="sonarqube.ts" path="C:/www/NUTRECIPE/src/lib/config/sonarqube.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="winston.ts" path="C:/www/NUTRECIPE/src/lib/config/winston.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.src.model">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="baseModel.ts" path="C:/www/NUTRECIPE/src/model/baseModel.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.src.routes">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="routes.ts" path="C:/www/NUTRECIPE/src/routes/routes.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.src.service">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="IBookmarkIngredientService.ts" path="C:/www/NUTRECIPE/src/service/IBookmarkIngredientService.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IBookmarkRecipeService.ts" path="C:/www/NUTRECIPE/src/service/IBookmarkRecipeService.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IForgotPasswordService.ts" path="C:/www/NUTRECIPE/src/service/IForgotPasswordService.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IIngredientService.ts" path="C:/www/NUTRECIPE/src/service/IIngredientService.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="ILoginService.ts" path="C:/www/NUTRECIPE/src/service/ILoginService.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IRecipeService.ts" path="C:/www/NUTRECIPE/src/service/IRecipeService.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IRegisterService.ts" path="C:/www/NUTRECIPE/src/service/IRegisterService.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IUserService.ts" path="C:/www/NUTRECIPE/src/service/IUserService.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.src.service.Impl">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="BookmarkIngredientServiceImpl.ts" path="C:/www/NUTRECIPE/src/service/Impl/BookmarkIngredientServiceImpl.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="BookmarkRecipeServiceImpl.ts" path="C:/www/NUTRECIPE/src/service/Impl/BookmarkRecipeServiceImpl.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="ForgotPasswordServiceImpl.ts" path="C:/www/NUTRECIPE/src/service/Impl/ForgotPasswordServiceImpl.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="IngredientServiceImpl.ts" path="C:/www/NUTRECIPE/src/service/Impl/IngredientServiceImpl.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="LoginServiceImpl.ts" path="C:/www/NUTRECIPE/src/service/Impl/LoginServiceImpl.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="RecipeServiceImpl.ts" path="C:/www/NUTRECIPE/src/service/Impl/RecipeServiceImpl.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="RegisterServiceImpl.ts" path="C:/www/NUTRECIPE/src/service/Impl/RegisterServiceImpl.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="UserServiceImpl.ts" path="C:/www/NUTRECIPE/src/service/Impl/UserServiceImpl.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+  </project>
+</coverage>

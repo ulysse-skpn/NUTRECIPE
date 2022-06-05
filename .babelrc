@@ -1,0 +1,16 @@
+{
+    "plugins": ["istanbul"],
+    "presets": 
+    [
+        "@babel/typescript",
+        [
+            "@babel/env",
+            {
+                "modules": false,
+                "targets": {
+                "chrome": "90"
+                }
+            }
+        ]
+    ]
+}
