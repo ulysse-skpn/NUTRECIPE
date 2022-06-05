@@ -1,4 +1,4 @@
-import { IUserIn, IUserOut } from "../interfaces/IUser";
+import { IUserOut } from "../interfaces/IUser";
 
 const mockUserOut:IUserOut = 
 {

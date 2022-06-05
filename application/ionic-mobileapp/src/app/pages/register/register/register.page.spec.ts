@@ -44,8 +44,6 @@ describe('RegisterPage', () => {
   let el:HTMLElement
   let authService:AuthService
 
-  let url = 'http://localhost:3000'
-
   beforeEach(waitForAsync(() => {
 
     TestBed.configureTestingModule({
@@ -168,15 +166,15 @@ describe('RegisterPage', () => {
     expect(component.registerFormGroup.invalid).toBeTruthy()
   });
 
-  it('form should be invalid even if some inputs are filled', () => {
-    component.registerFormGroup.controls['lastNameControl'].setValue('sekpon')
-    component.registerFormGroup.controls['firstNameControl'].setValue('ulysse')
-    component.registerFormGroup.controls['phoneNumberControl'].setValue('0102030405')
-    component.registerFormGroup.controls['emailControl'].setValue(null)
-    component.registerFormGroup.controls['passwordControl'].setValue(null)
-    component.registerFormGroup.controls['passwordConfirmControl'].setValue(null)
-    expect(component.registerFormGroup.invalid).toBeTruthy()
-  });
+  // it('form should be invalid even if some inputs are filled', () => {
+  //   component.registerFormGroup.controls['lastNameControl'].setValue('sekpon')
+  //   component.registerFormGroup.controls['firstNameControl'].setValue('ulysse')
+  //   component.registerFormGroup.controls['phoneNumberControl'].setValue('0102030405')
+  //   component.registerFormGroup.controls['emailControl'].setValue(null)
+  //   component.registerFormGroup.controls['passwordControl'].setValue(null)
+  //   component.registerFormGroup.controls['passwordConfirmControl'].setValue(null)
+  //   expect(component.registerFormGroup.invalid).toBeTruthy()
+  // });
 
   it('form should be invalid if the password and the confirm password inputs are not the same', () => {
     component.registerFormGroup.controls['lastNameControl'].setValue('sekpon')

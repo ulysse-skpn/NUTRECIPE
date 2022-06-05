@@ -203,10 +203,10 @@ describe('RecipesPageComponent', () => {
 
     component.loadRecipes()
 
-    recipeService.getSizeArrayRecipes().subscribe( res => {
-      expect(res).toBeDefined()
+    recipeService.getSizeArrayRecipes().subscribe( response => {
+      expect(response).toBeDefined()
 
-      expect(res).toEqual(10)
+      expect(response).toEqual(10)
     })
 
     expect(component.loadRecipes).toHaveBeenCalled()

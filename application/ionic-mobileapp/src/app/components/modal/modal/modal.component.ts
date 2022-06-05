@@ -54,7 +54,6 @@ export class ModalComponent implements OnInit {
   removeSpecialChars(string:string)
   {
     if( string ) return string.replace(/[\[\]"']+/g,'').split(",")
-    return
   }
 
   close()

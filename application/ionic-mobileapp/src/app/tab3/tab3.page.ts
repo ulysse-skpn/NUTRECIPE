@@ -100,7 +100,7 @@ export class Tab3Page implements OnInit {
         backdropDismiss:true
       })
   
-      return await modal.present()
+      return modal.present()
     })
   }
 
@@ -131,7 +131,7 @@ export class Tab3Page implements OnInit {
         backdropDismiss:true
       })
   
-      return await modal.present()
+      return modal.present()
     })
   }
 

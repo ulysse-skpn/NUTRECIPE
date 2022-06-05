@@ -43,7 +43,7 @@ describe('RecipesService', () => {
 
     const id = 4
 
-    recipeService.getRandomRecipe(id).subscribe()
+    recipeService.getRecipeById(id).subscribe()
 
     const req = httpMock.expectOne(`${url}/recipes/${id}`)
 

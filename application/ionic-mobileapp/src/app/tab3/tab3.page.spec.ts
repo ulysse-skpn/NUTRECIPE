@@ -1,7 +1,7 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { ComponentFixture, TestBed, waitForAsync , fakeAsync , tick } from '@angular/core/testing';
-import { IonicModule, ToastController } from '@ionic/angular';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { IonicModule } from '@ionic/angular';
 import { Tab3Page } from './tab3.page';
 import { BookmarksService } from '../services/bookmarks/bookmarks.service';
 import { IngredientsService } from '../services/ingredients/ingredients.service';
@@ -13,22 +13,9 @@ import { SideMenuComponent } from '../components/side-menu/side-menu/side-menu.c
 import { of } from 'rxjs';
 import { Tab1Page } from '../tab1/tab1.page';
 import { Tab2Page } from '../tab2/tab2.page';
-import { IIngredientBookmarkIn, IIngredientBookmarkOut, IRecipeBookmarkIn, IRecipeBookmarkOut } from '../interfaces/IBookmark';
+import { IIngredientBookmarkIn, IRecipeBookmarkIn } from '../interfaces/IBookmark';
 import { NotAuthorizedPage } from '../pages/not-authorized/not-authorized/not-authorized.page';
 import { FormsModule } from '@angular/forms';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
-const mockRecipeBookmark = 
-{
-  recipe: 
-  {
-    isBookmarked:true
-  },
-  recipeId: 0,
-  userId: 0,
-  saved: false
-}
 
 const mockRecipeBookmarkList = 
 [
@@ -42,17 +29,6 @@ const mockRecipeBookmarkList =
     saved: false
   }
 ]
-
-const mockIngredientBookmark = 
-{
-  ingredient: 
-  {
-    isBookmarked:true
-  },
-  ingredientId: 0,
-  userId: 0,
-  saved: false
-}
 
 const mockIngredientBookmarkList = 
 [
@@ -111,31 +87,21 @@ const event:Event =
 describe('Tab3Page', () => {
   let component: Tab3Page
   let fixture: ComponentFixture<Tab3Page>
-  let recipeService:RecipesService
-  let ingredientService:IngredientsService
   let bookmarkService:BookmarksService
-  let jwtHelper: JwtHelperService
-  let url = 'http://localhost:3000'
-  let el:HTMLElement
   let store = {}
-  let jwtHelperStub:any
-  let toastController: ToastController
 
 
   beforeEach(waitForAsync(() => {
 
     spyOn(sessionStorage, 'setItem').and.callFake((key, value) => {
-      return store[key] = <string>value
+      store[key] = value
+      return store
     })
   
     spyOn(sessionStorage,'getItem').and.callFake( (key) => {
       return store[key] || null
     })
 
-    jwtHelperStub = 
-    {
-      isTokenExpired: jasmine.createSpy('isTokenExpired').and.returnValue(true)
-    }
 
     TestBed.configureTestingModule({
       declarations: [Tab3Page , SideMenuComponent],
@@ -176,10 +142,7 @@ describe('Tab3Page', () => {
     component = fixture.componentInstance
     fixture.detectChanges()
 
-    ingredientService = TestBed.inject(IngredientsService)
-    recipeService = TestBed.inject(RecipesService)
     bookmarkService = TestBed.inject(BookmarksService)
-    jwtHelper = TestBed.inject(JwtHelperService)
   }));
 
   it('should create Tab3 Page', () => {
@@ -187,7 +150,6 @@ describe('Tab3Page', () => {
   });
 
   it('should call loadIngredientBookmarks method', async() => {
-    // spyOn<Tab3Page , any>(component,'loadIngredientBookmarks').and.callThrough()
     const bookmarkServiceSpy = spyOn<any>(bookmarkService,'getAllIngredientBookmarks').and.returnValue(of(mockIngredientBookmarkList))
     component.loadIngredientBookmarks()
 
@@ -200,7 +162,6 @@ describe('Tab3Page', () => {
   });
 
   it('should call loadRecipeBookmarks method', async() => {
-    // spyOn<Tab3Page , any>(component,'loadRecipeBookmarks').and.callThrough()
     const bookmarkServiceSpy = spyOn<any>(bookmarkService,'getAllRecipeBookmarks').and.returnValue(of(mockRecipeBookmarkList))
     component.loadRecipeBookmarks()
 
@@ -269,19 +230,7 @@ describe('Tab3Page', () => {
       toastControllerSpy.create.and.callFake( () => {
         return toastSpy
       })
-      
-      toastSpy.onDidDismiss().then( (e: { role: string }) => {//?
-        // expect(e).toBeDefined()
-        // expect(e).not.toEqual(null)
-        // expect(e.role).toEqual('recipe')
 
-        // if( e.role === 'recipe')
-        // {
-        //   const bookmarkServiceSpy = spyOn(bookmarkService,'updateRecipeBookmark').and.returnValue(of(1))
-        //   bookmarkService.updateRecipeBookmark(bookmark , bookmark.recipeId)
-        //   expect(bookmarkServiceSpy).toHaveBeenCalled()
-        // }
-      })
     })
   });
 

@@ -94,14 +94,13 @@ describe('Tab2Page', () => {
   let component: Tab2Page
   let fixture: ComponentFixture<Tab2Page>
   let ingredientService:IngredientsService
-  let url = 'http://localhost:3000'
-  let el:HTMLElement
   let store = {}
 
   beforeEach(waitForAsync(() => {
 
     spyOn(sessionStorage, 'setItem').and.callFake((key, value) => {
-      return store[key] = <string>value
+      store[key] = value
+      return store
     })
   
     spyOn(sessionStorage,'getItem').and.callFake( (key) => {
@@ -238,12 +237,6 @@ describe('Tab2Page', () => {
     expect(component.detail).toHaveBeenCalled()
   }));
 
-  // it('should call loadData method', () => { //? Issue with event.target.complete()
-    // spyOn<Tab2Page , any>(component,'loadData').and.callThrough()
-    // component.loadData(event)
-    // expect(component.loadData).toHaveBeenCalled()
-  // });
-
   it('should call expand method', () => {
     spyOn<Tab2Page , any>(component,'expand').and.callThrough()
 
@@ -258,12 +251,12 @@ describe('Tab2Page', () => {
   });
 
   it('should call saveTab method', () => {
-    spyOn<Tab2Page , any>(component,'saveTab').and.callThrough()
+    const spy = spyOn<Tab2Page , any>(component,'saveTab').and.callThrough()
 
     const tab = "card"
 
     component.saveTab(tab)
 
-    expect(component.saveTab).toHaveBeenCalled()
+    expect(spy).toHaveBeenCalled()
   });
 });

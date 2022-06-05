@@ -162,11 +162,12 @@ export class SettingsPage implements OnInit {
   
         await toast.present().then( async() => {
           await this.modalController.dismiss()
+        }).then( async() => {
+          await toast.onDidDismiss().then( async() => {
+            await this.authService.logout()
+          })
         })
   
-        await toast.onDidDismiss().then( async() => {
-          await this.authService.logout()
-        })
       })
     }
   }

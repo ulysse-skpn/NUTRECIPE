@@ -4,7 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { LoginPage } from './login.page';
 
 import { RouterTestingModule } from '@angular/router/testing'
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing'
+import { HttpClientTestingModule } from '@angular/common/http/testing'
 import { JwtHelperService, JwtModule } from "@auth0/angular-jwt";
 import { By } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -64,11 +64,9 @@ const userOut2:IUserOut =
 describe('LoginPage', () => {
   let component: LoginPage
   let fixture: ComponentFixture<LoginPage>
-  let jwtHelper: JwtHelperService
   let el:HTMLElement
   let jwtHelperStub:any
   let authService:AuthService
-  let url = 'http://localhost:3000'
 
 
   beforeEach(waitForAsync(() => {
@@ -113,9 +111,7 @@ describe('LoginPage', () => {
 
     fixture = TestBed.createComponent(LoginPage)
     component = fixture.componentInstance
-    // fixture.detectChanges()
 
-    jwtHelper = TestBed.inject(JwtHelperService)
     authService = TestBed.inject(AuthService)
   }));
 

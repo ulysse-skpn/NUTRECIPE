@@ -18,7 +18,6 @@ describe('SideMenuComponent', () => {
   let component: SideMenuComponent
   let fixture: ComponentFixture<SideMenuComponent>
   let el:HTMLElement
-  let jwtHelper: JwtHelperService
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -51,8 +50,6 @@ describe('SideMenuComponent', () => {
     fixture = TestBed.createComponent(SideMenuComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
-
-    jwtHelper = TestBed.inject(JwtHelperService)
   }));
 
   it('should create Side Menu Component', () => {
@@ -61,7 +58,7 @@ describe('SideMenuComponent', () => {
 
   it('should call ngOnInit method with access_token in sessionStorage', () => {
     fixture.detectChanges(false)
-    sessionStorage.setItem("access_token","test")
+    sessionStorage.setItem("access_token","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTI4OTUyNTYsImV4cCI6MTY1Mjk4MTY1Nn0.0wxSiAeDO4_V-4i5lzB1Z1Mugp3jpf8Z5GIOhy0XZy8")
     fixture.detectChanges()
     spyOn<SideMenuComponent,any>(component,'ngOnInit').and.callThrough()
     component.ngOnInit()
@@ -84,12 +81,8 @@ describe('SideMenuComponent', () => {
   it('should call goToLogin method', async() => {
     spyOn(component,'goToLogin').and.callThrough()
     component.visible = false
-    fixture.detectChanges()
 
-    el = fixture.debugElement.query(By.css(".goToLogin")).nativeElement
-    el.click()
-    
-    expect(el).toBeDefined()
+    component.goToLogin()
 
     fixture.whenStable().then( () => {
       fixture.detectChanges()
@@ -100,12 +93,8 @@ describe('SideMenuComponent', () => {
   it('should call logout method', async() => {
     spyOn(component,'logout').and.callThrough()
     component.visible = true
-    fixture.detectChanges()
 
-    el = fixture.debugElement.query(By.css(".logout")).nativeElement
-    el.click()
-    
-    expect(el).toBeDefined()
+    component.logout()
 
     fixture.whenStable().then( () => {
       fixture.detectChanges()

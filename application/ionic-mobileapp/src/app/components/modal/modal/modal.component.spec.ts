@@ -17,8 +17,11 @@ describe('ModalComponent', () => {
       imports: [IonicModule.forRoot() , ReactiveFormsModule , FormsModule , BrowserModule , CommonModule ,]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ModalComponent);
-    component = fixture.componentInstance;
+    
+    fixture = TestBed.createComponent(ModalComponent)
+    component = fixture.componentInstance
+    
+    fixture.detectChanges()
   }));
 
   it('should create Modal component', () => {
@@ -35,21 +38,18 @@ describe('ModalComponent', () => {
   it('should call ngOnInit method when th item is an ingredient', () => {
     spyOn<ModalComponent,any>(component,'ngOnInit')
     component.type = 'ingredient-details'
-    fixture.detectChanges()
     expect(component.type).toEqual("ingredient-details")
   });
 
   it('should call ngOnInit method when th item is a recipe', () => {
     spyOn<ModalComponent,any>(component,'ngOnInit')
     component.type = 'recipe-details'
-    fixture.detectChanges()
     expect(component.type).toEqual("recipe-details")
   });
 
   it('should call removeSpecialchars method', () => {
     spyOn<ModalComponent,any>(component,'removeSpecialChars').and.callThrough()
     component.removeSpecialChars("test--")
-    fixture.detectChanges()
     expect(component.removeSpecialChars).toHaveBeenCalled()
   });
 

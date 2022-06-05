@@ -69,19 +69,6 @@ export class RecipesService {
     )
   }
 
-  getRandomRecipe(id:number):Observable<IRecipeOut>
-  {
-    const url = `http://${this.host}:${this.port}/recipes/${id}`
-    return this.http.get<IRecipeOut>(url)
-    .pipe(
-      tap( (data:IRecipeOut) => {
-        console.log(data)
-      }),
-      retry(1),
-      catchError(this.handleError)
-    )
-  }
-
   addRecipe(recipe:IRecipeIn):Observable<IRecipeOut>
   {
     const url = `http://${this.host}:${this.port}/recipes`

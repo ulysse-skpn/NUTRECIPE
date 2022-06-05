@@ -52,8 +52,9 @@ export class Tab1Page implements OnInit {
     this.recipeService.getAllRecipesPagination( pIndex, pSize ).subscribe( async(res) => {
       res.forEach( (element:any) => {
         element['expanded'] = false
-        
-        element.bookmarkRecipe ? element['isBookmarked'] = element.bookmarkRecipe.saved : element['isBookmarked'] = null
+        element['isBookmarked'] = null
+
+        if( element.bookmarkRecipe ) element['isBookmarked'] = element.bookmarkRecipe.saved
 
         this.recipeList.push(element)
       });
@@ -85,7 +86,7 @@ export class Tab1Page implements OnInit {
         backdropDismiss:true
       })
   
-      return await modal.present()
+      return modal.present()
     })
     
   }
@@ -138,7 +139,7 @@ export class Tab1Page implements OnInit {
   {
     const randomId = this.randomInt()
 
-    this.recipeService.getRandomRecipe(randomId).subscribe( (res:IRecipeOut) => {
+    this.recipeService.getRecipeById(randomId).subscribe( (res:IRecipeOut) => {
       res['expanded'] = false
       res.ingredients_list = this.removeSpecialChars(res.ingredients_list)
       this.randomRecipeIngredientsList = this.createStep(res.ingredients_list,",")
@@ -146,7 +147,8 @@ export class Tab1Page implements OnInit {
       res.instructions = this.removeSpecialChars(res.instructions)
       this.randomRecipeInstructions = this.createStep(res.instructions,".")
     
-      return this.randomRecipe = res
+      this.randomRecipe = res
+      return this.randomRecipe 
     })
   }
 

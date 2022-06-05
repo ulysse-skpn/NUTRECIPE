@@ -47,8 +47,9 @@ export class Tab2Page implements OnInit {
       
       res.forEach( (element:any) => {
         element['expanded'] = false
-        
-        element.bookmarkIngredient ? element['isBookmarked'] = element.bookmarkIngredient.saved : element['isBookmarked'] = null
+        element['isBookmarked'] = null
+
+        if( element.bookmarkIngredient ) element['isBookmarked'] = element.bookmarkIngredient.saved
 
         this.ingredientList.push(element)
       });
@@ -82,7 +83,7 @@ export class Tab2Page implements OnInit {
         backdropDismiss:true
       })
   
-      return await modal.present()
+      return modal.present()
     })
     
   }
@@ -97,7 +98,7 @@ export class Tab2Page implements OnInit {
     let message!:string
     let isSaved!:boolean
 
-    if( item.isBookmarked == true )
+    if( item.isBookmarked === true )
     {
       message = "Ajouté aux favoris"
       isSaved = true

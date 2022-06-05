@@ -29,7 +29,7 @@ export class SideMenuComponent implements OnInit {
       component: SettingsPage
     })
 
-    return await modal.present()
+    return modal.present()
   }
 
   getStats()

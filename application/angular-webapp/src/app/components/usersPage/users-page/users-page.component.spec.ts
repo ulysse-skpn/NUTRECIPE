@@ -204,10 +204,10 @@ describe('UsersPageComponent', () => {
 
     component.loadUsers()
 
-    userService.getSizeArrayUsers().subscribe( res => {
-      expect(res).toBeDefined()
+    userService.getSizeArrayUsers().subscribe( response => {
+      expect(response).toBeDefined()
 
-      expect(res).toEqual(10)
+      expect(response).toEqual(10)
     })
 
     expect(component.loadUsers).toHaveBeenCalled()

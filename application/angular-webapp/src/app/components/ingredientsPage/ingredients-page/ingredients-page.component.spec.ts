@@ -206,10 +206,10 @@ describe('IngredientsPageComponent', () => {
 
     component.loadIngredients()
 
-    ingredientService.getSizeArrayIngredients().subscribe( res => {
-      expect(res).toBeDefined()
+    ingredientService.getSizeArrayIngredients().subscribe( response => {
+      expect(response).toBeDefined()
 
-      expect(res).toEqual(10)
+      expect(response).toEqual(10)
     })
 
     expect(component.loadIngredients).toHaveBeenCalled()

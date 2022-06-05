@@ -8,8 +8,7 @@ import { JwtHelperService } from '@auth0/angular-jwt'
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  templateUrl: './login.page.html'
 })
 export class LoginPage implements OnInit {
 

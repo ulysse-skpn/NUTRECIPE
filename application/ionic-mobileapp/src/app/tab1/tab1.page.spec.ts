@@ -89,14 +89,13 @@ describe('Tab1Page', () => {
   let component: Tab1Page
   let fixture: ComponentFixture<Tab1Page>
   let recipeService:RecipesService
-  let url = 'http://localhost:3000'
-  let el:HTMLElement
   let store = {}
 
   beforeEach(waitForAsync(() => {
 
     spyOn(sessionStorage, 'setItem').and.callFake((key, value) => {
-      return store[key] = <string>value
+      store[key] = value
+      return store
     })
   
     spyOn(sessionStorage,'getItem').and.callFake( (key) => {
@@ -225,18 +224,12 @@ describe('Tab1Page', () => {
 
   it('should call getRandomRecipe method', () => {
     spyOn<Tab1Page , any>(component,'getRandomRecipe').and.callThrough()
-    const recipeServiceSpy = spyOn(recipeService,'getRandomRecipe').and.returnValue(of(mockRecipe))
+    const recipeServiceSpy = spyOn(recipeService,'getRecipeById').and.returnValue(of(mockRecipe))
     const randomId = 13
     component.getRandomRecipe()
-    recipeService.getRandomRecipe( randomId )
+    recipeService.getRecipeById( randomId )
     expect(recipeServiceSpy).toHaveBeenCalled()
   });
-
-  // it('should call loadData method', () => { //? Issue with event.target.complete()
-    // spyOn<Tab1Page , any>(component,'loadData').and.callThrough()
-    // component.loadData(event)
-    // expect(component.loadData).toHaveBeenCalled()
-  // });
 
   it('should call expand method', () => {
     spyOn<Tab1Page , any>(component,'expand').and.callThrough()
