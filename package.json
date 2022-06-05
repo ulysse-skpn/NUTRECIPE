@@ -10,7 +10,7 @@
     "typedoc-g": "npx typedoc --entryPointStrategy expand ./src",
     "swagger": "tsoa spec",
     "sonar": "node sonar-project.js",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress run --browser chrome"
   },
   "jest": {
     "testEnvironment": "node",
@@ -27,6 +27,7 @@
   "author": "Ulysse Sekpon",
   "license": "ISC",
   "devDependencies": {
+    "@cypress/code-coverage": "^3.10.0",
     "@types/bcrypt": "^5.0.0",
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
