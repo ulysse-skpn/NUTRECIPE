@@ -8,10 +8,6 @@ import { ForgotPasswordCtrl } from "../controllers/forgotPasswordController";
 import { RootCtrl } from "../controllers/rootController";
 import { BookmarkIngredientCtrl } from "../controllers/bookmarkIngredientController";
 import { BookmarkRecipeCtrl } from "../controllers/bookmarkRecipeController";
-// import * as swagger from "swagger-ui-express"
-// import swaggerDocument from "../lib/config/swagger.json"
-// import { Get, Post , Put , Delete , Route } from "tsoa";
-
 
 
 export class Routes 
@@ -29,16 +25,6 @@ export class Routes
 
     public routes(app: Application): void 
     {
-        // SWAGGER UI
-        app
-            // .use("/api-docs" , swagger.serve)
-            // .route("/api-docs")
-            // .get(swagger.setup(swaggerDocument))
-
-            // .use("/api" , swagger.serve)
-            // .route("/api")
-            // .get(swagger.setup(swaggerDocument))
-
 
         //  APP ROOT
         app

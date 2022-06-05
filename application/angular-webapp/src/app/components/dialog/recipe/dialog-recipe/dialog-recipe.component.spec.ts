@@ -10,7 +10,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of } from 'rxjs';
-import { RecipesPageComponent } from 'src/app/components/recipesPage/recipes-page/recipes-page.component';
 import { mockRecipe } from 'src/app/mocks/itemMock';
 import { RecipesService } from 'src/app/services/recipes/recipes.service';
 
@@ -20,8 +19,6 @@ describe('DialogRecipeComponent', () => {
   let component: DialogRecipeComponent
   let fixture: ComponentFixture<DialogRecipeComponent>
   let recipeService:RecipesService
-  let el:HTMLElement
-  let dialogRef: MatDialogRef<RecipesPageComponent>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -46,7 +43,6 @@ describe('DialogRecipeComponent', () => {
     fixture.detectChanges()
 
     recipeService = TestBed.inject(RecipesService)
-    dialogRef = TestBed.inject(MatDialogRef)
   });
 
   it('should create Dialog Recipe Component', () => {

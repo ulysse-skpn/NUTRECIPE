@@ -1,4 +1,4 @@
-import { AllowNull, Column, Table , DataType, PrimaryKey, AutoIncrement, Model, HasMany, HasOne } from "sequelize-typescript";
+import { AllowNull, Column, Table , DataType, PrimaryKey, AutoIncrement, Model, HasOne } from "sequelize-typescript";
 import { BookmarkRecipe } from "./BookmarkRecipeEntity";
 
 @Table

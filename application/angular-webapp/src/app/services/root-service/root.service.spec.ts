@@ -1,14 +1,12 @@
-import { fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { TestBed} from '@angular/core/testing';
 import { HttpClientTestingModule , HttpTestingController } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { mockPassword, mockUserOut } from 'src/app/mocks/authMock';
 import { RootService } from './root.service';
 import { IUserIn } from 'src/app/interfaces/IUser';
-import { StorageService } from '../storage/storage.service';
 
 describe('RootService', () => {
   let authService: RootService
-  let storageService: StorageService
   let httpMock: HttpTestingController
   let url = 'http://localhost:3000'
 

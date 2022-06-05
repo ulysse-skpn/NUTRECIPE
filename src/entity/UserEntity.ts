@@ -1,4 +1,4 @@
-import { AllowNull, Column, Table , DataType, Unique, IsEmail, Length, Model, PrimaryKey, AutoIncrement } from "sequelize-typescript";
+import { AllowNull, Column, Table , DataType, IsEmail, Length, Model, PrimaryKey, AutoIncrement } from "sequelize-typescript";
 
 @Table
 export class User extends Model

@@ -1,16 +1,13 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule , HttpTestingController } from '@angular/common/http/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RootService } from '../root-service/root.service';
 import { RouteGuard } from './route.guard';
 import { Router } from '@angular/router';
 
 describe('RouteGuardServiceGuard', () => {
-  let rootService: RootService
   let routeGuard: RouteGuard
-  let httpMock: HttpTestingController
   let routeMock: any = { snapshot: {}}
   let routeStateMock: any = { snapshot: {}, url: '/login'}
-  let routerMock = {navigate: jasmine.createSpy('navigate')}
 
   const rootServiceSpy = jasmine.createSpyObj("RootService",
   ['isLoggedIn'])
@@ -29,8 +26,6 @@ describe('RouteGuardServiceGuard', () => {
     })
 
     routeGuard = TestBed.inject(RouteGuard)
-    rootService = TestBed.inject(RootService)
-    httpMock = TestBed.inject(HttpTestingController)
   });
 
   it('Route guard service should be created', () => {

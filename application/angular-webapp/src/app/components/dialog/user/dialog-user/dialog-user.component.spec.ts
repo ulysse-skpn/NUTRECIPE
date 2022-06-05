@@ -6,11 +6,10 @@ import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/materia
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of } from 'rxjs';
-import { UsersPageComponent } from 'src/app/components/usersPage/users-page/users-page.component';
 import { mockUser } from 'src/app/mocks/userMock';
 import { UsersService } from 'src/app/services/users/users.service';
 
@@ -20,9 +19,6 @@ describe('DialogUserComponent', () => {
   let component: DialogUserComponent
   let fixture: ComponentFixture<DialogUserComponent>
   let userService:UsersService
-  let el:HTMLElement
-  let dialogRef: MatDialogRef<UsersPageComponent>
-  let snackBar:MatSnackBar
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -47,7 +43,6 @@ describe('DialogUserComponent', () => {
     fixture.detectChanges()
 
     userService = TestBed.inject(UsersService)
-    dialogRef = TestBed.inject(MatDialogRef)
   });
 
   it('should create', () => {

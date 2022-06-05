@@ -1,5 +1,5 @@
 
-import { AllowNull, Column, Table , IsFloat , DataType, PrimaryKey, Model, AutoIncrement, HasMany, HasOne } from "sequelize-typescript";
+import { AllowNull, Column, Table , IsFloat , DataType, PrimaryKey, Model, AutoIncrement, HasOne } from "sequelize-typescript";
 import { BookmarkIngredient } from "./BookmarkIngredientEntity";
 
 @Table

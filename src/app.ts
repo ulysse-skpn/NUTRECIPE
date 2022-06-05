@@ -3,8 +3,6 @@ import helmet from "helmet"
 import cors from "cors"
 import { morganMiddleware } from "./lib/config/morgan"
 import { apiErrorHandler } from "./handlers/errorHandler"
-// import swaggerUi from "swagger-ui-express" 
-// import swaggerDocument from "./lib/config/swagger.json"
 
 
 import { Routes } from "./routes/routes"
@@ -40,7 +38,6 @@ class App
       }))
       this.app.use(morganMiddleware)
       this.app.use(apiErrorHandler)
-      // this.app.use("/api" , swaggerUi.serve , swaggerUi.setup(swaggerDocument))
     }
 }
 

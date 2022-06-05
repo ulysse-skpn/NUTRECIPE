@@ -10,7 +10,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of } from 'rxjs';
-import { IngredientsPageComponent } from 'src/app/components/ingredientsPage/ingredients-page/ingredients-page.component';
 import { mockIngredient } from 'src/app/mocks/itemMock';
 import { IngredientsService } from 'src/app/services/ingredients/ingredients.service';
 
@@ -20,8 +19,6 @@ describe('DialogIngredientComponent', () => {
   let component: DialogIngredientComponent
   let fixture: ComponentFixture<DialogIngredientComponent>
   let ingredientService:IngredientsService
-  let el:HTMLElement
-  let dialogRef: MatDialogRef<IngredientsPageComponent>
 
   beforeEach(async () => {
 
@@ -47,7 +44,6 @@ describe('DialogIngredientComponent', () => {
     fixture.detectChanges()
 
     ingredientService = TestBed.inject(IngredientsService)
-    dialogRef = TestBed.inject(MatDialogRef)
   });
 
   it('should create Dialog Ingredient Component', () => {
