@@ -14,7 +14,7 @@ describe('ModalComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ModalComponent ],
-      imports: [IonicModule.forRoot() , ReactiveFormsModule , FormsModule , BrowserModule , CommonModule ,]
+      imports: [IonicModule.forRoot() , ReactiveFormsModule , FormsModule , BrowserModule , CommonModule ]
     }).compileComponents();
 
     
@@ -35,13 +35,13 @@ describe('ModalComponent', () => {
     expect(component.close).toHaveBeenCalled()
   });
   
-  it('should call ngOnInit method when th item is an ingredient', () => {
+  it('should call ngOnInit method when the item is an ingredient', () => {
     spyOn<ModalComponent,any>(component,'ngOnInit')
     component.type = 'ingredient-details'
     expect(component.type).toEqual("ingredient-details")
   });
 
-  it('should call ngOnInit method when th item is a recipe', () => {
+  it('should call ngOnInit method when the item is a recipe', () => {
     spyOn<ModalComponent,any>(component,'ngOnInit')
     component.type = 'recipe-details'
     expect(component.type).toEqual("recipe-details")

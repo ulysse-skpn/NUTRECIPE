@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">65.62% </span>
+                <span class="strong">78.12% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>42/64</span>
+                <span class='fraction'>50/64</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/8</span>
+                <span class='fraction'>6/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">61.9% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>13/21</span>
+                <span class='fraction'>14/21</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">65.45% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>36/55</span>
+                <span class='fraction'>44/55</span>
             </div>
         
             
@@ -309,7 +309,7 @@
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">7x</span>
@@ -427,26 +427,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -456,6 +445,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -631,15 +631,15 @@ export class Tab3Page implements OnInit {
       ]
     })
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    await toast.present()</span>
+    await toast.present()
     
-<span class="cstat-no" title="statement not covered" >    await toast.onDidDismiss().then( <span class="fstat-no" title="function not covered" >(e</span>) =&gt; {</span>
+    await toast.onDidDismiss().then( (e) =&gt; {
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      <span class="missing-if-branch" title="if path not taken" >I</span>if( e.role === "cancel" ) <span class="cstat-no" title="statement not covered" >return</span></span>
+      <span class="missing-if-branch" title="if path not taken" >I</span>if( e.role === "cancel" ) <span class="cstat-no" title="statement not covered" >return</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      item.isBookmarked = !item.isBookmarked  </span>
+      item.isBookmarked = !item.isBookmarked  
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if( type === "ingredient" )</span>
+      <span class="missing-if-branch" title="if path not taken" >I</span>if( type === "ingredient" )
       {
         const bookmark: IIngredientBookmarkIn = 
 <span class="cstat-no" title="statement not covered" >        {</span>
@@ -650,16 +650,16 @@ export class Tab3Page implements OnInit {
   
 <span class="cstat-no" title="statement not covered" >        this.bookmarkService.updateIngredientBookmark(bookmark , bookmark.ingredientId).subscribe()</span>
       }
-      else <span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="if path not taken" >I</span>if( type === "recipe" )</span>
+      else if( type === "recipe" )
       {
         const bookmark: IRecipeBookmarkIn = 
-<span class="cstat-no" title="statement not covered" >        {</span>
+        {
           recipeId: item.recipeId,
           userId: id,
           saved: false
         } 
   
-<span class="cstat-no" title="statement not covered" >        this.bookmarkService.updateRecipeBookmark(bookmark , bookmark.recipeId).subscribe()</span>
+        this.bookmarkService.updateRecipeBookmark(bookmark , bookmark.recipeId).subscribe()
       }
 &nbsp;
     })
@@ -682,7 +682,7 @@ export class Tab3Page implements OnInit {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Sun Jun 05 2022 23:08:55 GMT+0200 (heure d’été d’Europe centrale)
+                at Mon Jun 06 2022 15:01:56 GMT+0200 (heure d’été d’Europe centrale)
             </div>
         <script src="../../../prettify.js"></script>
         <script>
