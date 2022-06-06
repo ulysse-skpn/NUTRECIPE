@@ -52,7 +52,7 @@
                         <input matInput #input placeholder='mot de passe' min="6" [type]="hide ? 'password' : 'text'" id="password" name="password" formControlName="passwordControl" required>
                         <mat-error *ngIf="getErrorMessage('passwordControl','required')">Ce champ est obligatoire</mat-error>
                         <mat-error *ngIf="getErrorMessage('passwordControl','minlength')">6 caractères minimum</mat-error>
-                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                             <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
                         </button>
                         <mat-hint align="end">{{ input.value?.length || 0}}/6</mat-hint>

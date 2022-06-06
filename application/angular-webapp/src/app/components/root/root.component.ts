@@ -43,6 +43,10 @@ export class RootComponent {
         window.alert("Vous n'avez pas les droits pour vous connecter à l'application")
         return
       }
+
+      const nameUser = `${res.user.last_name.toLocaleUpperCase()} ${ res.user.first_name.charAt(0).toLocaleUpperCase() + res.user.first_name.slice(1) }`
+
+      sessionStorage.setItem( "nameUser" , nameUser )
       sessionStorage.setItem( "access_token" , res.access_token )
       sessionStorage.setItem( "expiresIn" , res.expires_in.toString() )
       
