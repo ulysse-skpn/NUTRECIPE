@@ -2302,5 +2302,32 @@
     "s": {},
     "f": {},
     "b": {}
+  },
+  "C:/www/NUTRECIPE/cypress/coverage/lcov-report/block-navigation.js": {
+    "path": "C:/www/NUTRECIPE/cypress/coverage/lcov-report/block-navigation.js",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/www/NUTRECIPE/cypress/coverage/lcov-report/prettify.js": {
+    "path": "C:/www/NUTRECIPE/cypress/coverage/lcov-report/prettify.js",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/www/NUTRECIPE/cypress/coverage/lcov-report/sorter.js": {
+    "path": "C:/www/NUTRECIPE/cypress/coverage/lcov-report/sorter.js",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
   }
 }

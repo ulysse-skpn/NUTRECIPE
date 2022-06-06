@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1654470886944" clover="3.2.0">
-  <project timestamp="1654470886946" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="81" files="256" classes="256"/>
+<coverage generated="1654554267009" clover="3.2.0">
+  <project timestamp="1654554267010" name="All files">
+    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="82" files="259" classes="259"/>
     <package name="NUTRECIPE">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="cypress.config.ts" path="C:/www/NUTRECIPE/cypress.config.ts">
@@ -794,6 +794,18 @@
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
       <file name="UserServiceImpl.js" path="C:/www/NUTRECIPE/build/src/service/Impl/UserServiceImpl.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="NUTRECIPE.cypress.coverage.lcov-report">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="block-navigation.js" path="C:/www/NUTRECIPE/cypress/coverage/lcov-report/block-navigation.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="prettify.js" path="C:/www/NUTRECIPE/cypress/coverage/lcov-report/prettify.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="sorter.js" path="C:/www/NUTRECIPE/cypress/coverage/lcov-report/sorter.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
