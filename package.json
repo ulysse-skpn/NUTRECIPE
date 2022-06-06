@@ -10,7 +10,7 @@
     "typedoc-g": "npx typedoc --entryPointStrategy expand ./src",
     "swagger": "tsoa spec",
     "sonar": "node sonar-project.js",
-    "cypress:open": "cypress run --browser chrome"
+    "cypress:open": "cypress run --browser chrome --config-file cypress.config.ts"
   },
   "jest": {
     "testEnvironment": "node",
