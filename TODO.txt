@@ -1,9 +1,7 @@
 https://medium.com/swlh/nodejs-code-evaluation-using-jest-sonarqube-and-docker-f6b41b2c319d
 
 TODO Splash screen
-TODO CI/CD
 TODO Tester ( pas les tests unitaires ) la partie angular du début à la fin [ connexion , CRUD , etc ] sur ordi et téléphone
-TODO Refaire présentation powerpoint
 TODO Refaire dossier professionnel 
 
 Si il reste du temps :
@@ -26,3 +24,5 @@ Travail plus long et complexe que prévu
 Doc des frameworks souvent incomplète
 A chaque mise à jour du navigateur , l'apparence de la vue navigateur sur mobile peut changer
 Difficulté sur les relations des entités
+Problème avec github actions
+Conciliation entre travail en entreprise et travail sur le projet
