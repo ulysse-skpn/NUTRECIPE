@@ -43,9 +43,9 @@ database.authenticate()
 
                 await database.query("SELECT COUNT(ingredientId) as elem FROM ingredients" , { plain:true , raw:true} )
                     .then( async (e:any) => {
- 
+
                             
-                        if( e.elem === 0 || e.elem === 1 ) 
+                        if( e.elem < 1) 
                         {
                             InitEntities.init_ingredient()
 
@@ -64,7 +64,7 @@ database.authenticate()
                     .then( async (e:any) => {
 
 
-                        if( e.elem === 0 || e.elem === 1 )
+                        if( e.elem < 1 )
                         {
                             InitEntities.init_recipe()
                             
@@ -79,19 +79,25 @@ database.authenticate()
 
                 await database.query("SELECT COUNT(userId) as elem FROM users" , { plain:true , raw:true} )
                     .then( async (e:any) => {
-                        InitEntities.init_user()
+                        const nbElem = e.elem
+
+                        if( nbElem < 1 ) InitEntities.init_user()
                         logger.info( 'users table initialized' )
                     })       
 
                 await database.query("SELECT COUNT(id) as elem FROM bookmarkingredients" , { plain:true , raw:true} )
                     .then( async (e:any) => {
-                        InitEntities.init_bookmark_ingredient()
+                        const nbElem = e.elem
+                        
+                        if( nbElem < 1 ) InitEntities.init_bookmark_ingredient()
                         logger.info( 'bookmarkingredients table initialized' )
                     })    
                     
                 await database.query("SELECT COUNT(id) as elem FROM bookmarkrecipes" , { plain:true , raw:true} )
                     .then( async (e:any) => {
-                        InitEntities.init_bookmark_recipe()
+                        const nbElem = e.elem
+
+                        if( nbElem < 1 ) InitEntities.init_bookmark_recipe()
                         logger.info( 'bookmarkrecipes table initialized' )
                     })       
 

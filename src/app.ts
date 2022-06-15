@@ -21,6 +21,9 @@ class App
 
     private readonly _allowOrigin  =
     [
+      'capacitor://localhost',
+      'http://localhost',
+      'https://10.0.2.2:3000',
       'https://127.0.0.1:3000',
       'https://localhost:4000',
       'https://localhost:9876', // karma/jasmine
